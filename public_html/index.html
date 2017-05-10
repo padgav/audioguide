@@ -30,10 +30,15 @@ var client = new $.es.Client({
 
 var bg = document.querySelector('html');
 
-document.onclick = function() {
-  recognition.start();
-  console.log('Ready to receive a color command.');
-}
+var card = "";
+$( document ).ready(function() {
+  // Handler for .ready() called.
+    $(".card").on("click" , function() {
+        card = $(this).attr("id");
+        recognition.start();
+  
+    })
+});
 
 recognition.onresult = function(event) {
   var last = event.results.length - 1;
@@ -42,7 +47,7 @@ recognition.onresult = function(event) {
   console.log('Confidence: ' + text);
   client.search({
   index: 'myindex',
-  q: 'question:'+text
+  q: 'answer'+text + " AND title:"+card
 }, function (error, response) {
         console.log("resp:",response.hits.hits[0]._source.doc.answer);
         $("#answer").html(response.hits.hits[0]._source.doc.answer)
@@ -73,6 +78,8 @@ recognition.onerror = function(event) {
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
+        <div class="card" id="Crocefissione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"/></div>
+        <div class="card" id="Annunciazione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"/></div>
         <div id="answer">TODO write content</div>
     </body>
 </html>
