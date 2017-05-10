@@ -32,6 +32,11 @@ client.ping({
 var id = 0;
 documents.reviews.map(function(doc){
 console.log("title", doc.title);
+doc.qa.map(function (qa){
+    
+    
+    
+
 
 client.create({
   index: 'myindex',
@@ -39,11 +44,11 @@ client.create({
   id: id++,
   body: {
     // put the partial document under the `doc` key
-    doc: doc
+    doc: {title: doc.title, question: qa.question, answer: qa.answer}
   }
 }, function (error, response) {
   // ...
         console.log("error", error);
 })
-
+})
 })
