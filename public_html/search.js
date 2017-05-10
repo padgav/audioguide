@@ -7,8 +7,6 @@ var elasticsearch = require('elasticsearch');
 var fs = require('fs');
 
 
-var documents = JSON.parse(fs.readFileSync('data/reviews.json', 'utf8'));
-
 
 var client = new elasticsearch.Client({
   host: 'localhost:9200',
