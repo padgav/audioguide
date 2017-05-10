@@ -5,10 +5,74 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="node_modules/elasticsearch-browser/elasticsearch.jquery.min.js"></script>
+        <script src="node_modules/elasticsearch-browser/elasticsearch.min.js"></script>
+       
+        <script>
+         var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+         var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
+         var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+         var recognition = new SpeechRecognition();
+         var speechRecognitionList = new SpeechGrammarList();   
+         recognition.grammars = speechRecognitionList;
+//recognition.continuous = false;
+recognition.lang = 'it-IT';
+recognition.interimResults = false;
+recognition.maxAlternatives = 1;
+
+var synth = window.speechSynthesis;
+
+
+var client = new $.es.Client({
+  hosts: 'nat01.crs4.it:9200'
+});
+
+var bg = document.querySelector('html');
+
+document.onclick = function() {
+  recognition.start();
+  console.log('Ready to receive a color command.');
+}
+
+recognition.onresult = function(event) {
+  var last = event.results.length - 1;
+  var text = event.results[last][0].transcript;
+  
+  console.log('Confidence: ' + text);
+  client.search({
+  index: 'myindex',
+  q: 'question:'+text
+}, function (error, response) {
+        console.log("resp:",response.hits.hits[0]._source.doc.answer);
+        $("#answer").html(response.hits.hits[0]._source.doc.answer)
+        var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.doc.answer);
+        synth.speak(utterThis);
+
+});
+
+  
+  
+  
+}
+
+recognition.onspeechend = function() {
+  recognition.stop();
+}
+
+recognition.onnomatch = function(event) {
+  console.log( 'I didnt recognise that color.');
+}
+
+recognition.onerror = function(event) {
+  console.log( 'Error occurred in recognition: ' + event.error);
+}
+
+        </script>
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div id="answer">TODO write content</div>
     </body>
 </html>
