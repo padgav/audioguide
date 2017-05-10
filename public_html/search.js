@@ -3,7 +3,6 @@
  * and open the template in the editor.
  */
 
-
 var elasticsearch = require('elasticsearch');
 var fs = require('fs');
 
@@ -27,4 +26,11 @@ client.ping({
   }
 });
 
-client.indices.delete({index: 'myindex'});
+
+
+client.search({
+  index: 'myindex',
+  q: 'body:Vegrine~'
+}, function (error, response) {
+        console.log("resp:",response);
+});
