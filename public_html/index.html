@@ -37,7 +37,14 @@ $( document ).ready(function() {
         card = $(this).attr("id");
         recognition.start();
   
-    })
+    });
+    $(".card").on("mouseenter" , function() {
+        card = $(this).attr("id");
+        
+        var utterThis = new SpeechSynthesisUtterance(card);
+        synth.speak(utterThis);
+    });
+    
 });
 
 recognition.onresult = function(event) {
