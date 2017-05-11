@@ -58,12 +58,12 @@ recognition.onresult = function(event) {
   console.log('Confidence: ' + text);
   client.search({
   index: 'myindex',
-  q: 'question:'+text + " AND title:"+card
+  q: "question:"+text + " AND title:"+card
 }, function (error, response) {
         console.log("resp:",response);
         if(response.hits.total >0){
-            $("#answer").html(response.hits.hits[0]._source.doc.answer)
-            var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.doc.answer);
+            $("#answer").html(response.hits.hits[0]._source.answer)
+            var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
             synth.speak(utterThis);
         }
         else {

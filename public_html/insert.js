@@ -55,7 +55,7 @@ var settings = {
   };
   
 client.indices.putSettings({
-  index: myindex,
+  index: 'myindex',
   body: settings
 });
 
