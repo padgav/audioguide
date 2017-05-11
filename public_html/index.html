@@ -58,14 +58,7 @@ recognition.onresult = function(event) {
   console.log('Confidence: ' + text);
   client.search({
   index: 'myindex',
-  body:{
-      query:{
-          match:{
-              title: card,
-              question: text
-          }
-      }
-  }
+  q: "question:" + text + " AND title:" + card
 }, function (error, response) {
         console.log("resp:",response);
         if(response.hits.total >0){

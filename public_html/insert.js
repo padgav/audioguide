@@ -27,9 +27,8 @@ client.ping({
     }
 });
 
-//client.indices.delete({index: 'myindex'});
 
-
+/*
 var settings = {
     "analysis": {
       "filter": {
@@ -58,6 +57,7 @@ client.indices.putSettings({
   index: 'myindex',
   body: settings
 });
+*/
 
 var id = 0;
 documents.reviews.map(function(doc) {
