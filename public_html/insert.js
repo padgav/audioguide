@@ -37,7 +37,8 @@ var settings = {
           "type": "synonym", 
           "synonyms": [ 
             "Maria,Madonna,Vergine",
-            "quadro,opera,dipinto"
+            "quadro,opera,dipinto",
+            "angelo,arcangelo,gabriele"
           ]
         }
       },
@@ -69,7 +70,9 @@ documents.reviews.map(function(doc) {
             id: id++,
             body: {
                 // put the partial document under the `doc` key
-                doc: {title: doc.title, question: qa.question, answer: qa.answer}
+                title: doc.title, 
+                question: qa.question, 
+                answer: qa.answer
             }
         }, function(error, response) {
             // ...
