@@ -47,7 +47,7 @@ recognition.onresult = function(event) {
   console.log('Confidence: ' + text);
   client.search({
   index: 'myindex',
-  q: 'answer'+text + " AND title:"+card
+  q: 'question'+text + " AND title:"+card
 }, function (error, response) {
         console.log("resp:",response.hits.hits[0]._source.doc.answer);
         $("#answer").html(response.hits.hits[0]._source.doc.answer)
