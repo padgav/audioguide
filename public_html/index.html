@@ -21,9 +21,29 @@ recognition.lang = 'it-IT';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
+var messages = new Array();
+messages[0] = "Non ho capito, prova a ripetere";
+
+
+
 var synth = window.speechSynthesis;
 
+function populateVoiceList() {
+  voices = synth.getVoices();
 
+  for(i = 0; i < voices.length ; i++) {
+    var option = document.createElement('option');
+    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+    
+    if(voices[i].default) {
+      option.textContent += ' -- DEFAULT';
+    }
+
+    option.setAttribute('data-lang', voices[i].lang);
+    option.setAttribute('data-name', voices[i].name);
+    voiceSelect.appendChild(option);
+  }
+}
 var client = new $.es.Client({
   hosts: 'nat01.crs4.it:9200'
 });
@@ -56,10 +76,16 @@ recognition.onresult = function(event) {
   index: 'myindex',
   q: 'question'+text + " AND title:"+card
 }, function (error, response) {
-        console.log("resp:",response.hits.hits[0]._source.doc.answer);
-        $("#answer").html(response.hits.hits[0]._source.doc.answer)
-        var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.doc.answer);
-        synth.speak(utterThis);
+        console.log("resp:",response);
+        if(response.hits.total >0){
+            $("#answer").html(response.hits.hits[0]._source.doc.answer)
+            var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.doc.answer);
+            synth.speak(utterThis);
+        }
+        else {
+            var utterThis = new SpeechSynthesisUtterance(messages[0]);
+            synth.speak(utterThis);
+        }
 
 });
 
