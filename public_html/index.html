@@ -55,23 +55,25 @@ recognition.onresult = function(event) {
   var last = event.results.length - 1;
   var text = event.results[last][0].transcript;
   
-  console.log('Confidence: ' + text);
-  client.search({
-  index: 'myindex',
-  q: "question:" + text + " AND title:" + card
-}, function (error, response) {
-        console.log("resp:",response);
-        if(response.hits.total >0){
-            $("#answer").html(response.hits.hits[0]._source.answer)
-            var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
-            synth.speak(utterThis);
-        }
-        else {
-            var utterThis = new SpeechSynthesisUtterance(messages[0]);
-            synth.speak(utterThis);
-        }
+  var query = 'title:' +card +' AND question:' + text ;  
+console.log("query: ", query);
+        console.log('Confidence: ' + text);
+        client.search({
+            index: 'myindex',
+            q: query
+        }, function(error, response) {
+            console.log("resp:", response);
+            if (response.hits.total > 0) {
+                $("#answer").html(response.hits.hits[0]._source.answer)
+                var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
+                synth.speak(utterThis);
+            }
+            else {
+                var utterThis = new SpeechSynthesisUtterance(messages[0]);
+                synth.speak(utterThis);
+            }
 
-});
+        });
 
   
   

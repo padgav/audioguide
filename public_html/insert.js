@@ -59,6 +59,31 @@ client.indices.putSettings({
 });
 */
 
+var elasticsearch = require('elasticsearch');
+var fs = require('fs');
+
+
+var documents = JSON.parse(fs.readFileSync('data/reviews.json', 'utf8'));
+
+
+var client = new elasticsearch.Client({
+    host: 'localhost:9200',
+    log: 'trace'
+});
+
+
+client.ping({
+    requestTimeout: 30000,
+}, function(error) {
+    if (error) {
+        console.error('elasticsearch cluster is down!');
+    } else {
+        console.log('All is well');
+    }
+});
+
+
+
 var id = 0;
 documents.reviews.map(function(doc) {
     console.log("title", doc.title);
@@ -68,10 +93,11 @@ documents.reviews.map(function(doc) {
             index: 'myindex',
             type: 'mytype',
             id: id++,
+            analyzer: 'my_synonyms',
             body: {
                 // put the partial document under the `doc` key
-                title: doc.title, 
-                question: qa.question, 
+                title: doc.title,
+                question: qa.question,
                 answer: qa.answer
             }
         }, function(error, response) {

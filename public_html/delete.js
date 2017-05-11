@@ -4,11 +4,11 @@
  */
 
 
+
 var elasticsearch = require('elasticsearch');
 var fs = require('fs');
 
 
-var documents = JSON.parse(fs.readFileSync('data/reviews.json', 'utf8'));
 
 
 var client = new elasticsearch.Client({
@@ -28,3 +28,40 @@ client.ping({
 });
 
 client.indices.delete({index: 'myindex'});
+
+
+
+
+var settings = {
+    analysis: {
+      filter: {
+        my_synonym_filter: {
+          type: "synonym",
+          synonyms: [
+            "Maria,Madonna,Vergine",
+            "quadro,opera,dipinto",
+            "angelo,arcangelo,gabriele"
+          ]
+        }
+      },
+      analyzer: {
+        my_synonyms: {
+          tokenizer: "standard",
+          filter: [
+            "lowercase",
+            "my_synonym_filter"
+          ]
+        }
+      }
+    }
+  };
+
+client.indices.create({
+        index: 'myindex',
+        body:{
+        settings: settings
+}
+
+}, function(error, response){
+console.log(error)
+});
