@@ -27,9 +27,7 @@ client.ping({
   }
 });
 
-client.indices.delete({index: 'myindex'});
-
-
+client.indices.delete({index: 'myindex'}, function(error){});
 
 
 var settings = {
@@ -38,9 +36,42 @@ var settings = {
         my_synonym_filter: {
           type: "synonym",
           synonyms: [
-            "Maria,Madonna,Vergine",
-            "quadro,opera,dipinto",
-            "angelo,arcangelo,gabriele"
+            "maria, madonna, vergine",
+            "quadro, opera, dipinto",
+            "angelo, arcangelo, gabriele"
+          ]
+        },
+        italian_elision: {
+          "type": "elision",
+          "articles": [
+                "c", "l", "all", "dall", "dell",
+                "nell", "sull", "coll", "pell",
+                "gl", "agl", "dagl", "degl", "negl",
+                "sugl", "un", "m", "t", "s", "v", "d"
+          ]
+        },
+        italian_stop: {
+          "type":       "stop",
+          "stopwords":  "_italian_" 
+        },
+        italian_keywords: {
+          "type":       "keyword_marker",
+          "keywords":   ["esempio"] 
+        },
+        italian_stemmer: {
+          "type":       "stemmer",
+          "language":   "light_italian"
+        }
+      },
+      char_filter: { 
+        quotes: {
+          type: "mapping",
+          mappings: [ 
+            "\\u0091=>\\u0027",
+            "\\u0092=>\\u0027",
+            "\\u2018=>\\u0027",
+            "\\u2019=>\\u0027",
+            "\\u201B=>\\u0027"
           ]
         }
       },
@@ -49,19 +80,49 @@ var settings = {
           tokenizer: "standard",
           filter: [
             "lowercase",
-            "my_synonym_filter"
-          ]
+            "my_synonym_filter",
+            "italian_elision",
+            "italian_stop",
+            "italian_keywords",
+            "italian_stemmer"
+          ],
+          char_filter: [ "quotes" ]
         }
       }
     }
+  };
+  
+  var mappings ={
+      mytype: {
+      properties: {
+        question: { 
+          type: "text",
+          analyzer: "my_synonyms"
+          
+        },
+        answer:{
+          type: "text",
+          analyzer: "my_synonyms"
+        },
+        title:{
+          type: "text"
+        }
+      }
+    }
+      
+      
   };
 
 client.indices.create({
         index: 'myindex',
         body:{
-        settings: settings
+        settings: settings,
+        mappings: mappings
 }
 
 }, function(error, response){
 console.log(error)
 });
+
+
+

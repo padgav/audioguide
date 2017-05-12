@@ -28,36 +28,7 @@ client.ping({
 });
 
 
-/*
-var settings = {
-    "analysis": {
-      "filter": {
-        "my_synonym_filter": {
-          "type": "synonym", 
-          "synonyms": [ 
-            "Maria,Madonna,Vergine",
-            "quadro,opera,dipinto",
-            "angelo,arcangelo,gabriele"
-          ]
-        }
-      },
-      "analyzer": {
-        "my_synonyms": {
-          "tokenizer": "standard",
-          "filter": [
-            "lowercase",
-            "my_synonym_filter" 
-          ]
-        }
-      }
-    }
-  };
-  
-client.indices.putSettings({
-  index: 'myindex',
-  body: settings
-});
-*/
+
 
 var elasticsearch = require('elasticsearch');
 var fs = require('fs');
@@ -89,11 +60,10 @@ documents.reviews.map(function(doc) {
     console.log("title", doc.title);
     doc.qa.map(function(qa) {
 
-        client.create({
+        client.index({
             index: 'myindex',
             type: 'mytype',
             id: id++,
-            analyzer: 'my_synonyms',
             body: {
                 // put the partial document under the `doc` key
                 title: doc.title,

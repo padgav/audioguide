@@ -4,31 +4,58 @@
  */
 
 var elasticsearch = require('elasticsearch');
-var fs = require('fs');
 
 
+var text = process.argv[2];
+var card = process.argv[3];
 
 var client = new elasticsearch.Client({
   host: 'localhost:9200',
-  log: 'trace'
 });
 
+client.indices.analyze({
+        index: "myindex",
+        analyzer: "my_synonyms",
+        text: text
 
-client.ping({
-  requestTimeout: 30000,
-}, function (error) {
-  if (error) {
-    console.error('elasticsearch cluster is down!');
-  } else {
-    console.log('All is well');
-  }
-});
+}, function(error, response){console.log(response)});
 
-
-
+var query = "question:" + text + " AND title:" + card;
+console.log(query);
 client.search({
   index: 'myindex',
-  q: 'body:Vegrine~'
+  //analyzer: 'my_synonyms',
+  //q: query
+  body:{
+      query: {
+        bool: {
+            must:[
+                
+                {
+                    match:{
+                        title: card
+                    }
+                }
+            ],
+            should:[
+                {
+                    match:{
+                        question: text
+                    }
+                },
+                {
+                    match:{
+                        answer: text
+                    }
+                }
+                
+            ]
+            
+      }
+    }
+  }
+
 }, function (error, response) {
-        console.log("resp:",response);
+        console.log("error:",error);
+        console.log("resp:",response.hits.hits[0]);
 });

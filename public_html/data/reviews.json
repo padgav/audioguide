@@ -3,16 +3,22 @@
 {   "card_id": "Annunciazione", 
      "title": "Annunciazione",
      "qa":[
-         
+         {
+             "question": "Cosa posso chiedere?",
+              "answer":  "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore"
+         },
          {"question": "Descrizione generale",
            "answer":  "La tavola raffigura la scena dell'annunciazione con l'angelo Gabriele a sinistra e Maria Vergine a destra"   
          },
-         {"question": "Che tipo di materia materiele e tecnica sono utilizzate",
+         {"question": "Che tipo di materia materiale e tecnica sono utilizzate",
            "answer":  "Tempera e olio su tavola"   
          },
          
          {"question": "Cosa fa l'angelo e come è ritratto ",
            "answer":  "L'angelo Gabriele è ritratto semi inginocchiato con la mano sinistra aperta e rivolta verso Maria"   
+         },
+         {"question": "Di che colore è la veste il vestito dell'angelo ",
+           "answer":  "L'angelo Gabriele ha un mantello rosso sopra una veste bianca"   
          },
          
          {"question": "Cosa è vestito l'angelo  gabriele ",
@@ -35,7 +41,7 @@
          },
          
          {"question": "Informazioni sull'autore",
-           "answer":  "Antioco Mainas nato a Cagliari nel 1508 e morto sempre a Cagliari nella seconda metà sedicesimo secolo. E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."   
+           "answer":  "Antioco Mainas nato a Cagliari, nel 1508.  Morto sempre a Cagliari nella seconda metà sedicesimo secolo. E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."   
          },
          
          

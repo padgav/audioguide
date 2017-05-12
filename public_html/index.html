@@ -5,6 +5,12 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            .card {
+                width: 500px;
+                height: 500px;
+            }
+        </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="node_modules/elasticsearch-browser/elasticsearch.jquery.min.js"></script>
         <script src="node_modules/elasticsearch-browser/elasticsearch.min.js"></script>
@@ -23,19 +29,24 @@ recognition.maxAlternatives = 1;
 
 var messages = new Array();
 messages[0] = "Non ho capito, prova a ripetere";
-
+var voices;
 
 
 var synth = window.speechSynthesis;
 
 var client = new $.es.Client({
-  hosts: 'nat01.crs4.it:9200'
+  hosts: 'localhost:9200'
 });
 
 var bg = document.querySelector('html');
 
 var card = "";
 $( document ).ready(function() {
+    
+    
+    voices = synth.getVoices();
+    
+    
   // Handler for .ready() called.
     $(".card").on("click" , function() {
         card = $(this).attr("id");
@@ -43,9 +54,11 @@ $( document ).ready(function() {
   
     });
     $(".card").on("mouseenter" , function() {
+        if(card === $(this).attr("id")) return;
         card = $(this).attr("id");
         
         var utterThis = new SpeechSynthesisUtterance(card);
+        utterThis.voice = voices[2];
         synth.speak(utterThis);
     });
     
@@ -55,21 +68,42 @@ recognition.onresult = function(event) {
   var last = event.results.length - 1;
   var text = event.results[last][0].transcript;
   
-  var query = 'title:' +card +' AND question:' + text ;  
+  var query = "question:" + text + " AND title:" + card
 console.log("query: ", query);
         console.log('Confidence: ' + text);
         client.search({
             index: 'myindex',
-            q: query
+            //analyzer: 'my_synonyms',
+            //q: query
+            body:{
+      query: {
+        bool: {
+            must:[
+                {
+                    match:{
+                        question: text
+                    }
+                },
+                {
+                    match:{
+                        title: card
+                    }
+                }
+            ]     
+      }
+    }
+  }
         }, function(error, response) {
             console.log("resp:", response);
             if (response.hits.total > 0) {
                 $("#answer").html(response.hits.hits[0]._source.answer)
                 var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
+                utterThis.voice = voices[2];
                 synth.speak(utterThis);
             }
             else {
                 var utterThis = new SpeechSynthesisUtterance(messages[0]);
+                utterThis.voice = voices[2];
                 synth.speak(utterThis);
             }
 
@@ -100,5 +134,6 @@ recognition.onerror = function(event) {
          <div class="card" id="Annunciazione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"/></div>
         <div class="card" id="Crocefissione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"/></div>
         <div id="answer">TODO write content</div>
+        <select></select>
     </body>
 </html>
