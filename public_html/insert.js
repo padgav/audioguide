@@ -68,7 +68,8 @@ documents.reviews.map(function(doc) {
                 // put the partial document under the `doc` key
                 title: doc.title,
                 question: qa.question,
-                answer: qa.answer
+                answer: qa.answer,
+                link: qa.link
             }
         }, function(error, response) {
             // ...

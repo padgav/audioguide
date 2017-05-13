@@ -29,16 +29,15 @@ client.search({
   body:{
       query: {
         bool: {
-            must:[
-                
+            
+            should:[
                 {
                     match:{
                         title: card
-                    }
-                }
-            ],
-            should:[
-                {
+                    },
+                    match:{
+                        title: "Antioco Mainas"
+                    },
                     match:{
                         question: text
                     }

@@ -11,6 +11,10 @@ and open the template in the editor.
                 height: 500px;
             }
         </style>
+        <!--link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script-->
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="node_modules/elasticsearch-browser/elasticsearch.jquery.min.js"></script>
         <script src="node_modules/elasticsearch-browser/elasticsearch.min.js"></script>
@@ -53,9 +57,11 @@ $( document ).ready(function() {
     
   // Handler for .ready() called.
     $(".card").on("click" , function() {
-        beep();
         card = $(this).attr("id");
-        recognition.start();
+        $("#answer").html(card);
+        beep();
+        synth.cancel();
+        recognition.start(); 
   
     });
     $(".card").on("mouseenter" , function() {
@@ -89,6 +95,7 @@ console.log("query: ", query);
                         question: text
                     }
                 },
+                
                 {
                     match:{
                         title: card
@@ -105,6 +112,10 @@ console.log("query: ", query);
                 var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
                 utterThis.voice = voices[2];
                 synth.speak(utterThis);
+                if(response.hits.hits[0]._source.link!=undefined){
+                    card=response.hits.hits[0]._source.link;
+                    console.log(response.hits.hits[0]._source.link)
+                }
             }
             else {
                 var utterThis = new SpeechSynthesisUtterance(messages[0]);

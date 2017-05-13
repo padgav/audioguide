@@ -1,4 +1,27 @@
 {"reviews":[
+        
+{
+    "card_id": "Antioco Mainas",
+    "title": "Antioco Mainas",
+    "qa":[
+         {
+             "question": "Dove è nato?",
+              "answer":  "E nato a Cagliari"
+         },
+         {
+             "question": "Quando è nato?",
+              "answer":  "E nato nel 1508"
+         },
+         {
+             "question": "A quale corrente appartiene?",
+              "answer":  "E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."
+         },
+         {"question": "Informazioni ",
+           "answer":  "Antioco Mainas nato a Cagliari, nel 1508.  Morto sempre a Cagliari nella seconda metà sedicesimo secolo. E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."    
+         }
+    ]
+},
+        
 
 {   "card_id": "Annunciazione", 
      "title": "Annunciazione",
@@ -37,18 +60,13 @@
            "answer":  "E' un ambiente chiuso, la cui austerità pare mitigata unicamente dal drappo verde appeso al muro, appena dietro la Madonna."   
          },
          {"question": "Chi è l'autore?",
-           "answer":  "L'autore del dipinto è Antioco Mainas"   
+           "answer":  "L'autore del dipinto è Antioco Mainas",
+           "link": "Antioco Mainas"
          },
          
-         {"question": "Informazioni sull'autore",
-           "answer":  "Antioco Mainas nato a Cagliari, nel 1508.  Morto sempre a Cagliari nella seconda metà sedicesimo secolo. E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."   
-         },
-         
-         
-
-
+      
          {"question": "Di che periodo è?",
-           "answer":  "Metà del secolo XVI"   
+           "answer":  "Metà del secolo sedicesimo"   
          }
      ]
   },
@@ -63,7 +81,7 @@
            "answer":  " sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di S. Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio."   
          },
          {"question": "Chi è l'autore?",
-           "answer":  "Lorenzo Càvaro"   
+           "answer":  "Lorenzo Càavaro"   
          },
          {"question": "Di che periodo è?",
            "answer":  "1507"   
