@@ -29,20 +29,17 @@ client.search({
   body:{
       query: {
         bool: {
-            
-            should:[
-                {
-                    match:{
-                        title: card
-                    },
+            should:{
+                "dis_max": {
+                    "queries": [
+                        {"match": {"question": text}}
+                    ]
                     
-                    match:{
-                        question: text
-                    }
-                }],
+                }
+            },
             must:{
                     match:{
-                        answer: text
+                        title: card
                     }
                 }
             }

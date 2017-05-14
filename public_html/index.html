@@ -89,7 +89,7 @@ console.log("query: ", query);
             body:{
       query: {
         bool: {
-            must:[
+            should:[
                 {
                     match:{
                         question: text
@@ -98,10 +98,15 @@ console.log("query: ", query);
                 
                 {
                     match:{
-                        title: card
+                        answer: text
                     }
                 }
-            ]     
+            ],
+            must:{
+                match:{
+                    title: card
+                }
+            }
       }
     }
   }
