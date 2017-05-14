@@ -35,23 +35,18 @@ client.search({
                     match:{
                         title: card
                     },
-                    match:{
-                        title: "Antioco Mainas"
-                    },
+                    
                     match:{
                         question: text
                     }
-                },
-                {
+                }],
+            must:{
                     match:{
                         answer: text
                     }
                 }
-                
-            ]
-            
-      }
-    }
+            }
+        }
   }
 
 }, function (error, response) {
