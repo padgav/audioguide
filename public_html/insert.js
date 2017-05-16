@@ -62,10 +62,10 @@ documents.reviews.map(function(doc) {
 
         client.index({
             index: 'myindex',
-            type: 'mytype',
-            id: id++,
+            type: "mytype",
+            //id: id++,
             body: {
-                // put the partial document under the `doc` key
+                
                 title: doc.title,
                 question: qa.question,
                 answer: qa.answer,

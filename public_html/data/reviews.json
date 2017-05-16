@@ -1,93 +1,140 @@
-{"reviews":[
-        
 {
-    "card_id": "Antioco Mainas",
-    "title": "Antioco Mainas",
-    "qa":[
-         {
-             "question": "Dove è nato?",
-              "answer":  "E nato a Cagliari"
-         },
-         {
-             "question": "Quando è nato?",
-              "answer":  "E nato nel 1508"
-         },
-         {
-             "question": "A quale corrente appartiene?",
-              "answer":  "E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."
-         },
-         {"question": "Informazioni ",
-           "answer":  "Antioco Mainas nato a Cagliari, nel 1508.  Morto sempre a Cagliari nella seconda metà sedicesimo secolo. E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."    
-         }
-    ]
-},
-        
-
-{   "card_id": "Annunciazione", 
-     "title": "Annunciazione",
-     "qa":[
-         {
-             "question": "Cosa posso chiedere?",
-              "answer":  "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore"
-         },
-         {"question": "Descrizione generale",
-           "answer":  "La tavola raffigura la scena dell'annunciazione con l'angelo Gabriele a sinistra e Maria Vergine a destra"   
-         },
-         {"question": "Che tipo di materia materiale e tecnica sono utilizzate",
-           "answer":  "Tempera e olio su tavola"   
-         },
-         
-         {"question": "Cosa fa l'angelo e come è ritratto ",
-           "answer":  "L'angelo Gabriele è ritratto semi inginocchiato con la mano sinistra aperta e rivolta verso Maria"   
-         },
-         {"question": "Di che colore è la veste il vestito dell'angelo ",
-           "answer":  "L'angelo Gabriele ha un mantello rosso sopra una veste bianca"   
-         },
-         
-         {"question": "Cosa è vestito l'angelo  gabriele ",
-           "answer":  "L'angelo Gabriele ha un mantello rosso sopra una veste bianca"   
-         },
-         
-         
-         {"question": "Da dove proviene, dov'era",
-           "answer":  "Probabilmente questa tavola, insieme alla Crocefissione  e al Transito della Vergine  faceva parte di un retablo proveniente dalla chiesa di San Francesco ad Oristano."   
-         },
-         
-         {"question": "Come è disposta Maria",
-           "answer":  "La Madonna è seduta con le spalle rivolte verso l'angelo, colta nell'atto di voltarsi spaventata verso il richiamo del messaggero divino"   
-         },
-         {"question": "Come è l'ambiente",
-           "answer":  "E' un ambiente chiuso, la cui austerità pare mitigata unicamente dal drappo verde appeso al muro, appena dietro la Madonna."   
-         },
-         {"question": "Chi è l'autore?",
-           "answer":  "L'autore del dipinto è Antioco Mainas",
-           "link": "Antioco Mainas"
-         },
-         
-      
-         {"question": "Di che periodo è?",
-           "answer":  "Metà del secolo sedicesimo"   
-         }
-     ]
-  },
-
-{   "card_id": "Crocefissione", 
-     "title": "Crocefissione",
-     "qa":[
-         {"question": "Descrizione generale",
-          "answer": "Il dipinto fa parte probabilmente di un retablo eseguito per la chiesa di S. Efisio di Giorgino a Cagliari, di patronato della famiglia Ballero.  Dell'opera sono oggi noti solo due elementi: quello appunto raffigurante la Crocifissione, custodito in Pinacoteca e una Madonna in trono col Bambino e angeli, di proprietà privata; nella parte inferiore di questa, in minuscola gotica, un'iscrizione recita: EN L'AIN MDVIII / […] FET DONNA FRANC / ISCA CADONI IAM, tramandandoci il nome della commitente, Donna Francesca Cadoni.  La Crocifissione è costruita in maniera molto elementare: sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di S. Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio.  Le due tavole furono attribuite a Lorenzo Cavaro dall'Aru (1924) e la loro assegnazione rimane, allo stato degli studi, invariata e probabile, vista l'innegabile affinità stilistica con il retablo di Gonnostramatza, opera datata e firmata dal pittore stampacino."
+    "reviews": [
+        {
+            "id": "pinacoteca",
+            "title": "Pinacoteca",
+            "type": "mytype",
+            "qa": [
+                {   "question": "",
+                    "answer" : ""
+                },
+                
+                {   "question": "La piancoteca Nazionale di Cagliari",
+                    "answer" : "La Pinacoteca Nazionale di Cagliari, situata all’interno del complesso museale della Cittadella dei Musei, nasce sulla preesistente struttura del Regio Arsenale. Dopo essere stata ospitata fin dalla fine dell’Ottocento nel Palazzo delle Seziate nella vicina Piazza Indipendenza e, per più di un secolo, chiusa al pubblico, ha trovato la sua definitiva collocazione nell’attuale sede inaugurata nel 1992."
+                },
+                
+                {   "question": "Architettura dell'edificio",
+                    "answer" : "Dal punto di vista architettonico l’edificio rappresenta un interessante connubio tra le antiche mura spagnole, progettate da Rocco Capellino ed ampliate da Giorgio e Jacopo Palearo nel XVI secolo, e l’attuale assetto razionalista moderno che perfettamente si inserisce all’interno dello suggestivo quartiere medievale di Castello."
+                },
+                
+                {   "question": "Paesaggio, vista veduta panorama",
+                    "answer" : "La felice ubicazione della pinacoteca offre al visitatore un’incantevole veduta panoramica della città di Cagliari."
+                },
+                
+                {   "question": "collezione san francesco",
+                    "answer" : "Il primo nucleo della collezione pittorica si formò nel XIX secolo quando, a seguito della soppressione degli enti ecclesiastici nel 1866 e della distruzione nel 1875 della chiesa cagliaritana di San Francesco di Stampace, confluirono nel patrimonio dello Stato numerosi dipinti. "
+                },
+                
+                {   "question": "collezione pezzi",
+                    "answer" : "L'intero patrimonio della Pinacoteca consta di ben 1272 pezzi, tra dipinti, oreficeria, tessuti e ricami, materiale lapideo e stemmi, armi, arredo domestico, cestini e intrecci, ceramiche, arredo liturgico e sculture."
+                },
+                           
+                {
+                    "question": "Storia di Cagliari",
+                    "answer": "Nel 1326 il Castello di Cagliari, fiorente città di formazione e cultura pisana, si consegna definitivamente agli Aragonesi."
+                },
+                {
+                    "question": "Dall'arte italica a quella iberica",
+                    "answer": "A tutti gli effetti il 1326 chiude, non solo per Cagliari ma per gran parte della Sardegna, il ciclo della civiltà artistica medioevale segnata da presenze italiche, I riferimenti culturali si orientano gradualmente, ma sempre più decisamente, in direzione del versante iberico."
+                }
+            ]
         },
-         {"question": "Come è l'ambiente",
-           "answer":  " sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di S. Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio."   
-         },
-         {"question": "Chi è l'autore?",
-           "answer":  "Lorenzo Càavaro"   
-         },
-         {"question": "Di che periodo è?",
-           "answer":  "1507"   
-         }
-     ]
-  }
+        
+        
+        
+        {
+            "id": "Antioco Mainas",
+            "title": "Antioco Mainas",
+            "type": "mytype",
+            "qa": [
+                {
+                    "question": "Dove è nato?",
+                    "answer": "E nato a Cagliari"
+                },
+                {
+                    "question": "Quando è nato?",
+                    "answer": "E nato nel 1508"
+                },
+                {
+                    "question": "A quale corrente appartiene?",
+                    "answer": "E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."
+                },
+                {
+                    "question": "Informazioni ",
+                    "answer": "Antioco Mainas nato a Cagliari, nel 1508.  Morto sempre a Cagliari nella seconda metà sedicesimo secolo. E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."
+                }
+            ]
+        },
+        {
+            "id": "Annunciazione",
+            "title": "Annunciazione",
+            "type": "painting",
+            "qa": [
+                {
+                    "question": "Cosa posso chiedere?",
+                    "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore"
+                },
+                {
+                    "question": "Descrizione generale, personaggi rappresentati",
+                    "answer": "La tavola raffigura la scena dell'annunciazione dove sono rappresentati  l'angelo Gabriele a sinistra e Maria Vergine a destra"
+                },
+                {
+                    "question": "Che tipo di materia materiale e tecnica sono utilizzate",
+                    "answer": "Tempera e olio su tavola"
+                },
+                {
+                    "question": "Cosa fa l'angelo e come è raffigurato ",
+                    "answer": "L'angelo Gabriele è raffigurato semi inginocchiato con la mano sinistra aperta e rivolta verso Maria"
+                },
+                {
+                    "question": "Come è vestito l'angelo  gabriele ",
+                    "answer": "L'angelo Gabriele ha un mantello rosso sopra una veste bianca"        },
+                {
+                    "question": "Da dove proviene, dov'era",
+                    "answer": "Probabilmente questa tavola, insieme alla Crocefissione  e al Transito della Vergine  faceva parte di un retablo proveniente dalla chiesa di San Francesco ad Oristano."
+                },
+                {
+                    "question": "Come è disposta Maria",
+                    "answer": "La Madonna è seduta con le spalle rivolte verso l'angelo, colta nell'atto di voltarsi spaventata verso il richiamo del messaggero divino"
+                },
+                {
+                    "question": "Come è l'ambiente",
+                    "answer": "E' un ambiente chiuso, la cui austerità pare mitigata unicamente dal drappo verde appeso al muro, appena dietro la Madonna."
+                },
+                {
+                    "question": "Chi è l'autore?",
+                    "answer": "L'autore della tavola è il maestro Antioco Mainas",
+                    "link": "Antioco Mainas"
+       },
+                {
+                    "question": "Di che periodo è?",
+                    "answer": "Metà del secolo sedicesimo"
+                }
+            ]
+        },
+        {
+            "id": "Crocefissione",
+            "title": "Crocefissione",
+            "type": "mytype",
+            "qa": [
+                {
+                    "question": "Descrizione generale",
+                    "answer": "Il dipinto fa parte probabilmente di un retablo eseguito per la chiesa di S. Efisio di Giorgino a Cagliari, di patronato della famiglia Ballero.  Dell'opera sono oggi noti solo due elementi: quello appunto raffigurante la Crocifissione, custodito in Pinacoteca e una Madonna in trono col Bambino e angeli, di proprietà privata; nella parte inferiore di questa, in minuscola gotica, un'iscrizione recita: EN L'AIN MDVIII / […] FET DONNA FRANC / ISCA CADONI IAM, tramandandoci il nome della commitente, Donna Francesca Cadoni.  La Crocifissione è costruita in maniera molto elementare: sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di S. Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio.  Le due tavole furono attribuite a Lorenzo Cavaro dall'Aru (1924) e la loro assegnazione rimane, allo stato degli studi, invariata e probabile, vista l'innegabile affinità stilistica con il retablo di Gonnostramatza, opera datata e firmata dal pittore stampacino."
+                },
+                {
+                    "question": "Come è l'ambiente",
+                    "answer": " sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di S. Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio."
+                },
+                {
+                    "question": "Chi è l'autore?",
+                    "answer": "Lorenzo Càavaro"
+                },
+                {
+                    "question": "Di che periodo è?",
+                    "answer": "1507"
+                }
+            ]
+        }
 
-]
+    ]
 }
