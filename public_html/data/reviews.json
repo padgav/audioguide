@@ -9,8 +9,13 @@
                     "answer" : ""
                 },
                 
-                {   "question": "La piancoteca Nazionale di Cagliari",
-                    "answer" : "La Pinacoteca Nazionale di Cagliari, situata all’interno del complesso museale della Cittadella dei Musei, nasce sulla preesistente struttura del Regio Arsenale. Dopo essere stata ospitata fin dalla fine dell’Ottocento nel Palazzo delle Seziate nella vicina Piazza Indipendenza e, per più di un secolo, chiusa al pubblico, ha trovato la sua definitiva collocazione nell’attuale sede inaugurata nel 1992."
+                {   "question": "Quartiere di Stampace",
+                    "answer":"Stampace  è uno dei quattro quartieri storici della città di Cagliari. Il quartiere, situato nel centro storico cittadino, a Ovest del Castello di Cagliari, venne fondato dai Pisani nel tredicesimo secolo e da essi dotato di un modesto sistema di fortificazione (di cui resta la torre dello Sperone)."
+                },
+                
+                
+                {   "question": "La pinacoteca Nazionale di Cagliari",
+                    "answer" : "La Pinacoteca Nazionale di Cagliari, situata all’interno del complesso museale della Cittadella dei Musei, nasce sulla preesistente struttura del Regio Arsenale. Dopo essere stata ospitata fin dalla fine dell’Ottocento nel Palazzo delle Seziate nella vicina Piazza Indipendenza, e, per più di un secolo, chiusa al pubblico, ha trovato la sua definitiva collocazione nell’attuale sede inaugurata nel 1992."
                 },
                 
                 {   "question": "Architettura dell'edificio",
@@ -22,7 +27,7 @@
                 },
                 
                 {   "question": "collezione san francesco",
-                    "answer" : "Il primo nucleo della collezione pittorica si formò nel XIX secolo quando, a seguito della soppressione degli enti ecclesiastici nel 1866 e della distruzione nel 1875 della chiesa cagliaritana di San Francesco di Stampace, confluirono nel patrimonio dello Stato numerosi dipinti. "
+                    "answer" : "Il primo nucleo della collezione pittorica si formò nel diciannovesimo secolo quando, a seguito della soppressione degli enti ecclesiastici nel 1866 e della distruzione nel 1875 della chiesa cagliaritana di San Francesco di Stampace, confluirono nel patrimonio dello Stato numerosi dipinti. "
                 },
                 
                 {   "question": "collezione pezzi",
@@ -90,7 +95,7 @@
                     "question": "Come è vestito l'angelo  gabriele ",
                     "answer": "L'angelo Gabriele ha un mantello rosso sopra una veste bianca"        },
                 {
-                    "question": "Da dove proviene, dov'era",
+                    "question": "Da dove proviene, dov'era, la provenienza",
                     "answer": "Probabilmente questa tavola, insieme alla Crocefissione  e al Transito della Vergine  faceva parte di un retablo proveniente dalla chiesa di San Francesco ad Oristano."
                 },
                 {
@@ -119,7 +124,7 @@
             "qa": [
                 {
                     "question": "Descrizione generale",
-                    "answer": "Il dipinto fa parte probabilmente di un retablo eseguito per la chiesa di S. Efisio di Giorgino a Cagliari, di patronato della famiglia Ballero.  Dell'opera sono oggi noti solo due elementi: quello appunto raffigurante la Crocifissione, custodito in Pinacoteca e una Madonna in trono col Bambino e angeli, di proprietà privata; nella parte inferiore di questa, in minuscola gotica, un'iscrizione recita: EN L'AIN MDVIII / […] FET DONNA FRANC / ISCA CADONI IAM, tramandandoci il nome della commitente, Donna Francesca Cadoni.  La Crocifissione è costruita in maniera molto elementare: sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di S. Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio.  Le due tavole furono attribuite a Lorenzo Cavaro dall'Aru (1924) e la loro assegnazione rimane, allo stato degli studi, invariata e probabile, vista l'innegabile affinità stilistica con il retablo di Gonnostramatza, opera datata e firmata dal pittore stampacino."
+                    "answer": "Il dipinto fa parte probabilmente di un retablo eseguito per la chiesa di Sant'Efisio di Giorgino a Cagliari, di patronato della famiglia Ballèro.  Dell'opera sono oggi noti solo due elementi: quello appunto raffigurante la Crocifissione, custodito in Pinacoteca e una Madonna in trono col Bambino e angeli, di proprietà privata;  La Crocifissione è costruita in maniera molto elementare: sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di San Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio.  Le due tavole furono attribuite a Lorenzo Càvaro dall'Aru (1924) e la loro assegnazione rimane, allo stato degli studi, invariata e probabile, vista l'innegabile affinità stilistica con il retablo di Gonnostramatza, opera datata e firmata dal pittore stampacino."
                 },
                 {
                     "question": "Come è l'ambiente",
