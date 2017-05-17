@@ -96,16 +96,18 @@ var settings = {
       mytype: {
       properties: {
         question: { 
-          type: "text",
+          type: "string",
           analyzer: "my_synonyms"
           
         },
         answer:{
-          type: "text",
+          type: "string",
           analyzer: "my_synonyms"
         },
         title:{
-          type: "text"
+          "type": "string",
+            "index": "not_analyzed"        
+          
         }
       }
     }
