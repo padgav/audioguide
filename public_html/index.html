@@ -9,6 +9,7 @@ and open the template in the editor.
             .card {
                 width: 500px;
                 height: 500px;
+                display: inline;
             }
         </style>
         <!--link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -19,9 +20,32 @@ and open the template in the editor.
         <script src="node_modules/elasticsearch-browser/elasticsearch.jquery.min.js"></script>
         <script src="node_modules/elasticsearch-browser/elasticsearch.min.js"></script>
 
-        <script src="js/audio.js"> </script>
-           
-   
+        <script src="http://js.leapmotion.com/leap-0.6.3.min.js"></script>
+        
+
+        <script src="js/audio.js"></script>
+            
+        <script>
+            var controllerOptions = {};
+            var c = 0;
+            Leap.loop(controllerOptions, function(frame) {
+            console.log("frame hands length", frame.hands.length);
+            
+            if((frame.hands.length>0) && (c == 0)){
+                var utterThis = new SpeechSynthesisUtterance("L'Annunciazione di Antioco Mainas");
+                 utterThis.voice = voices[2];
+                    synth.speak(utterThis);
+                    c=1;
+                console.log("palmposition", frame.hands[0].palmPosition);
+            }
+            
+            if (frame.pointables.length > 0) {
+            console.log("type: ",frame.pointables[1].type);
+            }
+        })
+
+        </script>
+
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
