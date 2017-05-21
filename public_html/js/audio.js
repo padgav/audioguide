@@ -42,6 +42,7 @@ $(document).ready(function() {
 
 
     var synth = window.speechSynthesis;
+    
 
     var client = new $.es.Client({
         hosts: 'localhost:9200'
@@ -53,6 +54,7 @@ $(document).ready(function() {
 
 
     voices = synth.getVoices();
+    
 
 
     // Handler for .ready() called.
@@ -62,7 +64,8 @@ $(document).ready(function() {
         beep();
         synth.cancel();
         recognition.start();
-
+        voices = synth.getVoices();
+    
     });
     $(".card").on("mouseenter", function() {
         if (card === $(this).attr("id"))
