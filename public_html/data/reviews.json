@@ -83,9 +83,19 @@
                    "question": "Descrizione generale",
                    "answer": "Il retablo del presepio è costituito da una tavola centrale, quattro tavole laterali di cui due a sinistra e due a destra, una tavola superiore centrale e 7 piccoli scomparti che compongono la parte inferiore del retablo chiamata predella. Nella tavola centrale è rappresentata la scena dell'adorazione dei pastori."
                },
+               
                {
-                   "question": "Tavola centrale scena del presepio ",
-                   "answer": "Nella parte superiore centrale è raffigurata la capanna con tetto a due spioventi  di cui si vede la parte interna, e sullo sfondo un paesaggio di ispirazione fiamminga. La struttura è costituita da un solo ambiente con ingresso frontale , ed apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, dove sono presenti delle note musicali. In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte, aureola circolare crociata. Nella zona opposta sono posizionati su tre livelli i tre pastori."
+                   "question": "Da dove proviene, la provenienza, dove si trovava",
+                   "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace dove era collocato nella cappella di patronato della famiglia Carnicer. "
+               },
+               {
+                   "question": "Chi è l'autore, chi l'ha dipinto, informazioni sull'autore",
+                   "answer": "A tutt'oggi, rimane ancora anonimo. Per convenzoine viene indicato come il Maestro del presepio."
+               },
+               
+               {
+                   "question": "Tavola centrale scena del presepio adorazione dei pastori",
+                   "answer": "La tavola raffigura la scena della natività. E' rappresentata una capanna con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello di fronte alla mangiatoia.. La struttura è costituita da un solo ambiente con ingresso frontale , . Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  sullo sfondo  un paesaggio di ispirazione fiamminga"
                },
                {
                    "question": "Come è rappresentata la madonna",
@@ -96,7 +106,7 @@
                    "answer": "Alla sinistra della Madonna , San Giuseppe con aureola a cresta  dorata, abito viola con bordi dorati e mantello rosso sempre con bordatura dorata, con sopra un altro ridotto mantello con cappuccio nero. IL Santo ha la barba e i capelli grigi,  lo sguardo rivolto verso il Bambino, con mani giunte verso il basso. Dalla veste si intravede il piede nero sinistro. All’interno delle braccia piegate scorre un bastono lungo che arriva sino a terra. "
                },
                {
-                   "question": "Come sono raffigurati i pastori?",
+                   "question": "Descrivi i pastori?",
                    "answer": "Il primo in basso è inginocchiato in atto di adorazione messo di profilo sinistro; In secondo sempre in ginocchio, visibile la parte superiore e parte della gamba sinistra, più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale"
                },
                {
@@ -113,11 +123,23 @@
                },
                {
                    "question": "sfondo paesaggio",
-                   "answer": " "
+                   "answer": "sullo sfondo un paesaggio di ispirazione fiamminga, con verdi colline e castelli medievali"
                },
                {
-                   "question": " ",
-                   "answer": " "
+                   "question": "Datazione, periodo, quando è stato dipinto",
+                   "answer": "Fine del quindicesimo secolo"
+               },
+               {
+                   "question": "Descrivi gli angeli",
+                   "answer": ". Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, dove sono presenti delle note musicali. Alcuni angeli hanno delle ali dorate con profili rossi, altri hanno le ali con sfumature di bianco, rosso e verde. "
+               },
+               {
+                   "question": "descrivi la parte esterna della capanna",
+                   "answer": "Nella zona esterna alla capanna a sinistra su un muro è posizionata una mensola su cui poggiano una cipolla e utensili da cucina, e una treccia di aglio appesa. "
+               },
+               {
+                   "question": "Descrivi il bambino",
+                   "answer": "il Bambino è rappresentato nudo con le braccia aperte con aureola circolare crociata steso  sopra un lembo del mantello della madonna "
                },
                {
                    "question": " ",

@@ -73,7 +73,7 @@ $(document).ready(function() {
         card = $(this).attr("id");
 
         var utterThis = new SpeechSynthesisUtterance(card);
-        utterThis.voice = voices[2];
+        utterThis.voice = voices[0];
         synth.speak(utterThis);
     });
 
@@ -82,7 +82,7 @@ $(document).ready(function() {
     recognition.onresult = function(event) {
         var last = event.results.length - 1;
         var text = event.results[last][0].transcript;
-        
+        $("#question").html(text)
         var query = "question:" + text + " AND title:" + card
         console.log("query: ", query);
         console.log('Confidence: ' + text);
@@ -121,12 +121,12 @@ $(document).ready(function() {
             if (response.hits.total > 0) {
                 $("#answer").html(response.hits.hits[0]._source.answer)
                 var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
-                utterThis.voice = voices[2];
+                utterThis.voice = voices[0];
                 synth.speak(utterThis);
-                utterThis.onend = function(event) {
+                /*utterThis.onend = function(event) {
                     console.log("utterThis.onend");
                     recognition.start();
-                }
+                }*/
 
                 
                 
@@ -136,12 +136,13 @@ $(document).ready(function() {
                 }
             } else {
                 var utterThis = new SpeechSynthesisUtterance(messages[0]);
-                utterThis.voice = voices[2];
+                utterThis.voice = voices[0];
                 synth.speak(utterThis);
+                /*
                 utterThis.onend = function(event) {
                     console.log("utterThis.onend");
                     recognition.start();
-                }
+                }*/
                 
             }
 

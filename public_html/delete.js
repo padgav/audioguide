@@ -38,7 +38,9 @@ var settings = {
           synonyms: [
             "maria, madonna, vergine",
             "quadro, opera, dipinto",
-            "angelo, arcangelo, gabriele"
+            "angelo, arcangelo, gabriele",
+            "epoca, periodo, anno",
+            "bambino, gesù"
           ]
         },
         italian_elision: {
