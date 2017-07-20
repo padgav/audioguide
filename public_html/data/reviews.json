@@ -84,6 +84,10 @@
                    "answer": " La tavola misura 275 per 261 centimetri circa" 
                },
                {
+                  "question": "Che tecnica e materiali sono utilizzati? - di che cosa è fatta",
+                   "answer": " Tempera su tavola" 
+               },
+               {
                    "question": "Descrizione generale",
                    "answer": "Il retablo del presepio è costituito da una tavola centrale, quattro tavole laterali di cui due a sinistra e due a destra, una tavola superiore centrale e 7 piccoli scomparti che compongono la parte inferiore del retablo chiamata predella. Nella tavola centrale è rappresentata la scena dell'adorazione dei pastori."
                },
@@ -143,7 +147,7 @@
                },
                {
                    "question": "Datazione, periodo, quando è stato dipinto",
-                   "answer": "Fine del quindicesimo secolo"
+                   "answer": "L'opera risale alla fine del quindicesimo secolo"
                },
                {
                    "question": "Descrivi gli angeli",
