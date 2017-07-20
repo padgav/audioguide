@@ -80,6 +80,10 @@
                    "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore" 
                },
                {
+                  "question": "Che dimensioni ha l'opera?",
+                   "answer": " La tavola misura 275 per 261 centimetri circa" 
+               },
+               {
                    "question": "Descrizione generale",
                    "answer": "Il retablo del presepio è costituito da una tavola centrale, quattro tavole laterali di cui due a sinistra e due a destra, una tavola superiore centrale e 7 piccoli scomparti che compongono la parte inferiore del retablo chiamata predella. Nella tavola centrale è rappresentata la scena dell'adorazione dei pastori."
                },
@@ -89,12 +93,12 @@
                    "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace dove era collocato nella cappella di patronato della famiglia Carnicer. "
                },
                {
-                   "question": "Chi è l'autore, chi l'ha dipinto, informazioni sull'autore",
-                   "answer": "A tutt'oggi, rimane ancora anonimo. Per convenzoine viene indicato come il Maestro del presepio."
+                   "question": "Chi è l'autore, chi l'ha dipinto, chi l'ha fatto, informazioni sull'autore",
+                   "answer": "L'autore dell'opera a tutt'oggi, rimane ancora anonimo. Per convenzione viene indicato come il Maestro del presepio."
                },
                
                {
-                   "question": "Tavola centrale scena del presepio adorazione dei pastori",
+                   "question": "Tavola centrale, scena del presepio adorazione dei pastori",
                    "answer": "La tavola raffigura la scena della natività. E' rappresentata una capanna con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello di fronte alla mangiatoia.. La struttura è costituita da un solo ambiente con ingresso frontale , . Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  sullo sfondo  un paesaggio di ispirazione fiamminga"
                },
                {
@@ -102,20 +106,32 @@
                    "answer": "La Madonna con aureola circolare dorata,  indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo. Lo sguardo rivolto verso il Bambino, cappelli ondulati che cadono sulle spalle, le mani giunte rivolte verso il basso. "
                },
                {
+                   "question": "Di che colore è il vestito di Maria",
+                   "answer": "La Madonna indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo."
+               },
+               {
+                   "question": "Come sono i capelli di Maria",
+                   "answer": "maria porta i capelli onndulati che ricadono sulle spalle."
+               },
+               {
+                   "question": "Che espressione ha il volto di Maria",
+                   "answer": "Lo sguardo è rivolto in basso verso il bambino."
+               },
+               {
                    "question": "Come è raffigurato San Giuseppe",
                    "answer": "Alla sinistra della Madonna , San Giuseppe con aureola a cresta  dorata, abito viola con bordi dorati e mantello rosso sempre con bordatura dorata, con sopra un altro ridotto mantello con cappuccio nero. IL Santo ha la barba e i capelli grigi,  lo sguardo rivolto verso il Bambino, con mani giunte verso il basso. Dalla veste si intravede il piede nero sinistro. All’interno delle braccia piegate scorre un bastono lungo che arriva sino a terra. "
                },
                {
                    "question": "Descrivi i pastori?",
-                   "answer": "Il primo in basso è inginocchiato in atto di adorazione messo di profilo sinistro; In secondo sempre in ginocchio, visibile la parte superiore e parte della gamba sinistra, più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale"
+                   "answer": "Sono raffigurati tre pastori: il primo in basso è inginocchiato in atto di adorazione messo di profilo sinistro; In secondo sempre in ginocchio, visibile la parte superiore e parte della gamba sinistra, più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale"
                },
                {
                    "question": "Descrivi il primo pastore",
-                   "answer": "Il primo in basso è inginocchiato in atto di adorazione messo di profilo sinistro, con capelli neri lunghi, barba e baffi neri, con le braccia piegate e mani aperte. Indossa un abito marrone con cintura, dove è stato appeso un lungo coltello provvisto di custodia che scende sul lato dell’abito. Appesa sul braccio sinistro una borraccia tonda con due piccoli manici e un tappo di colore bianco. Alla sinistra del pastore sono poggiati per terra un bastone e un cappello scuro"
+                   "answer": "Il primo pastore in basso è inginocchiato in atto di adorazione messo di profilo sinistro, con capelli neri lunghi, barba e baffi neri, con le braccia piegate e mani aperte. Indossa un abito marrone con cintura, dove è stato appeso un lungo coltello provvisto di custodia che scende sul lato dell’abito. Appesa sul braccio sinistro una borraccia tonda con due piccoli manici e un tappo di colore bianco. Alla sinistra del pastore sono poggiati per terra un bastone e un cappello scuro"
                },
                {
                    "question": "Descrivi il secondo pastore",
-                   "answer": "In secondo piano il pastore è raffigurato in ginocchio, visibile la parte superiore e parte della gamba sinistra, con un copricapo rosso, lunga barba grigia, viso visto di tre quarti,  sguardo rivolto verso il basso. Indossa un mantello verde, ha tra le braccia un agnello e un bastone. Al lato della cintura una piccola borsa intrecciata di paglia , da cui sono visibili un cucchiaio di legno e una borraccia. "
+                   "answer": "In secondo pastore è raffigurato in ginocchio, visibile la parte superiore e parte della gamba sinistra, con un copricapo rosso, lunga barba grigia, viso visto di tre quarti,  sguardo rivolto verso il basso. Indossa un mantello verde, ha tra le braccia un agnello e un bastone. Al lato della cintura una piccola borsa intrecciata di paglia , da cui sono visibili un cucchiaio di legno e una borraccia. "
                },
                {
                    "question": "Descrivi il terzo pastore",
@@ -131,7 +147,7 @@
                },
                {
                    "question": "Descrivi gli angeli",
-                   "answer": ". Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, dove sono presenti delle note musicali. Alcuni angeli hanno delle ali dorate con profili rossi, altri hanno le ali con sfumature di bianco, rosso e verde. "
+                   "answer": "Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, dove sono presenti delle note musicali. Alcuni angeli hanno delle ali dorate con profili rossi, altri hanno le ali con sfumature di bianco, rosso e verde. "
                },
                {
                    "question": "descrivi la parte esterna della capanna",
@@ -142,12 +158,16 @@
                    "answer": "il Bambino è rappresentato nudo con le braccia aperte con aureola circolare crociata steso  sopra un lembo del mantello della madonna "
                },
                {
-                   "question": " ",
-                   "answer": " "
+                   "question": "Perchè l'aureola è circolare cosa significa",
+                   "answer": "Questo lo dovete chiedere a Marcella"
                },
                {
-                   "question": " ",
-                   "answer": " "
+                   "question": "Perchè l'aureola è ottagonale a cresta poligonale cosa significa",
+                   "answer": "Questo lo dovete chiedere a Marcella"
+               },
+               {
+                   "question": "Perchè l'aureola è crociata cosa significa",
+                   "answer": "Questo lo dovete chiedere a Marcella"
                },
                {
                    "question": " ",
