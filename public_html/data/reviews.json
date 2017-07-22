@@ -17,6 +17,10 @@
                 {   "question": "La pinacoteca Nazionale di Cagliari",
                     "answer" : "La Pinacoteca Nazionale di Cagliari, situata all’interno del complesso museale della Cittadella dei Musei, nasce sulla preesistente struttura del Regio Arsenale. Dopo essere stata ospitata fin dalla fine dell’Ottocento nel Palazzo delle Seziate nella vicina Piazza Indipendenza, e, per più di un secolo, chiusa al pubblico, ha trovato la sua definitiva collocazione nell’attuale sede inaugurata nel 1992."
                 },
+                { "question": "Che cosa è un retablo rettangolo",
+                  "answer" : "Retablo è un termine di origine spagnola che indica una grande pala d'altare inquadrata architettonicamente. Il retablo può essere costituito da un dipinto su tavola a scomparti che a seconda delle parti di cui si compone può essere un dittico, un trittico o un polittico, ma può essere anche formato da scomparti in rilievo."
+                    
+                },
                 
                 {   "question": "Architettura dell'edificio",
                     "answer" : "Dal punto di vista architettonico l’edificio rappresenta un interessante connubio tra le antiche mura spagnole, progettate da Rocco Capellino ed ampliate da Giorgio e Jacopo Palearo nel XVI secolo, e l’attuale assetto razionalista moderno che perfettamente si inserisce all’interno dello suggestivo quartiere medievale di Castello."
@@ -76,7 +80,7 @@
            "type": "painting",
            "qa":[
                {
-                  "question": "Cosa posso chiedere?",
+                  "question": "Cosa posso chiedere? aiuto che domande posso fare?",
                    "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore" 
                },
                {
@@ -106,7 +110,7 @@
                    "answer": "La tavola raffigura la scena della natività. E' rappresentata una capanna con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello di fronte alla mangiatoia.. La struttura è costituita da un solo ambiente con ingresso frontale , . Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  sullo sfondo  un paesaggio di ispirazione fiamminga"
                },
                {
-                   "question": "Come è rappresentata la madonna",
+                   "question": "Come è rappresentata la madonna, descrivi maria",
                    "answer": "La Madonna con aureola circolare dorata,  indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo. Lo sguardo rivolto verso il Bambino, cappelli ondulati che cadono sulle spalle, le mani giunte rivolte verso il basso. "
                },
                {
@@ -115,11 +119,15 @@
                },
                {
                    "question": "Come sono i capelli di Maria",
-                   "answer": "maria porta i capelli onndulati che ricadono sulle spalle."
+                   "answer": "Maria porta i capelli onndulati che ricadono sulle spalle."
                },
                {
                    "question": "Che espressione ha il volto di Maria",
                    "answer": "Lo sguardo è rivolto in basso verso il bambino."
+               },
+               {
+                   "question": "Di che colore sono gli occhi  di Maria",
+                   "answer": "Gli occhi sono socchiusi con lo sguardo rivolto verso il basso."
                },
                {
                    "question": "Come è raffigurato San Giuseppe",

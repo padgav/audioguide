@@ -40,7 +40,8 @@ var settings = {
             "quadro, opera, dipinto",
             "angelo, arcangelo, gabriele",
             "epoca, periodo, anno",
-            "bambino, gesù"
+            "bambino, gesù, bambinello",
+            "vestito", "abito", "veste"
           ]
         },
         italian_elision: {

@@ -7,9 +7,18 @@ and open the template in the editor.
     <head>
         <style>
             .card {
-                width: 500px;
-                height: 500px;
+                max-width: 500px;
+                max-height: 500px;
                 display: inline;
+            }
+            #pointer{
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                border: 5px solid red;
+                top: 0px;
+                left: 0px;
+                
             }
         </style>
         <!--link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -20,7 +29,7 @@ and open the template in the editor.
         <script src="node_modules/elasticsearch-browser/elasticsearch.jquery.min.js"></script>
         <script src="node_modules/elasticsearch-browser/elasticsearch.min.js"></script>
 
-        <!--script src="http://js.leapmotion.com/leap-0.6.3.min.js"></script-->
+        <script src="http://js.leapmotion.com/leap-0.6.3.min.js"></script>
         
 
         <script src="js/audio.js"></script>
@@ -28,20 +37,24 @@ and open the template in the editor.
         <!--script>
             var controllerOptions = {};
             var c = 0;
-            Leap.loop(controllerOptions, function(frame) {
+            var controller = Leap.loop(controllerOptions, function(frame) {
             console.log("frame hands length", frame.hands.length);
             
-            if((frame.hands.length>0) && (c == 0)){
-                var utterThis = new SpeechSynthesisUtterance("L'Annunciazione di Antioco Mainas");
+            if((frame.hands.length>0)){
+                if(c==0){
+                var utterThis = new SpeechSynthesisUtterance(messages[1]);
                  utterThis.voice = voices[2];
                     synth.speak(utterThis);
                     c=1;
-                console.log("palmposition", frame.hands[0].palmPosition);
+                }
+                    controller.disconnect();
+                    console.log("palmposition", frame.hands[0].palmPosition);
             }
             
-            if (frame.pointables.length > 0) {
+            
+            /*if (frame.pointables.length > 0) {
             console.log("type: ",frame.pointables[1].type);
-            }
+            }*/
         })
 
         </script-->
@@ -50,12 +63,13 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <div class="card" id="Annunciazione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"/></div>
-        <div class="card" id="Crocefissione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"/></div>
-        <div class="card" id="Adorazione"><img  src="http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"/></div>
+        <!--div class="card" id="Annunciazione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"/></div>
+        <div class="card" id="Crocefissione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"/></div-->
+        <div class="card" id="Adorazione"><img   src="http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"/></div>
         
-        <div id="question">TODO write content</div>
-        <div id="answer">TODO write content</div>
+        <div id="question">Question</div>
+        <div id="answer">Answer</div>
+        <!--div id="pointer"></div-->
         <select></select>
     </body>
 </html>

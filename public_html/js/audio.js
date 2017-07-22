@@ -24,6 +24,10 @@ var bg;
 
 var card;
 
+synth.onvoiceschanged = function() {
+    voices = synth.getVoices();
+
+};
 
 $(document).ready(function() {
     
@@ -34,14 +38,40 @@ $(document).ready(function() {
     recognition.lang = 'it-IT';
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
-
-
-    messages[0] = "Non ho capito. Prova a ripetere.";
-
+        //var synth = window.speechSynthesis;
 
 
 
-    var synth = window.speechSynthesis;
+        messages[0] = "Non ho capito. Prova a ripetere.";
+        messages[1] = "Benvenuto alla Pinacoteca Nazionale di Cagliari. Ti trovi davanti al retàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione dei pastori. La tavola raffigura la scena della natività. E' rappresentata una capanna, con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello, di fronte alla mangiatoia. La struttura è costituita da un solo ambiente, con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  Puoi chiedermi altre informazioni facendomi delle domande";
+        var controllerOptions = {};
+        var c = 0;
+        var controller = Leap.loop(controllerOptions, function(frame) {
+
+        //console.log("frame hands length", frame.hands.length);
+
+            if ((frame.hands.length > 0)){
+                if (c == 0){
+                    var utterThis = new SpeechSynthesisUtterance(messages[1]);
+                    utterThis.voice = voices[2];
+                    synth.speak(utterThis);
+                    c = 1;
+                }
+                controller.disconnect();
+                console.log("palmposition", frame.hands[0].palmPosition);
+                var interactionBox = frame.interactionBox;
+                var normalizedPosition = interactionBox.normalizePoint(frame.hands[0].palmPosition, true);
+                console.log("normalizedPosition", normalizedPosition);
+            }
+
+
+        /*if (frame.pointables.length > 0) {
+         console.log("type: ",frame.pointables[1].type);
+         }*/
+        })
+
+
+
     
 
     var client = new $.es.Client({
@@ -53,7 +83,7 @@ $(document).ready(function() {
     var card = "";
 
 
-    voices = synth.getVoices();
+    
     
 
 
@@ -64,7 +94,9 @@ $(document).ready(function() {
         beep();
         synth.cancel();
         recognition.start();
-        voices = synth.getVoices();
+        //voices = synth.getVoices();
+        c = 0;
+        controller.connect();
     
     });
     $(".card").on("mouseenter", function() {
@@ -73,7 +105,7 @@ $(document).ready(function() {
         card = $(this).attr("id");
 
         var utterThis = new SpeechSynthesisUtterance(card);
-        utterThis.voice = voices[0];
+        utterThis.voice = voices[2];
         synth.speak(utterThis);
     });
 
@@ -121,7 +153,7 @@ $(document).ready(function() {
             if (response.hits.total > 0) {
                 $("#answer").html(response.hits.hits[0]._source.answer)
                 var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
-                utterThis.voice = voices[0];
+                utterThis.voice = voices[2];
                 synth.speak(utterThis);
                 /*utterThis.onend = function(event) {
                     console.log("utterThis.onend");
@@ -136,7 +168,7 @@ $(document).ready(function() {
                 }
             } else {
                 var utterThis = new SpeechSynthesisUtterance(messages[0]);
-                utterThis.voice = voices[0];
+                utterThis.voice = voices[2];
                 synth.speak(utterThis);
                 /*
                 utterThis.onend = function(event) {
