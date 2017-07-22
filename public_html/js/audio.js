@@ -193,7 +193,9 @@ $(document).ready(function() {
         }, function(error, response) {
             console.log("resp:", response);
             if (response.hits.total > 0) {
-                $("#answer").html(response.hits.hits[0]._source.answer)
+                $("#answer").html(response.hits.hits[0]._source.answer);
+                $("#answer").css({ top: '400px' });
+                $("#answer").animate({top: -1000}, 10000);
                 var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
                 utterThis.voice = voices[VOICEIDX];
                
