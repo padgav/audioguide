@@ -6,10 +6,31 @@ and open the template in the editor.
 <html>
     <head>
         <style>
-            .card {
-                max-width: 500px;
-                max-height: 500px;
-                display: inline;
+            body{
+                background: black;
+                height: 100%;
+                margin: 0
+            }
+            .container{
+                display: flex;
+                flex-flow: column;
+                height: 100vh;
+                margin:auto;
+                border: 3px solid green;
+                padding: 10px;
+            }
+            
+            .container div, .card div,  img {
+                width: auto;
+                height: 100%;
+                margin:auto;
+            }
+            
+            .card{
+                border: 3px solid red;
+                max-width:100%;
+                max-height:100%;
+                
             }
             #pointer{
                 position: absolute;
@@ -20,18 +41,18 @@ and open the template in the editor.
                 left: 0px;
                 
             }
+            .painting{
+                opacity: 0;
+            }
             
             #answer{
-                background-image: -webkit-gradient(
-  linear, left top, left bottom, from(rgba(50,50,50,0.8)),
-  to(rgba(80,80,80,0.2)), color-stop(.5,#333333)
-);
-
+                top: 550px;
                 font-size: 80px;
                 color: DarkGray ;
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: bold;
                 position:absolute;
+                
             }
         </style>
         <!--link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -76,13 +97,15 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
+        <div class="container">
         <!--div class="card" id="Annunciazione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"/></div>
         <div class="card" id="Crocefissione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"/></div-->
-        <div class="card" id="Adorazione"><img   src="http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"/></div>
+        <div class="card" id="Adorazione"><img  class="painting" src="http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"/></div>
         
         <input style="display:block" type="text" id="question" placeholder="Domanda">
         <div id="answer">Risposta</div>
         <!--div id="pointer"></div-->
         <select></select>
+        </div> <!--- container -->
     </body>
 </html>

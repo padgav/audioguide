@@ -62,6 +62,7 @@ $(document).ready(function() {
                 lastHandlingTime = Date.now();
                 if (active == 0){
                     music.play();
+                    $(".painting").fadeTo(5000,1);
                     setTimeout(function(){
                         $(music).animate({volume: 0.1}, 1000);
                         var utterThis = new SpeechSynthesisUtterance();
@@ -193,9 +194,11 @@ $(document).ready(function() {
         }, function(error, response) {
             console.log("resp:", response);
             if (response.hits.total > 0) {
-                $("#answer").html(response.hits.hits[0]._source.answer);
-                $("#answer").css({ top: '400px' });
-                $("#answer").animate({top: -1000}, 10000);
+                var answer = response.hits.hits[0]._source.answer;
+                $("#answer").html(answer);
+                $("#answer").stop();
+                $("#answer").css({ top: '500px' });
+                $("#answer").animate({top: -1000}, answer.length*100);
                 var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
                 utterThis.voice = voices[VOICEIDX];
                
