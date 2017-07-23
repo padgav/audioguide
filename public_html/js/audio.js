@@ -195,8 +195,10 @@ $(document).ready(function() {
             console.log("resp:", response);
             if (response.hits.total > 0) {
                 var answer = response.hits.hits[0]._source.answer;
-                $("#answer").html(answer);
+                $("#answer").hide();
                 $("#answer").stop();
+                $("#answer").fadeIn(2000);
+                $("#answer").html(answer);
                 $("#answer").css({ top: '500px' });
                 $("#answer").animate({top: -1000},  3000 * answer.length/30);
                 
