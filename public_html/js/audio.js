@@ -197,10 +197,10 @@ $(document).ready(function() {
                 var answer = response.hits.hits[0]._source.answer;
                 $("#answer").hide();
                 $("#answer").stop();
-                $("#answer").fadeIn(2000);
+                $("#answer").fadeIn({duration:2000, queue:false});
                 $("#answer").html(answer);
                 $("#answer").css({ top: '500px' });
-                $("#answer").animate({top: -1000},  3000 * answer.length/30);
+                $("#answer").animate({top: -1000, queue:false},  3000 * answer.length/30);
                 
                 $.post('log.php', {  
                     answer:answer,  
