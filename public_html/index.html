@@ -9,14 +9,16 @@ and open the template in the editor.
             body{
                 background: black;
                 height: 100%;
-                margin: 0
+                margin: 0;
+                overflow:hidden;
+
             }
             .container{
                 display: flex;
                 flex-flow: column;
                 height: 100vh;
                 margin:auto;
-                border: 3px solid green;
+                border: 3px solid black;
                 padding: 10px;
             }
             
@@ -27,7 +29,7 @@ and open the template in the editor.
             }
             
             .card{
-                border: 3px solid red;
+                border: 3px solid black;
                 max-width:100%;
                 max-height:100%;
                 
@@ -103,7 +105,7 @@ and open the template in the editor.
         <div class="card" id="Adorazione"><img  class="painting" src="http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"/></div>
         
         <input style="display:block" type="text" id="question" placeholder="Domanda">
-        <div id="answer">Risposta</div>
+        <div id="answer"></div>
         <!--div id="pointer"></div-->
         <select></select>
         </div> <!--- container -->

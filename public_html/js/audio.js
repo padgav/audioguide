@@ -198,7 +198,14 @@ $(document).ready(function() {
                 $("#answer").html(answer);
                 $("#answer").stop();
                 $("#answer").css({ top: '500px' });
-                $("#answer").animate({top: -1000}, answer.length*100);
+                $("#answer").animate({top: -1000},  3000 * answer.length/30);
+                
+                $.post('log.php', {  
+                    answer:answer,  
+                    question: text,  
+                    card: card
+                }); 
+            
                 var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
                 utterThis.voice = voices[VOICEIDX];
                
