@@ -20,7 +20,7 @@ var standbyTime = 60*1000;
 
 var messages = new Array();
 var voices;
-var VOICEIDX = 2;
+var VOICEIDX = 0;
 
 
 var synth = window.speechSynthesis;
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 
         messages[0] = "Non ho capito. Prova a ripetere.";
-        messages[1] = "Benvenuto alla Pinacoteca Nazionale di Cagliari. ";//Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione dei pastori. La tavola raffigura la scena della natività. E' rappresentata una capanna, con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello, di fronte alla mangiatoia. La struttura è costituita da un solo ambiente, con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  Puoi chiedermi altre informazioni facendomi delle domande";
+        messages[1] = "Benvenuto alla Pinacoteca Nazionale di Cagliari. Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione dei pastori. La tavola raffigura la scena della natività. E' rappresentata una capanna, con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello, di fronte alla mangiatoia. La struttura è costituita da un solo ambiente, con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  Puoi chiedermi altre informazioni facendomi delle domande";
         var controllerOptions = {enableGestures:true};
         var active = 0;
         
@@ -85,7 +85,7 @@ $(document).ready(function() {
                     active = 1;
                 }
                 //controller.disconnect();
-                //console.log("palmposition", frame.hands[0].palmPosition);
+                console.log("palmposition", frame.hands[0].palmPosition);
                 var interactionBox = frame.interactionBox;
                 var normalizedPosition = interactionBox.normalizePoint(frame.hands[0].palmPosition, true);
                 //console.log("normalizedPosition", normalizedPosition);
