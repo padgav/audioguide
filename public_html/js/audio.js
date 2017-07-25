@@ -199,7 +199,8 @@ $(document).ready(function() {
                 $("#answer").stop();
                 $("#answer").fadeIn({duration:2000, queue:false});
                 $("#answer").html(answer);
-                $("#answer").css({ top: '500px' });
+                //console.log($(document).height())
+                $("#answer").css({ top: $(document).height()/2});
                 $("#answer").animate({top: -1000, queue:false},  3000 * answer.length/30);
                 
                 $.post('log.php', {  
