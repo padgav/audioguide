@@ -1,4 +1,4 @@
-/* 
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -55,21 +55,21 @@ var settings = {
         },
         italian_stop: {
           "type":       "stop",
-          "stopwords":  "_italian_" 
+          "stopwords":  "_italian_"
         },
         italian_keywords: {
           "type":       "keyword_marker",
-          "keywords":   ["esempio"] 
+          "keywords":   ["esempio"]
         },
         italian_stemmer: {
           "type":       "stemmer",
           "language":   "light_italian"
         }
       },
-      char_filter: { 
+      char_filter: {
         quotes: {
           type: "mapping",
-          mappings: [ 
+          mappings: [
             "\\u0091=>\\u0027",
             "\\u0092=>\\u0027",
             "\\u2018=>\\u0027",
@@ -94,28 +94,28 @@ var settings = {
       }
     }
   };
-  
+
   var mappings ={
       mytype: {
       properties: {
-        question: { 
-          type: "string",
+        question: {
+          type: "text",
           analyzer: "my_synonyms"
-          
+
         },
         answer:{
-          type: "string",
+          type: "text",
           analyzer: "my_synonyms"
         },
         title:{
-          "type": "string",
-            "index": "not_analyzed"        
-          
+          type: "keyword"
+            //"index": "not_analyzed"
+
         }
       }
     }
-      
-      
+
+
   };
 
 client.indices.create({
@@ -128,6 +128,3 @@ client.indices.create({
 }, function(error, response){
 console.log(error)
 });
-
-
-
