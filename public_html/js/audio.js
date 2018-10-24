@@ -1,4 +1,4 @@
-/* 
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -36,7 +36,7 @@ synth.onvoiceschanged = function() {
 };
 
 $(document).ready(function() {
-    
+
     recognition = new SpeechRecognition();
     speechRecognitionList = new SpeechGrammarList();
     recognition.grammars = speechRecognitionList;
@@ -46,19 +46,41 @@ $(document).ready(function() {
     recognition.maxAlternatives = 1;
         //var synth = window.speechSynthesis;
 
+        //evento tastiera e assegnazione a ctrlK
+        document.addEventListener('keydown', Tasto);
+        var ctrlK=0;
 
+        function Tasto(e) {
+          var x = e.keyCode;
+          switch (x) {
+            case 91:
+              ctrlK=1;
+              console.log("MetaKey pressed: ", ctrlK);
+
+              break;
+
+            default:
+              console.log("pressione tastiera: ", window.event.keyCode);
+            break;
+          }
+          console.log("LOGGING X: ", x);
+        }
+        //end
 
         messages[0] = "Non ho capito. Prova a ripetere.";
         messages[1] = "Benvenuto alla Pinacoteca Nazionale di Cagliari. Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione dei pastori. La tavola raffigura la scena della natività. E' rappresentata una capanna, con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello, di fronte alla mangiatoia. La struttura è costituita da un solo ambiente, con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  Puoi chiedermi altre informazioni facendomi delle domande";
         var controllerOptions = {enableGestures:true};
         var active = 0;
-        
+
         var controller = Leap.loop(controllerOptions, function(frame) {
-            
+
             //console.log("frame hands length", frame.hands.length);
             var now = Date.now();
             if((now - lastQuestionTime  > standbyTime ) && (now - lastHandlingTime  > standbyTime)) active = 0;
-            if ((frame.hands.length > 0)){
+
+            console.log("** ctrlK **", ctrlK); //if ((frame.hands.length > 0){}
+
+            if ((frame.hands.length > 0)||(ctrlK==1)){
                 lastHandlingTime = Date.now();
                 if (active == 0){
                     music.play();
@@ -68,27 +90,31 @@ $(document).ready(function() {
                         var utterThis = new SpeechSynthesisUtterance();
                         utterThis.text = messages[1];
                         utterThis.voice = voices[VOICEIDX];
-                        
+
                         utterThis.onend = function (event) {
                             console.log("end");
                             $(music).animate({volume: 1}, 1000);
                             //recognition.start();
                         }
                         synth.speak(utterThis);
-                        
+
                     }, 5000);
-                    
-                    
-                   
-                    
+
+
+
+
 
                     active = 1;
                 }
                 //controller.disconnect();
+                if(frame.hands.length<0)
+                {
                 console.log("palmposition", frame.hands[0].palmPosition);
                 var interactionBox = frame.interactionBox;
                 var normalizedPosition = interactionBox.normalizePoint(frame.hands[0].palmPosition, true);
+                }
                 //console.log("normalizedPosition", normalizedPosition);
+
             }
 
 
@@ -102,7 +128,7 @@ $(document).ready(function() {
         }
 
 
-    
+
 
     var client = new $.es.Client({
         hosts: 'localhost:9200'
@@ -113,8 +139,8 @@ $(document).ready(function() {
     var card = "";
 
 
-    
-    
+
+
 
 
     // Handler for .ready() called.
@@ -128,7 +154,7 @@ $(document).ready(function() {
         //voices = synth.getVoices();
         lastQuestionTime =  Date.now();
         controller.connect();
-    
+
     });
     $(".card").on("mouseenter", function() {
         if (card === $(this).attr("id"))
@@ -139,7 +165,7 @@ $(document).ready(function() {
         utterThis.voice = voices[VOICEIDX];
         synth.speak(utterThis);
     });
-    
+
     $("#question").keypress(function(e) {
     if(e.which == 13) {
         synth.cancel();
@@ -202,26 +228,26 @@ $(document).ready(function() {
                 //console.log($(document).height())
                 $("#answer").css({ top: $(document).height()/2});
                 $("#answer").animate({top: -1000, queue:false},  3000 * answer.length/30);
-                
-                $.post('log.php', {  
-                    answer:answer,  
-                    question: text,  
+
+                $.post('log.php', {
+                    answer:answer,
+                    question: text,
                     card: card
-                }); 
-            
+                });
+
                 var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
                 utterThis.voice = voices[VOICEIDX];
-               
-                
+
+
                 utterThis.onend = function (event) {
                             $(music).animate({volume: 1}, 1000);
                             //recognition.start();
                 }
-               
+
                 synth.speak(utterThis);
 
-                
-                
+
+
                 if (response.hits.hits[0]._source.link != undefined) {
                    // card = response.hits.hits[0]._source.link;
                     console.log(response.hits.hits[0]._source.link)
@@ -233,13 +259,13 @@ $(document).ready(function() {
                             $(music).animate({volume: 1}, 1000);
                         }
                 synth.speak(utterThis);
-            
+
                 /*
                 utterThis.onend = function(event) {
                     console.log("utterThis.onend");
                     recognition.start();
                 }*/
-                
+
             }
 
         });
