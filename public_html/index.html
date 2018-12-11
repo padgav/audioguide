@@ -4,110 +4,126 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            body{
-                background: black;
-                height: 100%;
-                margin: 0;
-                overflow:hidden;
+<head>
+  <style>
+    body{
+      background: black;
+      height: 100%;
+      margin: 0;
+      overflow:hidden;
 
-            }
-            .container{
-                display: flex;
-                flex-flow: column;
-                height: 100vh;
-                margin:auto;
-                border: 3px solid black;
-                padding: 10px;
-            }
-            
-            .container div, .card div,  img {
-                width: auto;
-                height: 100%;
-                margin:auto;
-            }
-            
-            .card{
-                border: 3px solid black;
-                max-width:100%;
-                max-height:100%;
-                
-            }
-            #pointer{
-                position: absolute;
-                height: 20px;
-                width: 20px;
-                border: 5px solid red;
-                top: 0px;
-                left: 0px;
-                
-            }
-            .painting{
-                opacity: 0;
-            }
-            
-            #answer{
-                top: 550px;
-                font-size: 80px;
-                color: DarkGray ;
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: bold;
-                position:absolute;
-                
-            }
-        </style>
-        <!--link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script-->
+    }
+    .container{
+      display: flex;
+      flex-flow: column;
+      height: 98vh;
+      margin:auto;
+      border: 3px solid black;
+      padding: 10px;
+    }
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="node_modules/elasticsearch-browser/elasticsearch.jquery.min.js"></script>
-        <script src="node_modules/elasticsearch-browser/elasticsearch.min.js"></script>
+    .container div, .card div,  img {
+      width: auto;
+      height: 100%;
+      margin:auto;
+    }
 
-        <script src="http://js.leapmotion.com/leap-0.6.3.min.js"></script>
-        
 
-        <script src="js/audio.js"></script>
-            
-        <!--script>
-            var controllerOptions = {};
-            var c = 0;
-            var controller = Leap.loop(controllerOptions, function(frame) {
-            console.log("frame hands length", frame.hands.length);
-            
-            if((frame.hands.length>0)){
-                if(c==0){
-                var utterThis = new SpeechSynthesisUtterance(messages[1]);
-                 utterThis.voice = voices[2];
-                    synth.speak(utterThis);
-                    c=1;
-                }
-                    controller.disconnect();
-                    console.log("palmposition", frame.hands[0].palmPosition);
-            }
-            
-            
-            /*if (frame.pointables.length > 0) {
-            console.log("type: ",frame.pointables[1].type);
-            }*/
-        })
 
-        </script-->
 
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <div class="container">
-        <!--div class="card" id="Annunciazione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"/></div>
-        <div class="card" id="Crocefissione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"/></div-->
-        <div class="card" id="Adorazione"><img  class="painting" src="http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"/></div>
-        
-        <input style="display:block" type="text" id="question" placeholder="Domanda">
-        <div id="answer"></div>
-        <!--div id="pointer"></div-->
-        <select></select>
-        </div> <!--- container -->
-    </body>
+    .card{
+      border: 3px solid black;
+      max-width:100%;
+      max-height:100%;
+
+    }
+    #pointer{
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      border: 5px solid red;
+      top: 0px;
+      left: 0px;
+
+    }
+    .painting{
+      opacity: 0;
+    }
+
+
+    #answer{
+      top: 550px;
+      font-size: 80px;
+      color: DarkGray ;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      position:absolute;
+
+    }
+
+    #question{
+      font-size: 23px;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+  </style>
+  <!--link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="node_modules/elasticsearch-browser/elasticsearch.jquery.min.js"></script>
+  <script src="node_modules/elasticsearch-browser/elasticsearch.min.js"></script>
+
+  <script src="http://js.leapmotion.com/leap-0.6.3.min.js"></script>
+
+
+  <script src="js/audio.js"></script>
+
+  <!--script>
+  var controllerOptions = {};
+  var c = 0;
+  var controller = Leap.loop(controllerOptions, function(frame) {
+  console.log("frame hands length", frame.hands.length);
+
+  if((frame.hands.length>0)){
+  if(c==0){
+  var utterThis = new SpeechSynthesisUtterance(messages[1]);
+  utterThis.voice = voices[2];
+  synth.speak(utterThis);
+  c=1;
+}
+controller.disconnect();
+console.log("palmposition", frame.hands[0].palmPosition);
+}
+
+
+/*if (frame.pointables.length > 0) {
+console.log("type: ",frame.pointables[1].type);
+}*/
+})
+
+</script-->
+
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+  <div class="container">
+    <!--div class="card" id="Annunciazione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"/></div>
+    <div class="card" id="Crocefissione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"/></div-->
+
+
+
+    <div class="card" id="Adorazione" style="max-height:93%"><img  class="painting" src="http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"/></div>
+      <!--<input style="display:block;position:fixed;top:50%;left:75%" type="text" id="question" placeholder="Domanda"> -->  <!--width:240px;position:fixed;top:200px;left:75%-->
+
+    <div id="answer">
+    </div>
+    <input style="display:block;" type="text" id="question" placeholder="Domanda" > <!-- INPUT posto sotto come in origine-->
+
+    <!--div id="pointer"></div-->
+    <!--<select></select>-->
+  </div> <!--- container -->
+</body>
 </html>

@@ -23,6 +23,33 @@ var voices;
 var VOICEIDX = 0;
 
 
+messages['undef'] = "Non ho capito. Prova a ripetere.";
+messages['welcome'] = "Benvenuto alla Pinacoteca Nazionale di Cagliari. Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione dei pastori. La tavola raffigura la scena della natività. E' rappresentata una capanna, con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello, di fronte alla mangiatoia. La struttura è costituita da un solo ambiente, con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  Puoi chiedermi altre informazioni facendomi delle domande";
+messages['pastore1'] = 'Stai esaminando il primo pastorello';//{'Stai esaminando il primo pastorello', 'Stai esaminando il primo pastore'};
+messages['pastore2'] = "Stai esaminando il secondo pastorello";
+//messages['pastore'] = {1:" il pastorello", 2:"Stai esaminando il pastore", 3:"Stai esaminando il custode degli ovini"};
+/*
+var timeout = new Date().getTime() + 15*60*1000; //add 15 minutes;
+Then in your check, you're checking:
+
+if(new Date().getTime() > timeout) {
+  alert("Session has expired");
+}
+*/
+///
+var myMsg = {
+    welcome: {  1: messages['welcome'], 2:'', 3:'' },
+    undef: { 1: 'Non ho capito. Prova a ripetere.', 2:'Puoi cortesemente ripetere la domanda?', 3:'Non ho capito la domanda. Sto ancora ascoltando, ripeti pure.' },
+    touching:{ 1: 'Stai esaminando ', 2:'Stai analizzando ', 3:'Stai esplorando' },
+    re:{1: 'Ancora una volta ', 2:'Di nuovo ', 3:'Ci siamo tornati. ' },
+    //shephard1: { 1: 'Il primo pastore ', 2:'Il primo pastorello ', 3:'Il primo dei pastori ', check: 0 },
+    shephard2: { 1: 'Il secondo pastore ', 2:'Il pastore in secondo piano', 3:'Il secondo dei pastori ', check: 0 },
+    giuseppe: { 1: 'San giuseppe ', 2:'La sagoma di San giuseppe ', 3:'la figura di san giuseppe ', check: 0 },
+    madonna: { 1: 'la madonna ', 2:'la figura di maria ', 3:'la sagoma della madonna ', check: 0 }
+
+}
+///
+
 var synth = window.speechSynthesis;
 
 var bg;
@@ -34,6 +61,18 @@ synth.onvoiceschanged = function() {
     voices = synth.getVoices();
 
 };
+
+
+//get random integer from 1 up to 3
+function getRandomArbitrary(min, max) {
+  var x=Math.random() * (max - min) + min;
+
+  if (x <=1) x = 1;
+    else if (x <=2) x = 2;
+      else x = 3;
+
+  return x;
+}
 
 $(document).ready(function() {
 
@@ -47,15 +86,106 @@ $(document).ready(function() {
         //var synth = window.speechSynthesis;
 
         //evento tastiera e assegnazione a ctrlK
-        document.addEventListener('keydown', Tasto);
         var ctrlK=0;
+        var active = 0;
+        document.addEventListener('keydown', Tasto);
 
+/*
+        function moreInfo(text)
+        {
+          getResult(text);
+        }
+*/
+        var lastX = -1;
         function Tasto(e) {
+
           var x = e.keyCode;
+          if(x == lastX) return;
+          lastX = x;
+
+          var utterThis = new SpeechSynthesisUtterance();
           switch (x) {
-            case 91:
+            case 32
+            :
               ctrlK=1;
+              StartNow();
+              //getResult('adorazione');
+
               console.log("MetaKey pressed: ", ctrlK);
+
+              break;
+
+
+              case 39
+              :
+              synth.cancel();
+              //var utterThis = new SpeechSynthesisUtterance();
+              //utterThis.stop;
+              //synth.speak(utterThi);
+
+
+              //utterThis.text = messages['pastore1'];
+              if(myMsg['giuseppe']['check'] == 0)
+                {
+                  utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
+                  myMsg['giuseppe']['check'] = 1;//Date.now();
+                }
+              else
+                utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
+
+              utterThis.voice = voices[VOICEIDX];
+              synth.speak(utterThis);
+              getResult('san giuseppe');
+              //utterThis.text="vuoi ulteriori informazioni?";
+              //utterThis.voice = voices[VOICEIDX];
+              //synth.speak(utterThis);
+
+              ///
+              //var utterThis = new SpeechSynthesisUtterance("pastore");
+              //utterThis.voice = voices[VOICEIDX];
+              //synth.speak(utterThis);
+              //console.log("card: ",card);
+              ///
+              break;
+              case 37
+              :
+              synth.cancel();
+              //var utterThis = new SpeechSynthesisUtterance();
+              //utterThis.stop;
+              //synth.speak(utterThi);
+
+              if(myMsg['shephard2']['check'] == 0)
+                {
+                  utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
+                  myMsg['shephard2']['check'] = 1; //Date.now();
+                }
+              else
+                utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
+
+              utterThis.voice = voices[VOICEIDX];
+              synth.speak(utterThis);
+              getResult('secondo pastore');
+
+              break;
+
+              case 38
+              :
+              synth.cancel();
+              //var utterThis = new SpeechSynthesisUtterance();
+              //utterThis.stop;
+              //synth.speak(utterThi);
+
+              if(myMsg['madonna']['check'] == 0)
+                {
+                  utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+                  myMsg['madonna']['check'] = 1; //Date.now();
+                }
+              else
+                utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+
+              utterThis.voice = voices[VOICEIDX];
+              synth.speak(utterThis);
+              getResult('descrivi maria');
 
               break;
 
@@ -67,18 +197,100 @@ $(document).ready(function() {
         }
         //end
 
-        messages[0] = "Non ho capito. Prova a ripetere.";
-        messages[1] = "Benvenuto alla Pinacoteca Nazionale di Cagliari. Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione dei pastori. La tavola raffigura la scena della natività. E' rappresentata una capanna, con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello, di fronte alla mangiatoia. La struttura è costituita da un solo ambiente, con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  Puoi chiedermi altre informazioni facendomi delle domande";
-        var controllerOptions = {enableGestures:true};
-        var active = 0;
+/*
+        //evento mouse e assegnazione a mosueK
+        document.addEventListener('onclick', Bottone);
+        var mosueK=0;
 
+        function Bottone(e) {
+          var m = e.button;
+          switch (m) {
+            case 0:
+              mosueK=1;
+              console.log("MoueButton pressed: ", mosueK);
+
+              break;
+
+            default:
+              console.log("pressione tastiera: ", window.event.keyCode);
+            break;
+          }
+          console.log("LOGGING X: ", m);
+        }
+        //end
+*/
+
+
+
+////        var controllerOptions = {enableGestures:true};
+        //var active = 0;
+
+        //START
+        function StartNow(){
+          var now = Date.now();
+          if((now - lastQuestionTime  > standbyTime ) && (now - lastHandlingTime  > standbyTime)) active = 0;
+          console.log("** ctrlK **", ctrlK);//if ((frame.hands.length > 0){}
+
+          if (ctrlK==1){
+              lastHandlingTime = Date.now();
+              if (active == 0){
+                  music.play();
+
+/*
+synth.cancel();
+$(music).animate({volume: 0.1}, 1000);
+lastQuestionTime =  Date.now();
+getResult($("#question").val());
+*/
+                  $(".painting").fadeTo(5000,1);
+                  setTimeout(function(){
+                      //synth.cancel();
+                      $(music).animate({volume: 0.1}, 1000);
+                      var utterThis = new SpeechSynthesisUtterance();
+                      utterThis.text = messages['welcome'];
+                      utterThis.voice = voices[VOICEIDX];
+
+                      utterThis.onend = function (event) {
+                          console.log("end");
+                          $(music).animate({volume: 1}, 1000);
+                          //recognition.start();
+                      }
+                      synth.speak(utterThis);
+
+                  }, 5000);
+
+
+
+
+
+                  active = 1;
+              }
+              //controller.disconnect();
+
+              /*
+              if(frame.hands.length<0)
+              {
+              console.log("palmposition", frame.hands[0].palmPosition);
+              var interactionBox = frame.interactionBox;
+              var normalizedPosition = interactionBox.normalizePoint(frame.hands[0].palmPosition, true);
+              }
+              */
+
+              //console.log("normalizedPosition", normalizedPosition);
+          }
+
+        }
+        //stop
+/*
         var controller = Leap.loop(controllerOptions, function(frame) {
 
             //console.log("frame hands length", frame.hands.length);
             var now = Date.now();
             if((now - lastQuestionTime  > standbyTime ) && (now - lastHandlingTime  > standbyTime)) active = 0;
 
-            console.log("** ctrlK **", ctrlK); //if ((frame.hands.length > 0){}
+            //if ((frame.hands.length <= 0)&&active == 0){music.play();console.log("palmposition <= 0")}
+            //window.event.keyCode;
+            console.log("** ctrlK **", ctrlK);//if ((frame.hands.length > 0){}
 
             if ((frame.hands.length > 0)||(ctrlK==1)){
                 lastHandlingTime = Date.now();
@@ -107,6 +319,7 @@ $(document).ready(function() {
                     active = 1;
                 }
                 //controller.disconnect();
+
                 if(frame.hands.length<0)
                 {
                 console.log("palmposition", frame.hands[0].palmPosition);
@@ -114,19 +327,19 @@ $(document).ready(function() {
                 var normalizedPosition = interactionBox.normalizePoint(frame.hands[0].palmPosition, true);
                 }
                 //console.log("normalizedPosition", normalizedPosition);
-
             }
 
 
-        /*if (frame.pointables.length > 0) {
-         console.log("type: ",frame.pointables[1].type);
-         }*/
         })
+        //FINE function frame
+*/
+
+/*
         controller.on('gesture', onGesture);
         function onGesture(gesture,frame){
             console.log(gesture.type + " with ID " + gesture.id + " in frame " + frame.id);
         }
-
+*/
 
 
 
@@ -144,22 +357,25 @@ $(document).ready(function() {
 
 
     // Handler for .ready() called.
+
     $(".card").on("click", function() {
         card = $(this).attr("id");
         $("#answer").html(card);
         beep();
         synth.cancel();
         $(music).animate({volume: 0.1}, 1000);
+        if(active == 1)
         recognition.start();
         //voices = synth.getVoices();
         lastQuestionTime =  Date.now();
-        controller.connect();
+        //StartNow();//controller.connect();
 
     });
     $(".card").on("mouseenter", function() {
         if (card === $(this).attr("id"))
             return;
         card = $(this).attr("id");
+
 
         var utterThis = new SpeechSynthesisUtterance(card);
         utterThis.voice = voices[VOICEIDX];
@@ -172,7 +388,10 @@ $(document).ready(function() {
         $(music).animate({volume: 0.1}, 1000);
         lastQuestionTime =  Date.now();
         getResult($("#question").val());
+        console.log("e.which =13!!!!!!!");
     }
+
+
 });
 
 
@@ -253,7 +472,7 @@ $(document).ready(function() {
                     console.log(response.hits.hits[0]._source.link)
                 }
             } else {
-                var utterThis = new SpeechSynthesisUtterance(messages[0]);
+                var utterThis = new SpeechSynthesisUtterance(messages['undef']);
                 utterThis.voice = voices[VOICEIDX];
                 utterThis.onend = function (event) {
                             $(music).animate({volume: 1}, 1000);
@@ -285,6 +504,36 @@ $(document).ready(function() {
 
     recognition.onerror = function(event) {
         console.log('Error occurred in recognition: ' + event.error);
+        /*
+        utterThis.text = "Non ho riconosciuto nessuna domanda. Se vuoi riformulare fai un click.";
+        utterThis.voice = voices[VOICEIDX];
+        synth.speak(utterThis);
+        */
     }
 
 });
+
+/*
+
+case 38
+:
+synth.cancel();
+//var utterThis = new SpeechSynthesisUtterance();
+//utterThis.stop;
+//synth.speak(utterThi);
+
+if(myMsg['madonna']['check'] == 0)
+  {
+    utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+    myMsg['madonna']['check'] = 1; //Date.now();
+  }
+else
+  utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+
+utterThis.voice = voices[VOICEIDX];
+synth.speak(utterThis);
+getResult('madonna');
+
+break;
+
+*/
