@@ -1,4 +1,4 @@
-/* 
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -65,10 +65,12 @@ documents.reviews.map(function(doc) {
             type: "mytype",
             //id: id++,
             body: {
-                
+
                 title: doc.title,
                 question: qa.question,
                 answer: qa.answer,
+                name: qa.name,
+                suggests: qa.suggests,
                 link: qa.link
             }
         }, function(error, response) {

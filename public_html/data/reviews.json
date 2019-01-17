@@ -8,36 +8,36 @@
                 {   "question": "",
                     "answer" : ""
                 },
-                
+
                 {   "question": "Quartiere di Stampace",
                     "answer":"Stampace  è uno dei quattro quartieri storici della città di Cagliari. Il quartiere, situato nel centro storico cittadino, a Ovest del Castello di Cagliari, venne fondato dai Pisani nel tredicesimo secolo e da essi dotato di un modesto sistema di fortificazione (di cui resta la torre dello Sperone)."
                 },
-                
-                
+
+
                 {   "question": "La pinacoteca Nazionale di Cagliari",
                     "answer" : "La Pinacoteca Nazionale di Cagliari, situata all’interno del complesso museale della Cittadella dei Musei, nasce sulla preesistente struttura del Regio Arsenale. Dopo essere stata ospitata fin dalla fine dell’Ottocento nel Palazzo delle Seziate nella vicina Piazza Indipendenza, e, per più di un secolo, chiusa al pubblico, ha trovato la sua definitiva collocazione nell’attuale sede inaugurata nel 1992."
                 },
-                { "question": "Che cosa è un retablo rettangolo",
+                { "question": "Che significa retablo rettangolo",
                   "answer" : "Retablo è un termine di origine spagnola che indica una grande pala d'altare inquadrata architettonicamente. Il retablo può essere costituito da un dipinto su tavola a scomparti che a seconda delle parti di cui si compone può essere un dittico, un trittico o un polittico, ma può essere anche formato da scomparti in rilievo."
-                    
+
                 },
-                
+
                 {   "question": "Architettura dell'edificio",
                     "answer" : "Dal punto di vista architettonico l’edificio rappresenta un interessante connubio tra le antiche mura spagnole, progettate da Rocco Capellino ed ampliate da Giorgio e Jacopo Palearo nel XVI secolo, e l’attuale assetto razionalista moderno che perfettamente si inserisce all’interno dello suggestivo quartiere medievale di Castello."
                 },
-                
+
                 {   "question": "Paesaggio, vista veduta panorama",
                     "answer" : "La felice ubicazione della pinacoteca offre al visitatore un’incantevole veduta panoramica della città di Cagliari."
                 },
-                
+
                 {   "question": "collezione san francesco",
                     "answer" : "Il primo nucleo della collezione pittorica si formò nel diciannovesimo secolo quando, a seguito della soppressione degli enti ecclesiastici nel 1866 e della distruzione nel 1875 della chiesa cagliaritana di San Francesco di Stampace, confluirono nel patrimonio dello Stato numerosi dipinti. "
                 },
-                
+
                 {   "question": "collezione pezzi",
                     "answer" : "L'intero patrimonio della Pinacoteca consta di ben 1272 pezzi, tra dipinti, oreficeria, tessuti e ricami, materiale lapideo e stemmi, armi, arredo domestico, cestini e intrecci, ceramiche, arredo liturgico e sculture."
                 },
-                           
+
                 {
                     "question": "Storia di Cagliari",
                     "answer": "Nel 1326 il Castello di Cagliari, fiorente città di formazione e cultura pisana, si consegna definitivamente agli Aragonesi."
@@ -48,9 +48,9 @@
                 }
             ]
         },
-        
-        
-        
+
+
+
         {
             "id": "Antioco Mainas",
             "title": "Antioco Mainas",
@@ -79,197 +79,219 @@
            "title": "Adorazione",
            "type": "painting",
            "qa":[
-               {
-                  "question": "Cosa posso chiedere? aiuto che domande posso fare?",
-                   "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore" 
-               },
-               {
-                  "question": "Che dimensioni ha l'opera?",
-                   "answer": " La tavola misura 275 per 261 centimetri circa" 
-               },
-               {
-                  "question": "Che tecnica e materiali sono utilizzati? - di che cosa è fatta",
-                   "answer": " Tempera su tavola" 
-               },
-               {
-                   "question": "Descrizione generale",
-                   "answer": "Il retablo del presepio è costituito da una tavola centrale, quattro tavole laterali di cui due a sinistra e due a destra, una tavola superiore centrale e 7 piccoli scomparti che compongono la parte inferiore del retablo chiamata predella. Nella tavola centrale è rappresentata la scena dell'adorazione dei pastori."
-               },
-               
-               {
-                   "question": "Da dove proviene, la provenienza, dove si trovava",
-                   "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace dove era collocato nella cappella di patronato della famiglia Carnicer. "
-               },
-               {
-                   "question": "Chi è l'autore, chi l'ha dipinto, chi l'ha fatto, informazioni sull'autore",
-                   "answer": "L'autore dell'opera a tutt'oggi, rimane ancora anonimo. Per convenzione viene indicato come il Maestro del presepio."
-               },
-               
-               {
-                   "question": "Tavola centrale, scena del presepio adorazione dei pastori",
-                   "answer": "La tavola raffigura la scena della natività. E' rappresentata una capanna con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello di fronte alla mangiatoia.. La struttura è costituita da un solo ambiente con ingresso frontale , . Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  sullo sfondo  un paesaggio di ispirazione fiamminga"
-               },
-               {
-                   "question": "Come è rappresentata la madonna, descrivi maria",
-                   "answer": "La Madonna con aureola circolare dorata,  indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo. Lo sguardo rivolto verso il Bambino, cappelli ondulati che cadono sulle spalle, le mani giunte rivolte verso il basso. "
-               },
-               {
-                   "question": "Di che colore è il vestito di Maria",
-                   "answer": "La Madonna indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo."
-               },
-               {
-                   "question": "Come sono i capelli di Maria",
-                   "answer": "Maria porta i capelli ondulati che ricadono sulle spalle."
-               },
-               {
-                   "question": "Che espressione ha il volto di Maria",
-                   "answer": "Lo sguardo è rivolto in basso verso il bambino."
-               },
-               {
-                   "question": "Di che colore sono gli occhi di Maria",
-                   "answer": "Gli occhi sono socchiusi con lo sguardo rivolto verso il basso."
-               },
-               {
-                   "question": "Come è raffigurato San Giuseppe",
-                   "answer": "Alla sinistra della Madonna , San Giuseppe con aureola a cresta  dorata, abito viola con bordi dorati e mantello rosso sempre con bordatura dorata, con sopra un altro ridotto mantello con cappuccio nero. IL Santo ha la barba e i capelli grigi,  lo sguardo rivolto verso il Bambino, con mani giunte verso il basso. Dalla veste si intravede il piede nero sinistro. All’interno delle braccia piegate scorre un bastono lungo che arriva sino a terra. "
-               },
-               {
-                   "question": "Descrivi i pastori?",
-                   "answer": "Sono raffigurati tre pastori: il primo in basso è inginocchiato in atto di adorazione messo di profilo sinistro; In secondo sempre in ginocchio, visibile la parte superiore e parte della gamba sinistra, più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale"
-               },
-               {
-                   "question": "Descrivi il primo pastore",
-                   "answer": "Il primo pastore in basso è inginocchiato in atto di adorazione messo di profilo sinistro, con capelli neri lunghi, barba e baffi neri, con le braccia piegate e mani aperte. Indossa un abito marrone con cintura, dove è stato appeso un lungo coltello provvisto di custodia che scende sul lato dell’abito. Appesa sul braccio sinistro una borraccia tonda con due piccoli manici e un tappo di colore bianco. Alla sinistra del pastore sono poggiati per terra un bastone e un cappello scuro"
-               },
-               {
-                   "question": "Descrivi il secondo pastore",
-                   "answer": "In secondo pastore è raffigurato in ginocchio, visibile la parte superiore e parte della gamba sinistra, con un copricapo rosso, lunga barba grigia, viso visto di tre quarti,  sguardo rivolto verso il basso. Indossa un mantello verde, ha tra le braccia un agnello e un bastone. Al lato della cintura una piccola borsa intrecciata di paglia , da cui sono visibili un cucchiaio di legno e una borraccia. "
-               },
-               {
-                   "question": "Descrivi il terzo pastore",
-                   "answer": "Più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale fatto da due trombe separate da un tessuto rosso. I capelli sono lunghi e chiari, e la testa è cinta i da un nastro di stoffa bianco, indossa una veste corta marron con cintura bianca da cui pende una piccola borsa e un piccolo mantello rosa. "
-               },
-               {
-                   "question": "sfondo paesaggio",
-                   "answer": "sullo sfondo un paesaggio di ispirazione fiamminga, con verdi colline e castelli medievali"
-               },
-               {
-                   "question": "Datazione, periodo, quando è stato dipinto",
-                   "answer": "L'opera risale alla fine del quindicesimo secolo"
-               },
-               {
-                   "question": "Descrivi gli angeli",
-                   "answer": "Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, dove sono presenti delle note musicali. Alcuni angeli hanno delle ali dorate con profili rossi, altri hanno le ali con sfumature di bianco, rosso e verde. "
-               },
-               {
-                   "question": "descrivi la parte esterna della capanna",
-                   "answer": "Nella zona esterna alla capanna a sinistra su un muro è posizionata una mensola su cui poggiano una cipolla e utensili da cucina, e una treccia di aglio appesa. "
-               },
-               {
-                   "question": "Descrivi il bambino",
-                   "answer": "il Bambino è rappresentato nudo con le braccia aperte con aureola circolare crociata steso  sopra un lembo del mantello della madonna "
-               },
-               {
-                   "question": "Perchè l'aureola è circolare cosa significa",
-                   "answer": "Questo lo dovete chiedere a Marcella"
-               },
-               {
-                   "question": "Perchè l'aureola è ottagonale a cresta poligonale cosa significa",
-                   "answer": "Questo lo dovete chiedere a Marcella"
-               },
-               {
-                   "question": "Perchè l'aureola è crociata cosa significa",
-                   "answer": " riferimento all'aureola che circonda il capo di Gesù Bambino, si indicano tre estremità della croce che preconizzano il sacrificio di Gesù Cristo per la nostra redenzione. Inoltre i bracci di tre ricordano la trinità."
-               },
-               {
-                   "question": "Perché San Giuseppe ha l'aureola ottagonale?",
-                   "answer": "L'aureola ottagonale è simbolo della virtù. Poiché il cerchio è simbolo della perfezione, quella ottagonale indica la via di chi è alla ricerca della perfezione. La figura di Giuseppe è intermedia tra l'antico e il nuovo testamento, in particolare Giuseppe è il protagonista insieme a Maria della rivelazione e del cammino della salvezza, in quanto padre putativo di Gesù Cristo, posto a garanzia della salvaguardia del Bambino Divino."
-               },
-               {
-                   "question": "Perché gli angeli hanno le ali colorate in modo differente?",
-                   "answer": "Gli angeli sarebbero organizzati in gerarchie di più ordini. Il periodo medievale è molto legato al simbolismo dei colori e quindi spesso sottolineavano la gerarchia dell'angelo rappresentato mediante il colore o il numero delle ali. Nel caso della tavola del presepio non sono collocabili all'interno delle gerarchie, in quanto provvisti di ali multicolore"
-               },
-               {
-                   "question": "Quali sono le dimensioni della tavola e del retablo tavola?",
-                   "answer": "Le dimensioni della tavola sono cm. 163,7 x 87,5; quelle relative al retablo cm. 275,2 x 261,1"
-               },
-               {
-                   "question": "Dov'era originariamente il retablo?",
-                   "answer": "Il retablo era originariamente collocato nella parete di controfacciata della chiesa di San Francesco di Stampace nella prima cappella a sinistra (famiglia Carnìcerj."
-               },
-               {
-                   "question": "Perché c'è la cipolla?",
-                   "answer": "La cipolla è il prodotto più consumato sin dall'antichità. Gli antichi egizi tenevano grande considerazione rappresentandola nei geroglifici e nelle tombe dei faraoni, con il significato divino di lasciapassare per l'altre tomba. I greci la associavano al dio Ares, somministrandola alle truppe per accrescerne il valore nei combattimenti. Nell'esegesi biblica identificava il dolore prodotto dal peccato (irritante per gli occhi) e la falsità (molti strati del suo involucro)."
-               },
-               
-               {
-                   "question": "Perchè c'e' l'aglio?",
-                   "answer": "L'aglio è interpretato simbolicamente come energia che allontana un'influenza magica o maligna. Presso molti popoli era considerato rimedio contro il malocchio e gli spiriti maligni. In Grecia si attribuiva effetto protettivo pronunciando la parola aglio per allontanare la cattiva sorte."
-               },
-               {
-                   "question": "Perchè ci sono utensili da cucina?",
-                   "answer": " Gli utensili da cucina indicano la familiarità dell'ambiente, dove gli strumenti della vita quotidiana accompagnano in semplicità l'esistenza di Gesù Cristo e la sua famìglia."
-               },
-               {
-                   "question": "Perché il bambino è nudo?",
-                   "answer": "La nudità del bambino rappresenta l'umanizzazione di Gesù e la sua gloria priva di peccato. "
-               },
-               {
-                   "question": "La veste di Maria tra colori e disegni in rilievo ha un significato?",
-                   "answer": "Il rosso della veste di Maria indica la passione di Gesù Cristo, il mantello reso in broccato, da l'indicazione di regalità della Madonna che appare simbolicamente vestita con un ricco abbigliamento di stretto significato teologico."
-               },
-               {
-                   "question": "Perché la Madonna ha i capelli ondulati e slegati fino alle spalle?",
-                   "answer": "Le giovani della società ebraica ai tempi di Cristo avevano la consuetudine, prima del matrimonio di mantenere i capelli sciolti come indicazione del loro stato anagrafico libero e di verginità. Per quanto riguarda ì capelli ondulati probabilmente sono riferimento alla moda della capigliatura fiamminga tra il '400 e il '500."
-               },
-               {
-                   "question": "Chi è l'autore del retablo?",
-                   "answer": "L'autore è un anonimo maestro di ambito aragonese"
-               },
-               {
-                   "question": "Chi ha commissionato il retablo?",
-                   "answer": "La committenza del retablo è attribuita alla famiglia Carnicer, aragonese composta da notai, avvocati, procuratori e medici. Giovanni Carnicer notaio nel Regno d'Aragona, passò in Sardegna nel 1482 dove acquistò la Segreteria della città di Cagliari, ufficio che fu tramandato in famiglia per circa tre secoli, passando di padre in figlio. Giovanni Carnicer fu presente assieme al figlio Pietro Andrea al parlamento Dusay, come notaio pubblico, e sindaco del Braccio reale, venendo ricompensato nel 1510 per una somma di 20 lire. La famiglia si estinse nella seconda metà del XVIII secolo."
-               },
-               {
-                   "question": "qual è il significato politico di questo retablo?",
-                   "answer": "Il retablo sostiene il programma politico dei re cattolici, Ferdinando d'Aragona e Isabella di Castiglia che attuano un processo di conquista (in senso cristiano) del territorio iberico e ricompongono i paesi di oltre mare che costituiscono la Corona d'Aragona prima e quella di Spagna successivamente, le loro commissioni artistiche riconfermano il cristianesimo come religione di stato e su questa fondano anche una distribuzione dell'immagine canonica presente nelle sedi dell'amministrazione del culto e dei processi amministrativi."
-               },
-               {
-                   "question": "Perché c'è uno sfondo fiammingo?",
-                   "answer": "Lo sfondo fiammingo è caratteristico di tutta la produzione artistica tardo-gotica della penisola iberica. L'influenza giunge in quel territorio grazie alla presenza di Jan Van Eych presso le corti reali spagnole per eseguire i ritratti dei giovani principi. La sua maestria fu tale da essere apprezzata anche dagli ambienti artistici locali."
-               },
-               {
-                   "question": "Che strumento suona il terzo pastore?",
-                   "answer": "Lo strumento che suona il terzo pastore può essere riportato tra una cornamusa e una zampogna"
-               },
-               {
-                   "question": "Perché i pastori non sono sullo stesso piano?",
-                   "answer": "Per una tecnica pittorica rappresentativa che utilizza un solo punto centrale nella realizzazione prospettica della scena, dando scarsissima attenzione alle profondità dei piani."
-               },
-               {
-                   "question": "La presenza del cane ha qualche significato?",
-                   "answer": "La presenza del cane simboleggia la fedeltà. Nella tavola ha una relazione con i pastori per il controllo del loro gregge"
-               },
-               {
-                   "question": "A quale scuola pittorica è riconducibile?",
-                   "answer": "Ambito aragonese"
-               },
-               {
-                   "question": "E' arrivato integro o è stato restaurato?",
-                   "answer": " E' arrivato privo dei polvaroli, ma in buono stato. Ha subito pochissimi interventi di restauro che potrebbero essere intesi come interventi di manutenzione e consolidamento."
-               },
-               {
-                   "question": " ",
-                   "answer": " "
-               },
-               {
-                   "question": " ",
-                   "answer": " "
-               }
-               
-               
+             {
+                "name": "first",
+                "question": "Cosa posso chiedere? aiuto che domande posso fare?",
+                 "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore",
+                 "suggests":  [
+                                {
+                                  "suggest": "Chiedimi uno",
+                                  "linkedeName": "nome1"
+                                }
+                                {
+                                  "suggest": "Chiedimi due",
+                                  "linkedeName": "nome2"
+                                }
+                              ]
+             },
+             {
+               "name": "second",
+                "question": "Che dimensioni ha l'opera?",
+                 "answer": " La tavola misura 275 per 261 centimetri circa. Puoi anche chiedermi informazioni su che tecnica e materiali sono utilizzati.",
+                 "suggests":  [
+
+                                   "Chiedimi uno",
+                                   "Chiedimi due"
+
+                              ]
+             },
+             {
+                "question": "Che tecnica e materiali sono utilizzati? - di che cosa è fatta",
+                 "answer": "Tempera su tavola. A riguardo puoi chiedere la descrizione generale."
+             },
+             {
+                 "question": "Descrizione generale. Descrizione del retablo. Descrivi il retablo. Parlami del retablo.",
+                 "answer": "Il retablo del presepio è costituito da una tavola centrale, quattro tavole laterali di cui due a sinistra e due a destra, una tavola superiore centrale e 7 piccoli scomparti che compongono la parte inferiore del retablo chiamata predella. Nella tavola centrale è rappresentata la scena dell'adorazione dei pastori. Puoi chiedermi informazioni sulla tavola centrale o sulle figure rappresentate."
+             },
+             {
+                 "question": "Figure rappresentate, personaggi raffigurati",
+                 "answer": "Le figure principali sono la madonna, il bambino, San giuseppe, i pastori e gli angeli rappresentati nella scena dell'adorazione dei pastori. Potresti chiedermi informazioni su uno di questi personaggi o la descrizione della scena dell'adorazione."
+             },
+             {
+                 "question": "Da dove proviene, la provenienza, dove si trovava",
+                 "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace dove era collocato nella cappella di patronato della famiglia Carnicer. Puoi fare domande sull'autore del dipinto. "
+             },
+             {
+                 "question": "Chi è l'autore, chi l'ha dipinto, chi l'ha realizzato, informazioni sull'autore",
+                 "answer": "L'autore dell'opera a tutt'oggi, rimane ancora anonimo. Per convenzione viene indicato come il Maestro del presepio. Potresti chiedermi informazioni sulla scena centrale rappresentante l'adorazione dei pastori"
+             },
+
+             {
+                 "question": "Tavola centrale, scena del presepio adorazione dei pastori. Scena dell'adorazione. Cosa rappresenta la tavola centrale? Cosa raffigura la tavola centrale?",
+                 "answer": "La tavola raffigura la scena della natività. E' rappresentata una capanna con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello di fronte alla mangiatoia.. La struttura è costituita da un solo ambiente con ingresso frontale , . Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  sullo sfondo  un paesaggio di ispirazione fiamminga. Puoi farmi altre domande su uno di questi personaggi, sul vestito o i capelli di maria, o sul paesaggio"
+             },
+
+             {
+                 "question": "Come è rappresentata la madonna, descrivi maria. Descrivi la madonna. Parla di Maria. Parlami della madonna.",
+                 "answer": "La Madonna con aureola circolare dorata,  indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo. Lo sguardo rivolto verso il Bambino, cappelli ondulati che cadono sulle spalle, le mani giunte rivolte verso il basso. Puoi chiedermi il significato di colori e disegni della veste di Maria, dei suoi capelli ondulati, o ancora puoi chiedermi  di San Giuseppe, o del paesaggio."
+             },
+             {
+                 "question": "Di che colore è il vestito di Maria",
+                 "answer": "La Madonna indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo."
+             },
+             {
+                 "question": "Come sono i capelli di Maria",
+                 "answer": "Maria porta i capelli ondulati che ricadono sulle spalle. Puoi chiedermi li significato dei suoi capelli ondulati."
+             },
+             {
+                 "question": "Che espressione ha il volto di Maria",
+                 "answer": "Lo sguardo è rivolto in basso verso il bambino."
+             },
+             {
+                 "question": "Di che colore sono gli occhi di Maria",
+                 "answer": "Gli occhi sono socchiusi con lo sguardo rivolto verso il basso."
+             },
+             {
+                 "question": "Come è raffigurato San Giuseppe, parlami di giuseppe",
+                 "answer": "Alla sinistra della Madonna , San Giuseppe con aureola a cresta  dorata, abito viola con bordi dorati e mantello rosso sempre con bordatura dorata, con sopra un altro ridotto mantello con cappuccio nero. IL Santo ha la barba e i capelli grigi,  lo sguardo rivolto verso il Bambino, con mani giunte verso il basso. Dalla veste si intravede il piede nero sinistro. All’interno delle braccia piegate scorre un bastono lungo che arriva sino a terra. Puoi chiedermi perché san Giuseppe ha l'aureola ottagonale o come sono raffigurati i pastori."
+             },
+             {
+                 "question": "Descrivi i pastori? Come sono raffigurati i pastori? Parlami, parla dei pastori.",
+                 "answer": "Sono raffigurati tre pastori: il primo in basso è inginocchiato in atto di adorazione messo di profilo sinistro; In secondo sempre in ginocchio, visibile la parte superiore e parte della gamba sinistra, più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale. Puoi chiedermi che descriva il primo, secondo o terzo pastore"
+             },
+             {
+                 "question": "Descrivi il primo pastore, Descrivimi parlami del primo pastore",
+                 "answer": "Il primo pastore in basso è inginocchiato in atto di adorazione messo di profilo sinistro, con capelli neri lunghi, barba e baffi neri, con le braccia piegate e mani aperte. Indossa un abito marrone con cintura, dove è stato appeso un lungo coltello provvisto di custodia che scende sul lato dell’abito. Appesa sul braccio sinistro una borraccia tonda con due piccoli manici e un tappo di colore bianco. Alla sinistra del pastore sono poggiati per terra un bastone e un cappello scuro. Puoi chiedermi di descriverti il secondo o il terzo pastore"
+             },
+             {
+                 "question": "Descrivi il secondo pastore, , Descrivimi parlami del secondo pastore",
+                 "answer": "In secondo pastore è raffigurato in ginocchio, visibile la parte superiore e parte della gamba sinistra, con un copricapo rosso, lunga barba grigia, viso visto di tre quarti,  sguardo rivolto verso il basso. Indossa un mantello verde, ha tra le braccia un agnello e un bastone. Al lato della cintura una piccola borsa intrecciata di paglia , da cui sono visibili un cucchiaio di legno e una borraccia. Puoi chiedermi di descriverti il primo o il terzo pastore"
+             },
+             {
+                 "question": "Descrivi il terzo pastore, Descrivimi il terzo pastore, parlami del terzo pastore",
+                 "answer": "Più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale fatto da due trombe separate da un tessuto rosso. I capelli sono lunghi e chiari, e la testa è cinta i da un nastro di stoffa bianco, indossa una veste corta marron con cintura bianca da cui pende una piccola borsa e un piccolo mantello rosa. Puoi chiedermi di descriverti il primo o il secondo pastore"
+             },
+             {
+                 "question": "sfondo paesaggio",
+                 "answer": "sullo sfondo un paesaggio di ispirazione fiamminga, con verdi colline e castelli medievali. Puoi chiedermi di descriverti la parte esterna della capanna o informazioni sullo sfondo fiammingo."
+             },
+             {
+                 "question": "Datazione, periodo, quando è stato dipinto.",
+                 "answer": "L'opera risale alla fine del quindicesimo secolo"
+             },
+             {
+                 "question": "Descrivi gli angeli. Parlami degli angeli.",
+                 "answer": "Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, dove sono presenti delle note musicali. Alcuni angeli hanno delle ali dorate con profili rossi, altri hanno le ali con sfumature di bianco, rosso e verde. Puoi chiedere perché gli angeli hanno le ali diversamente colorate."
+             },
+             {
+                 "question": "descrivi la parte esterna della capanna. Parlami della capanna.",
+                 "answer": "Nella zona esterna alla capanna a sinistra su un muro è posizionata una mensola su cui poggiano una cipolla e utensili da cucina, e una treccia di aglio appesa. Puoi chiedere informazioni sul significato dell'aglio e della cipolla. Puoi chiedermi perché ci sono gli utensili da cucina."
+             },
+             {
+                 "question": "Descrivi il bambino. Parlami del bambino.",
+                 "answer": "il Bambino è rappresentato nudo con le braccia aperte con aureola circolare crociata steso  sopra un lembo del mantello della madonna. Puoi chiedermi perché l'aureola è circolare o crociata.  Puoi chiedermi perché il bambino è nudo."
+             },
+             {
+                 "question": "Perchè l'aureola è circolare cosa significa. Parlami, spiegami, l'aureola circolare ",
+                 "answer": "Questo lo dovete chiedere a Marcella"
+             },
+             {
+                 "question": "Perchè l'aureola è ottagonale a cresta poligonale cosa significa Parlami, spiegami, l'aureola ottagonale",
+                 "answer": "Questo lo dovete chiedere a Marcella"
+             },
+             {
+                 "question": "Perchè l'aureola è crociata e cosa significa. Parlami, spiegami, l'aureola crociata",
+                 "answer": " riferimento all'aureola che circonda il capo di Gesù Bambino, si indicano tre estremità della croce che preconizzano il sacrificio di Gesù Cristo per la nostra redenzione. Inoltre i bracci di tre ricordano la trinità."
+             },
+             {
+                 "question": "Perché San Giuseppe ha l'aureola ottagonale? Parlami, spiegami, l'aureola ottagonale di San Giuseppe",
+                 "answer": "Giuseppe è il protagonista insieme a Maria della rivelazione e del cammino della salvezza, in quanto padre putativo di Gesù Cristo, posto a garanzia della salvaguardia del Bambino Divino. L'aureola ottagonale è simbolo della virtù. Poiché il cerchio è simbolo della perfezione, quella ottagonale indica la via di chi è alla ricerca della perfezione. La figura di Giuseppe è intermedia tra l'antico e il nuovo testamento"
+             },
+             {
+                 "question": "Perché gli angeli hanno le ali colorate in modo differente? Spiegami, raccontami, perché gli angeli hannole ali diversamente colorate. Ali di colore diverso.",
+                 "answer": "Gli angeli sarebbero organizzati in gerarchie di più ordini. Il periodo medievale è molto legato al simbolismo dei colori e quindi spesso sottolineavano la gerarchia dell'angelo rappresentato mediante il colore o il numero delle ali. Nel caso della tavola del presepio non sono collocabili all'interno delle gerarchie, in quanto provvisti di ali multicolore"
+             },
+             {
+                 "question": "Quali sono le dimensioni della tavola e del retablo?",
+                 "answer": "Le dimensioni della tavola sono cm. 163,7 per 87,5; quelle relative al retablo cm. 275,2 per 261,1"
+             },
+             {
+                 "question": "Dov'era originariamente il retablo?. Dove stava il retablo.",
+                 "answer": "Il retablo era originariamente collocato nella parete di controfacciata della chiesa di San Francesco di Stampace nella prima cappella a sinistra (famiglia Carnìcerj)."
+             },
+             {
+                 "question": "Perché c'è la cipolla? Parlami della cipolla",
+                 "answer": "La cipolla è il prodotto più consumato sin dall'antichità. Gli antichi egizi tenevano grande considerazione rappresentandola nei geroglifici e nelle tombe dei faraoni, con il significato divino di lasciapassare per l'oltre tomba. I greci la associavano al dio Ares, somministrandola alle truppe per accrescerne il valore nei combattimenti. Nell'esegesi biblica identificava il dolore prodotto dal peccato (irritante per gli occhi) e la falsità (molti strati del suo involucro)."
+             },
+
+             {
+                 "question": "Perchè c'e' l'aglio?",
+                 "answer": "L'aglio è interpretato simbolicamente come energia che allontana un'influenza magica o maligna. Presso molti popoli era considerato rimedio contro il malocchio e gli spiriti maligni. In Grecia si attribuiva effetto protettivo pronunciando la parola aglio per allontanare la cattiva sorte."
+             },
+             {
+                 "question": "Perchè ci sono utensili da cucina?",
+                 "answer": " Gli utensili da cucina indicano la familiarità dell'ambiente, dove gli strumenti della vita quotidiana accompagnano in semplicità l'esistenza di Gesù Cristo e la sua famìglia."
+             },
+             {
+                 "question": "Perché il bambino è nudo? parlami della nudità del bambino.",
+                 "answer": "La nudità del bambino rappresenta l'umanizzazione di Gesù e la sua gloria priva di peccato. Puoi chiedermi di descrivertigli angeli."
+             },
+             {
+                 "question": "La veste di Maria tra colori e disegni in rilievo ha un significato?",
+                 "answer": "Il rosso della veste di Maria indica la passione di Gesù Cristo, il mantello reso in broccato, da l'indicazione di regalità della Madonna che appare simbolicamente vestita con un ricco abbigliamento di stretto significato teologico."
+             },
+             {
+                 "question": "Perché la Madonna ha i capelli ondulati e slegati fino alle spalle? Capelli ondulati di maria. Qual'è il significato dei capelli ondulati? che significano i capelli ondulati.",
+                 "answer": "Le giovani della società ebraica ai tempi di Cristo avevano la consuetudine, prima del matrimonio di mantenere i capelli sciolti come indicazione del loro stato anagrafico libero e di verginità. Per quanto riguarda ì capelli ondulati probabilmente sono riferimento alla moda della capigliatura fiamminga tra il '400 e il '500."
+             },
+             {
+                 "question": "Chi è l'autore dell'opera? Chi è l'autore del retablo? Chi è l'autore del dipinto",
+                 "answer": "L'autore è un anonimo maestro di ambito aragonese. Puoi chiedere chi ha commissionato il retablo."
+             },
+             {
+                 "question": "Chi ha commissionato il retablo? Chi ha commissionato l'opera? Chi ha commissionato il dipinto?",
+                 "answer": "La committenza del retablo è attribuita alla famiglia Carnicer, aragonese composta da notai, avvocati, procuratori e medici. Giovanni Carnicer notaio nel Regno d'Aragona, passò in Sardegna nel 1482 dove acquistò la Segreteria della città di Cagliari, ufficio che fu tramandato in famiglia per circa tre secoli, passando di padre in figlio. Giovanni Carnicer fu presente assieme al figlio Pietro Andrea al parlamento Dusay, come notaio pubblico, e sindaco del Braccio reale, venendo ricompensato nel 1510 per una somma di 20 lire. La famiglia si estinse nella seconda metà del XVIII secolo."
+             },
+             {
+                 "question": "qual è il significato politico di questo retablo?qual è il significato politico dell'opera? qual è il significato politico del dipinto?",
+                 "answer": "Il retablo sostiene il programma politico dei re cattolici, Ferdinando d'Aragona e Isabella di Castiglia che attuano un processo di conquista (in senso cristiano) del territorio iberico e ricompongono i paesi di oltre mare che costituiscono la Corona d'Aragona prima e quella di Spagna successivamente, le loro commissioni artistiche riconfermano il cristianesimo come religione di stato e su questa fondano anche una distribuzione dell'immagine canonica presente nelle sedi dell'amministrazione del culto e dei processi amministrativi."
+             },
+             {
+                 "question": "Perché c'è uno sfondo fiammingo?",
+                 "answer": "Lo sfondo fiammingo è caratteristico di tutta la produzione artistica tardo-gotica della penisola iberica. L'influenza giunge in quel territorio grazie alla presenza di Jan Van Eych presso le corti reali spagnole per eseguire i ritratti dei giovani principi. La sua maestria fu tale da essere apprezzata anche dagli ambienti artistici locali."
+             },
+             {
+                 "question": "Che strumento suona il terzo pastore?",
+                 "answer": "Lo strumento che suona il terzo pastore può essere riportato tra una cornamusa e una zampogna"
+             },
+             {
+                 "question": "Perché i pastori non sono sullo stesso piano?",
+                 "answer": "Per una tecnica pittorica rappresentativa che utilizza un solo punto centrale nella realizzazione prospettica della scena, dando scarsissima attenzione alle profondità dei piani."
+             },
+             {
+                 "question": "La presenza del cane ha qualche significato?",
+                 "answer": "La presenza del cane simboleggia la fedeltà. Nella tavola ha una relazione con i pastori per il controllo del loro gregge"
+             },
+             {
+                 "question": "A quale scuola pittorica è riconducibile? Parlami dello stile di pittura.",
+                 "answer": "Ambito aragonese"
+             },
+             {
+                 "question": "E' arrivato integro o è stato restaurato? In che quali condizioni è pervenuto il dipinto l0",
+                 "answer": " E' arrivato privo dei polvaroli, ma in buono stato. Ha subito pochissimi interventi di restauro che potrebbero essere intesi come interventi di manutenzione e consolidamento."
+             },
+             {
+                 "question": " ",
+                 "answer": " "
+             },
+             {
+                 "question": " ",
+                 "answer": " "
+             }
+
+
            ]
-            
+
         },
         {
             "id": "Annunciazione",

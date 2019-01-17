@@ -24,7 +24,7 @@ var VOICEIDX = 0;
 
 
 messages['undef'] = "Non ho capito. Prova a ripetere.";
-messages['welcome'] = "Benvenuto alla Pinacoteca Nazionale di Cagliari. Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione dei pastori. La tavola raffigura la scena della natività. E' rappresentata una capanna, con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello, di fronte alla mangiatoia. La struttura è costituita da un solo ambiente, con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori.  Puoi chiedermi altre informazioni facendomi delle domande";
+messages['welcome'] = "Benvenuto! Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione. La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco, In basso da sinistra sono raffigurati la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
 messages['pastore1'] = 'Stai esaminando il primo pastorello';//{'Stai esaminando il primo pastorello', 'Stai esaminando il primo pastore'};
 messages['pastore2'] = "Stai esaminando il secondo pastorello";
 //messages['pastore'] = {1:" il pastorello", 2:"Stai esaminando il pastore", 3:"Stai esaminando il custode degli ovini"};
@@ -225,6 +225,15 @@ $(document).ready(function() {
 ////        var controllerOptions = {enableGestures:true};
         //var active = 0;
 
+
+
+///////////////////////////////////////
+///////////////////////////////////////
+
+///////////////////////////////////////
+///////////////////////////////////////
+
+
         //START
         function StartNow(){
           var now = Date.now();
@@ -350,6 +359,7 @@ getResult($("#question").val());
     var bg = document.querySelector('html');
 
     var card = "";
+    var askedNames =  new Object();
 
 
 
@@ -404,6 +414,7 @@ getResult($("#question").val());
     }
     function getResult(text){
         var query = "question:" + text + " AND title:" + card
+
         console.log("query: ", query);
         console.log('Confidence: ' + text);
         client.search({
@@ -446,7 +457,12 @@ getResult($("#question").val());
                 $("#answer").html(answer);
                 //console.log($(document).height())
                 $("#answer").css({ top: $(document).height()/2});
-                $("#answer").animate({top: -1000, queue:false},  3000 * answer.length/30);
+                var len = answer.length;
+                var perc = (len/100)*10;
+                $("#answer").animate({top: -1000, queue:false},   3000*len/perc);
+
+                console.log("ANSWER LENGTH: ", len);
+                console.log("VALUE X length: ",perc);
 
                 $.post('log.php', {
                     answer:answer,
@@ -454,13 +470,31 @@ getResult($("#question").val());
                     card: card
                 });
 
-                var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
-                utterThis.voice = voices[VOICEIDX];
+                console.log("console all qa:", response.hits.hits[0]);
 
+                var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
+                var suggests = response.hits.hits[0]._source.suggests;
+                //askedNames.push(response.hits.hits[0]._source.name);
+                //askedNames{}
+                var name = response.hits.hits[0]._source.name;
+                if(askedNames[name]==undefined)
+                  askedNames[name] = 1;
+                else
+                  askedNames[name] ++;              
+
+
+                var utterSuggests;
+                utterThis.voice = voices[VOICEIDX];
+                console.log("console NAME:", askedNames);
 
                 utterThis.onend = function (event) {
-                            $(music).animate({volume: 1}, 1000);
+                            //$(music).animate({volume: 1}, 1000);
                             //recognition.start();
+                            utterSuggests = new SpeechSynthesisUtterance(suggests[0] + suggests[1]/*+ suggests[2]*/);
+                            utterSuggests.onend = function (event) {
+                                $(music).animate({volume: 1}, 1000);
+                            }
+                            synth.speak(utterSuggests);
                 }
 
                 synth.speak(utterThis);
