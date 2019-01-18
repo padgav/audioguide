@@ -480,7 +480,7 @@ getResult($("#question").val());
                 if(askedNames[name]==undefined)
                   askedNames[name] = 1;
                 else
-                  askedNames[name] ++;              
+                  askedNames[name] ++;
 
 
                 var utterSuggests;
@@ -490,11 +490,24 @@ getResult($("#question").val());
                 utterThis.onend = function (event) {
                             //$(music).animate({volume: 1}, 1000);
                             //recognition.start();
-                            utterSuggests = new SpeechSynthesisUtterance(suggests[0] + suggests[1]/*+ suggests[2]*/);
-                            utterSuggests.onend = function (event) {
-                                $(music).animate({volume: 1}, 1000);
-                            }
-                            synth.speak(utterSuggests);
+
+
+                            for (i in suggests)
+                            {
+                              //console.log("checking suggest: ", i + '=' + suggests[i]["suggest"]) ;
+
+                              //if(!(askedNames.includes( suggests[i]["linkedName"])))
+                              //{
+                                  utterSuggests = new SpeechSynthesisUtterance(suggests[i]["suggest"] /*+ suggests[2]*/);
+
+
+                                  utterSuggests.onend = function (event) {
+                                      $(music).animate({volume: 1}, 1000);
+                                    }
+
+                                    synth.speak(utterSuggests);
+                                  }
+                                //}
                 }
 
                 synth.speak(utterThis);
