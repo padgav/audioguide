@@ -24,7 +24,7 @@ var VOICEIDX = 0;
 
 
 messages['undef'] = "Non ho capito. Prova a ripetere.";
-messages['welcome'] = "Benvenuto! Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione. La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco, In basso da sinistra sono raffigurati la Madonna e San Giuseppe , ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
+messages['welcome'] = "Benvenuto! Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione. La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco, In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
 messages['pastore1'] = 'Stai esaminando il primo pastorello';//{'Stai esaminando il primo pastorello', 'Stai esaminando il primo pastore'};
 messages['pastore2'] = "Stai esaminando il secondo pastorello";
 //messages['pastore'] = {1:" il pastorello", 2:"Stai esaminando il pastore", 3:"Stai esaminando il custode degli ovini"};
@@ -255,6 +255,22 @@ getResult($("#question").val());
                   setTimeout(function(){
                       //synth.cancel();
                       $(music).animate({volume: 0.1}, 1000);
+
+
+                      //scrittura su schermo(?)
+                      $("#answer").hide();
+                      $("#answer").stop();
+                      $("#answer").fadeIn({duration:2000, queue:false});
+                      $("#answer").html(messages['welcome']);
+                      //console.log($(document).height())
+                      $("#answer").css({ top: $(document).height()/2});
+                      var len = messages['welcome'].length;
+                      var perc = (len/100)*10;
+                      $("#answer").animate({top: -1000, queue:false},   3000*len/perc);
+
+                      console.log("ANSWER LENGTH: ", len);
+                      console.log("VALUE X length: ",perc);
+
                       var utterThis = new SpeechSynthesisUtterance();
                       utterThis.text = messages['welcome'];
                       utterThis.voice = voices[VOICEIDX];
@@ -359,7 +375,7 @@ getResult($("#question").val());
     var bg = document.querySelector('html');
 
     var card = "";
-    var askedNames =  new Object();
+    var askedNames =  new Array();
 
 
 
@@ -450,7 +466,38 @@ getResult($("#question").val());
         }, function(error, response) {
             console.log("resp:", response);
             if (response.hits.total > 0) {
-                var answer = response.hits.hits[0]._source.answer;
+                //var answer = response.hits.hits[0]._source.answer;
+                var suggests = response.hits.hits[0]._source.suggests;
+
+                var toSynthText = response.hits.hits[0]._source.answer;//+" Testo aggiunto.";
+                console.log("toSynthText: ",toSynthText);
+                console.log("suggests: ",suggests[0]["linkedName"]);
+              //  console.log("askedNamesss", askedNames);
+
+
+
+                for (i in suggests)
+                {
+
+                  if(askedNames[ suggests[i]["linkedName"] ]!=undefined)
+                    console.log("**** AskedNames in suggest cile", askedNames[ suggests[i]["linkedName"] ]);
+
+                  if(askedNames[ suggests[i]["linkedName"] ]==undefined)
+                  {
+                    if(c==undefined) var c = true;
+                    if(c==true) {toSynthText+= " Puoi chiedere "; c=false; }
+                    else toSynthText+= " oppure ";
+
+                    toSynthText+= " "+suggests[i]["suggest"];
+                  }
+
+                  console.log("Nel for toSynthText:", toSynthText);
+
+                }
+                var answer = toSynthText;
+
+
+                //scrittura su schermo(?)
                 $("#answer").hide();
                 $("#answer").stop();
                 $("#answer").fadeIn({duration:2000, queue:false});
@@ -472,41 +519,23 @@ getResult($("#question").val());
 
                 console.log("console all qa:", response.hits.hits[0]);
 
-                var utterThis = new SpeechSynthesisUtterance(response.hits.hits[0]._source.answer);
-                var suggests = response.hits.hits[0]._source.suggests;
-                //askedNames.push(response.hits.hits[0]._source.name);
-                //askedNames{}
                 var name = response.hits.hits[0]._source.name;
                 if(askedNames[name]==undefined)
                   askedNames[name] = 1;
                 else
                   askedNames[name] ++;
 
+                  console.log("askedNames", askedNames);
 
-                var utterSuggests;
+                var utterThis = new SpeechSynthesisUtterance(toSynthText);
+                //SpeechSynthesisUtterance.text += " . Aggiunto un testo finale.";
+
                 utterThis.voice = voices[VOICEIDX];
-                console.log("console NAME:", askedNames);
 
                 utterThis.onend = function (event) {
-                            //$(music).animate({volume: 1}, 1000);
+                            $(music).animate({volume: 1}, 1000);
                             //recognition.start();
 
-
-                            for (i in suggests)
-                            {
-                              //console.log("checking suggest: ", i + '=' + suggests[i]["suggest"]) ;
-
-                              //if(!(askedNames.includes( suggests[i]["linkedName"])))
-                              //{
-                                  utterSuggests = new SpeechSynthesisUtterance(suggests[i]["suggest"] /*+ suggests[2]*/);
-
-
-                                  utterSuggests.onend = function (event) {
-                                      $(music).animate({volume: 1}, 1000);
-                                    }
-
-                                    synth.speak(utterSuggests);
-                                  }
                                 //}
                 }
 
