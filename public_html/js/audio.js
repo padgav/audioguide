@@ -24,7 +24,7 @@ var VOICEIDX = 0;
 
 
 messages['undef'] = "Non ho capito. Prova a ripetere.";
-messages['welcome'] = "Benvenuto! Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione. La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco, In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
+messages['welcome'] = "Benvenuto! Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione. La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
 messages['pastore1'] = 'Stai esaminando il primo pastorello';//{'Stai esaminando il primo pastorello', 'Stai esaminando il primo pastore'};
 messages['pastore2'] = "Stai esaminando il secondo pastorello";
 //messages['pastore'] = {1:" il pastorello", 2:"Stai esaminando il pastore", 3:"Stai esaminando il custode degli ovini"};
@@ -260,13 +260,16 @@ getResult($("#question").val());
                       //scrittura su schermo(?)
                       $("#answer").hide();
                       $("#answer").stop();
-                      $("#answer").fadeIn({duration:2000, queue:false});
+                      $("#answer").fadeIn({duration:$(document).height()/2, queue:false});
                       $("#answer").html(messages['welcome']);
                       //console.log($(document).height())
                       $("#answer").css({ top: $(document).height()/2});
+                      //
+
+                      //
                       var len = messages['welcome'].length;
                       var perc = (len/100)*10;
-                      $("#answer").animate({top: -1000, queue:false},   3000*len/perc);
+                      $("#answer").animate({top: - ($(document).height()/2), queue:false},   3000*len/perc);
 
                       console.log("ANSWER LENGTH: ", len);
                       console.log("VALUE X length: ",perc);
@@ -500,13 +503,13 @@ getResult($("#question").val());
                 //scrittura su schermo(?)
                 $("#answer").hide();
                 $("#answer").stop();
-                $("#answer").fadeIn({duration:2000, queue:false});
+                $("#answer").fadeIn({duration:$(document).height()/2, queue:false});
                 $("#answer").html(answer);
                 //console.log($(document).height())
                 $("#answer").css({ top: $(document).height()/2});
                 var len = answer.length;
                 var perc = (len/100)*10;
-                $("#answer").animate({top: -1000, queue:false},   3000*len/perc);
+                $("#answer").animate({top: -($(document).height()*0.45), queue:false},   3000*len/perc);
 
                 console.log("ANSWER LENGTH: ", len);
                 console.log("VALUE X length: ",perc);
