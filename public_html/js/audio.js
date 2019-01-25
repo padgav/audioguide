@@ -260,7 +260,7 @@ getResult($("#question").val());
                       //scrittura su schermo(?)
                       $("#answer").hide();
                       $("#answer").stop();
-                      $("#answer").fadeIn({duration:$(document).height()/2, queue:false});
+                      $("#answer").fadeIn({duration: $(document).height()/2, queue:false});
                       $("#answer").html(messages['welcome']);
                       //console.log($(document).height())
                       $("#answer").css({ top: $(document).height()/2});
@@ -386,6 +386,34 @@ getResult($("#question").val());
 
 
     // Handler for .ready() called.
+
+     $(".card").on('mousedown', function(e) {
+        if( e.which == 2 ) {
+           e.preventDefault();
+           console.log("e.which = MIDDLE BUTTON!");
+           if(music.paused)
+            music.play();
+           else
+          { music.pause(); music.currentTime = 0; }
+             /*
+             if(middleB==undefined) var middleB = true;
+             if(middleB==true)
+             {
+               music.pause();
+               music.currentTime = 0;
+               middleB==false;
+             }
+             else
+             {
+               music.play();
+               middleB==true;
+             }
+             */
+
+         }
+       }
+     );
+
 
     $(".card").on("click", function() {
         card = $(this).attr("id");
