@@ -268,7 +268,7 @@ getResult($("#question").val());
 
                       //
                       var len = messages['welcome'].length;
-                      var perc = (len/100)*10;
+                      var perc = (len* 0.1);
                       $("#answer").animate({top: - ($(document).height()/2), queue:false},   3000*len/perc);
 
                       console.log("ANSWER LENGTH: ", len);
@@ -527,18 +527,21 @@ getResult($("#question").val());
 
                 }
                 var answer = toSynthText;
-
+                var len = answer.length;
+                var perc = (len*0.1);
 
                 //scrittura su schermo(?)
                 $("#answer").hide();
                 $("#answer").stop();
                 $("#answer").fadeIn({duration:$(document).height()/2, queue:false});
+                //$("#answer").fadeIn({duration:2000, queue:false});
                 $("#answer").html(answer);
                 //console.log($(document).height())
                 $("#answer").css({ top: $(document).height()/2});
-                var len = answer.length;
-                var perc = (len/100)*10;
-                $("#answer").animate({top: -($(document).height()*0.45), queue:false},   3000*len/perc);
+
+                $("#answer").animate({top: -($(document).height()*0.6), queue:false},   3000*len/perc);
+                //$("#answer").animate({top: -1000, queue:false},   3000*len/perc);
+
 
                 console.log("ANSWER LENGTH: ", len);
                 console.log("VALUE X length: ",perc);
