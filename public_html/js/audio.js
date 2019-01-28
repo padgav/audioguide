@@ -501,6 +501,7 @@ getResult($("#question").val());
                 var suggests = response.hits.hits[0]._source.suggests;
 
                 var toSynthText = response.hits.hits[0]._source.answer;//+" Testo aggiunto.";
+                var moreAsk = " Puoi chiedermi ";
                 console.log("toSynthText: ",toSynthText);
                 console.log("suggests: ",suggests[0]["linkedName"]);
               //  console.log("askedNamesss", askedNames);
@@ -511,13 +512,13 @@ getResult($("#question").val());
                 {
 
                   if(askedNames[ suggests[i]["linkedName"] ]!=undefined)
-                    console.log("**** AskedNames in suggest cile", askedNames[ suggests[i]["linkedName"] ]);
+                    console.log("**** AskedNames in suggest file", askedNames[ suggests[i]["linkedName"] ]);
 
                   if(askedNames[ suggests[i]["linkedName"] ]==undefined)
                   {
                     if(c==undefined) var c = true;
-                    if(c==true) {toSynthText+= " Puoi chiedere "; c=false; }
-                    else toSynthText+= " oppure ";
+                    if(c==true) {toSynthText+= moreAsk; c=false; }
+                    else toSynthText+= ", ";
 
                     toSynthText+= " "+suggests[i]["suggest"];
                   }

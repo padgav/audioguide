@@ -85,7 +85,7 @@
                  "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore.",
                  "suggests":  [
                                 {
-                                  "suggest": "inoltre informazioni sulla tavola centrale",
+                                  "suggest": "informazioni sulla tavola centrale",
                                   "linkedName": "tav"
                                 }
                               ]
@@ -123,7 +123,11 @@
                "answer": "Il retablo del presepio è costituito da una tavola centrale, quattro tavole laterali di cui due a sinistra e due a destra, una tavola superiore centrale e 7 piccoli scomparti che compongono la parte inferiore del retablo chiamata predella. Nella tavola centrale è rappresentata la scena dell'adorazione dei pastori.",
                "suggests":  [
                               {
-                                "suggest": "informazioni sulla tavola centrale o sulle figure rappresentate",
+                                "suggest": "informazioni sulla tavola centrale",
+                                "linkedName": "tav"
+                              },
+                              {
+                                "suggest": "sulle figure rappresentate",
                                 "linkedName": "pgs"
                               }
                             ]
@@ -185,7 +189,7 @@
                                 "linkedName": "rapmad"
                               },
                               {
-                                "suggest": "sui capelli della vergine",
+                                "suggest": "come porta i capelli Maria",
                                 "linkedName": "capmad"
                               },
                               {
@@ -202,7 +206,7 @@
                "suggests":  [
                               {
                                 "suggest": "di che colore è la veste di Maria",
-                                "linkedName": "vestmad"
+                                "linkedName": "vestmad2"
                               },
                               {
                                 "suggest": "come sono i suoi capelli",
@@ -213,7 +217,7 @@
                                 "linkedName": "rapgiu"
                               },
                               {
-                                "suggest": "dell'espressione del volto di Maria",
+                                "suggest": "informazioni sull'espressione del volto di Maria",
                                 "linkedName": "espmad"
 
                               }
@@ -232,11 +236,11 @@
              },
              {
                "name": "capmad",
-               "question": "Come sono i capelli di Maria",
+               "question": "Come sono i capelli di Maria, come porta i capelli la madonna",
                "answer": "Maria porta i capelli ondulati che ricadono sulle spalle.",
                "suggests":  [
                               {
-                                "suggest": "significato dei suoi capelli ondulati",
+                                "suggest": "il significato dei suoi capelli ondulati",
                                 "linkedName": "capleg"
                               }
                             ]
@@ -247,7 +251,7 @@
                "answer": "Lo sguardo è rivolto in basso verso il bambino.",
                "suggests":  [
                               {
-                                "suggest": " di che Colore sono gli occhi della madonna",
+                                "suggest": "di che Colore sono gli occhi della madonna",
                                 "linkedName": "occmad"
                               }
                             ]
@@ -265,7 +269,7 @@
              },
              {
                "name": "rapgiu",
-               "question": "Come è raffigurato San Giuseppe, parlami di giuseppe",
+               "question": "Come è raffigurato San Giuseppe, come è rappresentato san giuseppe, parlami di giuseppe",
                "answer": "Alla sinistra della Madonna, San Giuseppe con aureola a cresta  dorata, abito viola con bordi dorati e mantello rosso sempre con bordatura dorata, con sopra un altro ridotto mantello con cappuccio nero. IL Santo ha la barba e i capelli grigi, lo sguardo rivolto verso il Bambino, con mani giunte verso il basso. Dalla veste si intravede il piede nero sinistro. All’interno delle braccia piegate scorre un bastono lungo che arriva sino a terra. ",
                "suggests":  [
                               {
@@ -316,7 +320,7 @@
              {
                "name": "secp",
                "question": "Descrivi il secondo pastore, Descrivimi parlami del secondo pastore",
-               "answer": "In secondo pastore è raffigurato in ginocchio, visibile la parte superiore e parte della gamba sinistra, con un copricapo rosso, lunga barba grigia, viso visto di tre quarti, sguardo rivolto verso il basso. Indossa un mantello verde, ha tra le braccia un agnello e un bastone. Al lato della cintura una piccola borsa intrecciata di paglia, da cui sono visibili un cucchiaio di legno e una borraccia.",
+               "answer": "Il secondo pastore è raffigurato in ginocchio, visibile la parte superiore e parte della gamba sinistra, con un copricapo rosso, lunga barba grigia, viso visto di tre quarti, sguardo rivolto verso il basso. Indossa un mantello verde, ha tra le braccia un agnello e un bastone. Al lato della cintura una piccola borsa intrecciata di paglia, da cui sono visibili un cucchiaio di legno e una borraccia.",
                "suggests":  [
                                {
                                  "suggest": "la descrizione del primo pastore",
@@ -330,7 +334,7 @@
              },
              {
                "name": "terp",
-               "question": "Descrivi il terzo pastore, Descrivimi il terzo pastore, parlami del terzo pastore",
+               "question": "Descrivi il terzo pastore, Descrivimi il terzo pastore, parlami del terzo",
                "answer": "Più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale fatto da due trombe separate da un tessuto rosso. I capelli sono lunghi e chiari, e la testa è cinta i da un nastro di stoffa bianco, indossa una veste corta marron con cintura bianca da cui pende una piccola borsa e un piccolo mantello rosa.",
                "suggests":  [
                                {
@@ -354,7 +358,7 @@
                "answer": "sullo sfondo un paesaggio di ispirazione fiamminga, con verdi colline e castelli medievali.",
                "suggests":  [
                               {
-                                "suggest": "di descriverti la parte esterna della capanna",
+                                "suggest": "di descrivere la parte esterna della capanna",
                                 "linkedName": "estcap"
                               },
                               {
@@ -415,34 +419,12 @@
                "answer": "il Bambino è rappresentato nudo con le braccia aperte con aureola circolare crociata steso  sopra un lembo del mantello della madonna.",
                "suggests":  [
                               {
-                                "suggest": "perché l'aureola è circolare o crociata",
+                                "suggest": "perché l'aureola è crociata",
                                 "linkedName": "aurcroc"
                               },
                               {
                                 "suggest": "perché il bambino è nudo",
                                 "linkedName": "nude"
-                              }
-                            ]
-             },
-             {
-               "name": "aurcirc",
-               "question": "Perchè l'aureola è circolare cosa significa. Parlami, spiegami, l'aureola circolare",
-               "answer": " ",
-               "suggests":  [
-                              {
-                                "suggest": "alla guida",
-                                "linkedName": "marcella"
-                              }
-                            ]
-             },
-             {
-               "name": "aurott",
-               "question": "Perchè l'aureola è ottagonale a cresta poligonale cosa significa Parlami, spiegami, l'aureola ottagonale",
-               "answer": " ",
-               "suggests":  [
-                              {
-                                "suggest": "alla guida",
-                                "linkedName": "marcella"
                               }
                             ]
              },
@@ -551,7 +533,7 @@
                "answer": "La nudità del bambino rappresenta l'umanizzazione di Gesù e la sua gloria priva di peccato.",
                "suggests":  [
                               {
-                                "suggest": "degli angeli",
+                                "suggest": "di descrivere gli angeli",
                                 "linkedName": "angels"
                               }
                             ]
@@ -588,7 +570,7 @@
                                 "linkedName": "commis"
                               },
                               {
-                                "suggest": "quali condizioni è pervenuto il dipinto",
+                                "suggest": "in quali condizioni è pervenuto il dipinto",
                                 "linkedName": "condiz"
                               }
 
@@ -678,7 +660,7 @@
                "answer": "E' arrivato privo dei polvaroli, ma in buono stato. Ha subito pochissimi interventi di restauro che potrebbero essere intesi come interventi di manutenzione e consolidamento.",
                "suggests":  [
                               {
-                                "suggest": "dello stile di pittura",
+                                "suggest": "a quale scuola pittorica è riconducibile il quadro",
                                 "linkedName": "pittor"
                               }
                             ]
