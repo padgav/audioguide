@@ -27,6 +27,7 @@ messages['undef'] = "Non ho capito. Prova a ripetere.";
 messages['welcome'] = "Benvenuto! Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione. La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
 messages['pastore1'] = 'Stai esaminando il primo pastorello';//{'Stai esaminando il primo pastorello', 'Stai esaminando il primo pastore'};
 messages['pastore2'] = "Stai esaminando il secondo pastorello";
+
 //messages['pastore'] = {1:" il pastorello", 2:"Stai esaminando il pastore", 3:"Stai esaminando il custode degli ovini"};
 /*
 var timeout = new Date().getTime() + 15*60*1000; //add 15 minutes;
@@ -46,6 +47,11 @@ var myMsg = {
     shephard2: { 1: 'Il secondo pastore ', 2:'Il pastore in secondo piano', 3:'Il secondo dei pastori ', check: 0 },
     giuseppe: { 1: 'San giuseppe ', 2:'La sagoma di San giuseppe ', 3:'la figura di san giuseppe ', check: 0 },
     madonna: { 1: 'la madonna ', 2:'la figura di maria ', 3:'la sagoma della madonna ', check: 0 }
+
+}
+var myMcoms = {
+    moff: ["spegni la musica"],
+    mon: ["accendi la musica"]
 
 }
 ///
@@ -395,20 +401,6 @@ getResult($("#question").val());
             music.play();
            else
           { music.pause(); music.currentTime = 0; }
-             /*
-             if(middleB==undefined) var middleB = true;
-             if(middleB==true)
-             {
-               music.pause();
-               music.currentTime = 0;
-               middleB==false;
-             }
-             else
-             {
-               music.play();
-               middleB==true;
-             }
-             */
 
          }
        }
@@ -422,6 +414,7 @@ getResult($("#question").val());
         synth.cancel();
         $(music).animate({volume: 0.1}, 1000);
         if(active == 1)
+        recognition.stop();
         recognition.start();
         //voices = synth.getVoices();
         lastQuestionTime =  Date.now();
@@ -441,10 +434,36 @@ getResult($("#question").val());
 
     $("#question").keypress(function(e) {
     if(e.which == 13) {
-        synth.cancel();
+
         $(music).animate({volume: 0.1}, 1000);
-        lastQuestionTime =  Date.now();
-        getResult($("#question").val());
+        lastQuestionTime =  Date.now
+
+        var tmpText=($("#question").val()).toLowerCase();
+
+        switch (tmpText) {
+          case myMcoms["moff"].toString():
+              console.log("Music pause cause: ",myMcoms["moff"]);
+              music.pause(); music.currentTime = 0;
+            break;
+            case myMcoms["mon"].toString():
+                console.log("Music play cause : ",myMcoms["mon"]);
+                music.play();
+              break;
+          default:
+            synth.cancel();
+            getResult($("#question").val());
+            break;
+
+        }
+        /*
+        if($("#question").val() == myMcoms["moff"])
+          {
+            console.log("break 'cause': ",myMcoms["moff"]);
+            music.pause(); music.currentTime = 0;
+          }
+        else
+          getResult($("#question").val());
+        */
         console.log("e.which =13!!!!!!!");
     }
 
@@ -457,9 +476,35 @@ getResult($("#question").val());
         var last = event.results.length - 1;
         var text = event.results[last][0].transcript;
         $("#question").val(text)
+
+        switch ((text.toLowerCase())) {
+          case myMcoms["moff"].toString():
+              console.log("Music pause cause: ",myMcoms["moff"]);
+              music.pause(); music.currentTime = 0;
+            break;
+            case myMcoms["mon"].toString():
+                console.log("Music play cause : ",myMcoms["mon"]);
+                music.play();
+              break;
+          default:
+            getResult(text);
+
+
+        }
+
+        /*
+        if(text.toLowerCase() == myMcoms["moff"])
+          {
+            console.log("break 'cause': ",myMcoms["moff"]);
+            music.pause(); music.currentTime = 0;
+          }
+        else
         getResult(text)
+        */
     }
     function getResult(text){
+
+
         var query = "question:" + text + " AND title:" + card
 
         console.log("query: ", query);
@@ -503,7 +548,7 @@ getResult($("#question").val());
                 var toSynthText = response.hits.hits[0]._source.answer;//+" Testo aggiunto.";
                 var moreAsk = " Puoi chiedermi ";
                 console.log("toSynthText: ",toSynthText);
-                console.log("suggests: ",suggests[0]["linkedName"]);
+                //console.log("suggests: ",suggests[0]["linkedName"]);
               //  console.log("askedNamesss", askedNames);
 
 
