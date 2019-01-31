@@ -51,7 +51,9 @@ var myMsg = {
 }
 var myMcoms = {
     moff: ["spegni la musica"],
-    mon: ["accendi la musica"]
+    mon: ["accendi la musica"],
+    mdown: ["abbassa la musica"],
+    mup: ["solleva la musica"]
 
 }
 ///
@@ -448,7 +450,13 @@ getResult($("#question").val());
             case myMcoms["mon"].toString():
                 console.log("Music play cause : ",myMcoms["mon"]);
                 music.play();
-              break;
+            break;
+            case  myMcoms["mdown"].toString():
+              $(music).animate({volume: 0.05}, 1000);
+            break;
+            case  myMcoms["mup"].toString():
+              $(music).animate({volume: 1}, 1000);
+            break;
           default:
             synth.cancel();
             getResult($("#question").val());
