@@ -53,7 +53,8 @@ var myMcoms = {
     moff: ["spegni la musica"],
     mon: ["accendi la musica"],
     mdown: ["abbassa la musica"],
-    mup: ["solleva la musica"]
+    mup: ["solleva la musica"],
+    restart: ["ricomincia"]
 
 }
 ///
@@ -241,6 +242,40 @@ $(document).ready(function() {
 ///////////////////////////////////////
 ///////////////////////////////////////
 
+
+        function txtRedirect(tmpText)
+        {
+          switch (tmpText.toLowerCase()) {
+            case myMcoms["moff"].toString():
+                console.log("Music pause cause: ",myMcoms["moff"]);
+                music.pause(); music.currentTime = 0;
+              break;
+              case myMcoms["mon"].toString():
+                  console.log("Music play cause : ",myMcoms["mon"]);
+                  music.play();
+              break;
+              case  myMcoms["mdown"].toString():
+                $(music).animate({volume: 0.05}, 1000);
+              break;
+              case  myMcoms["mup"].toString():
+                $(music).animate({volume: 1}, 1000);
+              break;
+              case  myMcoms["restart"].toString():
+                console.log("Restart cause : ",myMcoms["restart"]);
+                ctrlK = 1;
+                active = 0;
+                synth.cancel();
+                $("#answer").stop().fadeOut();
+                music.pause(); music.currentTime = 0;
+                StartNow();
+              break;
+            default:
+              synth.cancel();
+              getResult($("#question").val());
+              break;
+
+          }
+        }
 
         //START
         function StartNow(){
@@ -442,36 +477,7 @@ getResult($("#question").val());
 
         var tmpText=($("#question").val()).toLowerCase();
 
-        switch (tmpText) {
-          case myMcoms["moff"].toString():
-              console.log("Music pause cause: ",myMcoms["moff"]);
-              music.pause(); music.currentTime = 0;
-            break;
-            case myMcoms["mon"].toString():
-                console.log("Music play cause : ",myMcoms["mon"]);
-                music.play();
-            break;
-            case  myMcoms["mdown"].toString():
-              $(music).animate({volume: 0.05}, 1000);
-            break;
-            case  myMcoms["mup"].toString():
-              $(music).animate({volume: 1}, 1000);
-            break;
-          default:
-            synth.cancel();
-            getResult($("#question").val());
-            break;
-
-        }
-        /*
-        if($("#question").val() == myMcoms["moff"])
-          {
-            console.log("break 'cause': ",myMcoms["moff"]);
-            music.pause(); music.currentTime = 0;
-          }
-        else
-          getResult($("#question").val());
-        */
+        txtRedirect(tmpText);
         console.log("e.which =13!!!!!!!");
     }
 
@@ -485,30 +491,7 @@ getResult($("#question").val());
         var text = event.results[last][0].transcript;
         $("#question").val(text)
 
-        switch ((text.toLowerCase())) {
-          case myMcoms["moff"].toString():
-              console.log("Music pause cause: ",myMcoms["moff"]);
-              music.pause(); music.currentTime = 0;
-            break;
-            case myMcoms["mon"].toString():
-                console.log("Music play cause : ",myMcoms["mon"]);
-                music.play();
-              break;
-          default:
-            getResult(text);
-
-
-        }
-
-        /*
-        if(text.toLowerCase() == myMcoms["moff"])
-          {
-            console.log("break 'cause': ",myMcoms["moff"]);
-            music.pause(); music.currentTime = 0;
-          }
-        else
-        getResult(text)
-        */
+        txtRedirect(text);
     }
     function getResult(text){
 
