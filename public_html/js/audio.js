@@ -126,8 +126,7 @@ $(document).ready(function() {
 
           var utterThis = new SpeechSynthesisUtterance();
           switch (x) {
-            case 32
-            :
+            case 32:
               ctrlK=1;
               StartNow();
               //getResult('adorazione');
@@ -280,6 +279,7 @@ $(document).ready(function() {
 
                   $(".card").removeAttr("id");
                   $(".card").attr("id", myPaints[1]["name"].toString());
+
                   console.log("Quadro scelto (card): ",$(".card").attr("id"));
                   myMsg["which"]["check"]=0;
                   txtRedirect("ricomincia");
@@ -290,6 +290,7 @@ $(document).ready(function() {
               {
                 $(".card").removeAttr("id");
                 $(".card").attr("id", myPaints[2]["name"].toString());
+
                 console.log("Quadro scelto (card): ",$(".card").attr("id"));
                 myMsg["which"]["check"]=0;
                 txtRedirect( myMcoms["restart"].toString());
@@ -302,6 +303,7 @@ $(document).ready(function() {
               {
                 $(".card").removeAttr("id");
                 $(".card").attr("id", myPaints[3]["name"].toString());
+
                 console.log("Quadro scelto (card): ",$(".card").attr("id"));
                 myMsg["which"]["check"]=0;
                 txtRedirect( myMcoms["restart"].toString());
@@ -326,19 +328,19 @@ $(document).ready(function() {
           if($(".card").attr("id") ==  myPaints[1]["name"].toString())
           {
             currWelcome = myMsg['welcome'][1];
-            $(".painting").removeAttr("src");
+            //$(".painting").removeAttr("src");
             $(".painting").attr("src", myPaints[1]["src"].toString());
           }
           if($(".card").attr("id") ==  myPaints[2]["name"].toString())
           {
               currWelcome = myMsg['welcome'][2];
-              $(".painting").removeAttr("src");
+              //$(".painting").removeAttr("src");
               $(".painting").attr("src", myPaints[2]["src"].toString());
           }
           if( ($(".card").attr("id") ==  myPaints[3]["name"].toString()) ||($(".card").attr("id") ==  myPaints[4]["name"].toString()))
           {
               currWelcome = myMsg['welcome'][3];
-              $(".painting").removeAttr("src");
+              //$(".painting").removeAttr("src");
               $(".painting").attr("src", myPaints[3]["src"].toString());
           }
           console.log("*** La card è ", $(".card").attr("id"));
@@ -404,7 +406,7 @@ $(document).ready(function() {
 
     var bg = document.querySelector('html');
 
-    var card = "";
+    //var card = "";
     var askedNames =  new Array();
 
 
@@ -455,7 +457,8 @@ $(document).ready(function() {
 
     $("#question").keypress(function(e) {
     if(e.which == 13) {
-
+        if(ctrlK==1 && active ==1)
+          card = $(".card").attr("id");
         $(music).animate({volume: 0.1}, 1000);
         lastQuestionTime =  Date.now
 
