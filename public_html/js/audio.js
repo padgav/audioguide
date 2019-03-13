@@ -136,10 +136,10 @@ $(document).ready(function() {
               break;
 
               case 39:
+              //console.log("Cosa contiene card.attr(id): ", $(".card").attr("id"));
               if($(".card").attr("id") == myPaints[1]["name"].toString())
               {
               synth.cancel();
-
 
               //utterThis.text = messages['pastore1'];
               if(myMsg['giuseppe']['check'] == 0)
@@ -507,7 +507,7 @@ $(document).ready(function() {
                             {
                                 bool: {
                                     should: [
-                                        {match: {title: "Adorazione"}},
+                                        {match: {title: card}},
                                         {match: {title: card}}
 
                                     ]
