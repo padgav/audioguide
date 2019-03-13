@@ -1,6 +1,25 @@
 <!--
 To change this template, choose Tools | Templates
 and open the template in the editor.
+
+img {
+max-width:100%;
+height:auto;
+
+}
+<picture>
+     <source srcset="img/480.jpg" media="(max-width: 480px)">
+    <source srcset="img/768.jpg" media="(max-width: 768px)">
+    <img srcset="img/1688.jpg" alt="Immagine di default">
+</picture>
+
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 -->
 <!DOCTYPE html>
 <html>
@@ -16,16 +35,15 @@ and open the template in the editor.
     .container{
       display: flex;
       flex-flow: column;
-      height: 98vh;
+
+      height: 94.2vh;
       margin:auto;
       border: 3px solid black;
       padding: 10px;
     }
 
     .container div, .card div,  img {
-      width: auto;
       height: 100%;
-      margin:auto;
     }
 
 
@@ -48,13 +66,24 @@ and open the template in the editor.
     }
     .painting{
       opacity: 0;
+
+      position: absolute;
+       top:50%;
+       left:50%;
+       -webkit-transform: translate(-50%,-50%);
+       -moz-transform: translate(-50%,-50%);
+       -ms-transform: translate(-50%,-50%);
+       -o-transform: translate(-50%, -50%);
+       transform: translate(-50%,-50%);
+       max-height:92%;
+       width:auto;
     }
 
 
     #answer{
       top: 550px;
-      font-size: 80px;
-      color: DarkGray ;
+      font-size: 75px;
+      color: DarkGray;
       font-family: Arial, Helvetica, sans-serif;
       font-weight: bold;
       position:absolute;
@@ -64,6 +93,7 @@ and open the template in the editor.
     #question{
       font-size: 23px;
       font-family: Arial, Helvetica, sans-serif;
+      width:100%;
 
     }
   </style>
@@ -109,21 +139,29 @@ console.log("type: ",frame.pointables[1].type);
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
+
   <div class="container">
+
     <!--div class="card" id="Annunciazione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"/></div>
     <div class="card" id="Crocefissione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"/></div-->
 
 
 
-    <div class="card" id="Adorazione" style="max-height:93%"><img  class="painting" src="http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"/></div>
+    <div class="card" id="Adorazione" style="max-height:93%">
+      <img  class="painting" src="http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"/>
+      <div id="answer">
+      </div>
+    </div>
       <!--<input style="display:block;position:fixed;top:50%;left:75%" type="text" id="question" placeholder="Domanda"> -->  <!--width:240px;position:fixed;top:200px;left:75%-->
 
-    <div id="answer">
-    </div>
-    <input style="display:block;" type="text" id="question" placeholder="Domanda" > <!-- INPUT posto sotto come in origine-->
+
+
 
     <!--div id="pointer"></div-->
     <!--<select></select>-->
   </div> <!--- container -->
+  <input type="text"  style="opacity: 0.95" id="question" placeholder="Domanda" > <!-- INPUT posto sotto come in origine-->
+
 </body>
+
 </html>

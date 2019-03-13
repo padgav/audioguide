@@ -21,10 +21,7 @@ var standbyTime = 60*1000;
 var messages = new Array();
 var voices;
 var VOICEIDX = 0;
-var myRate = 0.9;
-///
-var utterThis;
-///
+
 
 messages['undef'] = "Non ho capito. Prova a ripetere.";
 messages['welcome'] = "Benvenuto! Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione. La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
@@ -111,9 +108,8 @@ $(document).ready(function() {
         //evento tastiera e assegnazione a ctrlK
         var ctrlK=0;
         var active = 0;
-          document.addEventListener('keydown', Tasto);
-          //document.event.preventDefault();
-          //document.event.stopPropagation();
+        document.addEventListener('keydown', Tasto);
+
 /*
         function moreInfo(text)
         {
@@ -128,8 +124,7 @@ $(document).ready(function() {
           if(x == lastX) return;
           lastX = x;
 
-          utterThis = new SpeechSynthesisUtterance();
-          utterThis.rate = myRate;
+          var utterThis = new SpeechSynthesisUtterance();
           switch (x) {
             case 32:
               ctrlK=1;
@@ -265,14 +260,10 @@ $(document).ready(function() {
               break;
 
               case myMcoms["change"].toString():
-
                 synth.cancel();
-
                 $("#answer").stop().fadeOut();
                 music.pause(); music.currentTime = 0;
-                utterThis = new SpeechSynthesisUtterance();
-                utterThis.rate = myRate;
-
+                var utterThis = new SpeechSynthesisUtterance();
                 if(myMsg["which"]["check"]==0)
                   myMsg["which"]["check"]=1;
                 utterThis.text = myMsg["which"][1];
@@ -372,20 +363,18 @@ $(document).ready(function() {
                       $("#answer").fadeIn({duration: $(document).height()/2, queue:false});
                       $("#answer").html(currWelcome);
                       //console.log($(document).height())
-                      $("#answer").css({ top: $(document).height()/2});
-                      //
+                      $("#answer").css({ top: $("body").height()/2});
+                       //
 
                       //
                       var len = currWelcome.length;
                       var perc = (len* 0.1);
-                      $("#answer").animate({top: - (len*1.3), queue:false},   2500000/perc /*3000*len/perc*/);
+                      $("#answer").animate({top: - ($(document).height()/2), queue:false},   3000*len/perc);
 
                       console.log("ANSWER LENGTH: ", len);
                       console.log("VALUE X length: ",perc);
 
-                      utterThis = new SpeechSynthesisUtterance();
-                      utterThis.rate = myRate;
-
+                      var utterThis = new SpeechSynthesisUtterance();
                       utterThis.text = currWelcome;
                       utterThis.voice = voices[VOICEIDX];
 
@@ -461,9 +450,7 @@ $(document).ready(function() {
         card = $(".card").attr("id");
 
 
-        utterThis = new SpeechSynthesisUtterance(card);
-        utterThis.rate = myRate;
-
+        var utterThis = new SpeechSynthesisUtterance(card);
         utterThis.voice = voices[VOICEIDX];
         synth.speak(utterThis);
     });
@@ -570,9 +557,9 @@ $(document).ready(function() {
                 //$("#answer").fadeIn({duration:2000, queue:false});
                 $("#answer").html(answer);
                 //console.log($(document).height())
-                $("#answer").css({ top: $(document).height()/2});
+                $("#answer").css({ top: $("body").height()/2});
 
-                $("#answer").animate({top: -(len*1.3), queue:false},   2500000/perc /*3000*len/perc*/);
+                $("#answer").animate({top: -($(document).height()*0.6), queue:false},   3000*len/perc);
                 //$("#answer").animate({top: -1000, queue:false},   3000*len/perc);
 
 
@@ -595,8 +582,7 @@ $(document).ready(function() {
 
                   console.log("askedNames", askedNames);
 
-                utterThis = new SpeechSynthesisUtterance(toSynthText);
-                utterThis.rate = myRate;
+                var utterThis = new SpeechSynthesisUtterance(toSynthText);
 
                 utterThis.voice = voices[VOICEIDX];
 
@@ -615,9 +601,7 @@ $(document).ready(function() {
                     console.log(response.hits.hits[0]._source.link)
                 }
             } else {
-                utterThis = new SpeechSynthesisUtterance(messages['undef']);
-                utterThis.rate = myRate;
-
+                var utterThis = new SpeechSynthesisUtterance(messages['undef']);
                 utterThis.voice = voices[VOICEIDX];
                 utterThis.onend = function (event) {
                             $(music).animate({volume: 1}, 1000);
