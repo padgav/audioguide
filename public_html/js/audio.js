@@ -41,7 +41,7 @@ if(new Date().getTime() > timeout) {
 ///
 var myMsg = {
     welcome: {  1: messages['welcome'], 2:messages['welcome2'], 3:messages['welcome3'] },
-    undef: { 1: 'Non ho capito. Prova a ripetere.', 2:'Puoi cortesemente ripetere la domanda?', 3:'Non ho capito la domanda. Sto ancora ascoltando, ripeti pure.' },
+    undef: { 1: 'Non ho capito. Prova a ripetere.', 2:'Puoi cortesemente riformulare la domanda?', 3:'Non ho capito. Riformula la domanda.' },
     touching:{ 1: 'Stai esaminando ', 2:'Stai analizzando ', 3:'Stai esplorando' },
     re:{1: 'Ancora una volta ', 2:'Di nuovo ', 3:'Ci siamo tornati. ' },
     //shephard1: { 1: 'Il primo pastore ', 2:'Il primo pastorello ', 3:'Il primo dei pastori ', check: 0 },
@@ -507,7 +507,7 @@ $(document).ready(function() {
                             {
                                 bool: {
                                     should: [
-                                        {match: {title: card}},
+                                        {match: {title: "Pinacoteca"}},
                                         {match: {title: card}}
 
                                     ]
@@ -601,7 +601,7 @@ $(document).ready(function() {
                     console.log(response.hits.hits[0]._source.link)
                 }
             } else {
-                var utterThis = new SpeechSynthesisUtterance(messages['undef']);
+                var utterThis = new SpeechSynthesisUtterance(myMsg['undef'][getRandomArbitrary(0,3)]);//messages['undef']);//myMsg['touching'][getRandomArbitrary(0,3)]
                 utterThis.voice = voices[VOICEIDX];
                 utterThis.onend = function (event) {
                             $(music).animate({volume: 1}, 1000);
