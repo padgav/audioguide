@@ -45,8 +45,9 @@ var myMsg = {
     touching:{ 1: 'Stai esaminando ', 2:'Stai analizzando ', 3:'Stai esplorando' },
     re:{1: 'Ancora una volta ', 2:'Di nuovo ', 3:'Ci siamo tornati. ' },
     //shephard1: { 1: 'Il primo pastore ', 2:'Il primo pastorello ', 3:'Il primo dei pastori ', check: 0 },
+    shephard1: { 1: 'Il primo pastore ', 2:'Il pastore in primo piano', 3:'Il primo dei pastori ', check: 0 },
     shephard2: { 1: 'Il secondo pastore ', 2:'Il pastore in secondo piano', 3:'Il secondo dei pastori ', check: 0 },
-    giuseppe: { 1: 'San giuseppe ', 2:'La sagoma di San giuseppe ', 3:'la figura di san giuseppe ', check: 0 },
+    shephard3: { 1: 'Il terzo pastore ', 2:'Il pastore in terzo piano', 3:'Il terzo dei pastori ', check: 0 },    giuseppe: { 1: 'San giuseppe ', 2:'La sagoma di San giuseppe ', 3:'la figura di san giuseppe ', check: 0 },
     madonna: { 1: 'la madonna ', 2:'la figura di maria ', 3:'la sagoma della madonna ', check: 0 },
     which: {1: 'Quale quadro vuoi esplorare?', check: 0}
 
