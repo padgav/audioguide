@@ -21,7 +21,7 @@ var standbyTime = 60*1000;
 var messages = new Array();
 var voices;
 var VOICEIDX = 0;
-
+var focusElem = false;
 
 messages['undef'] = "Non ho capito. Prova a ripetere.";
 messages['welcome'] = "Benvenuto! Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione. La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
@@ -45,10 +45,15 @@ var myMsg = {
     touching:{ 1: 'Stai esaminando ', 2:'Stai analizzando ', 3:'Stai esplorando' },
     re:{1: 'Ancora una volta ', 2:'Di nuovo ', 3:'Ci siamo tornati. ' },
     //shephard1: { 1: 'Il primo pastore ', 2:'Il primo pastorello ', 3:'Il primo dei pastori ', check: 0 },
-    shephard1: { 1: 'Il primo pastore ', 2:'Il pastore in primo piano', 3:'Il primo dei pastori ', check: 0 },
-    shephard2: { 1: 'Il secondo pastore ', 2:'Il pastore in secondo piano', 3:'Il secondo dei pastori ', check: 0 },
-    shephard3: { 1: 'Il terzo pastore ', 2:'Il pastore in terzo piano', 3:'Il terzo dei pastori ', check: 0 },    giuseppe: { 1: 'San giuseppe ', 2:'La sagoma di San giuseppe ', 3:'la figura di san giuseppe ', check: 0 },
-    madonna: { 1: 'la madonna ', 2:'la figura di maria ', 3:'la sagoma della madonna ', check: 0 },
+    hut: { 1: 'La capanna', 2:'Il pastore in primo piano', 3:'La capanna', check: 0 }, //s 83
+    baby: { 1: 'Il bambino', 2:'Il bambinello', 3:'Gesù bambino', check: 0 }, //f 70
+    angels: { 1: 'Gli angeli', 2:'Gli angeli che reggono un festone', 3:'Gli angeli posti nella parte alta della capanna', check: 0 },//a 65
+    dog: { 1: 'Il cane', 2:'Il cane dei pastori', 3:'Il cane', check: 0 }, //d 68
+    shephard1: { 1: 'Il primo pastore ', 2:'Il pastore in primo piano', 3:'Il primo dei pastori ', check: 0 }, //darrow 40
+    shephard2: { 1: 'Il secondo pastore ', 2:'Il pastore in secondo piano', 3:'Il secondo dei pastori ', check: 0 }, //larrow 37
+    shephard3: { 1: 'Il terzo pastore ', 2:'Il pastore in terzo piano', 3:'Il terzo dei pastori ', check: 0 }, // w 87
+    giuseppe: { 1: 'San giuseppe ', 2:'La sagoma di San giuseppe ', 3:'la figura di san giuseppe ', check: 0 }, // rarrow 39
+    madonna: { 1: 'la madonna ', 2:'la figura di maria ', 3:'la sagoma della madonna ', check: 0 }, // uparrow  38
     which: {1: 'Quale quadro vuoi esplorare?', check: 0}
 
 }
@@ -109,7 +114,9 @@ $(document).ready(function() {
         //evento tastiera e assegnazione a ctrlK
         var ctrlK=0;
         var active = 0;
+        //document.getElementById("question").addEventListener('keydown', Tasto);
         document.addEventListener('keydown', Tasto);
+        //focusElem
 
 /*
         function moreInfo(text)
@@ -136,74 +143,220 @@ $(document).ready(function() {
 
               break;
 
-              case 39:
-              //console.log("Cosa contiene card.attr(id): ", $(".card").attr("id"));
-              if($(".card").attr("id") == myPaints[1]["name"].toString())
-              {
-              synth.cancel();
 
-              //utterThis.text = messages['pastore1'];
-              if(myMsg['giuseppe']['check'] == 0)
-                {
-                  utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
-                  myMsg['giuseppe']['check'] = 1;//Date.now();
-                }
-              else
-                utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
 
-              utterThis.voice = voices[VOICEIDX];
-              synth.speak(utterThis);
-              getResult('san giuseppe');
-              }
-              break;
-
-              case 37:
-              if($(".card").attr("id") == myPaints[1]["name"].toString())
-              {
-              synth.cancel();
-              //var utterThis = new SpeechSynthesisUtterance();
-              //utterThis.stop;
-              //synth.speak(utterThi);
-
-              if(myMsg['shephard2']['check'] == 0)
-                {
-                  utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
-                  myMsg['shephard2']['check'] = 1; //Date.now();
-                }
-              else
-                utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
-
-              utterThis.voice = voices[VOICEIDX];
-              synth.speak(utterThis);
-              getResult('secondo pastore');
-              }
-              break;
-
-              case 38:
-              if($(".card").attr("id") ==  myPaints[1]["name"].toString())
-              {
-              synth.cancel();
-
-              if(myMsg['madonna']['check'] == 0)
-                {
-                  utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
-                  myMsg['madonna']['check'] = 1; //Date.now();
-                }
-              else
-                utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
-
-              utterThis.voice = voices[VOICEIDX];
-              synth.speak(utterThis);
-              getResult('descrivi maria');
-              }
-              break;
 
             default:
               console.log("pressione tastiera: ", window.event.keyCode);
             break;
           }
           console.log("LOGGING X: ", x);
+
+
+          if(focusElem!=true) //wasdfg
+                              //w 87 a 65 s 83 d 68 f 70 g 71
+          switch (x) {
+
+          case 37: //larrow
+
+          if($(".card").attr("id") == myPaints[1]["name"].toString())
+          {
+          synth.cancel();
+          //var utterThis = new SpeechSynthesisUtterance();
+          //utterThis.stop;
+          //synth.speak(utterThi);
+
+          if(myMsg['shephard2']['check'] == 0)
+            {
+              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
+              myMsg['shephard2']['check'] = 1; //Date.now();
+            }
+          else
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
+
+          utterThis.voice = voices[VOICEIDX];
+          synth.speak(utterThis);
+          getResult('secondo pastore');
+          }
+          break;
+
+          case 38: // uparrow
+          if($(".card").attr("id") ==  myPaints[1]["name"].toString())
+          {
+          synth.cancel();
+
+          if(myMsg['madonna']['check'] == 0)
+            {
+              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+              myMsg['madonna']['check'] = 1; //Date.now();
+            }
+          else
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+
+          utterThis.voice = voices[VOICEIDX];
+          synth.speak(utterThis);
+          getResult('descrivi maria');
+          }
+          break;
+
+          case 39: // rarrow
+          //console.log("Cosa contiene card.attr(id): ", $(".card").attr("id"));
+          if($(".card").attr("id") == myPaints[1]["name"].toString())
+          {
+          synth.cancel();
+
+          //utterThis.text = messages['pastore1'];
+          if(myMsg['giuseppe']['check'] == 0)
+            {
+              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
+              myMsg['giuseppe']['check'] = 1;//Date.now();
+            }
+          else
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
+
+          utterThis.voice = voices[VOICEIDX];
+          synth.speak(utterThis);
+          getResult('san giuseppe');
+          }
+          break;
+
+          case 40: //darrow
+          if($(".card").attr("id") == myPaints[1]["name"].toString())
+          {
+          synth.cancel();
+          //var utterThis = new SpeechSynthesisUtterance();
+          //utterThis.stop;
+          //synth.speak(utterThi);
+
+          if(myMsg['shephard1']['check'] == 0)
+            {
+              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
+              myMsg['shephard1']['check'] = 1; //Date.now();
+            }
+          else
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
+
+          utterThis.voice = voices[VOICEIDX];
+          synth.speak(utterThis);
+          getResult( myMsg['shephard1'][1]);
+          }
+          break;
+
+          case 87: // w 87
+          if($(".card").attr("id") == myPaints[1]["name"].toString())
+          {
+          synth.cancel();
+          //var utterThis = new SpeechSynthesisUtterance();
+          //utterThis.stop;
+          //synth.speak(utterThi);
+
+          if(myMsg['shephard3']['check'] == 0)
+            {
+              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
+              myMsg['shephard3']['check'] = 1; //Date.now();
+            }
+          else
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
+
+          utterThis.voice = voices[VOICEIDX];
+          synth.speak(utterThis);
+          getResult( myMsg['shephard3'][1]);
+          }
+          break;
+
+          case 65: //a 65
+          if($(".card").attr("id") == myPaints[1]["name"].toString())
+          {
+          synth.cancel();
+          //var utterThis = new SpeechSynthesisUtterance();
+          //utterThis.stop;
+          //synth.speak(utterThi);
+
+          if(myMsg['angels']['check'] == 0)
+            {
+              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['angels'][getRandomArbitrary(0,3)];
+              myMsg['angels']['check'] = 1; //Date.now();
+            }
+          else
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['angels'][getRandomArbitrary(0,3)];
+
+          utterThis.voice = voices[VOICEIDX];
+          synth.speak(utterThis);
+          getResult( myMsg['angels'][1]);
+          }
+          break;
+
+          case 68://d 68
+          if($(".card").attr("id") == myPaints[1]["name"].toString())
+          {
+          synth.cancel();
+          //var utterThis = new SpeechSynthesisUtterance();
+          //utterThis.stop;
+          //synth.speak(utterThi);
+
+          if(myMsg['dog']['check'] == 0)
+            {
+              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['dog'][getRandomArbitrary(0,3)];
+              myMsg['dog']['check'] = 1; //Date.now();
+            }
+          else
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['dog'][getRandomArbitrary(0,3)];
+
+          utterThis.voice = voices[VOICEIDX];
+          synth.speak(utterThis);
+          getResult( myMsg['dog'][1]);
+          }
+          break;
+
+          case 83://s 83
+          if($(".card").attr("id") == myPaints[1]["name"].toString())
+          {
+          synth.cancel();
+          //var utterThis = new SpeechSynthesisUtterance();
+          //utterThis.stop;
+          //synth.speak(utterThi);
+
+          if(myMsg['hut']['check'] == 0)
+            {
+              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['hut'][getRandomArbitrary(0,3)];
+              myMsg['hut']['check'] = 1; //Date.now();
+            }
+          else
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['hut'][getRandomArbitrary(0,3)];
+
+          utterThis.voice = voices[VOICEIDX];
+          synth.speak(utterThis);
+          getResult( myMsg['hut'][1]);
+          }
+          break;
+
+          case 70://f 70
+          if($(".card").attr("id") == myPaints[1]["name"].toString())
+          {
+          synth.cancel();
+          //var utterThis = new SpeechSynthesisUtterance();
+          //utterThis.stop;
+          //synth.speak(utterThi);
+
+          if(myMsg['baby']['check'] == 0)
+            {
+              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['baby'][getRandomArbitrary(0,3)];
+              myMsg['baby']['check'] = 1; //Date.now();
+            }
+          else
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['baby'][getRandomArbitrary(0,3)];
+
+          utterThis.voice = voices[VOICEIDX];
+          synth.speak(utterThis);
+          getResult( myMsg['baby'][1]);
+          }
+          break;
+
+
+
         }
+
+      }
         //end
 
 /*
