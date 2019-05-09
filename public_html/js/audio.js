@@ -176,7 +176,7 @@ $(document).ready(function() {
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
-          getResult('secondo pastore');
+          //getResult('secondo pastore');
           }
           break;
 
@@ -195,7 +195,7 @@ $(document).ready(function() {
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
-          getResult('descrivi maria');
+          //getResult('descrivi maria');
           }
           break;
 
@@ -216,7 +216,7 @@ $(document).ready(function() {
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
-          getResult('san giuseppe');
+          //getResult('san giuseppe');
           }
           break;
 
@@ -238,7 +238,7 @@ $(document).ready(function() {
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
-          getResult( myMsg['shephard1'][1]);
+          //getResult( myMsg['shephard1'][1]);
           }
           break;
 
@@ -260,7 +260,7 @@ $(document).ready(function() {
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
-          getResult( myMsg['shephard3'][1]);
+          //getResult( myMsg['shephard3'][1]);
           }
           break;
 
@@ -282,7 +282,7 @@ $(document).ready(function() {
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
-          getResult( myMsg['angels'][1]);
+          //getResult( myMsg['angels'][1]);
           }
           break;
 
@@ -304,7 +304,7 @@ $(document).ready(function() {
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
-          getResult( myMsg['dog'][1]);
+          //getResult( myMsg['dog'][1]);
           }
           break;
 
@@ -326,7 +326,7 @@ $(document).ready(function() {
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
-          getResult( myMsg['hut'][1]);
+          //getResult( myMsg['hut'][1]);
           }
           break;
 
@@ -348,7 +348,7 @@ $(document).ready(function() {
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
-          getResult( myMsg['baby'][1]);
+          //getResult( myMsg['baby'][1]);
           }
           break;
 
