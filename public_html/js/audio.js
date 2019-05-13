@@ -170,10 +170,13 @@ $(document).ready(function() {
             {
               utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
               myMsg['shephard2']['check'] = 1; //Date.now();
+              writeSubject(myMsg['shephard2'][1]); fixTxt();
             }
           else
+          {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
-
+            writeSubject(myMsg['shephard2'][1]); fixTxt();
+          }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
           //getResult('secondo pastore');
@@ -189,9 +192,13 @@ $(document).ready(function() {
             {
               utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
               myMsg['madonna']['check'] = 1; //Date.now();
+              writeSubject(myMsg['madonna'][1]); fixTxt();
             }
           else
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+            {
+              utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+              writeSubject(myMsg['madonna'][1]); fixTxt();
+            }
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -210,10 +217,13 @@ $(document).ready(function() {
             {
               utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
               myMsg['giuseppe']['check'] = 1;//Date.now();
+              writeSubject(myMsg['giuseppe'][1]); fixTxt();
             }
           else
+          {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
-
+            writeSubject(myMsg['giuseppe'][1]); fixTxt();
+          }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
           //getResult('san giuseppe');
@@ -232,10 +242,13 @@ $(document).ready(function() {
             {
               utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
               myMsg['shephard1']['check'] = 1; //Date.now();
+              writeSubject(myMsg['shephard1'][1]); fixTxt();
             }
           else
+          {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
-
+            writeSubject(myMsg['shephard1'][1]); fixTxt();
+          }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
           //getResult( myMsg['shephard1'][1]);
@@ -253,11 +266,14 @@ $(document).ready(function() {
           if(myMsg['shephard3']['check'] == 0)
             {
               utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
-              myMsg['shephard3']['check'] = 1; //Date.now();
+              myMsg['shephard3']['check'] = 1; //Date.now
+              writeSubject(myMsg['shephard3'][1]); fixTxt();
             }
           else
+          {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
-
+            writeSubject(myMsg['shephard3'][1]); fixTxt();
+          }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
           //getResult( myMsg['shephard3'][1]);
@@ -276,10 +292,13 @@ $(document).ready(function() {
             {
               utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['angels'][getRandomArbitrary(0,3)];
               myMsg['angels']['check'] = 1; //Date.now();
+              writeSubject(myMsg['angels'][1]); fixTxt();
             }
           else
+          {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['angels'][getRandomArbitrary(0,3)];
-
+            writeSubject(myMsg['angels'][1]); fixTxt();
+          }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
           //getResult( myMsg['angels'][1]);
@@ -298,10 +317,13 @@ $(document).ready(function() {
             {
               utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['dog'][getRandomArbitrary(0,3)];
               myMsg['dog']['check'] = 1; //Date.now();
+              writeSubject(myMsg['dog'][1]); fixTxt();
             }
           else
+          {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['dog'][getRandomArbitrary(0,3)];
-
+            writeSubject(myMsg['dog'][1]); fixTxt();
+          }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
           //getResult( myMsg['dog'][1]);
@@ -320,10 +342,13 @@ $(document).ready(function() {
             {
               utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['hut'][getRandomArbitrary(0,3)];
               myMsg['hut']['check'] = 1; //Date.now();
+              writeSubject(myMsg['hut'][1]); fixTxt();
             }
           else
+          {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['hut'][getRandomArbitrary(0,3)];
-
+            writeSubject(myMsg['hut'][1]); fixTxt();
+          }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
           //getResult( myMsg['hut'][1]);
@@ -342,10 +367,13 @@ $(document).ready(function() {
             {
               utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['baby'][getRandomArbitrary(0,3)];
               myMsg['baby']['check'] = 1; //Date.now();
+              writeSubject(myMsg['baby'][1]); fixTxt();
             }
           else
+          {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['baby'][getRandomArbitrary(0,3)];
-
+            writeSubject(myMsg['baby'][1]); fixTxt();
+          }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
           //getResult( myMsg['baby'][1]);
@@ -383,6 +411,11 @@ $(document).ready(function() {
 */
 
 
+        function writeSubject(sbjText)
+        {
+          $("#answer").html(sbjText);
+
+        }
 
         function txtRedirect(tmpText)
         {
@@ -405,12 +438,15 @@ $(document).ready(function() {
                 console.log("Restart cause : ",myMcoms["restart"]);
               case  myMcoms["restart2"].toString():
                 console.log("Restart cause : ",myMcoms["restart2"]);
+                reStart();
+                /*
                 ctrlK = 1;
                 active = 0;
                 synth.cancel();
                 $("#answer").stop().fadeOut();
                 music.pause(); music.currentTime = 0;
                 StartNow();
+                */
               break;
 
               case myMcoms["change"].toString():
@@ -472,6 +508,23 @@ $(document).ready(function() {
           }
         }
 
+        function fixTxt()
+        {
+          $("#answer").stop();
+          $("#answer").css({ top: $("body").height()/2});
+        }
+
+
+        function reStart()
+        {
+          ctrlK = 1;
+          active = 0;
+          synth.cancel();
+          $("#answer").stop().fadeOut();
+          music.pause(); music.currentTime = 0;
+          StartNow();
+
+        }
         //START
         function StartNow(){
           var now = Date.now();
@@ -511,7 +564,7 @@ $(document).ready(function() {
                       $(music).animate({volume: 0.1}, 1000);
 
 
-                      //scrittura su schermo(?)
+                      //scrittura su schermo 1(?)
                       $("#answer").hide();
                       $("#answer").stop();
                       $("#answer").fadeIn({duration: $(document).height()/2, queue:false});
@@ -519,7 +572,21 @@ $(document).ready(function() {
                       //console.log($(document).height())
                       $("#answer").css({ top: $("body").height()/2});
                        //
-
+                       /*
+                       $("#answer").stop();
+                       $("#answer").fadeIn({duration:2000, queue:false});
+                       $("#answer").html(answer);
+                       $("#answer").css({ top: '500px' });
+                       $("#answer").css({ top: $(document).height()/2});
+                       $("#answer").animate({top: -1000, queue:false},  3000 * answer.length/30);
+                       //
+                       $("#answer").html(answer);
+                       $("#answer").css({ top: $(document).height()/2});
+                       - $("#answer").animate({top: -1000, queue:false},  3000 * answer.length/30);
+                       + var len = answer.length;
+                       + var perc = (len/100)*10;
+                       + $("#answer").animate({top: -1000, queue:false},   3000*len/perc);
+                       */
                       //
                       var len = currWelcome.length;
                       var perc = (len* 0.1);
@@ -585,6 +652,11 @@ $(document).ready(function() {
 
 
     $(".card").on("click", function() {
+      if(ctrlK == 0 && active == 0)
+        reStart();
+      else {
+
+
         card = $(".card").attr("id");
         $("#answer").html(card);
         beep();
@@ -596,7 +668,7 @@ $(document).ready(function() {
         //voices = synth.getVoices();
         lastQuestionTime =  Date.now();
         //StartNow();//controller.connect();
-
+      }
     });
     $(".card").on("mouseenter", function() {
         if (card === $(".card").attr("id"))
@@ -704,7 +776,7 @@ $(document).ready(function() {
                 var len = answer.length;
                 var perc = (len*0.1);
 
-                //scrittura su schermo(?)
+                //scrittura su schermo 2(?)
                 $("#answer").hide();
                 $("#answer").stop();
                 $("#answer").fadeIn({duration:$(document).height()/2, queue:false});
