@@ -45,16 +45,16 @@ var myMsg = {
     touching:{ 1: 'Stai esaminando ', 2:'Stai analizzando ', 3:'Stai esplorando' },
     re:{1: 'Ancora una volta ', 2:'Di nuovo ', 3:'Ci siamo tornati. ' },
     //shephard1: { 1: 'Il primo pastore ', 2:'Il primo pastorello ', 3:'Il primo dei pastori ', check: 0 },
-    hut: { 1: 'La capanna', 2:'Il pastore in primo piano', 3:'La capanna', check: 0 }, //s 83
-    baby: { 1: 'Il bambino', 2:'Il bambinello', 3:'Gesù bambino', check: 0 }, //f 70
-    angels: { 1: 'Gli angeli', 2:'Gli angeli che reggono un festone', 3:'Gli angeli posti nella parte alta della capanna', check: 0 },//a 65
-    dog: { 1: 'Il cane', 2:'Il cane dei pastori', 3:'Il cane', check: 0 }, //d 68
-    shephard1: { 1: 'Il primo pastore ', 2:'Il pastore in primo piano', 3:'Il primo dei pastori ', check: 0 }, //darrow 40
-    shephard2: { 1: 'Il secondo pastore ', 2:'Il pastore in secondo piano', 3:'Il secondo dei pastori ', check: 0 }, //larrow 37
-    shephard3: { 1: 'Il terzo pastore ', 2:'Il pastore in terzo piano', 3:'Il terzo dei pastori ', check: 0 }, // w 87
-    giuseppe: { 1: 'San giuseppe ', 2:'La sagoma di San giuseppe ', 3:'la figura di san giuseppe ', check: 0 }, // rarrow 39
-    madonna: { 1: 'la madonna ', 2:'la figura di maria ', 3:'la sagoma della madonna ', check: 0 }, // uparrow  38
-    which: {1: 'Quale quadro vuoi esplorare?', check: 0}
+    hut: { 1: 'la capanna', 2:'la capanna', 3:'la capanna', check: 0 }, //s 83
+    baby: { 1: 'il bambino', 2:'il bambinello', 3:'Gesù bambino', check: 0 }, //f 70
+    angels: { 1: 'gli angeli', 2:'gli angeli che reggono un festone', 3:'gli angeli posti nella parte alta della capanna', check: 0 },//a 65
+    dog: { 1: 'il cane', 2:'il cane dei pastori', 3:'il cane', check: 0 }, //d 68
+    shephard1: { 1: 'il primo pastore ', 2:'il pastore in primo piano', 3:'il primo dei pastori ', check: 0 }, //darrow 40
+    shephard2: { 1: 'il secondo pastore ', 2:'il pastore in secondo piano', 3:'il secondo dei pastori ', check: 0 }, //larrow 37
+    shephard3: { 1: 'il terzo pastore ', 2:'il pastore in terzo piano', 3:'il terzo dei pastori ', check: 0 }, // w 87
+    giuseppe: { 1: 'San Giuseppe ', 2:'la sagoma di San Giuseppe ', 3:'la figura di San Giuseppe ', check: 0 }, // rarrow 39
+    madonna: { 1: 'la Madonna ', 2:'la figura di Maria ', 3:'la sagoma della Madonna ', check: 0 }, // uparrow  38
+    which: {1: 'quale quadro vuoi esplorare?', check: 0}
 
 }
 var myMcoms = {
@@ -170,12 +170,12 @@ $(document).ready(function() {
             {
               utterThis.text = touchs+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
               myMsg['shephard2']['check'] = 1; //Date.now();
-              writeSubject(myMsg['shephard2'][1]); fixTxt();
+              writeSubject(myMsg['shephard2'][1]);
             }
           else
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
-            writeSubject(myMsg['shephard2'][1]); fixTxt();
+            writeSubject(myMsg['shephard2'][1]);
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -192,12 +192,12 @@ $(document).ready(function() {
             {
               utterThis.text = touchs+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
               myMsg['madonna']['check'] = 1; //Date.now();
-              writeSubject(myMsg['madonna'][1]); fixTxt();
+              writeSubject(myMsg['madonna'][1]);
             }
           else
             {
               utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
-              writeSubject(myMsg['madonna'][1]); fixTxt();
+              writeSubject(myMsg['madonna'][1]);
             }
 
           utterThis.voice = voices[VOICEIDX];
@@ -217,12 +217,12 @@ $(document).ready(function() {
             {
               utterThis.text = touchs+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
               myMsg['giuseppe']['check'] = 1;//Date.now();
-              writeSubject(myMsg['giuseppe'][1]); fixTxt();
+              writeSubject(myMsg['giuseppe'][1]);
             }
           else
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
-            writeSubject(myMsg['giuseppe'][1]); fixTxt();
+            writeSubject(myMsg['giuseppe'][1]);
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -242,12 +242,12 @@ $(document).ready(function() {
             {
               utterThis.text = touchs+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
               myMsg['shephard1']['check'] = 1; //Date.now();
-              writeSubject(myMsg['shephard1'][1]); fixTxt();
+              writeSubject(myMsg['shephard1'][1]);
             }
           else
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
-            writeSubject(myMsg['shephard1'][1]); fixTxt();
+            writeSubject(myMsg['shephard1'][1]);
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -267,12 +267,12 @@ $(document).ready(function() {
             {
               utterThis.text = touchs+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
               myMsg['shephard3']['check'] = 1; //Date.now
-              writeSubject(myMsg['shephard3'][1]); fixTxt();
+              writeSubject(myMsg['shephard3'][1]);
             }
           else
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
-            writeSubject(myMsg['shephard3'][1]); fixTxt();
+            writeSubject(myMsg['shephard3'][1]);
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -292,12 +292,12 @@ $(document).ready(function() {
             {
               utterThis.text = touchs+""+ myMsg['angels'][getRandomArbitrary(0,3)];
               myMsg['angels']['check'] = 1; //Date.now();
-              writeSubject(myMsg['angels'][1]); fixTxt();
+              writeSubject(myMsg['angels'][1]);
             }
           else
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['angels'][getRandomArbitrary(0,3)];
-            writeSubject(myMsg['angels'][1]); fixTxt();
+            writeSubject(myMsg['angels'][1]);
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -317,12 +317,12 @@ $(document).ready(function() {
             {
               utterThis.text = touchs+""+ myMsg['dog'][getRandomArbitrary(0,3)];
               myMsg['dog']['check'] = 1; //Date.now();
-              writeSubject(myMsg['dog'][1]); fixTxt();
+              writeSubject(myMsg['dog'][1]);
             }
           else
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['dog'][getRandomArbitrary(0,3)];
-            writeSubject(myMsg['dog'][1]); fixTxt();
+            writeSubject(myMsg['dog'][1]);
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -342,12 +342,12 @@ $(document).ready(function() {
             {
               utterThis.text = touchs+""+ myMsg['hut'][getRandomArbitrary(0,3)];
               myMsg['hut']['check'] = 1; //Date.now();
-              writeSubject(myMsg['hut'][1]); fixTxt();
+              writeSubject(myMsg['hut'][1]);
             }
           else
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['hut'][getRandomArbitrary(0,3)];
-            writeSubject(myMsg['hut'][1]); fixTxt();
+            writeSubject(myMsg['hut'][1]);
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -367,12 +367,12 @@ $(document).ready(function() {
             {
               utterThis.text = touchs+""+ myMsg['baby'][getRandomArbitrary(0,3)];
               myMsg['baby']['check'] = 1; //Date.now();
-              writeSubject(myMsg['baby'][1]); fixTxt();
+              writeSubject(myMsg['baby'][1]);
             }
           else
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['baby'][getRandomArbitrary(0,3)];
-            writeSubject(myMsg['baby'][1]); fixTxt();
+            writeSubject(myMsg['baby'][1]);
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -414,7 +414,7 @@ $(document).ready(function() {
         function writeSubject(sbjText)
         {
           $("#answer").html(touchs+" "+sbjText);
-
+          fixTxt();
         }
 
         function txtRedirect(tmpText)
