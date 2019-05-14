@@ -15,7 +15,7 @@ var recognition;
 var speechRecognitionList;
 var lastQuestionTime = Date.now();
 var lastHandlingTime = Date.now();
-
+var touchs;
 var standbyTime = 60*1000;
 
 var messages = new Array();
@@ -152,7 +152,7 @@ $(document).ready(function() {
           }
           console.log("LOGGING X: ", x);
 
-
+          touchs = myMsg['touching'][getRandomArbitrary(0,3)];
           if(focusElem!=true) //wasdfg
                               //w 87 a 65 s 83 d 68 f 70 g 71
           switch (x) {
@@ -168,13 +168,13 @@ $(document).ready(function() {
 
           if(myMsg['shephard2']['check'] == 0)
             {
-              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
+              utterThis.text = touchs+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
               myMsg['shephard2']['check'] = 1; //Date.now();
               writeSubject(myMsg['shephard2'][1]); fixTxt();
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['shephard2'][1]); fixTxt();
           }
           utterThis.voice = voices[VOICEIDX];
@@ -190,13 +190,13 @@ $(document).ready(function() {
 
           if(myMsg['madonna']['check'] == 0)
             {
-              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+              utterThis.text = touchs+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
               myMsg['madonna']['check'] = 1; //Date.now();
               writeSubject(myMsg['madonna'][1]); fixTxt();
             }
           else
             {
-              utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+              utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
               writeSubject(myMsg['madonna'][1]); fixTxt();
             }
 
@@ -215,13 +215,13 @@ $(document).ready(function() {
           //utterThis.text = messages['pastore1'];
           if(myMsg['giuseppe']['check'] == 0)
             {
-              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
+              utterThis.text = touchs+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
               myMsg['giuseppe']['check'] = 1;//Date.now();
               writeSubject(myMsg['giuseppe'][1]); fixTxt();
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['giuseppe'][1]); fixTxt();
           }
           utterThis.voice = voices[VOICEIDX];
@@ -240,13 +240,13 @@ $(document).ready(function() {
 
           if(myMsg['shephard1']['check'] == 0)
             {
-              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
+              utterThis.text = touchs+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
               myMsg['shephard1']['check'] = 1; //Date.now();
               writeSubject(myMsg['shephard1'][1]); fixTxt();
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['shephard1'][1]); fixTxt();
           }
           utterThis.voice = voices[VOICEIDX];
@@ -265,13 +265,13 @@ $(document).ready(function() {
 
           if(myMsg['shephard3']['check'] == 0)
             {
-              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
+              utterThis.text = touchs+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
               myMsg['shephard3']['check'] = 1; //Date.now
               writeSubject(myMsg['shephard3'][1]); fixTxt();
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['shephard3'][1]); fixTxt();
           }
           utterThis.voice = voices[VOICEIDX];
@@ -290,13 +290,13 @@ $(document).ready(function() {
 
           if(myMsg['angels']['check'] == 0)
             {
-              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['angels'][getRandomArbitrary(0,3)];
+              utterThis.text = touchs+""+ myMsg['angels'][getRandomArbitrary(0,3)];
               myMsg['angels']['check'] = 1; //Date.now();
               writeSubject(myMsg['angels'][1]); fixTxt();
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['angels'][getRandomArbitrary(0,3)];
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['angels'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['angels'][1]); fixTxt();
           }
           utterThis.voice = voices[VOICEIDX];
@@ -315,13 +315,13 @@ $(document).ready(function() {
 
           if(myMsg['dog']['check'] == 0)
             {
-              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['dog'][getRandomArbitrary(0,3)];
+              utterThis.text = touchs+""+ myMsg['dog'][getRandomArbitrary(0,3)];
               myMsg['dog']['check'] = 1; //Date.now();
               writeSubject(myMsg['dog'][1]); fixTxt();
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['dog'][getRandomArbitrary(0,3)];
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['dog'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['dog'][1]); fixTxt();
           }
           utterThis.voice = voices[VOICEIDX];
@@ -340,13 +340,13 @@ $(document).ready(function() {
 
           if(myMsg['hut']['check'] == 0)
             {
-              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['hut'][getRandomArbitrary(0,3)];
+              utterThis.text = touchs+""+ myMsg['hut'][getRandomArbitrary(0,3)];
               myMsg['hut']['check'] = 1; //Date.now();
               writeSubject(myMsg['hut'][1]); fixTxt();
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['hut'][getRandomArbitrary(0,3)];
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['hut'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['hut'][1]); fixTxt();
           }
           utterThis.voice = voices[VOICEIDX];
@@ -365,13 +365,13 @@ $(document).ready(function() {
 
           if(myMsg['baby']['check'] == 0)
             {
-              utterThis.text = myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['baby'][getRandomArbitrary(0,3)];
+              utterThis.text = touchs+""+ myMsg['baby'][getRandomArbitrary(0,3)];
               myMsg['baby']['check'] = 1; //Date.now();
               writeSubject(myMsg['baby'][1]); fixTxt();
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+myMsg['touching'][getRandomArbitrary(0,3)]+""+ myMsg['baby'][getRandomArbitrary(0,3)];
+            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['baby'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['baby'][1]); fixTxt();
           }
           utterThis.voice = voices[VOICEIDX];
@@ -413,7 +413,7 @@ $(document).ready(function() {
 
         function writeSubject(sbjText)
         {
-          $("#answer").html(myMsg['touching'][getRandomArbitrary(0,3)]+" "+sbjText);
+          $("#answer").html(touchs+" "+sbjText);
 
         }
 
