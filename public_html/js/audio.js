@@ -42,7 +42,7 @@ if(new Date().getTime() > timeout) {
 var myMsg = {
     welcome: {  1: messages['welcome'], 2:messages['welcome2'], 3:messages['welcome3'] },
     undef: { 1: 'Non ho capito. Prova a ripetere.', 2:'Puoi cortesemente riformulare la domanda?', 3:'Non ho capito. Riformula la domanda.' },
-    touching:{ 1: 'Stai esaminando ', 2:'Stai analizzando ', 3:'Stai esplorando' },
+    touching:{ 1: 'Stai esaminando ', 2:'Stai analizzando ', 3:'Stai esplorando ' },
     re:{1: 'Ancora una volta ', 2:'Di nuovo ', 3:'Ci siamo tornati. ' },
     //shephard1: { 1: 'Il primo pastore ', 2:'Il primo pastorello ', 3:'Il primo dei pastori ', check: 0 },
     hut: { 1: 'la capanna', 2:'la capanna', 3:'la capanna', check: 0 }, //s 83
@@ -176,6 +176,7 @@ $(document).ready(function() {
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['shephard2'][1]);
+            myMsg['shephard2']['check'] = 0;
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -198,6 +199,7 @@ $(document).ready(function() {
             {
               utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
               writeSubject(myMsg['madonna'][1]);
+              myMsg['madonna']['check'] = 0;
             }
 
           utterThis.voice = voices[VOICEIDX];
@@ -223,6 +225,7 @@ $(document).ready(function() {
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['giuseppe'][1]);
+            myMsg['giuseppe']['check'] = 0;
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -248,6 +251,7 @@ $(document).ready(function() {
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['shephard1'][1]);
+            myMsg['shephard1']['check'] = 0;
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -273,6 +277,7 @@ $(document).ready(function() {
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['shephard3'][1]);
+            myMsg['shephard3']['check'] = 0;
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -298,6 +303,7 @@ $(document).ready(function() {
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['angels'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['angels'][1]);
+            myMsg['angels']['check'] = 0;
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -323,6 +329,7 @@ $(document).ready(function() {
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['dog'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['dog'][1]);
+            myMsg['dog']['check'] = 0;
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -348,6 +355,7 @@ $(document).ready(function() {
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['hut'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['hut'][1]);
+            myMsg['hut']['check'] = 0;
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -373,6 +381,7 @@ $(document).ready(function() {
           {
             utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['baby'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['baby'][1]);
+            myMsg['baby']['check'] = 0;
           }
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
@@ -414,7 +423,9 @@ $(document).ready(function() {
         function writeSubject(sbjText)
         {
           $("#answer").html(touchs+" "+sbjText);
-          fixTxt();
+          $("#answer").stop();
+          $("#answer").css({ top: $("body").height()/2});
+          //fixTxt();
         }
 
         function txtRedirect(tmpText)
@@ -507,13 +518,6 @@ $(document).ready(function() {
 
           }
         }
-
-        function fixTxt()
-        {
-          $("#answer").stop();
-          $("#answer").css({ top: $("body").height()/2});
-        }
-
 
         function reStart()
         {
