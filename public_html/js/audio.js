@@ -413,7 +413,7 @@ $(document).ready(function() {
 
         function writeSubject(sbjText)
         {
-          $("#answer").html(sbjText);
+          $("#answer").html(myMsg['touching'][getRandomArbitrary(0,3)]+""+sbjText);
 
         }
 
