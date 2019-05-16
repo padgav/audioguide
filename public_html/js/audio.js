@@ -18,15 +18,23 @@ var lastHandlingTime = Date.now();
 var touchs;
 var standbyTime = 60*1000;
 
+var input = "";
+var startKeyStroke = false;
+var keyStrokeValue = "";
+var currentPress;
+var lastPress;
+var cp = 0;
+var lp = 0;
+
 var messages = new Array();
 var voices;
-var VOICEIDX = 0;
+var VOICEIDX = 3;
 var focusElem = false;
 
 messages['undef'] = "Non ho capito. Prova a ripetere.";
-messages['welcome'] = "Benvenuto! Ti trovi davanti al rètàblo del Presepio, e stai per toccare la tavola tàttiile che rappresenta la scena dell'adorazione. La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
-messages['welcome2'] = "Benvenuto! Ti trovi davanti al quadro dell'Annunciazione: stai per toccare la tavola tàttiile dell'opera e puoi liberamente fare domande sul quadro."
-messages['welcome3'] = "Benvenuto! Ti trovi davanti al quadro della Crocefissione: stai per toccare la tavola tàttiile dell'opera e puoi liberamente fare domande sul quadro."
+messages['welcome'] = "Benvenuto! Hai posizionato correttamente la tavola dell'adorazione dei pastori. Puoi toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere circa la descrizione generale del retablo, la provenienza, l'autore oppure fare liberamente domande sul quadro.";//". La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
+messages['welcome2'] = "Benvenuto! Hai posizionato correttamente la tavola dell'Annunciazione. Puoi toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere la descrizione generale o fare liberamente domande sul quadro."
+messages['welcome3'] = "Benvenuto! Hai posizionato correttamente la tavola della Crocefissione e puoi toccare la tavola tàttiile dell'opera. Puoi chiedere la descrizione generale o fare liberamente domande sul quadro."
 messages['pastore2'] = "Stai esaminando il secondo pastorello";
 
 //messages['pastore'] = {1:" il pastorello", 2:"Stai esaminando il pastore", 3:"Stai esaminando il custode degli ovini"};
@@ -69,10 +77,10 @@ var myMcoms = {
 
 }
 var myPaints = {
-      1: {name: "Adorazione", src: "http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"},
-      2: {name: "Annunciazione", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"},
-      3: {name: "Crocefissione", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"},
-      4: {name: "Crocifissione", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"}
+      1: {name: "Adorazione", key: "0000142480", src: "http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"},
+      2: {name: "Annunciazione", key: "0000380280", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"},
+      3: {name: "Crocefissione", key: "", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"},
+      4: {name: "Crocifissione", key: "", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"}
     }
 //quadri = {1: "Adorazione", 2: "Annunciazione", 3: "Crocefissione"}
 ///
@@ -532,6 +540,10 @@ $(document).ready(function() {
         //START
         function StartNow(){
           var now = Date.now();
+
+          //$(".card").removeAttr("id");
+          //$(".card").attr("id", myPaints[1]["name"].toString());
+
           if((now - lastQuestionTime  > standbyTime ) && (now - lastHandlingTime  > standbyTime)) active = 0;
           console.log("** ctrlK **", ctrlK);//if ((frame.hands.length > 0){}
 
@@ -680,13 +692,114 @@ $(document).ready(function() {
         card = $(".card").attr("id");
 
 
-        var utterThis = new SpeechSynthesisUtterance(card);
-        utterThis.voice = voices[VOICEIDX];
-        synth.speak(utterThis);
+        //var utterThis = new SpeechSynthesisUtterance(card);
+        //utterThis.voice = voices[VOICEIDX];
+        //synth.speak(utterThis);
     });
 
+    //numeric ascii 38-57
+    $(document).keypress(function(ev) {
+
+      if (ev.which > 38 && ev.which <= 57) {
+
+        let v = ev.which-48;
+
+        if(startKeyStroke == false)
+          keyStrokeInit(v);
+
+        else
+        {
+          lastPress = new Date();
+          lp = lastPress.getTime();
+          let diff = lp - cp;
+          if(diff < 150)
+            keyStrokeValue += v;
+          else
+          {
+            keyStrokeReset();
+            keyStrokeInit(v);
+
+          }
+          console.log("diff lp - cp: ", diff );
+
+          console.log("value: ", keyStrokeValue);
+          console.log("currentPress: ",cp);
+          console.log("lastPress: ", lp);
+        }
+      }
+      else
+      {
+        if(ev.which == 13 && (keyStrokeValue.length == 10))
+        {
+          catchKeyStroke(keyStrokeValue);
+          console.log("Si tratta di un tag: ", keyStrokeValue);
+        }
+        keyStrokeReset();
+        console.log("value not numeric", keyStrokeValue);
+
+      }
+
+
+    });
+
+    function keyStrokeInit(v)
+    {
+      startKeyStroke = true;
+      keyStrokeValue += v;
+      console.log("value: ", keyStrokeValue);
+      currentPress = new Date();
+      cp = currentPress.getTime();
+      console.log("current press time: ", cp);
+    }
+
+    function keyStrokeReset()
+    {
+      keyStrokeValue = "";
+      startKeyStroke = false;
+      cp=0;
+      keyStrokeValue = "";
+      cp = 0;
+      lp = 0;
+
+    }
+    //0000380280var
+
+    function catchKeyStroke(value)
+    {
+        input = value;
+        let cardValue;
+
+        console.log("Evento keypress rilevato!", input);
+        if( (input == myPaints[1]['key'] ) ||(input == myPaints[2]['key'] )||(input == myPaints[3]['key'] ))
+        {
+          //imposto mypaints!
+          switch (input) {
+            case myPaints[1]['key']:
+              cardValue = myPaints[1]["name"].toString();
+            break;
+
+            case myPaints[2]['key']:
+            cardValue = myPaints[2]["name"].toString();
+
+            break;
+            case myPaints[3]['key']:
+              cardValue = myPaints[3]["name"].toString();
+
+            break;
+
+          }
+          $(".card").removeAttr("id");
+          $(".card").attr("id",cardValue)
+          reStart();
+
+          console.log("mypaints rilevato:", input);
+        }
+
+        input = "";
+    }
+
     $("#question").keypress(function(e) {
-    if(e.which == 13) {
+    if(e.which == 13) { //return keypress
         if(ctrlK==1 && active ==1)
           card = $(".card").attr("id");
         $(music).animate({volume: 0.1}, 1000);
