@@ -28,7 +28,7 @@ var lp = 0;
 
 var messages = new Array();
 var voices;
-var VOICEIDX = 3;
+var VOICEIDX = 0;
 var focusElem = false;
 
 messages['undef'] = "Non ho capito. Prova a ripetere.";
@@ -182,7 +182,7 @@ $(document).ready(function() {
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
+            utterThis.text = /*myMsg['re'][getRandomArbitrary(0,3)]+""+*/touchs+""+ myMsg['shephard2'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['shephard2'][1]);
             myMsg['shephard2']['check'] = 0;
           }
@@ -205,7 +205,7 @@ $(document).ready(function() {
             }
           else
             {
-              utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
+              utterThis.text = /*myMsg['re'][getRandomArbitrary(0,3)]+""+*/touchs+""+ myMsg['madonna'][getRandomArbitrary(0,3)];
               writeSubject(myMsg['madonna'][1]);
               myMsg['madonna']['check'] = 0;
             }
@@ -231,7 +231,7 @@ $(document).ready(function() {
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
+            utterThis.text = /*myMsg['re'][getRandomArbitrary(0,3)]+""+*/touchs+""+ myMsg['giuseppe'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['giuseppe'][1]);
             myMsg['giuseppe']['check'] = 0;
           }
@@ -257,7 +257,7 @@ $(document).ready(function() {
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
+            utterThis.text = /*myMsg['re'][getRandomArbitrary(0,3)]+""+*/touchs+""+ myMsg['shephard1'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['shephard1'][1]);
             myMsg['shephard1']['check'] = 0;
           }
@@ -283,7 +283,7 @@ $(document).ready(function() {
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
+            utterThis.text = /*myMsg['re'][getRandomArbitrary(0,3)]+""+*/touchs+""+ myMsg['shephard3'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['shephard3'][1]);
             myMsg['shephard3']['check'] = 0;
           }
@@ -309,7 +309,7 @@ $(document).ready(function() {
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['angels'][getRandomArbitrary(0,3)];
+            utterThis.text = /*myMsg['re'][getRandomArbitrary(0,3)]+""+*/touchs+""+ myMsg['angels'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['angels'][1]);
             myMsg['angels']['check'] = 0;
           }
@@ -335,7 +335,7 @@ $(document).ready(function() {
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['dog'][getRandomArbitrary(0,3)];
+            utterThis.text = /*myMsg['re'][getRandomArbitrary(0,3)]+""+*/touchs+""+ myMsg['dog'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['dog'][1]);
             myMsg['dog']['check'] = 0;
           }
@@ -361,7 +361,7 @@ $(document).ready(function() {
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['hut'][getRandomArbitrary(0,3)];
+            utterThis.text = /*myMsg['re'][getRandomArbitrary(0,3)]+""+*/touchs+""+ myMsg['hut'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['hut'][1]);
             myMsg['hut']['check'] = 0;
           }
@@ -387,7 +387,7 @@ $(document).ready(function() {
             }
           else
           {
-            utterThis.text = myMsg['re'][getRandomArbitrary(0,3)]+""+touchs+""+ myMsg['baby'][getRandomArbitrary(0,3)];
+            utterThis.text = /*myMsg['re'][getRandomArbitrary(0,3)]+""+*/touchs+""+ myMsg['baby'][getRandomArbitrary(0,3)];
             writeSubject(myMsg['baby'][1]);
             myMsg['baby']['check'] = 0;
           }
