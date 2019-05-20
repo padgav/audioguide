@@ -32,6 +32,14 @@ var VOICEIDX = 0;
 var focusElem = false;
 
 messages['undef'] = "Non ho capito. Prova a ripetere.";
+
+messages['welcome_0'] = "Benvenuto! Stai posizionando la tavola della ";
+messages['welcome_adorazione'] = ". La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. ";
+messages['welcome_annunciazione'] = "";
+messages['welcome_crocefissione'] = "";
+messages['outro'] = "Puoi toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere circa la descrizione generale del quadro, la provenienza, l'autore oppure fare liberamente domande sul quadro.";
+
+//Puoi toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere circa la descrizione generale del retablo, la provenienza, l'autore oppure fare liberamente domande sul quadro.";//". La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
 messages['welcome'] = "Benvenuto! Hai posizionato correttamente la tavola dell'adorazione dei pastori. Puoi toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere circa la descrizione generale del retablo, la provenienza, l'autore oppure fare liberamente domande sul quadro.";//". La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
 messages['welcome2'] = "Benvenuto! Hai posizionato correttamente la tavola dell'Annunciazione. Puoi toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere la descrizione generale o fare liberamente domande sul quadro."
 messages['welcome3'] = "Benvenuto! Hai posizionato correttamente la tavola della Crocefissione e puoi toccare la tavola tàttiile dell'opera. Puoi chiedere la descrizione generale o fare liberamente domande sul quadro."
@@ -47,8 +55,16 @@ if(new Date().getTime() > timeout) {
 }
 */
 ///
+var myPaints = {
+      1: {name: "Adorazione", key: "0000142480", src: "http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg", desc: messages['welcome_adorazione']},
+      2: {name: "Annunciazione", key: "0000380280", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"},
+      3: {name: "Crocefissione", key: "", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"},
+      4: {name: "Crocifissione", key: "", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"}
+    }
+//quadri = {1: "Adorazione", 2: "Annunciazione", 3: "Crocefissione"}
+///
 var myMsg = {
-    welcome: {  1: messages['welcome'], 2:messages['welcome2'], 3:messages['welcome3'] },
+    welcome: {  1: messages['welcome_0'] +   myPaints[1]["name"] +  myPaints[1]["desc"] + messages['outro'], 2:messages['welcome2'], 3:messages['welcome3'] },
     undef: { 1: 'Non ho capito. Prova a ripetere.', 2:'Puoi cortesemente riformulare la domanda?', 3:'Non ho capito. Riformula la domanda.' },
     touching:{ 1: 'Stai esaminando ', 2:'Stai analizzando ', 3:'Stai esplorando ' },
     re:{1: 'Ancora una volta ', 2:'Di nuovo ', 3:'Ci siamo tornati. ' },
@@ -72,18 +88,12 @@ var myMcoms = {
     mup: ["solleva la musica"],
     restart: ["ricomincia"],
     restart2: ["ricomincia da capo"],
-    change: ["cambia quadro"]
+    change: ["cambia quadro"],
+    time: ["che ore sono"]
 
 
 }
-var myPaints = {
-      1: {name: "Adorazione", key: "0000142480", src: "http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"},
-      2: {name: "Annunciazione", key: "0000380280", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"},
-      3: {name: "Crocefissione", key: "", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"},
-      4: {name: "Crocifissione", key: "", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"}
-    }
-//quadri = {1: "Adorazione", 2: "Annunciazione", 3: "Crocefissione"}
-///
+
 
 var synth = window.speechSynthesis;
 
@@ -142,17 +152,6 @@ $(document).ready(function() {
 
           var utterThis = new SpeechSynthesisUtterance();
           switch (x) {
-            case 32:
-              ctrlK=1;
-              StartNow();
-              //getResult('adorazione');
-
-              console.log("MetaKey pressed: ", ctrlK);
-
-              break;
-
-
-
 
             default:
               console.log("pressione tastiera: ", window.event.keyCode);
@@ -161,10 +160,20 @@ $(document).ready(function() {
           console.log("LOGGING X: ", x);
 
           touchs = myMsg['touching'][getRandomArbitrary(0,3)];
+
           if(focusElem!=true) //wasdfg
-                              //w 87 a 65 s 83 d 68 f 70 g 71
+          //w 87 a 65 s 83 d 68 f 70 g 71
           switch (x) {
 
+
+          case 32:
+              ctrlK=1;
+              StartNow();
+              //getResult('adorazione');
+
+              console.log("MetaKey pressed: ", ctrlK);
+
+              break;
           case 37: //larrow
 
           if($(".card").attr("id") == myPaints[1]["name"].toString())
@@ -435,7 +444,13 @@ $(document).ready(function() {
           $("#answer").css({ top: $("body").height()/2});
           //fixTxt();
         }
-
+        function comunicateInfo(infoTxt)
+        {
+          $("#answer").html(infoTxt);
+          $("#answer").stop();
+          $("#answer").css({ top: $("body").height()/2});
+          //fixTxt();
+        }
         function txtRedirect(tmpText)
         {
           switch (tmpText.toLowerCase()) {
@@ -452,6 +467,9 @@ $(document).ready(function() {
               break;
               case  myMcoms["mup"].toString():
                 $(music).animate({volume: 1}, 1000);
+              break;
+              case  myMcoms["time"].toString():
+                tellMeTime();
               break;
               case  myMcoms["restart"].toString():
                 console.log("Restart cause : ",myMcoms["restart"]);
@@ -812,9 +830,30 @@ $(document).ready(function() {
     }
 
 
-});
+  });
 
+  function tellMeTime()
+  {
+    let introduceH = "Sono le ore ";
+    //let introduceM = " e ";
+    let theDate = new Date();
+    //let theTime = theDate.getTime();
+    let hours = theDate.getHours();
+    let minutes = theDate.getMinutes();
 
+    let theTime = introduceH+hours+" e "/*+introduceM*/+minutes;
+    //theTime.getHours()
+    //Recupera il valore dell'ora
+    //getMinutes()
+
+    var utterThis = new SpeechSynthesisUtterance();
+    utterThis.text = theTime;
+    utterThis.voice = voices[VOICEIDX];
+    synth.speak(utterThis);
+    comunicateInfo(introduceH+hours+":"/*+introduceM*/+minutes)
+    console.log("che ore sono: ",myMcoms["time"]);
+
+  }
 
     recognition.onresult = function(event) {
         var last = event.results.length - 1;
