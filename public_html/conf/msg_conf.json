@@ -1,0 +1,30 @@
+{
+  "welcome": 
+  [ 
+  	"Benvenuto! Dopo aver posizionato correttamente la tavola ",
+  	"potrai toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere la descrizione generale del retablo, la provenienza, l'autore oppure fare liberamente domande sul quadro."
+  ]
+  "undef": 
+  [ 
+   "Non ho capito. Prova a ripetere.",
+   "Puoi cortesemente riformulare la domanda?",
+   "Non ho capito. Riformula la domanda."
+   ]
+  "touching": 
+  [
+   "Stai esaminando ",
+   "Stai analizzando ",
+   "Stai esplorando "
+  ]
+  "re": 
+  [
+  	"Ancora una volta ",
+  	"Di nuovo ",
+  	"Ci siamo tornati. "
+  ]
+  "which": 
+  [
+  	"quale quadro vuoi esplorare?",
+  	"check": 0
+  ]
+}

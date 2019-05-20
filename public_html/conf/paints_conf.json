@@ -1,0 +1,116 @@
+{
+  "name": "Adorazione",
+  "id": "0008657628",
+  "src": "http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg",
+  "art": "dell' ",
+  "subjects": [
+    {
+      "hut": [
+        "la capanna",
+        "il tetto della capanna",
+        "la tettoia della capanna",
+        "check": 0,
+        "key": 83
+      ],
+        "baby": [
+        "il bambino",
+        "il bambinello",
+        "Gesù bambino",
+        "check": 0,
+        "key": 70
+      ],
+        "angels": [
+        "gli angeli",
+        "gli angeli che reggono un festone",
+        "gli angeli posti nella parte alta della capanna",
+        "check": 0,
+        "key": 65
+      ],
+    	"dog": [
+        "il cane",
+        "il cane dei pastori",
+        "il cane",
+        "check": 0,
+        "key": 68
+      ],
+      "shephard1": [
+        "il primo pastore",
+        "il pastore in primo piano",
+        "il primo dei pastori ",
+        "check": 0,
+        "key": 40
+      ],
+      "shephard2": [
+        "il secondo pastore ",
+        "il pastore in secondo piano",
+        "il secondo dei pastori",
+        "check": 0,
+        "key": 37
+      ],
+      "shephard3": [
+        "il terzo pastore ",
+        "il pastore in terzo piano",
+        "il terzo dei pastori",
+        "check": 0,
+        "key": 87
+      ],
+      "giuseppe": [
+        "San Giuseppe ",
+        "la sagoma di San Giuseppe ",
+        "la figura di San Giuseppe ",
+        "check": 0,
+        "key": 39
+      ],
+      "madonna": [
+        "a Madonna ",
+        "la figura di Maria ",
+        "'la sagoma della Madonna ",        
+        "check": 0,        
+        "key": 38
+      ]
+    },
+    
+  "name": "Annunciazione",  
+  "id": "0000380280",  
+  "src": "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false",
+  "art": "dell' ",
+  "subjects": [
+    {
+      "madonna": [
+        "",
+        "",
+        "",        
+        "check": 0,        
+        "key": 37
+      ],
+        "arcangelo": [
+        " ",
+        " ",
+        " ",        
+        "check": 0,        
+        "key": 38
+      ]
+    },
+    
+  "name": "Crocifissione",
+  "id": "0008657628",
+  "src": "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false",
+  "art": "della ",
+  "subjects": [
+    {
+      "la croce": [
+        "",
+        "",
+        "",        
+        "check": 0,        
+        "key": 37
+      ],
+        "gesu": [
+        "",
+        "",
+        "",        
+        "check": 0,        
+        "key": 38
+      ]
+    }    
+}
