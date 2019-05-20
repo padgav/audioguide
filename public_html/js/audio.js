@@ -32,17 +32,9 @@ var VOICEIDX = 0;
 var focusElem = false;
 
 messages['undef'] = "Non ho capito. Prova a ripetere.";
-
-messages['welcome_0'] = "Benvenuto! Stai posizionando la tavola della ";
-messages['welcome_adorazione'] = ". La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. ";
-messages['welcome_annunciazione'] = "";
-messages['welcome_crocefissione'] = "";
-messages['outro'] = "Puoi toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere circa la descrizione generale del quadro, la provenienza, l'autore oppure fare liberamente domande sul quadro.";
-
-//Puoi toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere circa la descrizione generale del retablo, la provenienza, l'autore oppure fare liberamente domande sul quadro.";//". La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
-messages['welcome'] = "Benvenuto! Hai posizionato correttamente la tavola dell'adorazione dei pastori. Puoi toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere circa la descrizione generale del retablo, la provenienza, l'autore oppure fare liberamente domande sul quadro.";//". La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
-messages['welcome2'] = "Benvenuto! Hai posizionato correttamente la tavola dell'Annunciazione. Puoi toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere la descrizione generale o fare liberamente domande sul quadro."
-messages['welcome3'] = "Benvenuto! Hai posizionato correttamente la tavola della Crocefissione e puoi toccare la tavola tàttiile dell'opera. Puoi chiedere la descrizione generale o fare liberamente domande sul quadro."
+messages['welcome'] = "Benvenuto! Dopo aver posizionato correttamente la tavola dell'adorazione dei pastori potrai toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere la descrizione generale del retablo, la provenienza, l'autore oppure fare liberamente domande sul quadro.";//". La tavola raffigura una capanna, con apertura ad arco delineata da mattoni rosso chiaro, dove sono presenti il bue e l’asinello di fronte alla mangiatoia. Nella parte alta sono raffigurati  sei angeli che reggono un festone bianco. In basso da sinistra sono raffigurati la Madonna e San Giuseppe, ai loro piedi steso  sopra un lembo del mantello della madonna il Bambino nudo con braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Puoi fare domande circa la descrizione generale del retablo, la provenienza o l'autore";
+messages['welcome2'] = "Benvenuto! Dopo aver posizionato correttamente la tavola dell'Annunciazione potrai toccare la tavola tàttiile che rappresenta la scena. Puoi chiedere la descrizione generale o fare liberamente domande sul quadro."
+messages['welcome3'] = "Benvenuto! Dopo aver posizionato correttamente la tavola della Crocefissione potrai toccare la tavola tàttiile dell'opera. Puoi chiedere la descrizione generale o fare liberamente domande sul quadro."
 messages['pastore2'] = "Stai esaminando il secondo pastorello";
 
 //messages['pastore'] = {1:" il pastorello", 2:"Stai esaminando il pastore", 3:"Stai esaminando il custode degli ovini"};
@@ -55,16 +47,8 @@ if(new Date().getTime() > timeout) {
 }
 */
 ///
-var myPaints = {
-      1: {name: "Adorazione", key: "0000142480", src: "http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg", desc: messages['welcome_adorazione']},
-      2: {name: "Annunciazione", key: "0000380280", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"},
-      3: {name: "Crocefissione", key: "", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"},
-      4: {name: "Crocifissione", key: "", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"}
-    }
-//quadri = {1: "Adorazione", 2: "Annunciazione", 3: "Crocefissione"}
-///
 var myMsg = {
-    welcome: {  1: messages['welcome_0'] +   myPaints[1]["name"] +  myPaints[1]["desc"] + messages['outro'], 2:messages['welcome2'], 3:messages['welcome3'] },
+    welcome: {  1: messages['welcome'], 2:messages['welcome2'], 3:messages['welcome3'] },
     undef: { 1: 'Non ho capito. Prova a ripetere.', 2:'Puoi cortesemente riformulare la domanda?', 3:'Non ho capito. Riformula la domanda.' },
     touching:{ 1: 'Stai esaminando ', 2:'Stai analizzando ', 3:'Stai esplorando ' },
     re:{1: 'Ancora una volta ', 2:'Di nuovo ', 3:'Ci siamo tornati. ' },
@@ -94,6 +78,15 @@ var myMcoms = {
 
 }
 
+//tessera 0008657628 key 0000142480
+var myPaints = {
+      1: {name: "Adorazione", key: "0008657628", src: "http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg"},
+      2: {name: "Annunciazione", key: "0000380280", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"},
+      3: {name: "Crocefissione", key: "", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"},
+      4: {name: "Crocifissione", key: "", src: "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"}
+    }
+//quadri = {1: "Adorazione", 2: "Annunciazione", 3: "Crocefissione"}
+///
 
 var synth = window.speechSynthesis;
 
