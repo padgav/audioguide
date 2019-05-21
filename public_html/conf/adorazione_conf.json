@@ -1,72 +1,99 @@
 {
   "name": "Adorazione",
   "id": "0008657628",
-  "src": "http://3.bp.blogspot.com/-PWuqYUHJqME/Vl_6TrGcPzI/AAAAAAAACWE/DywzGXjIr8c/s1600/sar2.jpg",
+  "src": "./images/adorazione_pic.jpg",
   "art": "dell' ",
-  "subjects": [
-    {
-      "hut": [
-        "la capanna",
-        "il tetto della capanna",
-        "la tettoia della capanna",
+
+  "subjects": {
+
+      "83": {
+        "desc": [
+          "la capanna",
+          "il tetto della capanna",
+          "la tettoia della capanna"
+        ],
         "check": 0,
-        "key": 83
-      ],
-        "baby": [
-        "il bambino",
-        "il bambinello",
-        "Gesù bambino",
+        "name": "hut",
+      },
+
+      "70":{
+        "desc": [
+          "il bambino",
+          "il bambinello",
+          "Gesù bambino"
+        ],
         "check": 0,
-        "key": 70
-      ],
-        "angels": [
-        "gli angeli",
-        "gli angeli che reggono un festone",
-        "gli angeli posti nella parte alta della capanna",
+        "name": "baby"
+      },
+
+      "65": {
+        "desc": [
+          "gli angeli",
+          "gli angeli che reggono un festone",
+          "gli angeli posti nella parte alta della capanna"
+        ],
         "check": 0,
-        "key": 65
-      ],
-    	"dog": [
-        "il cane",
-        "il cane dei pastori",
-        "il cane",
+        "name": "angels"
+      },
+
+    	"68": {
+        "desc": [
+          "il cane",
+          "il cane dei pastori",
+          "il cane"
+        ],
         "check": 0,
-        "key": 68
-      ],
-      "shephard1": [
-        "il primo pastore",
-        "il pastore in primo piano",
-        "il primo dei pastori ",
+        "name": "dog"
+      },
+
+      "40": {
+        "desc": [
+          "il primo pastore",
+          "il pastore in primo piano",
+          "il primo dei pastori "
+        ],
         "check": 0,
-        "key": 40
-      ],
-      "shephard2": [
-        "il secondo pastore ",
-        "il pastore in secondo piano",
-        "il secondo dei pastori",
+        "name": "shephard1"
+      },
+
+      "37": {
+        "desc": [
+          "il secondo pastore ",
+          "il pastore in secondo piano",
+          "il secondo dei pastori"
+        ],
         "check": 0,
-        "key": 37
-      ],
-      "shephard3": [
+        "name": "shephard2"
+      },
+
+      "87": {
+        "desc": [
         "il terzo pastore ",
         "il pastore in terzo piano",
-        "il terzo dei pastori",
+        "il terzo dei pastori"
+        ],
         "check": 0,
-        "key": 87
-      ],
-      "giuseppe": [
-        "San Giuseppe ",
-        "la sagoma di San Giuseppe ",
-        "la figura di San Giuseppe ",
+        "name": "shephard3"
+      },
+
+      "39": {
+        "desc": [
+          "San Giuseppe ",
+          "la sagoma di San Giuseppe ",
+          "la figura di San Giuseppe "
+        ],
         "check": 0,
-        "key": 39
-      ],
-      "madonna": [
-        "a Madonna ",
-        "la figura di Maria ",
-        "'la sagoma della Madonna ",
+        "name": "giuseppe"
+      },
+
+      "38": {
+        "desc": [
+          "la Madonna ",
+          "la figura di Maria ",
+          "la sagoma della Madonna "
+        ],
         "check": 0,
-        "key": 38
-      ]
-    } 
+        "name": "madonna"
+      }
+    }
 }

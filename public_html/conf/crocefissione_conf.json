@@ -1,0 +1,27 @@
+{
+  "name": "Crocifissione",
+  "id": "0008657628",
+  "src": "./images/crocefissione_pic.jpg",
+  "art": "della ",
+
+  "subjects": {
+
+      "37": {
+        "desc": [
+          "Gesù Cristo",
+          "Gesù",
+          "Il Cristo"
+        ],
+        "check": 0,
+        "name": "gesu"
+      }    ,
+    "38": {
+      "desc": [
+        "la croce",
+        "la croce",
+        "la croce"
+      ],
+      "check": 0,
+      "name": "cross"
+    }
+}

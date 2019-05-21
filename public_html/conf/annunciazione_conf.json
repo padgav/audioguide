@@ -1,23 +1,27 @@
 {
-  "name": "Annunciazione",  
-  "id": "0000380280", 
-  "src": "http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false",
+  "name": "Annunciazione",
+  "id": "0000380280",
+  "src": "./images/annunciazione_pic.jpg",
   "art": "dell' ",
-  "subjects": [
-    {
-      "madonna": [
-        "",
-        "",
-        "",
-        "check": 0,
-        "key": 37
+
+  "subjects": {
+
+    "38": {
+      "desc": [
+        "la Madonna ",
+        "la figura di Maria ",
+        "la sagoma della Madonna "
       ],
-        "arcangelo": [
-        " ",
-        " ",
-        " ",
-        "check": 0,
-        "key": 38
-      ]
-    }   
+      "check": 0,
+      "name": "madonna"
+    },
+    "65": {
+      "desc": [
+        "l'Arcangelo",
+        "l'Arcangelo Gabriele",
+        "Gabriele Arcangelo"
+      ],
+      "check": 0,
+      "name": "angel"
+    }
 }
