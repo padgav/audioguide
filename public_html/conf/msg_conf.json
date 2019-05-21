@@ -26,10 +26,9 @@
   	"Di nuovo ",
   	"Ci siamo tornati. "
   ],
-  
-  "which":
-  [
-  	"quale quadro vuoi esplorare?",
-  	"check": 0
-  ]
+
+  "which": "quale quadro vuoi esplorare?",
+
+  "check": 0
+
 }
