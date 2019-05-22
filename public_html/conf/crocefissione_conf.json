@@ -1,6 +1,7 @@
 {
-  "name": "Crocifissione",
-  "id": "0008657628",
+  "name": "Crocefissione",
+  "alt_name": "Crocifissione",
+  "id": "0000318474",
   "src": "./images/crocefissione_pic.jpg",
   "art": "della ",
 
@@ -24,4 +25,5 @@
       "check": 0,
       "name": "cross"
     }
+  }
 }
