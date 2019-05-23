@@ -127,28 +127,12 @@ synth.onvoiceschanged = function() {
 
 };
 
-
-//get random integer from 1 up to 3
+//get random integer from min up to max
 function getRandomArbitrary(min, max) {
-  var x = Math.random() * (max - min) + min;
 
-  if (x <= 1) x = 1;
-  else if (x <= 2) x = 2;
-  else x = 3;
-
+  x = Math.floor(Math.random() * (max - min + 1) ) + min;
   return x;
-}
-//get random integer from 0 up to 2
-function getRandomArbitrary2(min, max) {
-  let minus = min - 1;
 
-  var x = Math.random() * (max - minus) + minus;
-
-  if (x <= 0) x = 0;
-  else if (x <= 1) x = 1;
-  else x = 2;
-
-  return x;
 }
 
 $(document).ready(function() {
@@ -196,7 +180,7 @@ $(document).ready(function() {
     console.log("LOGGING X: ", x);
 
     //touchs = myMsg['touching'][getRandomArbitrary(0,3)];
-    touchs = msg_conf['touching'][getRandomArbitrary2(0, 2)];
+    touchs = msg_conf['touching'][getRandomArbitrary(0, 2)];
 
     //w 87 a 65 s 83 d 68 f 70 g 71
     if (focusElem != true) //wasdfg
@@ -220,8 +204,8 @@ $(document).ready(function() {
 
           synth.cancel();
 
-          utterThis.text = touchs + "" + current_painting['subjects'][37]["desc"][getRandomArbitrary2(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][37]["desc"][getRandomArbitrary2(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][37]["desc"][getRandomArbitrary(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][37]["desc"][getRandomArbitrary(0, 2)];
           writeSubject(current_painting['subjects'][37]["desc"][0]);
 
           utterThis.voice = voices[VOICEIDX];
@@ -238,8 +222,8 @@ $(document).ready(function() {
             current_painting['subjects'][38]['check'] = 1;
           synth.cancel();
 
-          utterThis.text = touchs + "" + current_painting['subjects'][38]["desc"][getRandomArbitrary2(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][38]["desc"][getRandomArbitrary2(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][38]["desc"][getRandomArbitrary(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][38]["desc"][getRandomArbitrary(0, 2)];
           writeSubject(current_painting['subjects'][38]["desc"][0]);
 
           utterThis.voice = voices[VOICEIDX];
@@ -256,8 +240,8 @@ $(document).ready(function() {
             current_painting['subjects'][39]['check'] = 1;
           synth.cancel();
 
-          utterThis.text = touchs + "" + current_painting['subjects'][39]["desc"][getRandomArbitrary2(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][39]["desc"][getRandomArbitrary2(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][39]["desc"][getRandomArbitrary(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][39]["desc"][getRandomArbitrary(0, 2)];
           writeSubject(current_painting['subjects'][39]["desc"][0]);
 
           utterThis.voice = voices[VOICEIDX];
@@ -274,8 +258,8 @@ $(document).ready(function() {
             current_painting['subjects'][40]['check'] = 1;
           synth.cancel();
 
-          utterThis.text = touchs + "" + current_painting['subjects'][40]["desc"][getRandomArbitrary2(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][40]["desc"][getRandomArbitrary2(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][40]["desc"][getRandomArbitrary(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][40]["desc"][getRandomArbitrary(0, 2)];
           writeSubject(current_painting['subjects'][40]["desc"][0]);
 
           utterThis.voice = voices[VOICEIDX];
@@ -292,8 +276,8 @@ $(document).ready(function() {
             current_painting['subjects'][87]['check'] = 1;
           synth.cancel();
 
-          utterThis.text = touchs + "" + current_painting['subjects'][87]["desc"][getRandomArbitrary2(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][87]["desc"][getRandomArbitrary2(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][87]["desc"][getRandomArbitrary(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][87]["desc"][getRandomArbitrary(0, 2)];
           writeSubject(current_painting['subjects'][87]["desc"][0]);
 
           utterThis.voice = voices[VOICEIDX];
@@ -310,8 +294,8 @@ $(document).ready(function() {
             current_painting['subjects'][65]['check'] = 1;
           synth.cancel();
 
-          utterThis.text = touchs + "" + current_painting['subjects'][65]["desc"][getRandomArbitrary2(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][65]["desc"][getRandomArbitrary2(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][65]["desc"][getRandomArbitrary(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][65]["desc"][getRandomArbitrary(0, 2)];
           writeSubject(current_painting['subjects'][65]["desc"][0]);
 
           utterThis.voice = voices[VOICEIDX];
@@ -328,8 +312,8 @@ $(document).ready(function() {
             current_painting['subjects'][68]['check'] = 1;
           synth.cancel();
 
-          utterThis.text = touchs + "" + current_painting['subjects'][68]["desc"][getRandomArbitrary2(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][68]["desc"][getRandomArbitrary2(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][68]["desc"][getRandomArbitrary(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][68]["desc"][getRandomArbitrary(0, 2)];
           writeSubject(current_painting['subjects'][68]["desc"][0]);
 
           utterThis.voice = voices[VOICEIDX];
@@ -346,8 +330,8 @@ $(document).ready(function() {
             current_painting['subjects'][83]['check'] = 1;
           synth.cancel();
 
-          utterThis.text = touchs + "" + current_painting['subjects'][83]["desc"][getRandomArbitrary2(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][83]["desc"][getRandomArbitrary2(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][83]["desc"][getRandomArbitrary(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][83]["desc"][getRandomArbitrary(0, 2)];
           writeSubject(current_painting['subjects'][83]["desc"][0]);
 
           utterThis.voice = voices[VOICEIDX];
@@ -364,8 +348,8 @@ $(document).ready(function() {
             current_painting['subjects'][70]['check'] = 1;
           synth.cancel();
 
-          utterThis.text = touchs + "" + current_painting['subjects'][70]["desc"][getRandomArbitrary2(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][70]["desc"][getRandomArbitrary2(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][70]["desc"][getRandomArbitrary(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][70]["desc"][getRandomArbitrary(0, 2)];
           writeSubject(current_painting['subjects'][70]["desc"][0]);
 
           utterThis.voice = voices[VOICEIDX];
@@ -989,7 +973,7 @@ $(document).ready(function() {
           console.log(response.hits.hits[0]._source.link)
         }
       } else {
-        var utterThis = new SpeechSynthesisUtterance(msg_conf['undef'][getRandomArbitrary2(0, 2)]); //messages['undef']);//myMsg['touching'][getRandomArbitrary(0,3)]
+        var utterThis = new SpeechSynthesisUtterance(msg_conf['undef'][getRandomArbitrary(0, 2)]); //messages['undef']);//myMsg['touching'][getRandomArbitrary(0,3)]
         utterThis.voice = voices[VOICEIDX];
         utterThis.onend = function(event) {
           $(music).animate({
