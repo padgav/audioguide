@@ -38,6 +38,9 @@ var myMcoms = {
   mup: ["solleva la musica"],
   restart: ["ricomincia"],
   restart2: ["ricomincia da capo"],
+  quiet: ["stop"],
+  quiet2: ["silenzio"],
+  quiet3: ["fermati"],
   change: ["cambia quadro"],
   time: ["che ore sono"]
 }
@@ -389,7 +392,7 @@ $(document).ready(function() {
         break;
 
       case myMcoms["mon"].toString():
-        console.log("Music play cause : ", myMcoms["mon"]);
+        console.log("Music play cause: ", myMcoms["mon"]);
         music.play();
         break;
 
@@ -410,9 +413,10 @@ $(document).ready(function() {
         break;
 
       case myMcoms["restart"].toString():
-        console.log("Restart cause : ", myMcoms["restart"]);
+        console.log("Restart cause: ", myMcoms["restart"]);
       case myMcoms["restart2"].toString():
-        console.log("Restart cause : ", myMcoms["restart2"]);
+        console.log("Restart cause: ", myMcoms["restart2"]);
+
         reStart();
         /*
         ctrlK = 1;
@@ -422,6 +426,16 @@ $(document).ready(function() {
         music.pause(); music.currentTime = 0;
         StartNow();
         */
+        break;
+
+      case myMcoms["quiet"].toString():
+        console.log("Turn off cause: ", myMcoms["quiet"]);
+      case myMcoms["quiet2"].toString():
+        console.log("Turn off cause: ", myMcoms["quiet2"]);
+      case myMcoms["quiet3"].toString():
+        console.log("Turn off cause: ", myMcoms["quiet3"]);
+        quietPlease();
+
         break;
 
       case myMcoms["change"].toString():
@@ -493,6 +507,16 @@ $(document).ready(function() {
     music.currentTime = 0;
     StartNow();
 
+  }
+  function quietPlease() {
+    //ctrlK = 1;
+    //active = 0;
+    //synth.cancel();
+    $("#answer").stop().fadeOut();
+
+    music.pause();
+    synth.pause();
+    music.currentTime = 0;
   }
 
   //START
