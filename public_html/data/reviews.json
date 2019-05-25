@@ -285,7 +285,7 @@
              {
                "name": "pasts",
                "question": "Descrivi i pastori? Come sono raffigurati i pastori? Parlami, parla dei pastori.",
-               "answer": "Sono raffigurati tre pastori: il primo in basso è inginocchiato in atto di adorazione messo di profilo sinistro; In secondo sempre in ginocchio, visibile la parte superiore e parte della gamba sinistra, più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale.",
+               "answer": "Sono raffigurati tre pastori: il primo in basso è inginocchiato in atto di adorazione messo di profilo sinistro; Il secondo sempre in ginocchio, visibile la parte superiore e parte della gamba sinistra, più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale.",
                "suggests":  [
                               {
                                 "suggest": "la descrizione del primo pastore",
@@ -580,7 +580,7 @@
              {
                "name": "commis",
                "question": "Chi ha commissionato il retablo? Chi ha commissionato l'opera? Chi ha commissionato il dipinto?",
-               "answer": "La committenza del retablo è attribuita alla famiglia Carnicer, aragonese composta da notai, avvocati, procuratori e medici. Giovanni Carnicer notaio nel Regno d'Aragona, passò in Sardegna nel 1482 dove acquistò la Segreteria della città di Cagliari, ufficio che fu tramandato in famiglia per circa tre secoli, passando di padre in figlio. Giovanni Carnicer fu presente assieme al figlio Pietro Andrea al parlamento Dusay, come notaio pubblico, e sindaco del Braccio reale, venendo ricompensato nel 1510 per una somma di 20 lire. La famiglia si estinse nella seconda metà del XVIII secolo.",
+               "answer": "La committenza del retablo è attribuita alla famiglia Carnicer, aragonese composta da notai, avvocati, procuratori e medici. Giovanni Carnicer notaio nel Regno d'Aragona, passò in Sardegna nel 1482 dove acquistò la Segreteria della città di Cagliari, ufficio che fu tramandato in famiglia per circa tre secoli, passando di padre in figlio. Giovanni Carnicer fu presente assieme al figlio Pietro Andrea al parlamento Dusay, come notaio pubblico, e sindaco del Braccio reale, venendo ricompensato nel 1510 per una somma di 20 lire. La famiglia si estinse nella seconda metà del diciottesimo secolo.",
                "suggests":  [
                               {
                                 "suggest": "qual è il significato politico dell'opera",
