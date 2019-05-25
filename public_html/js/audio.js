@@ -39,7 +39,7 @@ var myMcoms = {
   mup: ["solleva la musica"],
   restart: ["ricomincia"],
   restart2: ["ricomincia da capo"],
-  quiet: ["stop"],
+  quiet: ["basta"],
   quiet2: ["silenzio"],
   quiet3: ["fermati"],
   change: ["cambia quadro"],
@@ -787,6 +787,7 @@ $(document).ready(function() {
           break;
 
       }
+      quietPlease();
       $(".card").removeAttr("id");
       $(".card").attr("id", cardValue)
       reStart();
