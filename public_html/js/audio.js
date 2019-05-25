@@ -17,6 +17,7 @@ var lastQuestionTime = Date.now();
 var lastHandlingTime = Date.now();
 var touchs;
 var standbyTime = 60 * 1000;
+var myTimeOut;
 
 var input = "";
 var startKeyStroke = false;
@@ -137,6 +138,13 @@ function getRandomArbitrary(min, max) {
   return x;
 
 }
+
+/*
+var handler = function(e) {
+	console.log(this.id);
+	e.stopPropagation();
+};
+*/
 
 $(document).ready(function() {
 
@@ -508,15 +516,18 @@ $(document).ready(function() {
     StartNow();
 
   }
+
   function quietPlease() {
     //ctrlK = 1;
     //active = 0;
-    //synth.cancel();
+
+    clearTimeout(myTimeOut);
     $("#answer").stop().fadeOut();
 
     music.pause();
     synth.pause();
     music.currentTime = 0;
+
   }
 
   //START
@@ -575,7 +586,7 @@ $(document).ready(function() {
         music.play();
 
         $(".painting").fadeTo(5000, 1);
-        setTimeout(function() {
+        myTimeOut = setTimeout(function() {
           //synth.cancel();
           $(music).animate({
             volume: 0.1
@@ -593,23 +604,7 @@ $(document).ready(function() {
           $("#answer").css({
             top: $("body").height() / 2
           });
-          //
-          /*
-          $("#answer").stop();
-          $("#answer").fadeIn({duration:2000, queue:false});
-          $("#answer").html(answer);
-          $("#answer").css({ top: '500px' });
-          $("#answer").css({ top: $(document).height()/2});
-          $("#answer").animate({top: -1000, queue:false},  3000 * answer.length/30);
-          //
-          $("#answer").html(answer);
-          $("#answer").css({ top: $(document).height()/2});
-          - $("#answer").animate({top: -1000, queue:false},  3000 * answer.length/30);
-          + var len = answer.length;
-          + var perc = (len/100)*10;
-          + $("#answer").animate({top: -1000, queue:false},   3000*len/perc);
-          */
-          //
+
           var len = currWelcome.length;
           var perc = (len * 0.1);
           $("#answer").animate({
@@ -634,7 +629,7 @@ $(document).ready(function() {
           synth.speak(utterThis);
 
         }, 5000);
-
+//fine setTimeout
 
 
 
