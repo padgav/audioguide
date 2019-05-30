@@ -31,7 +31,7 @@ var lp = 0;
 
 var messages = new Array();
 var voices;
-var VOICEIDX = 3;
+var VOICEIDX = 0;
 var focusElem = false;
 
 var myMcoms = {
