@@ -765,11 +765,11 @@
                     "answer": "accendi la musica"
                 },
                 {
-                    "question": "abbassa la musica, audio",
+                    "question": "abbassa la musica, audio, il volume",
                     "answer": "abbassa la musica"
                 },
                 {
-                    "question": "aumenta la musica, solleva l'audio",
+                    "question": "aumenta la musica, solleva l'audio, il volume",
                     "answer": "aumenta la musica"
                 },
                 {
