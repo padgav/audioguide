@@ -765,8 +765,12 @@
                     "answer": "accendi la musica"
                 },
                 {
-                    "question": "abbassa la musica",
+                    "question": "abbassa la musica, audio",
                     "answer": "abbassa la musica"
+                },
+                {
+                    "question": "aumenta la musica, solleva l'audio",
+                    "answer": "aumenta la musica"
                 },
                 {
                     "question": "ricomincia",
@@ -781,7 +785,7 @@
                     "answer": "cambia quadro"
                 },
                 {
-                    "question": "che ore sono",
+                    "question": "che ore sono, orario, l'ora",
                     "answer": "che ore sono"
                 }
             ]
