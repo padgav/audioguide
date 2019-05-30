@@ -731,7 +731,7 @@
         {
             "id": "Crocefissione",
             "title": "Crocefissione",
-            "type": "mytype",
+            "type": "painting",
             "qa": [
                 {
                     "question": "Descrizione generale",
@@ -748,6 +748,41 @@
                 {
                     "question": "Di che periodo è?",
                     "answer": "1507"
+                }
+            ]
+        },
+        {
+            "id": "controls",
+            "title": "controls",
+            "type": "controls",
+            "qa": [
+                {
+                    "question": "spegni la musica",
+                    "answer": "spegni la musica"
+                },
+                {
+                    "question": "accendi la musica",
+                    "answer": "accendi la musica"
+                },
+                {
+                    "question": "abbassa la musica",
+                    "answer": "abbassa la musica"
+                },
+                {
+                    "question": "ricomincia",
+                    "answer": "ricomincia"
+                },
+                {
+                    "question": "silenzio, fermati, basta cosi",
+                    "answer": "silenzio"
+                },
+                {
+                    "question": "cambia quadro",
+                    "answer": "cambia quadro"
+                },
+                {
+                    "question": "che ore sono",
+                    "answer": "che ore sono"
                 }
             ]
         }

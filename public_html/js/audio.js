@@ -8,6 +8,8 @@ function beep() {
   snd.play();
 }
 
+//var itsACom = false;
+
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
@@ -29,21 +31,21 @@ var lp = 0;
 
 var messages = new Array();
 var voices;
-var VOICEIDX = 0;
+var VOICEIDX = 3;
 var focusElem = false;
 
 var myMcoms = {
-  moff: ["spegni la musica"],
-  mon: ["accendi la musica"],
-  mdown: ["abbassa la musica"],
-  mup: ["solleva la musica"],
-  restart: ["ricomincia"],
-  restart2: ["ricomincia da capo"],
-  quiet: ["basta"],
-  quiet2: ["silenzio"],
-  quiet3: ["fermati"],
-  change: ["cambia quadro"],
-  time: ["che ore sono"]
+  moff: "spegni la musica",
+  mon: "accendi la musica",
+  mdown: "abbassa la musica",
+  mup: "solleva la musica",
+  restart: "ricomincia",
+  restart2: "ricomincia da capo",
+  quiet: "basta",
+  quiet2: "silenzio",
+  quiet3: "fermati",
+  change: "cambia quadro",
+  time: "che ore sono"
 }
 
 //tessera 0008657628 key 0000142480
@@ -393,36 +395,39 @@ $(document).ready(function() {
   function txtRedirect(tmpText) {
     switch (tmpText.toLowerCase()) {
 
-      case myMcoms["moff"].toString():
+      case myMcoms["moff"]:
         console.log("Music pause cause: ", myMcoms["moff"]);
         music.pause();
         music.currentTime = 0;
         break;
 
-      case myMcoms["mon"].toString():
+      case myMcoms["mon"]:
         console.log("Music play cause: ", myMcoms["mon"]);
         music.play();
         break;
 
-      case myMcoms["mdown"].toString():
+      case myMcoms["mdown"]:
+        console.log("Music down cause: ", myMcoms["mdown"]);
         $(music).animate({
           volume: 0.05
         }, 1000);
         break;
 
-      case myMcoms["mup"].toString():
+      case myMcoms["mup"]:
+        console.log("Music up cause: ", myMcoms["mup"]);
         $(music).animate({
           volume: 1
         }, 1000);
         break;
 
-      case myMcoms["time"].toString():
+      case myMcoms["time"]:
+        console.log("Time info cause: ", myMcoms["time"]);
         tellMeTime();
         break;
 
-      case myMcoms["restart"].toString():
+      case myMcoms["restart"]:
         console.log("Restart cause: ", myMcoms["restart"]);
-      case myMcoms["restart2"].toString():
+      case myMcoms["restart2"]:
         console.log("Restart cause: ", myMcoms["restart2"]);
 
         reStart();
@@ -436,17 +441,17 @@ $(document).ready(function() {
         */
         break;
 
-      case myMcoms["quiet"].toString():
+      case myMcoms["quiet"]:
         console.log("Turn off cause: ", myMcoms["quiet"]);
-      case myMcoms["quiet2"].toString():
+      case myMcoms["quiet2"]:
         console.log("Turn off cause: ", myMcoms["quiet2"]);
-      case myMcoms["quiet3"].toString():
+      case myMcoms["quiet3"]:
         console.log("Turn off cause: ", myMcoms["quiet3"]);
         quietPlease();
 
         break;
 
-      case myMcoms["change"].toString():
+      case myMcoms["change"]:
 
         synth.cancel();
         $("#answer").stop().fadeOut();
@@ -482,7 +487,7 @@ $(document).ready(function() {
 
             console.log("Quadro scelto (card): ", $(".card").attr("id"));
             msg_conf["check"] = 0;
-            txtRedirect(myMcoms["restart"].toString());
+            txtRedirect(myMcoms["restart"]);
 
             break;
           }
@@ -494,7 +499,7 @@ $(document).ready(function() {
 
               console.log("Quadro scelto (card): ", $(".card").attr("id"));
               msg_conf["check"] = 0;
-              txtRedirect(myMcoms["restart"].toString());
+              txtRedirect(myMcoms["restart"]);
 
               break;
             }
@@ -846,7 +851,104 @@ $(document).ready(function() {
     txtRedirect(text);
   }
 
+  //
+  function searchComand(text)
+  {
+    let comCard = "controls";
+
+    var query = "question:" + text + " AND title:" + comCard
+
+    console.log("query: ", query);
+    console.log('Confidence: ' + text);
+    client.search(
+      {
+      index: 'myindex',
+      //analyzer: 'my_synonyms',
+      //q: query
+      body: {
+        query: {
+          bool: {
+            must: [{
+                bool: {
+                  should: [{
+                      match: {
+                        question: {
+                          query: text,
+                          boost: 2
+                        }
+                      }
+                    },
+                    {
+                      match: {
+                        answer: text
+                      }
+                    }
+
+                  ]
+                }
+              },
+              {
+                bool: {
+                  should: [{
+                      match: {
+                        title: "controls"
+                      }
+                    },
+                    {
+                      match: {
+                        title: comCard
+                      }
+                    }
+
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }, function(error, response) {
+      console.log("resp:", response);
+
+      if (response.hits.total > 0) {
+
+        //itsACom = true;
+
+        console.log("+++ Comand recognized!!!");
+
+        var comResponse = response.hits.hits[0]._source.answer; //+" Testo aggiunto.";
+        txtRedirect(comResponse);
+        console.log("comResponse: ", comResponse);
+
+        //console.log("console all qa:", response.hits.hits[0]);
+
+        if (response.hits.hits[0]._source.link != undefined) {
+          // card = response.hits.hits[0]._source.link;
+          console.log(response.hits.hits[0]._source.link)
+          //itsACom = false;
+        }
+      }
+      else {
+        //itsACom = false;
+        console.log("+++ Comand not recognized!!!");
+        searchPainting(text);
+      }
+
+
+    }
+  );
+
+  }
+
+  //
   function getResult(text) {
+    searchComand(text);
+    //if(!itsACom)
+    //  searchPainting(text);
+  }
+
+  //
+  function searchPainting(text) {
 
 
     var query = "question:" + text + " AND title:" + card
