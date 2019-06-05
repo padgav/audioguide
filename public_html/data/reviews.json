@@ -757,6 +757,7 @@
             "type": "controls",
             "qa": [
                 {
+<<<<<<< HEAD
                     "question": "spegni la musica, spegnere",
                     "answer": "spegni la musica"
                 },
@@ -782,6 +783,37 @@
                 },
                 {
                     "question": "che ore sono, orario, ora",
+=======
+                    "question": "spegni la musica",
+                    "answer": "spegni la musica"
+                },
+                {
+                    "question": "accendi la musica",
+                    "answer": "accendi la musica"
+                },
+                {
+                    "question": "abbassa la musica, audio, il volume",
+                    "answer": "abbassa la musica"
+                },
+                {
+                    "question": "aumenta la musica, solleva l'audio, il volume",
+                    "answer": "aumenta la musica"
+                },
+                {
+                    "question": "ricomincia",
+                    "answer": "ricomincia"
+                },
+                {
+                    "question": "silenzio, fermati, basta cosi",
+                    "answer": "silenzio"
+                },
+                {
+                    "question": "cambia quadro",
+                    "answer": "cambia quadro"
+                },
+                {
+                    "question": "che ore sono, orario, l'ora",
+>>>>>>> 56f13ff08950d504ee19d6fe000eb16ff97a1226
                     "answer": "che ore sono"
                 }
             ]

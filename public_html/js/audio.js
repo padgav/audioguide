@@ -8,6 +8,8 @@ function beep() {
   snd.play();
 }
 
+//var itsACom = false;
+
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
@@ -849,7 +851,104 @@ $(document).ready(function() {
     txtRedirect(text);
   }
 
+  //
+  function searchComand(text)
+  {
+    let comCard = "controls";
+
+    var query = "question:" + text + " AND title:" + comCard
+
+    console.log("query: ", query);
+    console.log('Confidence: ' + text);
+    client.search(
+      {
+      index: 'myindex',
+      //analyzer: 'my_synonyms',
+      //q: query
+      body: {
+        query: {
+          bool: {
+            must: [{
+                bool: {
+                  should: [{
+                      match: {
+                        question: {
+                          query: text,
+                          boost: 2
+                        }
+                      }
+                    },
+                    {
+                      match: {
+                        answer: text
+                      }
+                    }
+
+                  ]
+                }
+              },
+              {
+                bool: {
+                  should: [{
+                      match: {
+                        title: "controls"
+                      }
+                    },
+                    {
+                      match: {
+                        title: comCard
+                      }
+                    }
+
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }, function(error, response) {
+      console.log("resp:", response);
+
+      if (response.hits.total > 0) {
+
+        //itsACom = true;
+
+        console.log("+++ Comand recognized!!!");
+
+        var comResponse = response.hits.hits[0]._source.answer; //+" Testo aggiunto.";
+        txtRedirect(comResponse);
+        console.log("comResponse: ", comResponse);
+
+        //console.log("console all qa:", response.hits.hits[0]);
+
+        if (response.hits.hits[0]._source.link != undefined) {
+          // card = response.hits.hits[0]._source.link;
+          console.log(response.hits.hits[0]._source.link)
+          //itsACom = false;
+        }
+      }
+      else {
+        //itsACom = false;
+        console.log("+++ Comand not recognized!!!");
+        searchPainting(text);
+      }
+
+
+    }
+  );
+
+  }
+
+  //
   function getResult(text) {
+    searchComand(text);
+    //if(!itsACom)
+    //  searchPainting(text);
+  }
+
+  //
+  function searchPainting(text) {
 
 
     var card2 = "controls";
