@@ -54,7 +54,7 @@ var synth = window.speechSynthesis;
 
 var bg;
 
-var card;
+var card = "Adorazione"
 var music = new Audio("music/Trio_Mediaeval_-_19_-_Alma_materAnte_thorum_Benedicta_es_celorum_regina_De_spineto_nata_rosa.wav");
 
 ///////////////////////////////////////
@@ -852,6 +852,7 @@ $(document).ready(function() {
   function getResult(text) {
 
 
+    var card2 = "controls";
     var query = "question:" + text + " AND title:" + card
 
     console.log("query: ", query);
@@ -886,7 +887,7 @@ $(document).ready(function() {
                 bool: {
                   should: [{
                       match: {
-                        title: "Pinacoteca"
+                        title: card2//"Pinacoteca"
                       }
                     },
                     {
@@ -906,6 +907,12 @@ $(document).ready(function() {
       console.log("resp:", response);
       if (response.hits.total > 0) {
         //var answer = response.hits.hits[0]._source.answer;
+
+        if(response.hits.hits[0]._source.title == "controls")
+        {
+          txtRedirect(response.hits.hits[0]._source.answer);
+          return;
+        }
 
         var toSynthText = response.hits.hits[0]._source.answer; //+" Testo aggiunto.";
         var moreAsk = " Puoi chiedermi ";

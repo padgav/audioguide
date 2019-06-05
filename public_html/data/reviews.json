@@ -645,7 +645,7 @@
              },
              {
                "name": "pittor",
-               "question": "A quale scuola pittorica è riconducibile il quadro? Parlami dello stile di pittura.",
+               "question": "A quale scuola pittorica è riconducibile il quadro? scuola e stile del dipinto. Parlami dello stile di pittura.",
                "answer": "Ambito aragonese.",
                "suggests":  [
                               {
@@ -723,7 +723,7 @@
                     "link": "Antioco Mainas"
        },
                 {
-                    "question": "Di che periodo è?",
+                    "question": "Di che periodo è? a quando risale. La data",
                     "answer": "Metà del secolo sedicesimo"
                 }
             ]
@@ -731,7 +731,7 @@
         {
             "id": "Crocefissione",
             "title": "Crocefissione",
-            "type": "mytype",
+            "type": "painting",
             "qa": [
                 {
                     "question": "Descrizione generale",
@@ -748,6 +748,41 @@
                 {
                     "question": "Di che periodo è?",
                     "answer": "1507"
+                }
+            ]
+        },
+        {
+            "id": "controls",
+            "title": "controls",
+            "type": "controls",
+            "qa": [
+                {
+                    "question": "spegni la musica, spegnere",
+                    "answer": "spegni la musica"
+                },
+                {
+                    "question": "accendi la musica, accendere",
+                    "answer": "accendi la musica"
+                },
+                {
+                    "question": "abbassa la musica, abbassare",
+                    "answer": "abbassa la musica"
+                },
+                {
+                    "question": "ricomincia, ricominciare",
+                    "answer": "ricomincia"
+                },
+                {
+                    "question": "silenzio, fermati, basta cosi, zitta",
+                    "answer": "silenzio"
+                },
+                {
+                    "question": "cambia, cambiare",
+                    "answer": "cambia quadro"
+                },
+                {
+                    "question": "che ore sono, orario, ora",
+                    "answer": "che ore sono"
                 }
             ]
         }
