@@ -1,0 +1,28 @@
+{
+  "name": "audioguide",
+  "version": "1.0.1",
+  "description": "tactile audioguide - design for all",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/padgav/audioguide.git"
+  },
+  "keywords": [
+    "audioguide"
+  ],
+  "author": "andrea-dev <sarcman@crs4.it> (http://www.crs4.it/it/peopledetails/437/andrea-devola/)",
+  "license": "ISC",
+  "dependencies": {
+    "elasticsearch": "^16.1.0",
+    "elasticsearch-browser": "^16.1.0",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1"
+  },
+  "bugs": {
+    "url": "https://github.com/padgav/audioguide/issues"
+  },
+  "homepage": "https://github.com/padgav/audioguide#readme"
+}
