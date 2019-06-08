@@ -13,7 +13,7 @@
   "keywords": [
     "audioguide"
   ],
-  "author": "andrea-dev <sarcman@crs4.it> (http://www.crs4.it/it/peopledetails/437/andrea-devola/)",
+  "author": "Gavino Paddeu",
   "license": "ISC",
   "dependencies": {
     "elasticsearch": "^16.1.0",
