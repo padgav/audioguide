@@ -57,7 +57,7 @@ var synth = window.speechSynthesis;
 var bg;
 
 var card = "Adorazione"
-var music = new Audio("music/Trio_Mediaeval_-_19_-_Alma_materAnte_thorum_Benedicta_es_celorum_regina_De_spineto_nata_rosa.wav");
+var music = new Audio("music/Trio_Mediaeval_-_19_-_Alma_materAnte_thorum_Benedicta_es_celorum_regina_De_spineto_nata_rosa.mp3");
 
 ///////////////////////////////////////
 // start load conf
