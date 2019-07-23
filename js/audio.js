@@ -34,6 +34,9 @@ var voices;
 var VOICEIDX = 0;
 var focusElem = false;
 
+var rateStd = 0.9;
+var currRate = rateStd;
+
 var myMcoms = {
   moff: "spegni la musica",
   mon: "accendi la musica",
@@ -45,7 +48,9 @@ var myMcoms = {
   quiet2: "silenzio",
   quiet3: "fermati",
   change: "cambia quadro",
-  time: "che ore sono"
+  time: "che ore sono",
+  vup: "aumenta la voce",
+  vdown: "abbassa la voce"
 }
 
 //tessera 0008657628 key 0000142480
@@ -180,7 +185,7 @@ $(document).ready(function() {
   function Tasto(e) {
 
     var x = e.keyCode;
-    if (x == lastX) return;
+    if (x == lastX && (x != 107 && x != 109)) return;
     lastX = x;
 
     var utterThis = new SpeechSynthesisUtterance();
@@ -369,6 +374,13 @@ $(document).ready(function() {
           synth.speak(utterThis);
           break;
 
+        case 107: //+ 107
+          txtRedirect(myMcoms["vup"]);
+          break;
+        case 109: //- 109
+          txtRedirect(myMcoms["vdown"]);
+          break;
+
       }
 
   }
@@ -418,6 +430,18 @@ $(document).ready(function() {
         $(music).animate({
           volume: 1
         }, 1000);
+        break;
+
+      case myMcoms["vup"]:
+        console.log("Voice up cause: ", myMcoms["vup"]);
+        currRate = currRate + 0.05;
+        console.log("Curr rate: ", currRate);
+        break;
+
+      case myMcoms["vdown"]:
+        console.log("Voice down cause: ", myMcoms["vdown"]);
+        currRate = currRate - 0.05;
+        console.log("Curr rate: ", currRate);
         break;
 
       case myMcoms["time"]:
@@ -623,6 +647,7 @@ $(document).ready(function() {
           var utterThis = new SpeechSynthesisUtterance();
           utterThis.text = currWelcome;
           utterThis.voice = voices[VOICEIDX];
+          utterThis.rate = currRate;
 
           utterThis.onend = function(event) {
             console.log("end");

@@ -721,7 +721,7 @@
                     "question": "Chi è l'autore?",
                     "answer": "L'autore della tavola è il maestro Antioco Mainas",
                     "link": "Antioco Mainas"
-       },
+                },
                 {
                     "question": "Di che periodo è? a quando risale. La data",
                     "answer": "Metà del secolo sedicesimo"
@@ -787,6 +787,14 @@
                 {
                     "question": "che ore sono, orario",
                     "answer": "che ore sono"
+                },
+                {
+                    "question": "accelera la voce",
+                    "answer": "aumenta la voce"
+                },
+                {
+                    "question": "rallenta la voce",
+                    "answer": "abbassa la voce"
                 }
             ]
         }
