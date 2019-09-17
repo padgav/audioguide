@@ -702,8 +702,29 @@ $(document).ready(function() {
 
     }
   });
+/*
+  $(".card").on("dblclick", function() {
+    console.log("DOUBLE CLICKED!!!");
+    if (ctrlK == 0 && active == 0)
+      reStart();
+    else {
 
-
+      card = $(".card").attr("id");
+      $("#answer").html(card);
+      beep();
+      synth.cancel();
+      $(music).animate({
+        volume: 0.1
+      }, 1000);
+      if (active == 1)
+        recognition.stop();
+      recognition.start();
+      //voices = synth.getVoices();
+      lastQuestionTime = Date.now();
+      //StartNow();//controller.connect();
+    //}
+  });
+*/
   $(".card").on("click", function() {
     if (ctrlK == 0 && active == 0)
       reStart();
@@ -880,6 +901,7 @@ $(document).ready(function() {
 
 
     var card2 = "controls";
+    var card1 = "Pinacoteca";
     var query = "question:" + text + " AND title:" + card
 
     console.log("query: ", query);
@@ -912,14 +934,20 @@ $(document).ready(function() {
               },
               {
                 bool: {
-                  should: [{
+                  should: [
+                    {
                       match: {
-                        title: card2//"Pinacoteca"
+                        title: card2
                       }
                     },
                     {
                       match: {
                         title: card
+                      }
+                    },
+                    {
+                      match: {
+                        title: card1//"Pinacoteca"
                       }
                     }
 
