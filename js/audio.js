@@ -31,7 +31,7 @@ var lp = 0;
 
 var messages = new Array();
 var voices;
-var VOICEIDX = 0;
+var VOICEIDX = 3;
 var focusElem = false;
 
 var rateStd = 0.9;
@@ -61,36 +61,49 @@ var synth = window.speechSynthesis;
 
 var bg;
 
-var card = "Adorazione"
-var music = new Audio("music/Trio_Mediaeval_-_19_-_Alma_materAnte_thorum_Benedicta_es_celorum_regina_De_spineto_nata_rosa.mp3");
+var card = "Gennamaria";
+var img;
+var music = new Audio();
+music.src = "/";
+//var music = new Audio("music/coro_angelico.mp3");
 
 ///////////////////////////////////////
 // start load conf
 //////////////////////////////////////
 
+var start_conf_path = './conf/start_conf.json';
+
 var adorazione_conf_path = './conf/adorazione_conf.json';
 var annunciazione_conf_path = './conf/annunciazione_conf.json';
 var crocefissione_conf_path = './conf/crocefissione_conf.json';
+var gennamaria_conf_path = './conf/gennamaria_conf.json';
+
 var current_painting;
 var adorazione_paint;
 var annunciazione_paint;
 var crocefissione_paint;
+var gennamaria_paint
 
-var msg_conf_path = './conf/msg_conf.json';
+var msg_conf__pic_path = './conf/msg_conf.json';
+var msg_conf_plastic_path = './conf/msg_conf_plastic.json';
+
 var msg_conf;
+var msg_conf_pic;
+var msg_conf_plastic;
 
-//msg_conf json load
-fetch(msg_conf_path).then(response => {
+
+//start_conf json load
+fetch(start_conf_path).then(response => {
   return response.json();
 }).then(data => {
   // Work with your JSON data here..
-  msg_conf = data;
+  $(".card").removeAttr("id");
+  $(".card").attr("id", data["start1"]);
   console.log(data);
 }).catch(err => {
   // What do when the request fails
   console.log('The request failed!');
 });
-
 //adorazione_conf json load
 fetch(adorazione_conf_path).then(response => {
   return response.json();
@@ -98,7 +111,9 @@ fetch(adorazione_conf_path).then(response => {
   // Work with your JSON data here..
   adorazione_paint = data
   //default current_painting assignation
-  current_painting = adorazione_paint;
+  if($(".card").attr("id") == 'Adorazione')
+    current_painting = adorazione_paint;
+  //current_painting = adorazione_paint;
   console.log(data);
 }).catch(err => {
   // What do when the request fails
@@ -111,6 +126,9 @@ fetch(annunciazione_conf_path).then(response => {
 }).then(data => {
   // Work with your JSON data here..
   annunciazione_paint = data;
+  //default current_painting assignation
+  if($(".card").attr("id") == 'Annunciazione')
+    current_painting = annunciazione_paint;
   console.log(data);
 }).catch(err => {
   // What do when the request fails
@@ -123,12 +141,55 @@ fetch(crocefissione_conf_path).then(response => {
 }).then(data => {
   // Work with your JSON data here..
   crocefissione_paint = data;
+  //default current_painting assignation
+  if($(".card").attr("id") == 'Crocefissione')
+    current_painting = crocefissione_paint;
   console.log(data);
 }).catch(err => {
   // What do when the request fails
   console.log('The request failed!');
 });
 
+//gennamaria_conf json load
+fetch(gennamaria_conf_path).then(response => {
+  return response.json();
+}).then(data => {
+  // Work with your JSON data here..
+  gennamaria_paint = data;
+  //default current_painting assignation
+  if($(".card").attr("id") == 'Gennamaria')
+    current_painting = gennamaria_paint;
+  console.log(data);
+}).catch(err => {
+  // What do when the request fails
+  console.log('The request failed!');
+});
+
+//msg_conf json load
+fetch(msg_conf__pic_path).then(response => {
+  return response.json();
+}).then(data => {
+  // Work with your JSON data here..
+  msg_conf_pic = data;
+  if($(".card").attr("id") != 'Gennamaria')
+    msg_conf = msg_conf_pic;
+  console.log(data);
+}).catch(err => {
+  // What do when the request fails
+  console.log('The request failed!');
+});
+fetch(msg_conf_plastic_path).then(response => {
+  return response.json();
+}).then(data => {
+  // Work with your JSON data here..
+  msg_conf_plastic = data;
+  if($(".card").attr("id") == 'Gennamaria')
+    msg_conf = msg_conf_plastic;
+  console.log(data);
+}).catch(err => {
+  // What do when the request fails
+  console.log('The request failed!');
+});
 ///////////////////////////////////////
 // end load conf
 //////////////////////////////////////
@@ -213,14 +274,57 @@ $(document).ready(function() {
           break;
 
         case 37: //larrow //2shephard
+        //$("kenburns1").attr('transform: scale3d(1, 1, 2.5) translate3d(0px, -0px, 0px)');
+        //$(".card").attr("id", annunciazione_paint["name"]);
 
+        $(".painting").addClass("k1");
+        $(".painting").removeClass("k2");
+        $(".painting").removeClass("k3");
+        $(".painting").removeClass("k4");
+
+
+
+/*
+//example 3
+$('#container').children().filter('div').dcss(
+    {
+    transform : 'translate(<transX>%,<transY>%)  scale(.5,.5)',
+    transition : 'all 1s <delay>s linear'
+    },
+    {
+        delay  : function(i,el,c){ return i * .1;},
+        transX : function(){ return 50 - Math.random()*100;},
+        transY : function(){ return 50 - Math.random()*100;}
+    });
+*/
+/*
+	// Reset the animation
+	$(selector).resetKeyframe(callback);
+
+	// Pause the animation
+	$(selector).pauseKeyframe();
+
+	// Resume the animation
+	$(selector).resumeKeyframe();
+*/
+
+
+//img = $(".painting").attr("id");
+//$("p").addClass("myClass yourClass");
+//          $(".card").removeAttr("id");
+
+// =>>> div(card).img.class = painting / = k1;
           if (current_painting['subjects'][37] == null)
             break;
 
           if (current_painting['subjects'][37]['check'] == 0)
-            current_painting['subjects'][37]['check'] = 1;
+          {
 
+            current_painting['subjects'][37]['check'] = 1;
+          }
           synth.cancel();
+
+
 
           utterThis.text = touchs + "" + current_painting['subjects'][37]["desc"][getRandomArbitrary(0, 2)];
           utterThis.text = touchs + "" + current_painting['subjects'][37]["desc"][getRandomArbitrary(0, 2)];
@@ -228,16 +332,21 @@ $(document).ready(function() {
 
           utterThis.voice = voices[VOICEIDX];
           synth.speak(utterThis);
-
           break;
 
         case 38: // uparrow
-
+        $(".painting").addClass("k2");
+        $(".painting").removeClass("k1");
+        $(".painting").removeClass("k3");
+        $(".painting").removeClass("k4");
           if (current_painting['subjects'][38] == null)
             break;
 
           if (current_painting['subjects'][38]['check'] == 0)
+          {
+
             current_painting['subjects'][38]['check'] = 1;
+          }
           synth.cancel();
 
           utterThis.text = touchs + "" + current_painting['subjects'][38]["desc"][getRandomArbitrary(0, 2)];
@@ -304,7 +413,10 @@ $(document).ready(function() {
           break;
 
         case 65: //a 65
-
+        $(".painting").addClass("k4");
+        $(".painting").removeClass("k3");
+        $(".painting").removeClass("k1");
+        $(".painting").removeClass("k2");
           if (current_painting['subjects'][65] == null)
             break;
 
@@ -358,6 +470,10 @@ $(document).ready(function() {
           break;
 
         case 70: //f 70
+          $(".painting").addClass("k3");
+          $(".painting").removeClass("k1");
+          $(".painting").removeClass("k2");
+          $(".painting").removeClass("k4");
 
           if (current_painting['subjects'][70] == null)
             break;
@@ -504,7 +620,7 @@ $(document).ready(function() {
           txtRedirect("ricomincia");
           break;
         }
-        case annunciazione_paint["name"].toLowerCase():
+    	case annunciazione_paint["name"].toLowerCase():
           if (msg_conf["check"] == 1) {
             $(".card").removeAttr("id");
             $(".card").attr("id", annunciazione_paint["name"]);
@@ -513,11 +629,11 @@ $(document).ready(function() {
             msg_conf["check"] = 0;
             txtRedirect(myMcoms["restart"]);
 
-            break;
+        	break;
           }
-          case crocefissione_paint["name"].toLowerCase():
-          case crocefissione_paint["alt_name"].toLowerCase():
-            if (msg_conf["check"] == 1) {
+        case crocefissione_paint["name"].toLowerCase():
+        case crocefissione_paint["alt_name"].toLowerCase():
+        	if (msg_conf["check"] == 1) {
               $(".card").removeAttr("id");
               $(".card").attr("id", crocefissione_paint["name"]);
 
@@ -525,12 +641,25 @@ $(document).ready(function() {
               msg_conf["check"] = 0;
               txtRedirect(myMcoms["restart"]);
 
-              break;
-            }
-            default:
-              synth.cancel();
-              getResult($("#question").val());
-              break;
+            break;
+        	}
+        case gennamaria_paint["name"].toLowerCase():
+        case gennamaria_paint["alt_name"].toLowerCase():
+        	if (msg_conf["check"] == 1) {
+              $(".card").removeAttr("id");
+              $(".card").attr("id", gennamaria_paint["name"]);
+
+              console.log("Opera scelta (card): ", $(".card").attr("id"));
+              //msg_conf => msg_conf_plastic_path
+              msg_conf["check"] = 0;
+              txtRedirect(myMcoms["restart"]);
+
+            break;
+        	}
+        default:
+            synth.cancel();
+            getResult($("#question").val());
+            break;
 
     }
   }
@@ -563,26 +692,40 @@ $(document).ready(function() {
   function StartNow() {
     var now = Date.now();
 
+
+    //"music/coro_angelico.mp3";
     console.log("Outer adorazione_paint on start: ", adorazione_paint);
     console.log("Outer annunciazione_paint on start: ", annunciazione_paint);
     console.log("Outer crocefissione_paint start: ", crocefissione_paint);
+    console.log("Outer gennamaria_paint start: ", gennamaria_paint);
+
 
     switch ($(".card").attr("id")) {
       case adorazione_paint["name"]:
         current_painting = adorazione_paint;
+        msg_conf = msg_conf_pic;
         console.log("CARD ID IN STARTNOW ADOR: ", current_painting["name"]);
 
         break;
 
       case annunciazione_paint["name"]:
         current_painting = annunciazione_paint;
+        msg_conf = msg_conf_pic;
         console.log("CARD ID IN STARTNOW ANNUNC: ", current_painting["name"]);
 
         break;
 
       case crocefissione_paint["name"]:
         current_painting = crocefissione_paint;
+        msg_conf = msg_conf_pic;
         console.log("CARD ID IN STARTNOW CROC: ", current_painting["name"]);
+
+        break;
+
+      case gennamaria_paint["name"]:
+        current_painting = gennamaria_paint;
+        msg_conf = msg_conf_plastic;
+        console.log("CARD ID IN STARTNOW GEANNAM: ", current_painting["name"]);
 
         break;
 
@@ -594,12 +737,22 @@ $(document).ready(function() {
 
     console.log("Outer msg on start: ", msg_conf);
 
+
+
+    if( music.src = "/")
+      music.src = "music/"+current_painting["music"];
+
+
+
     if ((now - lastQuestionTime > standbyTime) && (now - lastHandlingTime > standbyTime)) active = 0;
     console.log("** ctrlK **", ctrlK); //if ((frame.hands.length > 0){}
 
     //cambia il messaggio di benvenuto in funzione del quadro scelto (predisposto per quando si crea l'opzione)
+    let name = current_painting["name"];
+    if(current_painting["alt_name"]!= null)
+      name = current_painting["alt_name"];
     if ($(".card").attr("id") == current_painting["name"]) {
-      currWelcome = msg_conf['welcome'][0] + current_painting["art"] + current_painting["name"] + msg_conf['welcome'][1];
+      currWelcome = msg_conf['welcome'][0] + current_painting["support"] + current_painting["art"] + name + current_painting["caption"] + msg_conf['welcome'][1];
       //$(".painting").removeAttr("src");
       $(".painting").attr("src", current_painting["src"]);
       console.log("*** sto cambiando immagine con: ", current_painting["src"]);
@@ -822,7 +975,7 @@ $(document).ready(function() {
     let cardValue;
 
     console.log("Evento keypress rilevato!", input);
-    if ((input == adorazione_paint['id']) || (input == annunciazione_paint['id']) || (input == crocefissione_paint['id'])) {
+    if ((input == adorazione_paint['id']) || (input == annunciazione_paint['id']) || (input == crocefissione_paint['id']) || (input == gennamaria_paint['id'])) {
       //imposto mypaints!
       switch (input) {
         case adorazione_paint['id']:
@@ -835,6 +988,10 @@ $(document).ready(function() {
 
         case crocefissione_paint['id']:
           cardValue = crocefissione_paint['name'];
+          break;
+
+        case gennamaria_paint['id']:
+          cardValue = gennamaria_paint['name'];
           break;
 
       }
@@ -944,10 +1101,15 @@ $(document).ready(function() {
                       match: {
                         title: card
                       }
-                    },
+                    },/*
                     {
                       match: {
                         title: card1//"Pinacoteca"
+                      }
+                    },*/
+                    {
+                      match: {
+                        key: text//"Pinacoteca"
                       }
                     }
 
@@ -972,13 +1134,16 @@ $(document).ready(function() {
         var toSynthText = response.hits.hits[0]._source.answer; //+" Testo aggiunto.";
         var moreAsk = " Puoi chiedermi ";
         console.log("toSynthText: ", toSynthText);
+        console.log("**** KEY ****: ", response.hits.hits[0]._source.key);
 
         var suggests = response.hits.hits[0]._source.suggests;
+        var keywords = response.hits.hits[0]._source.key;
 
         for (i in suggests) {
 
           if (askedNames[suggests[i]["linkedName"]] != undefined)
             console.log("**** AskedNames in suggest file", askedNames[suggests[i]["linkedName"]]);
+
 
           if (askedNames[suggests[i]["linkedName"]] == undefined) {
             if (c == undefined) var c = true;
@@ -1052,11 +1217,13 @@ $(document).ready(function() {
 
         synth.speak(utterThis);
 
-
+        /*
         if (response.hits.hits[0]._source.link != undefined) {
           // card = response.hits.hits[0]._source.link;
-          console.log(response.hits.hits[0]._source.link)
+          console.log("**** LINK: ", response.hits.hits[0]._source.link)
+          console.log("**** KEY in answer", response.hits.hits[0]._source.key);
         }
+        */
       } else {
         var utterThis = new SpeechSynthesisUtterance(msg_conf['undef'][getRandomArbitrary(0, 2)]); //messages['undef']);//myMsg['touching'][getRandomArbitrary(0,3)]
         utterThis.voice = voices[VOICEIDX];

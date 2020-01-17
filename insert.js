@@ -71,7 +71,7 @@ documents.reviews.map(function(doc) {
                 answer: qa.answer,
                 name: qa.name,
                 suggests: qa.suggests,
-                link: qa.link
+                key: qa.key
             }
         }, function(error, response) {
             // ...

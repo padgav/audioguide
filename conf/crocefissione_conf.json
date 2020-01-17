@@ -4,6 +4,10 @@
   "id": "0000318474",
   "src": "./images/crocefissione_pic.jpg",
   "art": "della ",
+  "support": "la tavola tàttile ",
+  "music": "coro_angelico.mp3",
+  "conf": "./conf/msg_conf.json",
+  "caption": "",
 
   "subjects": {
 

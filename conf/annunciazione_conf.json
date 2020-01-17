@@ -3,6 +3,10 @@
   "id": "0000380280",
   "src": "./images/annunciazione_pic.jpg",
   "art": "dell' ",
+  "support": "la tavola tàttile ",
+  "music": "coro_angelico.mp3",
+  "conf": "./conf/msg_conf.json",
+  "caption": "",
 
   "subjects": {
 

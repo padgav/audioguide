@@ -1,0 +1,69 @@
+{
+  "name": "Gennamaria",
+  "alt_name": "Genna Maria",
+  "id": "000",
+  "src": "./images/gennamaria_pic.jpg",
+  "art": "di ",
+  "support": " plastico tàttile ",
+  "music": "canto_sardo.mp3",
+  "conf": "./conf/msg_conf_plastic.json",
+  "caption": ". Ubicato sulla sommità di una collina a 408 metri sopra il livello del mare, a circa un chilometro dal paese di Villanovaforru: gli elementi principali sono il nuraghe, l'antemurale e un villaggio situato all'interno ed all'esterno dell'antemurale;",
+
+  "subjects": {
+
+      "37": {
+        "desc": [
+          "il nuraghe",
+          "la struttura del nuraghe",
+          "la costruzione nuragica"
+        ],
+        "check": 0,
+        "name": "nuraghe"
+        }    ,
+      "38": {
+        "desc": [
+          "l'antemurale",
+          "l'antemurale",
+          "l'antemurale"
+        ],
+        "check": 0,
+        "name": "antemurale"
+      },
+      "65": {
+        "desc": [
+          "il cortile con cisterna",
+          "il cortile col pozzo",
+          "la cisterna nel cortile"
+        ],
+        "check": 0,
+        "name": "bacile"
+      },
+      "70": {
+        "desc": [
+          "il villaggio",
+          "la zona del villaggio",
+          "il centro abitato del sito archeologico"
+        ],
+        "check": 0,
+        "name": "pozzo"
+      },
+      "83": {
+        "desc": [
+          "il villaggio",
+          "la zona del villaggio",
+          "il centro abitato del sito archeologico"
+        ],
+        "check": 0,
+        "name": "pozzo"
+      },
+      "68": {
+        "desc": [
+          "la parte di villaggio costruita sui resti della fascia antemurale originaria",
+          "la zona del villaggio costituitasi nella fascia antemurale originaria",
+          "il centro abitato costruito sui resti della fascia antemurale originaria"
+        ],
+        "check": 0,
+        "name": "pozzo"
+    }
+  }
+}

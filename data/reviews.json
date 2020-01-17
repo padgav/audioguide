@@ -1,803 +1,1602 @@
 {
-    "reviews": [
-        {
-            "id": "pinacoteca",
-            "title": "Pinacoteca",
-            "type": "mytype",
-            "qa": [
-                {   "question": "",
-                    "answer" : ""
-                },
+  "reviews": [
+    {
+      "id": "pinacoteca",
+      "title": "Pinacoteca",
+      "type": "mytype",
+      "qa": [
+        {   "question": "",
+          "answer" : ""
+        },
 
-                {   "question": "Quartiere di Stampace",
-                    "answer":"Stampace  è uno dei quattro quartieri storici della città di Cagliari. Il quartiere, situato nel centro storico cittadino, a Ovest del Castello di Cagliari, venne fondato dai Pisani nel tredicesimo secolo e da essi dotato di un modesto sistema di fortificazione (di cui resta la torre dello Sperone)."
-                },
-
-
-                {   "question": "La pinacoteca Nazionale di Cagliari",
-                    "answer" : "La Pinacoteca Nazionale di Cagliari, situata all’interno del complesso museale della Cittadella dei Musei, nasce sulla preesistente struttura del Regio Arsenale. Dopo essere stata ospitata fin dalla fine dell’Ottocento nel Palazzo delle Seziate nella vicina Piazza Indipendenza, e, per più di un secolo, chiusa al pubblico, ha trovato la sua definitiva collocazione nell’attuale sede inaugurata nel 1992."
-                },
-                { "question": "Che significa retablo rettangolo",
-                  "answer" : "Retablo è un termine di origine spagnola che indica una grande pala d'altare inquadrata architettonicamente. Il retablo può essere costituito da un dipinto su tavola a scomparti che a seconda delle parti di cui si compone può essere un dittico, un trittico o un polittico, ma può essere anche formato da scomparti in rilievo."
-
-                },
-
-                {   "question": "Architettura dell'edificio",
-                    "answer" : "Dal punto di vista architettonico l’edificio rappresenta un interessante connubio tra le antiche mura spagnole, progettate da Rocco Capellino ed ampliate da Giorgio e Jacopo Palearo nel XVI secolo, e l’attuale assetto razionalista moderno che perfettamente si inserisce all’interno dello suggestivo quartiere medievale di Castello."
-                },
-
-                {   "question": "Paesaggio, vista veduta panorama",
-                    "answer" : "La felice ubicazione della pinacoteca offre al visitatore un’incantevole veduta panoramica della città di Cagliari."
-                },
-
-                {   "question": "collezione san francesco",
-                    "answer" : "Il primo nucleo della collezione pittorica si formò nel diciannovesimo secolo quando, a seguito della soppressione degli enti ecclesiastici nel 1866 e della distruzione nel 1875 della chiesa cagliaritana di San Francesco di Stampace, confluirono nel patrimonio dello Stato numerosi dipinti. "
-                },
-
-                {   "question": "collezione pezzi",
-                    "answer" : "L'intero patrimonio della Pinacoteca consta di ben 1272 pezzi, tra dipinti, oreficeria, tessuti e ricami, materiale lapideo e stemmi, armi, arredo domestico, cestini e intrecci, ceramiche, arredo liturgico e sculture."
-                },
-
-                {
-                    "question": "Storia di Cagliari",
-                    "answer": "Nel 1326 il Castello di Cagliari, fiorente città di formazione e cultura pisana, si consegna definitivamente agli Aragonesi."
-                },
-                {
-                    "question": "Dall'arte italica a quella iberica",
-                    "answer": "A tutti gli effetti il 1326 chiude, non solo per Cagliari ma per gran parte della Sardegna, il ciclo della civiltà artistica medioevale segnata da presenze italiche, I riferimenti culturali si orientano gradualmente, ma sempre più decisamente, in direzione del versante iberico."
-                }
-            ]
+        {   "question": "Quartiere di Stampace",
+          "answer":"Stampace  è uno dei quattro quartieri storici della città di Cagliari. Il quartiere, situato nel centro storico cittadino, a Ovest del Castello di Cagliari, venne fondato dai Pisani nel tredicesimo secolo e da essi dotato di un modesto sistema di fortificazione (di cui resta la torre dello Sperone)."
         },
 
 
+        {   "question": "La pinacoteca Nazionale di Cagliari",
+          "answer" : "La Pinacoteca Nazionale di Cagliari, situata all’interno del complesso museale della Cittadella dei Musei, nasce sulla preesistente struttura del Regio Arsenale. Dopo essere stata ospitata fin dalla fine dell’Ottocento nel Palazzo delle Seziate nella vicina Piazza Indipendenza, e, per più di un secolo, chiusa al pubblico, ha trovato la sua definitiva collocazione nell’attuale sede inaugurata nel 1992."
+        },
+        { "question": "Che significa retablo rettangolo",
+          "answer" : "Retablo è un termine di origine spagnola che indica una grande pala d'altare inquadrata architettonicamente. Il retablo può essere costituito da un dipinto su tavola a scomparti che a seconda delle parti di cui si compone può essere un dittico, un trittico o un polittico, ma può essere anche formato da scomparti in rilievo."
+
+        },
+
+        {   "question": "Architettura dell'edificio",
+          "answer" : "Dal punto di vista architettonico l’edificio rappresenta un interessante connubio tra le antiche mura spagnole, progettate da Rocco Capellino ed ampliate da Giorgio e Jacopo Palearo nel XVI secolo, e l’attuale assetto razionalista moderno che perfettamente si inserisce all’interno dello suggestivo quartiere medievale di Castello."
+        },
+
+        {   "question": "Paesaggio, vista veduta panorama",
+          "answer" : "La felice ubicazione della pinacoteca offre al visitatore un’incantevole veduta panoramica della città di Cagliari."
+        },
+
+        {   "question": "collezione san francesco",
+          "answer" : "Il primo nucleo della collezione pittorica si formò nel diciannovesimo secolo quando, a seguito della soppressione degli enti ecclesiastici nel 1866 e della distruzione nel 1875 della chiesa cagliaritana di San Francesco di Stampace, confluirono nel patrimonio dello Stato numerosi dipinti. "
+        },
+
+        {   "question": "collezione pezzi",
+          "answer" : "L'intero patrimonio della Pinacoteca consta di ben 1272 pezzi, tra dipinti, oreficeria, tessuti e ricami, materiale lapideo e stemmi, armi, arredo domestico, cestini e intrecci, ceramiche, arredo liturgico e sculture."
+        },
 
         {
-            "id": "Antioco Mainas",
-            "title": "Antioco Mainas",
-            "type": "mytype",
-            "qa": [
-                {
-                    "question": "Dove è nato?",
-                    "answer": "E nato a Cagliari"
-                },
-                {
-                    "question": "Quando è nato?",
-                    "answer": "E nato nel 1508"
-                },
-                {
-                    "question": "A quale corrente appartiene?",
-                    "answer": "E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."
-                },
-                {
-                    "question": "Informazioni ",
-                    "answer": "Antioco Mainas nato a Cagliari, nel 1508. Morto sempre a Cagliari nella seconda metà sedicesimo secolo. E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."
-                }
-            ]
+          "question": "Storia di Cagliari",
+          "answer": "Nel 1326 il Castello di Cagliari, fiorente città di formazione e cultura pisana, si consegna definitivamente agli Aragonesi."
         },
         {
-           "id": "Adorazione",
-           "title": "Adorazione",
-           "type": "painting",
-           "qa":[
-             {
-                "name": "first",
-                "question": "Cosa posso chiedere? aiuto che domande posso fare?",
-                 "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore.",
-                 "suggests":  [
-                                {
-                                  "suggest": "informazioni sulla tavola centrale",
-                                  "linkedName": "tav"
-                                }
-                              ]
-             },
-             {
-               "name": "dim",
-                "question": "Che dimensioni ha l'opera?",
-                 "answer": " La tavola misura 275 per 261 centimetri circa.",
-                 "suggests":  [
-                                {
-                                  "suggest": "che tecnica e materiali sono utilizzati",
-                                  "linkedName": "tech"
-                                }
-                              ]
-             },
-             {
-               "name": "tech",
-               "question": "Che tecnica e materiali sono utilizzati? - di che cosa è fatta.",
-               "answer": "Tempera su tavola. ",
-               "suggests":  [
-                              {
-                                "suggest": "la descrizione generale",
-                                "linkedName": "gen"
-                              },
-                              {
-                                "suggest": "chi è l'autore",
-                                "linkedName": "auth"
-                              }
-
-                            ]
-             },
-             {
-               "name": "gen",
-               "question": "Descrizione generale. Descrizione del retablo. Descrivi il retablo. Parlami del retablo.",
-               "answer": "Il retablo del presepio è costituito da una tavola centrale, quattro tavole laterali di cui due a sinistra e due a destra, una tavola superiore centrale e 7 piccoli scomparti che compongono la parte inferiore del retablo chiamata predella. Nella tavola centrale è rappresentata la scena dell'adorazione dei pastori.",
-               "suggests":  [
-                              {
-                                "suggest": "informazioni sulla tavola centrale",
-                                "linkedName": "tav"
-                              },
-                              {
-                                "suggest": "sulle figure rappresentate",
-                                "linkedName": "pgs"
-                              }
-                            ]
-             },
-             {
-               "name": "pgs",
-               "question": "Figure rappresentate, personaggi raffigurati",
-               "answer": "Le figure principali sono la madonna, il bambino, San giuseppe, i pastori e gli angeli rappresentati nella scena dell'adorazione dei pastori.",
-               "suggests":  [
-
-                              {
-                                "suggest": "informazioni su uno di questi personaggi o la descrizione della scena dell'adorazione",
-                                "linkedName": "tav"
-                              }
-                            ]
-             },
-             {
-               "name": "prov",
-               "question": "Da dove proviene, la provenienza, dove si trovava, dove stava il retablo",
-               "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace dove era collocato nella cappella di patronato della famiglia Carnicer.",
-               "suggests":  [
-                              {
-                                "suggest": "informazioni sull'autore del dipinto",
-                                "linkedName": "auth"
-                              }
-                            ]
-
-             },
-             {
-               "name": "auth",
-               "question": "Chi è l'autore, chi l'ha dipinto, chi l'ha realizzato, informazioni sull'autore",
-               "answer": "L'autore dell'opera a tutt'oggi, rimane ancora anonimo. Per convenzione viene indicato come il Maestro del presepio.",
-               "suggests":  [
-                              {
-                                "suggest": "informazioni sulla scena centrale rappresentante l'adorazione dei pastori",
-                                "linkedName": "tav"
-                              },
-                              {
-                                "suggest": "informazioni sulla datazione del dipinto",
-                                "linkedName": "dataz"
-                              },
-                              {
-                                "suggest": "che dimensioni ha l'opera",
-                                "linkedName": "dim"
-                              }
+          "question": "Dall'arte italica a quella iberica",
+          "answer": "A tutti gli effetti il 1326 chiude, non solo per Cagliari ma per gran parte della Sardegna, il ciclo della civiltà artistica medioevale segnata da presenze italiche, I riferimenti culturali si orientano gradualmente, ma sempre più decisamente, in direzione del versante iberico."
+        }
+      ]
+    },
 
 
-                            ]
 
-             },
+    {
+      "id": "Antioco Mainas",
+      "title": "Antioco Mainas",
+      "type": "mytype",
+      "qa": [
+        {
+          "question": "Dove è nato?",
+          "answer": "E nato a Cagliari"
+        },
+        {
+          "question": "Quando è nato?",
+          "answer": "E nato nel 1508"
+        },
+        {
+          "question": "A quale corrente appartiene?",
+          "answer": "E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."
+        },
+        {
+          "question": "Informazioni ",
+          "answer": "Antioco Mainas nato a Cagliari, nel 1508. Morto sempre a Cagliari nella seconda metà sedicesimo secolo. E' stato un pittore italiano, uno dei maggiori in Sardegna durante il periodo catalano."
+        }
+      ]
+    },
+    {
+      "id": "Adorazione",
+      "title": "Adorazione",
+      "type": "painting",
+      "qa":[
+        {
+          "name": "first",
+          "question": "Cosa posso chiedere? aiuto che domande posso fare?",
+          "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla tavola centrale",
+              "linkedName": "tav"
+            }
+          ]
+        },
+        {
+          "name": "dim",
+          "question": "Che dimensioni ha l'opera?",
+          "answer": " La tavola misura 275 per 261 centimetri circa.",
+          "suggests":  [
+            {
+              "suggest": "che tecnica e materiali sono utilizzati",
+              "linkedName": "tech"
+            }
+          ]
+        },
+        {
+          "name": "tech",
+          "question": "Che tecnica e materiali sono utilizzati? - di che cosa è fatta.",
+          "answer": "Tempera su tavola. ",
+          "suggests":  [
+            {
+              "suggest": "la descrizione generale",
+              "linkedName": "gen"
+            },
+            {
+              "suggest": "chi è l'autore",
+              "linkedName": "auth"
+            }
 
-             {
-               "name": "tav",
-               "question": "Tavola centrale, scena del presepio adorazione dei pastori. Scena dell'adorazione. Cosa rappresenta la tavola centrale? Cosa raffigura la tavola centrale?",
-               "answer": "La tavola raffigura la scena della natività. E' rappresentata una capanna con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello di fronte alla mangiatoia. La struttura è costituita da un solo ambiente con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco. In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe, ai loro piedi steso sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Sullo sfondo un paesaggio di ispirazione fiamminga.",
-               "suggests":  [
-                              {
-                                "suggest": "come è rappresentata la madonna",
-                                "linkedName": "rapmad"
-                              },
-                              {
-                                "suggest": "come porta i capelli Maria",
-                                "linkedName": "capmad"
-                              },
-                              {
-                                "suggest": "informazioni sul paesaggio",
-                                "linkedName": "paes"
-                              }
-                            ]
-             },
+          ]
+        },
+        {
+          "name": "gen",
+          "question": "Descrizione generale. Descrizione del retablo. Descrivi il retablo. Parlami del retablo.",
+          "answer": "Il retablo del presepio è costituito da una tavola centrale, quattro tavole laterali di cui due a sinistra e due a destra, una tavola superiore centrale e 7 piccoli scomparti che compongono la parte inferiore del retablo chiamata predella. Nella tavola centrale è rappresentata la scena dell'adorazione dei pastori.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla tavola centrale",
+              "linkedName": "tav"
+            },
+            {
+              "suggest": "sulle figure rappresentate",
+              "linkedName": "pgs"
+            }
+          ]
+        },
+        {
+          "name": "pgs",
+          "question": "Figure rappresentate, personaggi raffigurati",
+          "answer": "Le figure principali sono la madonna, il bambino, San giuseppe, i pastori e gli angeli rappresentati nella scena dell'adorazione dei pastori.",
+          "suggests":  [
 
-             {
-               "name": "rapmad",
-               "question": "Come è rappresentata la madonna. descrivi maria. Descrivi la madonna. Parla di Maria. Parlami della madonna.",
-               "answer": "La Madonna con aureola circolare dorata, indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo. Lo sguardo rivolto verso il Bambino, cappelli ondulati che cadono sulle spalle, le mani giunte rivolte verso il basso.",
-               "suggests":  [
-                              {
-                                "suggest": "di che colore è la veste di Maria",
-                                "linkedName": "vestmad2"
-                              },
-                              {
-                                "suggest": "come sono i suoi capelli",
-                                "linkedName": "capmad"
-                              },
-                              {
-                                "suggest": "come è rappresentato San Giuseppe",
-                                "linkedName": "rapgiu"
-                              },
-                              {
-                                "suggest": "informazioni sull'espressione del volto di Maria",
-                                "linkedName": "espmad"
-
-                              }
-                            ]
-             },
-             {
-               "name": "vestmad2",
-               "question": "Di che colore è il vestito della madonna, descrivimi la veste di Maria.",
-               "answer": "La Madonna indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo.",
-               "suggests":  [
-                              {
-                                "suggest": "cosa significano i colori della veste",
-                                "linkedName": "vestmad3"
-                              }
-                            ]
-             },
-             {
-               "name": "capmad",
-               "question": "Come sono i capelli di Maria, come porta i capelli la madonna",
-               "answer": "Maria porta i capelli ondulati che ricadono sulle spalle.",
-               "suggests":  [
-                              {
-                                "suggest": "il significato dei suoi capelli ondulati",
-                                "linkedName": "capleg"
-                              }
-                            ]
-             },
-             {
-               "name": "espmad",
-               "question": "Che espressione ha il volto di Maria",
-               "answer": "Lo sguardo è rivolto in basso verso il bambino.",
-               "suggests":  [
-                              {
-                                "suggest": "di che Colore sono gli occhi della madonna",
-                                "linkedName": "occmad"
-                              }
-                            ]
-             },
-             {
-               "name": "occmad",
-               "question": "Di che colore sono gli occhi di Maria. Colore degli occhi della madonna.",
-               "answer": "Gli occhi sono socchiusi con lo sguardo rivolto verso il basso.",
-               "suggests":  [
-                              {
-                                "suggest": "come è raffigurato San Giuseppe",
-                                "linkedName": "rapgiu"
-                              }
-                            ]
-             },
-             {
-               "name": "rapgiu",
-               "question": "Come è raffigurato San Giuseppe, come è rappresentato san giuseppe, parlami di giuseppe",
-               "answer": "Alla sinistra della Madonna, San Giuseppe con aureola a cresta  dorata, abito viola con bordi dorati e mantello rosso sempre con bordatura dorata, con sopra un altro ridotto mantello con cappuccio nero. IL Santo ha la barba e i capelli grigi, lo sguardo rivolto verso il Bambino, con mani giunte verso il basso. Dalla veste si intravede il piede nero sinistro. All’interno delle braccia piegate scorre un bastono lungo che arriva sino a terra. ",
-               "suggests":  [
-                              {
-                                "suggest": "perché san Giuseppe ha l'aureola ottagonale",
-                                "linkedName": "aurgiu"
-                              },
-                              {
-                                "suggest": "come sono raffigurati i pastori",
-                                "linkedName": "pasts"
-                              }
-                            ]
-             },
-             {
-               "name": "pasts",
-               "question": "Descrivi i pastori? Come sono raffigurati i pastori? Parlami, parla dei pastori.",
-               "answer": "Sono raffigurati tre pastori: il primo in basso è inginocchiato in atto di adorazione messo di profilo sinistro; Il secondo sempre in ginocchio, visibile la parte superiore e parte della gamba sinistra, più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale.",
-               "suggests":  [
-                              {
-                                "suggest": "la descrizione del primo pastore",
-                                "linkedName": "primp"
-                              },
-                              {
-                                "suggest": "la descrizione del secondo pastore",
-                                "linkedName": "secp"
-                              },
-                              {
-                                "suggest": "la descrizione del terzo pastore",
-                                "linkedName": "terp"
-                              }
-
-                            ]
-             },
-             {
-               "name": "primp",
-               "question": "Descrivi il primo pastore, Descrivimi parlami del primo pastore",
-               "answer": "Il primo pastore in basso è inginocchiato in atto di adorazione messo di profilo sinistro, con capelli neri lunghi, barba e baffi neri, con le braccia piegate e mani aperte. Indossa un abito marrone con cintura, dove è stato appeso un lungo coltello provvisto di custodia che scende sul lato dell’abito. Appesa sul braccio sinistro una borraccia tonda con due piccoli manici e un tappo di colore bianco. Alla sinistra del pastore sono poggiati per terra un bastone e un cappello scuro.",
-               "suggests":  [
-                               {
-                                 "suggest": "la descrizione del secondo pastore",
-                                 "linkedName": "secp"
-                               },
-                               {
-                                 "suggest": "la descrizione del terzo pastore",
-                                 "linkedName": "terp"
-                               }
-                            ]
-             },
-             {
-               "name": "secp",
-               "question": "Descrivi il secondo pastore, Descrivimi parlami del secondo pastore",
-               "answer": "Il secondo pastore è raffigurato in ginocchio, visibile la parte superiore e parte della gamba sinistra, con un copricapo rosso, lunga barba grigia, viso visto di tre quarti, sguardo rivolto verso il basso. Indossa un mantello verde, ha tra le braccia un agnello e un bastone. Al lato della cintura una piccola borsa intrecciata di paglia, da cui sono visibili un cucchiaio di legno e una borraccia.",
-               "suggests":  [
-                               {
-                                 "suggest": "la descrizione del primo pastore",
-                                 "linkedName": "primp"
-                               },
-                               {
-                                 "suggest": "la descrizione del terzo pastore",
-                                 "linkedName": "terp"
-                               }
-                            ]
-             },
-             {
-               "name": "terp",
-               "question": "Descrivi il terzo pastore, Descrivimi il terzo pastore, parlami del terzo",
-               "answer": "Più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale fatto da due trombe separate da un tessuto rosso. I capelli sono lunghi e chiari, e la testa è cinta i da un nastro di stoffa bianco, indossa una veste corta marron con cintura bianca da cui pende una piccola borsa e un piccolo mantello rosa.",
-               "suggests":  [
-                               {
-                                 "suggest": "la descrizione del primo pastore",
-                                 "linkedName": "primp"
-                               },
-                               {
-                                 "suggest": "la descrizione del secondo pastore",
-                                 "linkedName": "secp"
-                               },
-                               {
-                                 "suggest": "che strumento suona il terzo pastore",
-                                 "linkedName": "strumter"
-                               }
-
-                            ]
-             },
-             {
-               "name": "paes",
-               "question": "sfondo paesaggio. sul paesaggio.",
-               "answer": "sullo sfondo un paesaggio di ispirazione fiamminga, con verdi colline e castelli medievali.",
-               "suggests":  [
-                              {
-                                "suggest": "di descrivere la parte esterna della capanna",
-                                "linkedName": "estcap"
-                              },
-                              {
-                                "suggest": "informazioni sullo sfondo fiammingo",
-                                "linkedName": "sfofiamm"
-                              }
-                            ]
-             },
-             {
-               "name": "dataz",
-               "question": "Datazione, periodo, quando è stato dipinto.",
-               "answer": "L'opera risale alla fine del quindicesimo secolo.",
-               "suggests":  [
-                              {
-                                "suggest": "le dimensioni della tavola e del retablo",
-                                "linkedName": "dim2"
-                              }
-                            ]
-             },
-             {
-               "name": "angels",
-               "question": "Descrivi gli angeli. Parlami degli angeli.",
-               "answer": "Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, dove sono presenti delle note musicali. Alcuni angeli hanno delle ali dorate con profili rossi, altri hanno le ali con sfumature di bianco, rosso e verde.",
-               "suggests":  [
-                              {
-                                "suggest": "perché gli angeli hanno le ali colorate in modo differente",
-                                "linkedName": "aliang"
-                              },
-                              {
-                                "suggest": "perché i pastori non sono sullo stesso piano",
-                                "linkedName": "pianop"
-                              }
-                            ]
-             },
-             {
-               "name": "estcap",
-               "question": "descrivi la parte esterna della capanna. Parlami della capanna.",
-               "answer": "Nella zona esterna alla capanna a sinistra su un muro è posizionata una mensola su cui poggiano una cipolla e utensili da cucina, e una treccia di aglio appesa.",
-               "suggests":  [
-                              {
-                                "suggest": "informazioni sul significato dell'aglio",
-                                "linkedName": "aglio"
-                              },
-                              {
-                                "suggest": "perché ci sono gli utensili da cucina",
-                                "linkedName": "utens"
-                              },
-                              {
-                                "suggest": "informazioni sul significato della cipolla",
-                                "linkedName": "cipolla"
-                              }
-
-                            ]
-             },
-             {
-               "name": "bamb",
-               "question": "Descrivi il bambino. Parlami del bambino.",
-               "answer": "il Bambino è rappresentato nudo con le braccia aperte con aureola circolare crociata steso  sopra un lembo del mantello della madonna.",
-               "suggests":  [
-                              {
-                                "suggest": "perché l'aureola è crociata",
-                                "linkedName": "aurcroc"
-                              },
-                              {
-                                "suggest": "perché il bambino è nudo",
-                                "linkedName": "nude"
-                              }
-                            ]
-             },
-             {
-               "name": "aurcroc",
-               "question": "Perchè l'aureola è crociata e cosa significa. Parlami, spiegami, l'aureola crociata",
-               "answer": " riferimento all'aureola che circonda il capo di Gesù Bambino, si indicano tre estremità della croce che preconizzano il sacrificio di Gesù Cristo per la nostra redenzione. Inoltre i bracci di tre ricordano la trinità.",
-               "suggests":  [
-                              {
-                                "suggest": "informazioni sulla tavola centrale",
-                                "linkedName": "tav"
-                              }
-                            ]
-             },
-             {
-               "name": "aurgiu",
-               "question": "Perché San Giuseppe ha l'aureola ottagonale? Parlami, spiegami, l'aureola ottagonale di San Giuseppe",
-               "answer": "Giuseppe è il protagonista insieme a Maria della rivelazione e del cammino della salvezza, in quanto padre putativo di Gesù Cristo, posto a garanzia della salvaguardia del Bambino Divino. L'aureola ottagonale è simbolo della virtù. Poiché il cerchio è simbolo della perfezione, quella ottagonale indica la via di chi è alla ricerca della perfezione. La figura di Giuseppe è intermedia tra l'antico e il nuovo testamento.",
-               "suggests":  [
-                              {
-                                "suggest": "come è rappresentata la madonna",
-                                "linkedName": "rapmad"
-                              }
-                            ]
-             },
-             {
-               "name": "aliang",
-               "question": "Perché gli angeli hanno le ali colorate in modo differente? Spiegami, raccontami, perché gli angeli hanno le ali diversamente colorate. Ali di colore diverso.",
-               "answer": "Gli angeli sarebbero organizzati in gerarchie di più ordini. Il periodo medievale è molto legato al simbolismo dei colori e quindi spesso sottolineavano la gerarchia dell'angelo rappresentato mediante il colore o il numero delle ali. Nel caso della tavola del presepio non sono collocabili all'interno delle gerarchie, in quanto provvisti di ali multicolore.",
-               "suggests":  [
-                              {
-                                "suggest": "chi è l'autore del retablo",
-                                "linkedName": "auth2"
-                              },
-                              {
-                                "suggest": "quando è stato dipinto",
-                                "linkedName": "dataz"
-                              }
-
-
-                            ]
-             },
-             {
-               "name": "dim2",
-               "question": "Quali sono le dimensioni della tavola e del retablo?",
-               "answer": "Le dimensioni della tavola sono cm. 163,7 per 87,5; quelle relative al retablo cm. 275,2 per 261,1.",
-               "suggests":  [
-                              {
-                                "suggest": "chi è l'autore del retablo",
-                                "linkedName": "auth2"
-                              },
-                              {
-                                "suggest": " dove stava il retablo",
-                                "linkedName": "locret"
-                              }
-                            ]
-             },
-             {
-               "name": "locret",
-               "question": "Dov'era originariamente il retablo?. Dove stava il retablo.",
-               "answer": "Il retablo era originariamente collocato nella parete di controfacciata della chiesa di San Francesco di Stampace nella prima cappella a sinistra (famiglia Carnìcerj).",
-               "suggests":  [
-                              {
-                                "suggest": "chi ha commissionato il retablo",
-                                "linkedName": "commis"
-                              }
-                            ]
-             },
-             {
-               "name": "cipolla",
-               "question": "Perché c'è la cipolla? Parlami della cipolla",
-               "answer": "La cipolla è il prodotto più consumato sin dall'antichità. Gli antichi egizi tenevano grande considerazione rappresentandola nei geroglifici e nelle tombe dei faraoni, con il significato divino di lasciapassare per l'oltre tomba. I greci la associavano al dio Ares, somministrandola alle truppe per accrescerne il valore nei combattimenti. Nell'esegesi biblica identificava il dolore prodotto dal peccato (irritante per gli occhi) e la falsità (molti strati del suo involucro).",
-               "suggests":  [
-                              {
-                                "suggest": "cosa rappresenta il cane",
-                                "linkedName": "cane"
-                              }
-                            ]
-             },
-
-             {
-               "name": "aglio",
-               "question": "Perchè c'e' l'aglio?",
-               "answer": "L'aglio è interpretato simbolicamente come energia che allontana un'influenza magica o maligna. Presso molti popoli era considerato rimedio contro il malocchio e gli spiriti maligni. In Grecia si attribuiva effetto protettivo pronunciando la parola aglio per allontanare la cattiva sorte.",
-               "suggests":  [
-                              {
-                                "suggest": "cosa rappresenta il cane",
-                                "linkedName": "cane"
-                              }
-                            ]
-             },
-             {
-               "name": "utens",
-               "question": "Perchè ci sono utensili da cucina?",
-               "answer": " Gli utensili da cucina indicano la familiarità dell'ambiente, dove gli strumenti della vita quotidiana accompagnano in semplicità l'esistenza di Gesù Cristo e la sua famìglia.",
-               "suggests":  [
-                              {
-                                "suggest": "cosa rappresenta il cane",
-                                "linkedName": "cane"
-                              }
-                            ]
-             },
-             {
-               "name": "nude",
-               "question": "Perché il bambino è nudo? perché è nudo? parlami della nudità del bambino.",
-               "answer": "La nudità del bambino rappresenta l'umanizzazione di Gesù e la sua gloria priva di peccato.",
-               "suggests":  [
-                              {
-                                "suggest": "di descrivere gli angeli",
-                                "linkedName": "angels"
-                              }
-                            ]
-             },
-             {
-               "name": "vestmad3",
-               "question": "La veste di Maria tra colori e disegni in rilievo ha un significato? Cosa significano i colori della veste? ",
-               "answer": "Il rosso della veste di Maria indica la passione di Gesù Cristo, il mantello reso in broccato, da l'indicazione di regalità della Madonna che appare simbolicamente vestita con un ricco abbigliamento di stretto significato teologico.",
-               "suggests":  [
-                              {
-                                "suggest": "di che colore è il vestito della madonna",
-                                "linkedName": "vestmad2"
-                              }
-                            ]
-             },
-             {
-               "name": "capleg",
-               "question": "Perché la Madonna ha i capelli ondulati e slegati fino alle spalle? Capelli ondulati di maria. Qual'è il significato dei capelli ondulati? che significano i capelli ondulati.",
-               "answer": "Le giovani della società ebraica ai tempi di Cristo avevano la consuetudine, prima del matrimonio di mantenere i capelli sciolti come indicazione del loro stato anagrafico libero e di verginità. Per quanto riguarda ì capelli ondulati probabilmente sono riferimento alla moda della capigliatura fiamminga tra il '400 e il '500.",
-               "suggests":  [
-                              {
-                                "suggest": "qual è il significato politico dell'opera",
-                                "linkedName": "sigpol"
-                              }
-                            ]
-             },
-             {
-               "name": "auth2",
-               "question": "Chi è l'autore dell'opera? Chi è l'autore del retablo? Chi è l'autore del dipinto",
-               "answer": "L'autore è un anonimo maestro di ambito aragonese.",
-               "suggests":  [
-                              {
-                                "suggest": "chi ha commissionato il retablo",
-                                "linkedName": "commis"
-                              },
-                              {
-                                "suggest": "in quali condizioni è pervenuto il dipinto",
-                                "linkedName": "condiz"
-                              }
-
-
-                            ]
-             },
-             {
-               "name": "commis",
-               "question": "Chi ha commissionato il retablo? Chi ha commissionato l'opera? Chi ha commissionato il dipinto?",
-               "answer": "La committenza del retablo è attribuita alla famiglia Carnicer, aragonese composta da notai, avvocati, procuratori e medici. Giovanni Carnicer notaio nel Regno d'Aragona, passò in Sardegna nel 1482 dove acquistò la Segreteria della città di Cagliari, ufficio che fu tramandato in famiglia per circa tre secoli, passando di padre in figlio. Giovanni Carnicer fu presente assieme al figlio Pietro Andrea al parlamento Dusay, come notaio pubblico, e sindaco del Braccio reale, venendo ricompensato nel 1510 per una somma di 20 lire. La famiglia si estinse nella seconda metà del diciottesimo secolo.",
-               "suggests":  [
-                              {
-                                "suggest": "qual è il significato politico dell'opera",
-                                "linkedName": "sigpol"
-                              }
-                            ]
-             },
-             {
-               "name": "sigpol",
-               "question": "qual è il significato politico di questo retablo? qual è il significato politico dell'opera? qual è il significato politico del dipinto?",
-               "answer": "Il retablo sostiene il programma politico dei re cattolici, Ferdinando d'Aragona e Isabella di Castiglia che attuano un processo di conquista (in senso cristiano) del territorio iberico e ricompongono i paesi di oltre mare che costituiscono la Corona d'Aragona prima e quella di Spagna successivamente, le loro commissioni artistiche riconfermano il cristianesimo come religione di stato e su questa fondano anche una distribuzione dell'immagine canonica presente nelle sedi dell'amministrazione del culto e dei processi amministrativi.",
-               "suggests":  [
-                              {
-                                "suggest": "chi ha commissionato il retablo",
-                                "linkedName": "commis"
-                              }
-                            ]
-             },
-             {
-               "name": "sfofiamm",
-               "question": "Perché c'è uno sfondo fiammingo? Cosa significa lo sfondo fiammingo",
-               "answer": "Lo sfondo fiammingo è caratteristico di tutta la produzione artistica tardo-gotica della penisola iberica. L'influenza giunge in quel territorio grazie alla presenza di Jan Van Eych presso le corti reali spagnole per eseguire i ritratti dei giovani principi. La sua maestria fu tale da essere apprezzata anche dagli ambienti artistici locali.",
-               "suggests":  [
-                              {
-                                "suggest": "perché i pastori non sono sullo stesso piano",
-                                "linkedName": "pianop"
-                              }
-                            ]
-             },
-             {
-               "name": "strumter",
-               "question": "Che strumento suona il terzo pastore?",
-               "answer": "Lo strumento che suona il terzo pastore può essere riportato tra una cornamusa e una zampogna.",
-               "suggests":  [
-                              {
-                                "suggest": "cosa significa lo sfondo fiammingo",
-                                "linkedName": "sfofiamm"
-                              }
-                            ]
-             },
-             {
-               "name": "pianop",
-               "question": "Perché i pastori non sono sullo stesso piano?",
-               "answer": "Per una tecnica pittorica rappresentativa che utilizza un solo punto centrale nella realizzazione prospettica della scena, dando scarsissima attenzione alle profondità dei piani.",
-               "suggests":  [
-                              {
-                                "suggest": "a quale scuola pittorica è riconducibile il quadro",
-                                "linkedName": "pittor"
-                              }
-                            ]
-             },
-             {
-               "name": "cane",
-               "question": "La presenza del cane ha qualche significato? Cosa rappresenta il cane",
-               "answer": "La presenza del cane simboleggia la fedeltà. Nella tavola ha una relazione con i pastori per il controllo del loro gregge.",
-               "suggests":  [
-                              {
-                                "suggest": "perchè ci sono utensili da cucina",
-                                "linkedName": "utens"
-                              }
-                            ]
-             },
-             {
-               "name": "pittor",
-               "question": "A quale scuola pittorica è riconducibile il quadro? scuola e stile del dipinto. Parlami dello stile di pittura.",
-               "answer": "Ambito aragonese.",
-               "suggests":  [
-                              {
-                                "suggest": "in quali condizioni è pervenuto il dipinto",
-                                "linkedName": "condiz"
-                              }
-                            ]
-             },
-             {
-               "name": "condiz",
-               "question": "E' arrivato integro o è stato restaurato? In che quali condizioni è pervenuto il dipinto",
-               "answer": "E' arrivato privo dei polvaroli, ma in buono stato. Ha subito pochissimi interventi di restauro che potrebbero essere intesi come interventi di manutenzione e consolidamento.",
-               "suggests":  [
-                              {
-                                "suggest": "a quale scuola pittorica è riconducibile il quadro",
-                                "linkedName": "pittor"
-                              }
-                            ]
-             },
-             {
-               "name": "",
-               "question": " ",
-               "answer": " ",
-               "suggests":  [
-                              {
-                                "suggest": "",
-                                "linkedName": ""
-                              }
-                            ]
-             }
-
-
-           ]
+            {
+              "suggest": "informazioni su uno di questi personaggi o la descrizione della scena dell'adorazione",
+              "linkedName": "tav"
+            }
+          ]
+        },
+        {
+          "name": "prov",
+          "question": "Da dove proviene, la provenienza, dove si trovava, dove stava il retablo",
+          "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace dove era collocato nella cappella di patronato della famiglia Carnicer.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sull'autore del dipinto",
+              "linkedName": "auth"
+            }
+          ]
 
         },
         {
-            "id": "Annunciazione",
-            "title": "Annunciazione",
-            "type": "painting",
-            "qa": [
-                {
-                    "question": "Cosa posso chiedere?",
-                    "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore"
-                },
-                {
-                    "question": "Descrizione generale, personaggi rappresentati",
-                    "answer": "La tavola raffigura la scena dell'annunciazione dove sono rappresentati  l'angelo Gabriele a sinistra e Maria Vergine a destra"
-                },
-                {
-                    "question": "Che tipo di materia materiale e tecnica sono utilizzate",
-                    "answer": "Tempera e olio su tavola"
-                },
-                {
-                    "question": "Cosa fa l'angelo e come è raffigurato ",
-                    "answer": "L'angelo Gabriele è raffigurato semi inginocchiato con la mano sinistra aperta e rivolta verso Maria"
-                },
-                {
-                    "question": "Come è vestito l'angelo  gabriele ",
-                    "answer": "L'angelo Gabriele ha un mantello rosso sopra una veste bianca"        },
-                {
-                    "question": "Da dove proviene, dov'era, la provenienza",
-                    "answer": "Probabilmente questa tavola, insieme alla Crocefissione  e al Transito della Vergine  faceva parte di un retablo proveniente dalla chiesa di San Francesco ad Oristano."
-                },
-                {
-                    "question": "Come è disposta Maria",
-                    "answer": "La Madonna è seduta con le spalle rivolte verso l'angelo, colta nell'atto di voltarsi spaventata verso il richiamo del messaggero divino"
-                },
-                {
-                    "question": "Come è l'ambiente",
-                    "answer": "E' un ambiente chiuso, la cui austerità pare mitigata unicamente dal drappo verde appeso al muro, appena dietro la Madonna."
-                },
-                {
-                    "question": "Chi è l'autore?",
-                    "answer": "L'autore della tavola è il maestro Antioco Mainas",
-                    "link": "Antioco Mainas"
-                },
-                {
-                    "question": "Di che periodo è? a quando risale. La data",
-                    "answer": "Metà del secolo sedicesimo"
-                }
-            ]
+          "name": "auth",
+          "question": "Chi è l'autore, chi l'ha dipinto, chi l'ha realizzato, informazioni sull'autore",
+          "answer": "L'autore dell'opera a tutt'oggi, rimane ancora anonimo. Per convenzione viene indicato come il Maestro del presepio.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla scena centrale rappresentante l'adorazione dei pastori",
+              "linkedName": "tav"
+            },
+            {
+              "suggest": "informazioni sulla datazione del dipinto",
+              "linkedName": "dataz"
+            },
+            {
+              "suggest": "che dimensioni ha l'opera",
+              "linkedName": "dim"
+            }
+
+
+          ]
+
+        },
+
+        {
+          "name": "tav",
+          "question": "Tavola centrale, scena del presepio adorazione dei pastori. Scena dell'adorazione. Cosa rappresenta la tavola centrale? Cosa raffigura la tavola centrale?",
+          "answer": "La tavola raffigura la scena della natività. E' rappresentata una capanna con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello di fronte alla mangiatoia. La struttura è costituita da un solo ambiente con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco. In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe, ai loro piedi steso sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Sullo sfondo un paesaggio di ispirazione fiamminga.",
+          "suggests":  [
+            {
+              "suggest": "come è rappresentata la madonna",
+              "linkedName": "rapmad"
+            },
+            {
+              "suggest": "come porta i capelli Maria",
+              "linkedName": "capmad"
+            },
+            {
+              "suggest": "informazioni sul paesaggio",
+              "linkedName": "paes"
+            }
+          ]
+        },
+
+        {
+          "name": "rapmad",
+          "question": "Come è rappresentata la madonna. descrivi maria. Descrivi la madonna. Parla di Maria. Parlami della madonna.",
+          "answer": "La Madonna con aureola circolare dorata, indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo. Lo sguardo rivolto verso il Bambino, cappelli ondulati che cadono sulle spalle, le mani giunte rivolte verso il basso.",
+          "suggests":  [
+            {
+              "suggest": "di che colore è la veste di Maria",
+              "linkedName": "vestmad2"
+            },
+            {
+              "suggest": "come sono i suoi capelli",
+              "linkedName": "capmad"
+            },
+            {
+              "suggest": "come è rappresentato San Giuseppe",
+              "linkedName": "rapgiu"
+            },
+            {
+              "suggest": "informazioni sull'espressione del volto di Maria",
+              "linkedName": "espmad"
+
+            }
+          ]
         },
         {
-            "id": "Crocefissione",
-            "title": "Crocefissione",
-            "type": "painting",
-            "qa": [
-                {
-                    "question": "Descrizione generale",
-                    "answer": "Il dipinto fa parte probabilmente di un retablo eseguito per la chiesa di Sant'Efisio di Giorgino a Cagliari, di patronato della famiglia Ballèro. Dell'opera sono oggi noti solo due elementi: quello appunto raffigurante la Crocifissione, custodito in Pinacoteca e una Madonna in trono col Bambino e angeli, di proprietà privata;  La Crocifissione è costruita in maniera molto elementare: sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di San Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio. Le due tavole furono attribuite a Lorenzo Càvaro dall'Aru (1924) e la loro assegnazione rimane, allo stato degli studi, invariata e probabile, vista l'innegabile affinità stilistica con il retablo di Gonnostramatza, opera datata e firmata dal pittore stampacino."
-                },
-                {
-                    "question": "Come è l'ambiente",
-                    "answer": " sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di S. Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio."
-                },
-                {
-                    "question": "Chi è l'autore?",
-                    "answer": "Lorenzo Càavaro"
-                },
-                {
-                    "question": "Di che periodo è?",
-                    "answer": "1507"
-                }
-            ]
+          "name": "vestmad2",
+          "question": "Di che colore è il vestito della madonna, descrivimi la veste di Maria.",
+          "answer": "La Madonna indossa una veste color rosso scuro con i bordi dorati con motivo a rilievo, il manto in broccato con disegni vegetali sul rosso e oro, con una bordatura dorata motivo a rilievo.",
+          "suggests":  [
+            {
+              "suggest": "cosa significano i colori della veste",
+              "linkedName": "vestmad3"
+            }
+          ]
         },
         {
-            "id": "controls",
-            "title": "controls",
-            "type": "controls",
-            "qa": [
-                {
-                    "question": "spegni la musica, spegnere",
-                    "answer": "spegni la musica"
-                },
-                {
-                    "question": "accendi la musica, accendere",
-                    "answer": "accendi la musica"
-                },
-                {
-                    "question": "abbassa la musica, abbassare audio volume",
-                    "answer": "abbassa la musica"
-                },
-                {
-                    "question": "aumenta la musica, aumentare, sollevare solleva audio volume",
-                    "answer": "aumenta la musica"
-                },
-                {
-                    "question": "ricomincia, ricominciare",
-                    "answer": "ricomincia"
-                },
-                {
-                    "question": "silenzio, fermati, basta cosi, zitta",
-                    "answer": "silenzio"
-                },
-                {
-                    "question": "cambia, cambiare",
-                    "answer": "cambia quadro"
-                },
-                {
-                    "question": "che ore sono, orario",
-                    "answer": "che ore sono"
-                },
-                {
-                    "question": "accelera la voce",
-                    "answer": "aumenta la voce"
-                },
-                {
-                    "question": "rallenta la voce",
-                    "answer": "abbassa la voce"
-                }
-            ]
+          "name": "capmad",
+          "question": "Come sono i capelli di Maria, come porta i capelli la madonna",
+          "answer": "Maria porta i capelli ondulati che ricadono sulle spalle.",
+          "suggests":  [
+            {
+              "suggest": "il significato dei suoi capelli ondulati",
+              "linkedName": "capleg"
+            }
+          ]
+        },
+        {
+          "name": "espmad",
+          "question": "Che espressione ha il volto di Maria",
+          "answer": "Lo sguardo è rivolto in basso verso il bambino.",
+          "suggests":  [
+            {
+              "suggest": "di che Colore sono gli occhi della madonna",
+              "linkedName": "occmad"
+            }
+          ]
+        },
+        {
+          "name": "occmad",
+          "question": "Di che colore sono gli occhi di Maria. Colore degli occhi della madonna.",
+          "answer": "Gli occhi sono socchiusi con lo sguardo rivolto verso il basso.",
+          "suggests":  [
+            {
+              "suggest": "come è raffigurato San Giuseppe",
+              "linkedName": "rapgiu"
+            }
+          ]
+        },
+        {
+          "name": "rapgiu",
+          "question": "Come è raffigurato San Giuseppe, come è rappresentato san giuseppe, parlami di giuseppe",
+          "answer": "Alla sinistra della Madonna, San Giuseppe con aureola a cresta  dorata, abito viola con bordi dorati e mantello rosso sempre con bordatura dorata, con sopra un altro ridotto mantello con cappuccio nero. IL Santo ha la barba e i capelli grigi, lo sguardo rivolto verso il Bambino, con mani giunte verso il basso. Dalla veste si intravede il piede nero sinistro. All’interno delle braccia piegate scorre un bastono lungo che arriva sino a terra. ",
+          "suggests":  [
+            {
+              "suggest": "perché san Giuseppe ha l'aureola ottagonale",
+              "linkedName": "aurgiu"
+            },
+            {
+              "suggest": "come sono raffigurati i pastori",
+              "linkedName": "pasts"
+            }
+          ]
+        },
+        {
+          "name": "pasts",
+          "question": "Descrivi i pastori? Come sono raffigurati i pastori? Parlami, parla dei pastori.",
+          "answer": "Sono raffigurati tre pastori: il primo in basso è inginocchiato in atto di adorazione messo di profilo sinistro; Il secondo sempre in ginocchio, visibile la parte superiore e parte della gamba sinistra, più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale.",
+          "suggests":  [
+            {
+              "suggest": "la descrizione del primo pastore",
+              "linkedName": "primp"
+            },
+            {
+              "suggest": "la descrizione del secondo pastore",
+              "linkedName": "secp"
+            },
+            {
+              "suggest": "la descrizione del terzo pastore",
+              "linkedName": "terp"
+            }
+
+          ]
+        },
+        {
+          "name": "primp",
+          "question": "Descrivi il primo pastore, Descrivimi parlami del primo pastore",
+          "answer": "Il primo pastore in basso è inginocchiato in atto di adorazione messo di profilo sinistro, con capelli neri lunghi, barba e baffi neri, con le braccia piegate e mani aperte. Indossa un abito marrone con cintura, dove è stato appeso un lungo coltello provvisto di custodia che scende sul lato dell’abito. Appesa sul braccio sinistro una borraccia tonda con due piccoli manici e un tappo di colore bianco. Alla sinistra del pastore sono poggiati per terra un bastone e un cappello scuro.",
+          "suggests":  [
+            {
+              "suggest": "la descrizione del secondo pastore",
+              "linkedName": "secp"
+            },
+            {
+              "suggest": "la descrizione del terzo pastore",
+              "linkedName": "terp"
+            }
+          ]
+        },
+        {
+          "name": "secp",
+          "question": "Descrivi il secondo pastore, Descrivimi parlami del secondo pastore",
+          "answer": "Il secondo pastore è raffigurato in ginocchio, visibile la parte superiore e parte della gamba sinistra, con un copricapo rosso, lunga barba grigia, viso visto di tre quarti, sguardo rivolto verso il basso. Indossa un mantello verde, ha tra le braccia un agnello e un bastone. Al lato della cintura una piccola borsa intrecciata di paglia, da cui sono visibili un cucchiaio di legno e una borraccia.",
+          "suggests":  [
+            {
+              "suggest": "la descrizione del primo pastore",
+              "linkedName": "primp"
+            },
+            {
+              "suggest": "la descrizione del terzo pastore",
+              "linkedName": "terp"
+            }
+          ]
+        },
+        {
+          "name": "terp",
+          "question": "Descrivi il terzo pastore, Descrivimi il terzo pastore, parlami del terzo",
+          "answer": "Più in alto sempre sulla destra un’ altro pastore in piedi che suona uno strumento musicale fatto da due trombe separate da un tessuto rosso. I capelli sono lunghi e chiari, e la testa è cinta i da un nastro di stoffa bianco, indossa una veste corta marron con cintura bianca da cui pende una piccola borsa e un piccolo mantello rosa.",
+          "suggests":  [
+            {
+              "suggest": "la descrizione del primo pastore",
+              "linkedName": "primp"
+            },
+            {
+              "suggest": "la descrizione del secondo pastore",
+              "linkedName": "secp"
+            },
+            {
+              "suggest": "che strumento suona il terzo pastore",
+              "linkedName": "strumter"
+            }
+
+          ]
+        },
+        {
+          "name": "paes",
+          "question": "sfondo paesaggio. sul paesaggio.",
+          "answer": "sullo sfondo un paesaggio di ispirazione fiamminga, con verdi colline e castelli medievali.",
+          "suggests":  [
+            {
+              "suggest": "di descrivere la parte esterna della capanna",
+              "linkedName": "estcap"
+            },
+            {
+              "suggest": "informazioni sullo sfondo fiammingo",
+              "linkedName": "sfofiamm"
+            }
+          ]
+        },
+        {
+          "name": "dataz",
+          "question": "Datazione, periodo, quando è stato dipinto.",
+          "answer": "L'opera risale alla fine del quindicesimo secolo.",
+          "suggests":  [
+            {
+              "suggest": "le dimensioni della tavola e del retablo",
+              "linkedName": "dim2"
+            }
+          ]
+        },
+        {
+          "name": "angels",
+          "question": "Descrivi gli angeli. Parlami degli angeli.",
+          "answer": "Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco, dove sono presenti delle note musicali. Alcuni angeli hanno delle ali dorate con profili rossi, altri hanno le ali con sfumature di bianco, rosso e verde.",
+          "suggests":  [
+            {
+              "suggest": "perché gli angeli hanno le ali colorate in modo differente",
+              "linkedName": "aliang"
+            },
+            {
+              "suggest": "perché i pastori non sono sullo stesso piano",
+              "linkedName": "pianop"
+            }
+          ]
+        },
+        {
+          "name": "estcap",
+          "question": "descrivi la parte esterna della capanna. Parlami della capanna.",
+          "answer": "Nella zona esterna alla capanna a sinistra su un muro è posizionata una mensola su cui poggiano una cipolla e utensili da cucina, e una treccia di aglio appesa.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul significato dell'aglio",
+              "linkedName": "aglio"
+            },
+            {
+              "suggest": "perché ci sono gli utensili da cucina",
+              "linkedName": "utens"
+            },
+            {
+              "suggest": "informazioni sul significato della cipolla",
+              "linkedName": "cipolla"
+            }
+
+          ]
+        },
+        {
+          "name": "bamb",
+          "question": "Descrivi il bambino. Parlami del bambino.",
+          "answer": "il Bambino è rappresentato nudo con le braccia aperte con aureola circolare crociata steso  sopra un lembo del mantello della madonna.",
+          "suggests":  [
+            {
+              "suggest": "perché l'aureola è crociata",
+              "linkedName": "aurcroc"
+            },
+            {
+              "suggest": "perché il bambino è nudo",
+              "linkedName": "nude"
+            }
+          ]
+        },
+        {
+          "name": "aurcroc",
+          "question": "Perchè l'aureola è crociata e cosa significa. Parlami, spiegami, l'aureola crociata",
+          "answer": " riferimento all'aureola che circonda il capo di Gesù Bambino, si indicano tre estremità della croce che preconizzano il sacrificio di Gesù Cristo per la nostra redenzione. Inoltre i bracci di tre ricordano la trinità.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla tavola centrale",
+              "linkedName": "tav"
+            }
+          ]
+        },
+        {
+          "name": "aurgiu",
+          "question": "Perché San Giuseppe ha l'aureola ottagonale? Parlami, spiegami, l'aureola ottagonale di San Giuseppe",
+          "answer": "Giuseppe è il protagonista insieme a Maria della rivelazione e del cammino della salvezza, in quanto padre putativo di Gesù Cristo, posto a garanzia della salvaguardia del Bambino Divino. L'aureola ottagonale è simbolo della virtù. Poiché il cerchio è simbolo della perfezione, quella ottagonale indica la via di chi è alla ricerca della perfezione. La figura di Giuseppe è intermedia tra l'antico e il nuovo testamento.",
+          "suggests":  [
+            {
+              "suggest": "come è rappresentata la madonna",
+              "linkedName": "rapmad"
+            }
+          ]
+        },
+        {
+          "name": "aliang",
+          "question": "Perché gli angeli hanno le ali colorate in modo differente? Spiegami, raccontami, perché gli angeli hanno le ali diversamente colorate. Ali di colore diverso.",
+          "answer": "Gli angeli sarebbero organizzati in gerarchie di più ordini. Il periodo medievale è molto legato al simbolismo dei colori e quindi spesso sottolineavano la gerarchia dell'angelo rappresentato mediante il colore o il numero delle ali. Nel caso della tavola del presepio non sono collocabili all'interno delle gerarchie, in quanto provvisti di ali multicolore.",
+          "suggests":  [
+            {
+              "suggest": "chi è l'autore del retablo",
+              "linkedName": "auth2"
+            },
+            {
+              "suggest": "quando è stato dipinto",
+              "linkedName": "dataz"
+            }
+
+
+          ]
+        },
+        {
+          "name": "dim2",
+          "question": "Quali sono le dimensioni della tavola e del retablo?",
+          "answer": "Le dimensioni della tavola sono cm. 163,7 per 87,5; quelle relative al retablo cm. 275,2 per 261,1.",
+          "suggests":  [
+            {
+              "suggest": "chi è l'autore del retablo",
+              "linkedName": "auth2"
+            },
+            {
+              "suggest": " dove stava il retablo",
+              "linkedName": "locret"
+            }
+          ]
+        },
+        {
+          "name": "locret",
+          "question": "Dov'era originariamente il retablo?. Dove stava il retablo.",
+          "answer": "Il retablo era originariamente collocato nella parete di controfacciata della chiesa di San Francesco di Stampace nella prima cappella a sinistra (famiglia Carnìcerj).",
+          "suggests":  [
+            {
+              "suggest": "chi ha commissionato il retablo",
+              "linkedName": "commis"
+            }
+          ]
+        },
+        {
+          "name": "cipolla",
+          "question": "Perché c'è la cipolla? Parlami della cipolla",
+          "answer": "La cipolla è il prodotto più consumato sin dall'antichità. Gli antichi egizi tenevano grande considerazione rappresentandola nei geroglifici e nelle tombe dei faraoni, con il significato divino di lasciapassare per l'oltre tomba. I greci la associavano al dio Ares, somministrandola alle truppe per accrescerne il valore nei combattimenti. Nell'esegesi biblica identificava il dolore prodotto dal peccato (irritante per gli occhi) e la falsità (molti strati del suo involucro).",
+          "suggests":  [
+            {
+              "suggest": "cosa rappresenta il cane",
+              "linkedName": "cane"
+            }
+          ]
+        },
+
+        {
+          "name": "aglio",
+          "question": "Perchè c'e' l'aglio?",
+          "answer": "L'aglio è interpretato simbolicamente come energia che allontana un'influenza magica o maligna. Presso molti popoli era considerato rimedio contro il malocchio e gli spiriti maligni. In Grecia si attribuiva effetto protettivo pronunciando la parola aglio per allontanare la cattiva sorte.",
+          "suggests":  [
+            {
+              "suggest": "cosa rappresenta il cane",
+              "linkedName": "cane"
+            }
+          ]
+        },
+        {
+          "name": "utens",
+          "question": "Perchè ci sono utensili da cucina?",
+          "answer": " Gli utensili da cucina indicano la familiarità dell'ambiente, dove gli strumenti della vita quotidiana accompagnano in semplicità l'esistenza di Gesù Cristo e la sua famìglia.",
+          "suggests":  [
+            {
+              "suggest": "cosa rappresenta il cane",
+              "linkedName": "cane"
+            }
+          ]
+        },
+        {
+          "name": "nude",
+          "question": "Perché il bambino è nudo? perché è nudo? parlami della nudità del bambino.",
+          "answer": "La nudità del bambino rappresenta l'umanizzazione di Gesù e la sua gloria priva di peccato.",
+          "suggests":  [
+            {
+              "suggest": "di descrivere gli angeli",
+              "linkedName": "angels"
+            }
+          ]
+        },
+        {
+          "name": "vestmad3",
+          "question": "La veste di Maria tra colori e disegni in rilievo ha un significato? Cosa significano i colori della veste? ",
+          "answer": "Il rosso della veste di Maria indica la passione di Gesù Cristo, il mantello reso in broccato, da l'indicazione di regalità della Madonna che appare simbolicamente vestita con un ricco abbigliamento di stretto significato teologico.",
+          "suggests":  [
+            {
+              "suggest": "di che colore è il vestito della madonna",
+              "linkedName": "vestmad2"
+            }
+          ]
+        },
+        {
+          "name": "capleg",
+          "question": "Perché la Madonna ha i capelli ondulati e slegati fino alle spalle? Capelli ondulati di maria. Qual'è il significato dei capelli ondulati? che significano i capelli ondulati.",
+          "answer": "Le giovani della società ebraica ai tempi di Cristo avevano la consuetudine, prima del matrimonio di mantenere i capelli sciolti come indicazione del loro stato anagrafico libero e di verginità. Per quanto riguarda ì capelli ondulati probabilmente sono riferimento alla moda della capigliatura fiamminga tra il '400 e il '500.",
+          "suggests":  [
+            {
+              "suggest": "qual è il significato politico dell'opera",
+              "linkedName": "sigpol"
+            }
+          ]
+        },
+        {
+          "name": "auth2",
+          "question": "Chi è l'autore dell'opera? Chi è l'autore del retablo? Chi è l'autore del dipinto",
+          "answer": "L'autore è un anonimo maestro di ambito aragonese.",
+          "suggests":  [
+            {
+              "suggest": "chi ha commissionato il retablo",
+              "linkedName": "commis"
+            },
+            {
+              "suggest": "in quali condizioni è pervenuto il dipinto",
+              "linkedName": "condiz"
+            }
+
+
+          ]
+        },
+        {
+          "name": "commis",
+          "question": "Chi ha commissionato il retablo? Chi ha commissionato l'opera? Chi ha commissionato il dipinto?",
+          "answer": "La committenza del retablo è attribuita alla famiglia Carnicer, aragonese composta da notai, avvocati, procuratori e medici. Giovanni Carnicer notaio nel Regno d'Aragona, passò in Sardegna nel 1482 dove acquistò la Segreteria della città di Cagliari, ufficio che fu tramandato in famiglia per circa tre secoli, passando di padre in figlio. Giovanni Carnicer fu presente assieme al figlio Pietro Andrea al parlamento Dusay, come notaio pubblico, e sindaco del Braccio reale, venendo ricompensato nel 1510 per una somma di 20 lire. La famiglia si estinse nella seconda metà del diciottesimo secolo.",
+          "suggests":  [
+            {
+              "suggest": "qual è il significato politico dell'opera",
+              "linkedName": "sigpol"
+            }
+          ]
+        },
+        {
+          "name": "sigpol",
+          "question": "qual è il significato politico di questo retablo? qual è il significato politico dell'opera? qual è il significato politico del dipinto?",
+          "answer": "Il retablo sostiene il programma politico dei re cattolici, Ferdinando d'Aragona e Isabella di Castiglia che attuano un processo di conquista (in senso cristiano) del territorio iberico e ricompongono i paesi di oltre mare che costituiscono la Corona d'Aragona prima e quella di Spagna successivamente, le loro commissioni artistiche riconfermano il cristianesimo come religione di stato e su questa fondano anche una distribuzione dell'immagine canonica presente nelle sedi dell'amministrazione del culto e dei processi amministrativi.",
+          "suggests":  [
+            {
+              "suggest": "chi ha commissionato il retablo",
+              "linkedName": "commis"
+            }
+          ]
+        },
+        {
+          "name": "sfofiamm",
+          "question": "Perché c'è uno sfondo fiammingo? Cosa significa lo sfondo fiammingo",
+          "answer": "Lo sfondo fiammingo è caratteristico di tutta la produzione artistica tardo-gotica della penisola iberica. L'influenza giunge in quel territorio grazie alla presenza di Jan Van Eych presso le corti reali spagnole per eseguire i ritratti dei giovani principi. La sua maestria fu tale da essere apprezzata anche dagli ambienti artistici locali.",
+          "suggests":  [
+            {
+              "suggest": "perché i pastori non sono sullo stesso piano",
+              "linkedName": "pianop"
+            }
+          ]
+        },
+        {
+          "name": "strumter",
+          "question": "Che strumento suona il terzo pastore?",
+          "answer": "Lo strumento che suona il terzo pastore può essere riportato tra una cornamusa e una zampogna.",
+          "suggests":  [
+            {
+              "suggest": "cosa significa lo sfondo fiammingo",
+              "linkedName": "sfofiamm"
+            }
+          ]
+        },
+        {
+          "name": "pianop",
+          "question": "Perché i pastori non sono sullo stesso piano?",
+          "answer": "Per una tecnica pittorica rappresentativa che utilizza un solo punto centrale nella realizzazione prospettica della scena, dando scarsissima attenzione alle profondità dei piani.",
+          "suggests":  [
+            {
+              "suggest": "a quale scuola pittorica è riconducibile il quadro",
+              "linkedName": "pittor"
+            }
+          ]
+        },
+        {
+          "name": "cane",
+          "question": "La presenza del cane ha qualche significato? Cosa rappresenta il cane",
+          "answer": "La presenza del cane simboleggia la fedeltà. Nella tavola ha una relazione con i pastori per il controllo del loro gregge.",
+          "suggests":  [
+            {
+              "suggest": "perchè ci sono utensili da cucina",
+              "linkedName": "utens"
+            }
+          ]
+        },
+        {
+          "name": "pittor",
+          "question": "A quale scuola pittorica è riconducibile il quadro? scuola e stile del dipinto. Parlami dello stile di pittura.",
+          "answer": "Ambito aragonese.",
+          "suggests":  [
+            {
+              "suggest": "in quali condizioni è pervenuto il dipinto",
+              "linkedName": "condiz"
+            }
+          ]
+        },
+        {
+          "name": "condiz",
+          "question": "E' arrivato integro o è stato restaurato? In che quali condizioni è pervenuto il dipinto",
+          "answer": "E' arrivato privo dei polvaroli, ma in buono stato. Ha subito pochissimi interventi di restauro che potrebbero essere intesi come interventi di manutenzione e consolidamento.",
+          "suggests":  [
+            {
+              "suggest": "a quale scuola pittorica è riconducibile il quadro",
+              "linkedName": "pittor"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "question": " ",
+          "answer": " ",
+          "suggests":  [
+            {
+              "suggest": "",
+              "linkedName": ""
+            }
+          ]
         }
 
-    ]
+
+      ]
+
+    },
+    {
+      "id": "Annunciazione",
+      "title": "Annunciazione",
+      "type": "painting",
+      "qa": [
+        {
+          "question": "Cosa posso chiedere?",
+          "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore"
+        },
+        {
+          "question": "Descrizione generale, personaggi rappresentati",
+          "answer": "Il retablo dell'Annunciazione è costituito da otto pannelli. Nello scomparto centrale si trova l'Annunciazione; nel pannello superiore è raffigurata una Crocifissione; delle scene laterali un solo pannello a sinistra con la Caccia di San Giuliano; nella predella in basso sono raffigurati al centro Cristo in pietà, Sant'Antonio Abate e San Giovanni Battista a sinistra, Santa Margherita d'Antiochia e Santa Caterina d'Alessandria a destra."
+        },
+        {
+          "question": "Che tipo di materia materiale e tecnica sono utilizzate",
+          "answer": "Tempera su tavola con fondo d'oro."
+        },
+        {
+          "question": "Che dimensioni ha l'opera?",
+          "answer": "Il retablo misura 260 per 238 centimetri circa. Puoi anche chiedermi informazioni su tecnica e materiali utilizzati"
+        },
+        {
+          "question": "Quali sono i colori predominanti?",
+          "answer": "I colori predominanti sono marrone, rosso, verde, bianco, oro. Attraverso l'accostamento cromatico è possibile decifrare la corrente pittorica"
+        },
+        {
+          "question": "Qual è la corrente pittorica? Che datazione ha?",
+          "answer": "L'accostamento rosso, verde, bianco, oro esprime la piena adesione allo stile internazionale della pittura tardogotica catalana. L'opera è databile al 1410 circa"
+        },
+        {
+          "question": "L'opera è integra?",
+          "answer": "L'opera si presenta molto rovinata, alcuni elementi del pannello centrale non sono visibili. Ha subito un restauro nel 1998"
+        },
+        {
+          "question": "Figure rappresentate, personaggi raffigurati",
+          "answer": "Le figure principali del pannello centrale sono la Madonna e l'Arcangelo Gabriele. Potresti chiedermi informazioni su questi personaggi o la descrizione della scena"
+        },
+        {
+          "question": "Da dove proviene, la provenienza, dove si trovava",
+          "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace a Cagliari dove era collocato all'interno della terza cappella del coro, di patronato della famiglia Dedoni. Puoi fare domande sull'autore del dipinto"
+
+        },
+        {
+          "question": "Chi è l'autore, chi l'ha dipinto, chi l'ha fatto, informazioni sull'autore",
+          "answer": "L’opera è stata attribuita al catalano Joan Mates di Vilafranca del Penedès, potresti chiedermi informazioni sulla scena centrale rappresentante l'Annunciazione"
+        },
+        {
+          "question": "Tavola centrale, scena dell'Annunciazione. Cosa rappresenta la tavola? Cosa raffigura la tavola?",
+          "answer": "La tavola raffigura la scena dell'Annunciazione. Due figure in primo piano, a sinistra l'Arcangelo e a destra Maria, in un ambiente interno. Sullo sfondo sono presenti strutture architettoniche con arcate. In alto a sinistra la mano del Cristo punta le dita verso Maria, mandando lo Spirito Santo attraverso una colomba. Puoi farmi altre domande sui personaggi"
+        },
+        {
+          "question": "Come è rappresentata la Madonna, descrivi Maria",
+          "answer": "La Madonna con aureola circolare dorata, indossa una veste abbondante che avvolge tutto il corpo fino al pavimento. I capelli dorati semicoperti dalla veste, la mano destra è rivolta verso il petto"
+        },
+        {
+          "question": "Di che colore è il vestito di Maria",
+          "answer": "La veste di Maria è color marrone scuro con bordi dorati, nell'apertura sul petto si intravede una stoffa rossa decorata"
+        },
+        {
+          "question": "Che espressione ha il volto di Maria",
+          "answer": "Maria ha il capo chino, lo sguardo rivolto verso l'Arcangelo, l'espressione è dolce e delicata"
+        },
+        {
+          "question": "Come è raffigurato l'Arcangelo Gabriele",
+          "answer": "Alla sinistra della Vergine, Gabriele è con aureola dorata, in ginocchio, lo sguardo rivolto verso Maria. La veste è bianca, avvolta in gran in parte da un mantello color rosso con bordi dorati. Le ali sono color rosso. Porge gentilmente un giglio bianco"
+        },
+        {
+          "question": "Quale simbologia ha il giglio?",
+          "answer": "Nell'iconografia religiosa il giglio bianco rappresenta purezza e verità"
+        },
+        {
+          "question": "Quali elementi sono presenti oltre i due personaggi?",
+          "answer": "Sono presenti due elementi di rilievo. In alto a sinistra è presente una mano con due dita rivolte verso Maria, sono presenti dei tratti dorati che rappresentano la luce. Con questo gesto, il Cristo emana lo Spirito Santo attraverso una colomba bianca"
+        },
+        {
+          "question": "Che simbologia ha la colomba?",
+          "answer": "La colomba nella cristianità è simbolo di luce e salvezza"
+        }
+      ]
+    },
+    {
+      "id": "Crocefissione",
+      "title": "Crocefissione",
+      "type": "painting",
+      "qa": [
+        {
+          "question": "Descrizione generale",
+          "answer": "Il dipinto fa parte probabilmente di un retablo eseguito per la chiesa di Sant'Efisio di Giorgino a Cagliari, di patronato della famiglia Ballèro. Dell'opera sono oggi noti solo due elementi: quello appunto raffigurante la Crocifissione, custodito in Pinacoteca e una Madonna in trono col Bambino e angeli, di proprietà privata;  La Crocifissione è costruita in maniera molto elementare: sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di San Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio. Le due tavole furono attribuite a Lorenzo Càvaro dall'Aru (1924) e la loro assegnazione rimane, allo stato degli studi, invariata e probabile, vista l'innegabile affinità stilistica con il retablo di Gonnostramatza, opera datata e firmata dal pittore stampacino."
+        },
+        {
+          "question": "Come è l'ambiente",
+          "answer": " sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di S. Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio."
+        },
+        {
+          "question": "Chi è l'autore?",
+          "answer": "Lorenzo Càavaro"
+        },
+        {
+          "question": "Di che periodo è?",
+          "answer": "1507"
+        }
+      ]
+    },
+    {
+      "id": "Gennamaria",
+      "title": "Gennamaria",
+      "type": "painting",
+      "qa": [
+
+
+        {
+          "name": "first",
+          "question": "Cosa posso chiedere?",
+          "answer": "Puoi chiedere: la descrizione generale, sul villaggio, sull'antemurale.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul nuraghe",
+              "linkedName": "nuraghe"
+            }
+          ],
+          "key": "chiedere, domanda, domandare"
+        },
+        {
+          "name": "ubic",
+          "question": "Ubicazione, dove si trova, il sito archeologico Genna Maria",
+          "answer": "Il sito archeologico si trova a poche centinaia di metri da Collinas in prossimità di Villanovaforru sulla sommità della collina marnoso-calcarea di Genna Maria, nella Marmilla, regione della Sardegna centro-meridionale. Gode di un campo visivo che spazia dal golfo di Cagliari a quello di Oristano, e, a Nord, verso la Marmilla e i monti del Gennargentu.",
+          "suggests":  [
+            {
+              "suggest": "la descrizione generale",
+              "linkedName": "gen"
+            },
+            {
+              "suggest": "informazioni su Villanovaforru",
+              "linkedName": "villanova"
+            },
+            {
+              "suggest": "informazioni sul Museo di Genna Maria",
+              "linkedName": "museo"
+            }
+          ],
+          "key": "Dove si trova complesso genna maria. sta."
+        },
+        {
+          "name": "gen",
+          "question": "Descrizione generale. Struttura di Genna Maria.",
+          "answer": "La struttura del complesso di Genna Maria si compone di un bastione trilobato che racchiude la torre originaria, di un antemurale esagonale e di un villaggio posto all'interno ed all'esterno dell'antemurale. La torre originaria, costruita forse nel Bronzo medio (XV sec. a.C.), oggi svettata, ospita una semplice camera priva di vani sussidiari e di diametro interno assai ridotto rispetto a quello esterno.",
+          "suggests":  [
+            {
+              "suggest": "una descrizione del nuraghe",
+              "linkedName": "nuraghe"
+            },
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "l’ubicazione del sito Genna Maria",
+              "linkedName": "ubic"
+            }
+          ],
+          "key": "sDescrizione generale sito archeologico genna maria. Complesso. Struttura"
+        },
+        {
+          "name": "villanova",
+          "question": "Parlami di Villanovaforru",
+          "answer": "E’ un comune italiano di 680 abitanti della provincia del Sud Sardegna. Situato tra le dolci colline della Marmilla, a circa 50 km da Cagliari.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul Museo di Genna Maria",
+              "linkedName": "museo"
+            }
+          ],
+          "key": "Villanovaforru. Città. Paese."
+        },
+        {
+          "name": "nuraghe",
+          "question": "Parlami del nuraghe, dove si trova il nuraghe",
+          "answer": "Nella regione storica della Marmilla, sulla sommità della collina di Genn’e Mari che nella lingua sarda significa porta-accesso al mare, si trova il nuraghe Genna Maria. È un edificio complesso,  interamente realizzato in pietra, costituito da una torre centrale e da altre tre torri periferiche disposte negli angoli nord-est, sud-est e nord-ovest. All’interno è presente un piccolo cortile dove è situata una cisterna. Attorno ad esso si sviluppa un recinto composto da quattro torri residue. Nello spazio compreso tra il recinto e le torri è un villaggio di diverse capanne. ",
+          "suggests":  [
+            {
+              "suggest": "dettagli sulla torre principale",
+              "linkedName": "torre_originaria"
+            },
+            {
+              "suggest": "la descrizione dell’antemurale",
+              "linkedName": "antemurale"
+            },
+            {
+              "suggest": "informazioni sull’evoluzione del nuraghe",
+              "linkedName": "evoluzione"
+            },
+            {
+              "suggest": "informazioni sulla tecnica di costruzione",
+              "linkedName": "tecnica"
+            }
+          ],
+          "key": "nuraghe. descrizione del nuraghe. dove si trova dov'è il nuraghe."
+        },
+        {
+          "name": "scavi",
+          "question": "Come quando è stato scoperto il nuraghe. Come è avvenuta la scoperta. Chi ha diretto scavi. Come si presenta attualmente.",
+          "answer": "Il nuraghe era originariamente sepolto. Durante la seconda guerra mondiale è stato utilizzato come postazione antiaerea. Nel 1969 sono iniziate le prime indagini che si sono protratte nel corso degli anni settanta e ottanta. Il professore Enrico Atzeni dell’università di Cagliari con la collaborazione sul campo di Ubaldo Badas ha diretto gli scavi. Successivamente sono state fatti alcuni interventi conservativi, di restauro.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sugli scavi in corso",
+              "linkedName": "incorso"
+            },
+            {
+              "suggest": "informazioni sui materiali",
+              "linkedName": "materiali"
+            },
+            {
+              "suggest": "come si presenta oggi il nuraghe attuale",
+              "linkedName": "confronto"
+            }
+          ],
+          "key": "scavi. scavi. scavi. scoperto nuraghe."
+        },
+        {
+          "name": "incorso",
+          "question": "Gli scavi sono stati conclusi, finiti? in corso",
+          "answer": "Esistono ancora delle parti del nuraghe non scavate: finora è stato possibile ricostruire solo le vicende della parte nord-orientale del villaggio. Lo scavo nel settore sud-occidentale non è stato ancora concluso.",
+          "suggests":  [
+            {
+              "suggest": "quando è stato scoperto il nuraghe e circa gli interventi conservativi di restauro",
+              "linkedName": "scavi"
+            },
+            {
+              "suggest": "quali reperti/manufatti sono stati rinvenuti.",
+              "linkedName": "reperti"
+            },
+            {
+              "suggest": "informazioni sul Museo di Genna Maria",
+              "linkedName": "museo"
+            }
+          ],
+          "key": "scavi in corso. concluso"
+        },
+        {
+          "name": "tecnica",
+          "question": "Tecnica costruttiva nuraghe",
+          "answer": "La tecnica costruttiva è quella della muratura a secco, per la costruzione sono state adottate pietre di grandi dimensioni che pesano diversi quintali, legate tra loro da terra o fango. Gli ambienti interni delle torri sono chiusi da una cupola di pietre.",
+          "suggests":  [
+            {
+              "suggest": "che funzione hanno i nuraghi",
+              "linkedName": "funzione"
+            },
+            {
+              "suggest": "informazioni sui materiali",
+              "linkedName": "materiali"
+            },
+            {
+              "suggest": "quando è stato scoperto il nuraghe e circa gli interventi conservativi di restauro",
+              "linkedName": "scavi"
+            }
+          ],
+          "key": "tecnica costruttiva. costruzione"
+        },
+        {
+          "name": "materiali",
+          "question": "Quali materiali sono stati usati per costruire il nuraghe",
+          "answer": "Il nuraghe è stato costruito con una roccia locale che si chiama marna calcarea. Tuttavia alcuni elementi, come ad esempio gli architravi sopra gli ingressi, sono realizzati in una roccia differente, il basalto.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla tecnica di costruzione",
+              "linkedName": "tecnica"
+            },
+            {
+              "suggest": "informazioni sull’evoluzione del nuraghe",
+              "linkedName": "evoluzione"
+            },
+            {
+              "suggest": "quando è stato scoperto il nuraghe e circa gli interventi conservativi di restauro",
+              "linkedName": "scavi"
+            }
+          ],
+          "key": "materiali"
+        },
+	   {
+          "name": "confronto",
+          "question": "Come si presenta attualmente il nuraghe?",
+          "answer": "Oggi il nuraghe si presenta mancante della parte sommitale o terrazzo. Al termine della torre era presente un terrazzo che in parte sporgeva verso l’esterno. All’interno della muratura erano collocate alcune grandi mensole in pietra che sorreggevano probabilmente un solaio di legno.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sull’evoluzione del nuraghe",
+              "linkedName": "evoluzione"
+            },
+            {
+              "suggest": "informazioni sulla tecnica di costruzione",
+              "linkedName": "tecnica"
+            },
+            {
+              "suggest": "informazioni sul terrazzo",
+              "linkedName": "terrazzo"
+            }
+          ],
+          "key": "come è il nuraghe oggi attuale."
+        },
+        {
+          "name": "terrazzo",
+          "question": "Informazioni sul terrazzo.",
+          "answer": "Il terrazzo del nuraghe era la parte più vulnerabile dell’edificio, perché la parte più esposta agli agenti atmosferici come la pioggia ed il vento che potevano causare danni alla struttura. Occorreva dunque effettuare una continua manutenzione. È anche probabile che dal terrazzo si praticassero dei segnali per comunicare con gli altri nuraghi.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla Torre centrale",
+              "linkedName": "originaria"
+            },
+            {
+              "suggest": "informazioni sull’evoluzione del nuraghe",
+              "linkedName": "evoluzione"
+            },
+            {
+              "suggest": "informazioni sulla tecnica di costruzione",
+              "linkedName": "tecnica"
+            }
+          ],
+          "key": "terrazzo"
+        },
+        {
+          "name": "evoluzione",
+          "question": "Periodo e fase edilizia.",
+          "answer": "Il nuraghe nasce monotorre nel Bronzo Medio (1500 a.C.). Agli inizi del Bronzo Recente (1300 a.C.) la torre viene inglobata e parzialmente rifasciata da un bastione quadrilobato, con torri dotate di feritoie. All’interno del bastione: un cortile dotato di pozzo parzialmente scavato nella viva roccia. Nel Bronzo Finale (1100 a.C.), la terza fase edilizia del monumento: rifascio parziale del bastione; eliminazione di una delle sue torri; accecamento delle feritoie. Il villaggio nasce già nel Bronzo Medio, ma la forma che giunge sino a noi la assume nel corso della prima Età del Ferro (900 – 800 a.C.). assistiamo ad una vera e propria evoluzione dell’impianto abitativo: parte dell’antemurale viene smantellato e su di esso vengono costruite alcune delle nuove strutture del villaggio, che riusano materiali provenienti dallo stesso antemurale e dallo smontaggio di capanne più antiche.",
+          "suggests":  [
+            {
+              "suggest": "come si presenta oggi il nuraghe attuale",
+              "linkedName": "confronto"
+            },
+            {
+              "suggest": "che funzione avevano i nuraghi",
+              "linkedName": "funzione"
+            },
+            {
+              "suggest": "la descrizione dell’antemurale",
+              "linkedName": "antemurale"
+            }
+          ],
+          "key": "periodi nuraghe. fasi nuraghe. evoluzione del nuraghe"
+        },
+        {
+          "name": "originaria",
+          "question": "Parlami della torre centrale.",
+          "answer": "La torre centrale, costruita forse nel Bronzo medio (XV sec. a.C.), oggi svettata, ospita una semplice camera priva di vani sussidiari e di diametro interno assai ridotto rispetto a quello esterno. Raggiungeva gli 8/10 metri d’altezza e le mura del bastione arrivavano ai 7 metri, fornito di un cortile con pozzo e circondato da un antemurale turrito.",
+          "suggests":  [
+            {
+              "suggest": "la descrizione dell’antemurale",
+              "linkedName": "antemurale"
+            },
+            {
+              "suggest": "la descrizione del nuraghe",
+              "linkedName": "nuraghe"
+            },
+            {
+              "suggest": "informazioni sugli scavi in corso",
+              "linkedName": "incorso"
+            }
+          ],
+          "key": "torre centrale, principale, originaria"
+        },
+		{
+          "name": "antemurale",
+          "question": "Descrivi l’antemurale.",
+          "answer": "Il possente antemurale turrito, di forma esagonale, circonda il nuraghe e con esso è stato costruito e utilizzato in funzione di controllo del territorio fra il Bronzo Medio ed il Bronzo Finale (XV-XI sec. a.C.). E’ articolato in torri (di cui quattro ancora visibili) raccordate da cortine murate e rettilinee e ingresso a SE. Un episodio di distruzione avvenuto intorno al X sec. a. C. riduce il bastione trilobato alle dimensioni attuali che superano di circa 7 metri di elevato. Lo stesso antemurale viene scapitozzato e ridotto ad un alzato di pochi filari. Fuori e dentro le sue mure si è sviluppato il villaggio e il suo abitato.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "la descrizione del nuraghe",
+              "linkedName": "nuraghe"
+            },
+            {
+              "suggest": "informazioni sugli scavi",
+              "linkedName": "scavi"
+            }
+          ],
+          "key": "antemurale. mura. murate"
+        },
+        {
+          "name": "villaggio",
+          "question": "Descrivi, parlami del villaggio di Genna Maria",
+          "answer": "Il villaggio è  posto all'interno ed all'esterno dell'antemurale. Le capanne più recenti del vilaggio hanno strutture complesse a pianta centrale, con vani ellittici, quadrangolari e rettangolari, funzionali e decorati con varie forme. Eccezionale è la ‘casa a corte centrale’, ampia 150 metri quadri e suddivisa in ambienti che convergono in un unico cortile. Nella prima età del Ferro (IX-VIII sec. a.C.), un abitato succeduto ad un precedente insediamento del Bronzo medio occupò l'area compresa tra il bastione e l'antemurale, in parte sovrapponendosi ad esso e utilizzando il materiale proveniente dallo smantellamento di capanne più antiche. Il nuovo villaggio 'geometrico' presenta delle strutture complesse a pianta centrale, con vani ellittici, quadrangolari e rettangolari. Le abitazioni hanno carattere residenziale e sono funzionali ai bisogni del nucleo familiare: riposo, preparazione e consumo dei cibi, deposito di utensili e provviste, attività artigianali a scala domestica. Le murature sono realizzate in tecnica microlitica con piccoli blocchetti e lastrine di marna.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulle capanne",
+              "linkedName": "capanne"
+            },
+            {
+              "suggest": "la descrizione della casa a corte centrale",
+              "linkedName": "casacorte"
+            },
+            {
+              "suggest": "quali attività svolgevano gli abitanti",
+              "linkedName": "attivita"
+            }
+          ],
+          "key": "villaggio"
+        },
+        {
+          "name": "villaggi",
+          "question": "Descrivi i villaggi nuragici dell’era del bronzo",
+          "answer": "Nell’età del bronzo i villaggi sono costituiti da agglomerati di capanne di forma circolare con diametri variabili fino ai sei metri, interamente costruite in pietra e con il tetto realizzato in rami, come nelle attuali capanne dei pastori.",
+          "suggests":  [
+            {
+              "suggest": "descrizione del villaggio di Genna Maria",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "informazioni sulle capanne",
+              "linkedName": "capanne"
+            },
+            {
+              "suggest": "che attività svolgevano gli abitanti",
+              "linkedName": "attivita"
+            }
+          ],
+          "key": "generale"
+        },
+        {
+          "name": "capanne",
+          "question": "Descrivi le piccole capanne attorno al nuraghe Genna Maria",
+          "answer": "Nel mille avanti Cristo circa attorno al nuraghe Genna Maria si sviluppa un villaggio di piccole capanne di varie forme, sia quadrate che rettangolari o di forme irregolari. L’importanza delle capanne è dovuta anche ai ritrovamenti degli archeologi che hanno permesso di conoscere le attività quotidiane degli abitanti.",
+          "suggests":  [
+            {
+              "suggest": "che attività svolgevano gli abitanti",
+              "linkedName": "attivita"
+            },
+            {
+              "suggest": "la descrizione della casa a corte centrale",
+              "linkedName": "casacorte"
+            },
+            {
+              "suggest": "informazioni sui reperti della Capanna 12",
+              "linkedName": "capanna12"
+            }
+          ],
+          "key": "capanne, abitato"
+        },
+        {
+          "name": "attivita",
+          "question": "Quali attività svolgevano gli abitanti del villaggio?",
+          "answer": "All’interno delle capanne, gli archeologi hanno rinvenuto tracce delle attività quotidiane degli abitanti come le macine che attestano la molitura dei cereali e dei legumi secchi, le pietre per l’affilatura delle lame, la cottura dei cibi, le scorie che attestano la fusione del bronzo, la conservazione delle derrate agricole all’interno di grandi contenitori di ceramica.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulle capanne",
+              "linkedName": "capanne"
+            },
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "informazioni sulla produzione di vino",
+              "linkedName": "vino"
+            }
+          ],
+          "key": "attività abitanti villaggio"
+        },
+        {
+          "name": "vino",
+          "question": "Si produceva vino?",
+          "answer": "Le analisi effettuate sui resti di sedimenti semi hanno dimostrato che in età nuragica in Sardegna si coltivava uva per la produzione di un vino bianco.",
+          "suggests":  [
+            {
+              "suggest": "come venivano conservati gli alimenti",
+              "linkedName": "conservazione"
+            },
+            {
+              "suggest": "quali vegetali sono stati trovati",
+              "linkedName": "vegetali"
+            },
+            {
+              "suggest": "informazioni sui reperti della Capanna 12",
+              "linkedName": "capanna12"
+            }
+          ],
+          "key": "produzione vino"
+        },
+        {
+          "name": "animali",
+          "question": "Gli animali venivano cacciati, allevati. Caccia e allevamenti di animali",
+          "answer": "Lo studio dei focolari permette spesso di individuare gli avanzi dei pasti degli antichi nuragici. Lo studio archeozoologico ha permesso di ricostruire la fauna durante l’età nuragica, sono infatti stati individuati la pecora, la capra, il maiale ed il bue che erano allevati mentre il cinghiale ed il cervo venivano cacciati.",
+          "suggests":  [
+            {
+              "suggest": "come venivano conservati gli alimenti",
+              "linkedName": "conservazione"
+            },
+            {
+              "suggest": "che attività svolgevano gli abitanti",
+              "linkedName": "attivita"
+            },
+            {
+              "suggest": "quali vegetali sono stati trovati",
+              "linkedName": "vegetali"
+            }
+          ],
+          "key": "animali. caccia. allevamento.  pecora, capra, maiale, bue, cinghiale"
+        },
+        {
+          "name": "conservazione",
+          "question": "Conservazione degli alimenti. Cibo. Cosa mangiavano. Alimenti conservati",
+          "answer": "Gli alimenti venivano conservati all’interno di grandi contenitori di ceramica, oggi esposti in questo museo. Sappiamo infatti che durante le indagini di scavo sono stati trovati all’interno i resti di cereali carbonizzati.",
+          "suggests":  [
+            {
+              "suggest": "quali vegetali sono stati trovati",
+              "linkedName": "vegetali"
+            },
+            {
+              "suggest": "che attività svolgevano gli abitanti",
+              "linkedName": "capanna12"
+            },
+            {
+              "suggest": "informazioni sui reperti della Capanna 12",
+              "linkedName": "attivita"
+            }
+          ],
+          "key": "conservazione alimenti, cibo, cereali"
+        },
+        {
+          "name": "vegetali",
+          "question": "Quali vegetali sono stati ritrovati",
+          "answer": "Le analisi archeobotaniche hanno permesso di riconoscere la presenza del grano, dell’orzo, e delle fave. In altri siti nuragici sono stati individuati anche i piselli, e frutta come i fichi, l’uva.",
+          "suggests":  [
+            {
+              "suggest": "come venivano conservati gli alimenti",
+              "linkedName": "conservazione"
+            },
+            {
+              "suggest": "che attività svolgevano gli abitanti",
+              "linkedName": "capanna12"
+            },
+            {
+              "suggest": "informazioni sulla produzione di vino",
+              "linkedName": "vino"
+            }
+          ],
+          "key": "vegetali. botanica. flora. grano, orzo, fave, piselli, frutta, fichi, uva."
+        },
+        {
+          "name": "incendio",
+          "question": "Parlami dell’incendio del villaggio. L’abitato ebbe vita lunga?",
+          "answer": "l'abitato, sviluppatosi attorno al X° secolo a.C., in piena età del ferro, che si instaurò sulle rovine dell’antemurale, fino a lambire il bastione trilobato. L’abitato attorno al nuraghe non ebbe vita lunga: tra il 1000 ed il 900 avanti Cristo, il villaggio viene abbandonato, forse a causa di un incendio che fece crollare le abitazioni, facendo la fortuna degli archeologi che, dato l’episodio dell’incendio, hanno potuto così ritrovare interi corredi in grado di raccontare la quotidianità delle popolazioni contadine dell’epoca (dalla conservazione e lavorazione delle derrate alimentari, dalla filatura alla tessitura, dalla condivisione del fuoco ai sistemi di illuminazione).",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "informazioni sul culto",
+              "linkedName": "culto"
+            },
+            {
+              "suggest": "informazioni su ritrovamenti di reperti e manufatti",
+              "linkedName": "reperti"
+            }
+          ],
+          "key": "incendio. abitato."
+        },
+        {
+          "name": "culto",
+          "question": "ripopolamento, culto, offerte santuario; il nuraghe viene rifrequentato?",
+          "answer": "Durante il periodo punico sul finire del V secolo avanti Cristo, presso la torre centrale ed il cortile si svolgevano dei sacrifici anche di animali e si donavano delle offerte in onore di una divinità connessa con un culto agrario: all’interno della torre principale sono state rinvenute circa seicentocinquanta piccole lucerne in ceramica. Inoltre all’interno del cortile sono state rinvenute diverse monete che vanno dall’età romana a quella vandalica. E’ probabile che si riferiscano anche in questo caso a offerte.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio,"
+            },
+            {
+              "suggest": "informazioni sulle lucerne",
+              "linkedName": "lucerne"
+            },
+            {
+              "suggest": "circa ritrovamenti animali",
+              "linkedName": "animali"
+            },
+            {
+              "suggest": "informazioni sull’incendio che fece crollare le abitazioni",
+              "linkedName": "incendio"
+            }
+          ],
+          "key": "culto. religione. rito. offerte. divinità. sacrificio. "
+        },
+        {
+          "name": "lucerne",
+          "question": "Cosa sono le lucerne? informazioni sulle lucerne",
+          "answer": "Le lucerne, rinvenute nella torre principale, sono connesse con un rituale molto antico collegato con il solstizio estivo che si colloca attorno alla data del venti/ventuno giugno coincidente con la trebbiatura dei cereali. Durante questa festa è probabile che si portassero, durante una fiaccolata notturna, le lucerne nel luogo del santuario.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sull’incendio che fece crollare le abitazioni",
+              "linkedName": "incendio"
+            },
+            {
+              "suggest": "informazioni sul culto",
+              "linkedName": "culto"
+            },
+            {
+              "suggest": "che funzione avevano i nuraghi",
+              "linkedName": "funzione"
+            }
+          ],
+          "key": "lucerne, rituale, solstizio, santuario"
+        },
+        {
+          "name": "funzione",
+          "question": "A cosa servivano i nuraghi",
+          "answer": "Le ipotesi sull'utlizzo che avevano i nuraghi sono oggi ancora molto discusse. Alcuni anni fa gli archeologi attribuivano ai nuraghi una funzione difensiva, ma le recenti indagini hanno oggi dimostrato che all’interno dei nuraghi si svolgevano attività come la lavorazione del grano, la preparazione di cibi, probabilmente anche per fini rituali. Non sono state rinvenute tracce di azioni belliche.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul culto",
+              "linkedName": "culto"
+            },
+            {
+              "suggest": "informazioni sull’incendio che fece crollare le abitazioni",
+              "linkedName": "incendio"
+            },
+            {
+              "suggest": "informazioni sulle lucerne",
+              "linkedName": "lucerne"
+            }
+          ],
+          "key": "nuraghi, funzione, utilizzo, utilizzati, utilità, nuraghi, servivano."
+        },
+        {
+          "name": "casacorte",
+          "question": "Parlami della ‘casa a corte centrale’",
+          "answer": "La casa a corte centrale è ampia ben 150 metri quadrati e suddivisa in una serie di ambienti che convergono verso un unico cortile. Grazie all’intero corredo di questa casa (detta appunto ‘a corte centrale’), è stato possibile ricostruire quella che era la vita quotidiana degli abitanti: prevalentemente sono utensili di uso domestico, in pietra e ceramica e sono rari gli esempi in metallo.",
+          "suggests":  [
+            {
+              "suggest": "sul nuraghe di Genna Maria",
+              "linkedName": "nuraghe"
+            },
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "informazioni sugli scavi in corso",
+              "linkedName": "incorso"
+            }
+          ],
+          "key": "casa a corte centrale. vita quotidiana."
+        },
+        {
+          "name": "capanna12",
+          "question": "Parlami della 12",
+          "answer": "La capanna 12 è considerato un probabile magazzino-deposito, che conteneva grandi vasi per la conservazione di derrate solide (cereali), diversi vasi legati alla trasformazione e consumazione dei cibi, una brocca askoide decorata a stralucido, un vaso piriforme decorato con volto umano in rilievo, borracce a faccia piana ecc.. Nel pavimento della capanna 12 sono stati recuperati resti vegetali carbonizzati di grano e orzo, legumi, vinaccioli di vite coltivata e minuscoli frammenti di un preparato alimentare che è stato identificato come pane a base di una farina non lievitata (analisi di P. Marinval).",
+          "suggests":  [
+            {
+              "suggest": "come venivano conservati gli alimenti",
+              "linkedName": "conservazione"
+            },
+            {
+              "suggest": "quali vegetali sono stati trovati",
+              "linkedName": "vegetali"
+            },
+            {
+              "suggest": "circa ritrovamenti animali",
+              "linkedName": "animali"
+            }
+          ],
+          "key": "capanna 12. magazzino. deposito. alimentare. cereali. cibi. farina"
+        },
+        {
+          "name": "reperti",
+          "question": "Quali reperti, ritrovamenti, manufatti",
+          "answer": "Ci sono stati ritrovamenti di diversi reperti e manufatti: evolute e di alta qualità, talvolta decorate a stecca con eleganti motivi geometrici, le ceramiche rinvenute nel villaggio: vasi piriformi, fiasche, brocchette, 'antipastiere', sassole, portabrace, pintadere. Trai reperti anche ziri, caldaie, coppe di cottura, bacili e macine che testimoniano l'operosità di questa antica comunità agricola. La capanna 12 ha inoltre restituito grani di cereali, ghiande, leguminose e un frammento di pane carbonizzato. Tra i resti di pasto: ossa di bue, pecora-capra, maiale-cinghiale, cervo, prolago e valve di lamellibranchi.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sui reperti della Capanna 12",
+              "linkedName": "capanna12"
+            },
+            {
+              "suggest": "informazioni sul Museo di Genna Maria",
+              "linkedName": "museo"
+            },
+            {
+              "suggest": "se sono stati trovati dei bronzetti nel nuraghe",
+              "linkedName": "bronzetti"
+            }
+          ],
+          "key": "reperti, ritrovamenti, manufatti. vasi piriformi, fiasche, brocchette, pintadere. resti di pasto."
+        },
+        {
+          "name": "bronzetti",
+          "question": "Sono stati trovati bronzetti. Pugnale. Bronzetti.",
+          "answer": "Gli scavi non hanno rinvenuto alcun bronzetto fatta accezione per una piccola rappresentazione di pugnale all’interno del suo fodero o faretra. Questo perché i bronzetti vengono generalmente rinvenuti presso i pozzi sacri, mentre sono rari all’interno di un nuraghe.",
+          "suggests":  [
+            {
+              "suggest": "come venivano utilizzati i bronzetti",
+              "linkedName": "bonzetti_utilizzo"
+            },
+            {
+              "suggest": "cosa rappresentano o le dimensioni dei bronzetti",
+              "linkedName": "bronzetti2"
+            },
+            {
+              "suggest": "informazioni su ritrovamenti di reperti e manufatti",
+              "linkedName": "reperti"
+            }
+          ],
+          "key": "bronzetti. pugnale."
+        },
+        {
+          "name": "bronzetti2",
+          "question": "Parlami dei bronzetti. Cosa rappresentano, dimensioni.",
+          "answer": "I bronzetti generalmente di piccole dimensioni rappresentano uomini, donne, bambini ma anche di ogni genere di animali come buoi, cinghiali, volpi, cani, cervi e di oggetti d’uso quotidiano.",
+          "suggests":  [
+            {
+              "suggest": "se sono stati trovati dei bronzetti nel nuraghe",
+              "linkedName": "bronzetti"
+            },
+            {
+              "suggest": "come venivano utilizzati i bronzetti",
+              "linkedName": "bonzetti_utilizzo"
+            },
+            {
+              "suggest": "circa i ritrovamenti animali",
+              "linkedName": "animali"
+            }
+          ],
+          "key": "bronzetti dimensione rappresentano."
+        },
+        {
+          "name": "bonzetti_utilizzo",
+          "question": "A cosa servivano i bronzetti",
+          "answer": "I bronzetti servivano con molta probabilità come offerte; venivano utilizzati dagli individui che li donavano alla divinità.",
+          "suggests":  [
+            {
+              "suggest": "se sono stati trovati dei bronzetti nel nuraghe",
+              "linkedName": "bronzetti"
+            },
+            {
+              "suggest": "cosa rappresentano o le dimensioni dei bronzetti",
+              "linkedName": "bronzetti2"
+            }
+          ],
+          "key": "bronzetti, funzione, utilizzo, utilizzati, utilità, nuraghi, servivano"
+        },
+        {
+          "name": "civilta",
+          "question": "Quando si sviluppa la civiltà nuragica",
+          "answer": "Agli inizi del secondo millennio avanti Cristo, iniziano ad essere costruiti in tutta la regione della Sardegna edifici in pietra, chiamati protonuraghi, che che anticipano la costruzione del nuraghe vero e proprio a forma di torre. Nel corso dell’età del Bronzo Recente, circa tremilacinquecento anni fa, l’architettura nuragica si evolve e attraverso nuove tecniche costruttive si erigono grandi torri che potevano avere fino a tre piani sovrapposti. Da qui l’inizio della civiltà nuragica.",
+          "suggests":  [
+            {
+              "suggest": "se sono presenti protonuraghi nel territorio di Genna Maria",
+              "linkedName": "protogenna"
+            },
+            {
+              "suggest": "informazioni sugli scavi",
+              "linkedName": "scavi"
+            },
+            {
+              "suggest": "informazioni sugli scavi in corso",
+              "linkedName": "incorso"
+            }
+          ],
+          "key": "bronzetti, utilizzo, servivano, utilizzati, funzione"
+        },
+        {
+          "name": "protogenna",
+          "question": "Sono presenti protonuraghi attorno al territorio di Genna Maria?",
+          "answer": "Sono presenti dei protonuraghi non lontano dal territorio di Genna Maria nel vicino altipiano di Siddi, anche Giara, dove è presente il protonuraghe Sa Fogaia",
+          "suggests":  [
+            {
+              "suggest": "che utilizzo avevano i protonuraghi",
+              "linkedName": "protoutilizzo"
+            },
+            {
+              "suggest": "che forma avevano i protonuraghi",
+              "linkedName": "protoforma"
+            },
+            {
+              "suggest": "informazioni sugli scavi in corso",
+              "linkedName": "incorso"
+            }
+          ],
+          "key": "protonuraghe presenti genna maria"
+        },
+        {
+          "name": "protoforma",
+          "question": "Che forma avevano i protonuraghi?",
+          "answer": "I protonuraghi avevano forma di bastioni terrazzati generalmente attraversati da un lungo corridoio, da qui anche il nome di nuraghi a corridoi. Non esiste una forma planimetrica canonica, né sono attestati di varie tipologie. Nell’architettura nuragica non si era ancora delineata la forma a tronco di cono che caratterizzerà invece le fasi media e recente dell’età del Bronzo.",
+          "suggests":  [
+            {
+              "suggest": "che utilizzo avevano i protonuraghi",
+              "linkedName": "protoutilizzo"
+            },
+            {
+              "suggest": "se sono presenti protonuraghi attorno al territorio di Genna Maria",
+              "linkedName": "protogenna"
+            }
+          ],
+          "key": "protonuraghe forma, "
+        },
+        {
+          "name": "protoutilizzo",
+          "question": "A cosa servivano i protonuraghi",
+          "answer": "Non ci sono molte informazioni sull’utilizzo dei protonuraghi. Sono ancora poco studiati, mancano infatti ricerche specifiche su questa tipologia di edifici.",
+          "suggests":  [
+            {
+              "suggest": "che forma avevano i protonuraghi",
+              "linkedName": "protoforma"
+            },
+            {
+              "suggest": "se sono presenti protonuraghi attorno al territorio di Genna Maria",
+              "linkedName": "protogenna"
+            },
+            {
+              "suggest": "che funzione avevano invece i nuraghi",
+              "linkedName": "funzione"
+            }
+          ],
+          "key": "protonuraghi, funzione, utilizzo, utilizzati, utilità, nuraghi, servivano"
+        },
+        {
+          "name": "museo",
+          "question": "informazioni sul Museo di Genna Maria. Cosa ospita il museo",
+          "answer": "Il museo Genna Maria situato nell'antico Monte di Soccorso, è stato inaugurato nel 1982. Si dispone su due piani e ospita numerosi e preziosi reperti rinvenuti non solo nel territorio di Villanovaforru, ma anche nei paesi limitrofi. Gran parte dei manufatti rinvenuti nel nuraghe e nel villaggio sono stati restaurati ed esposti nelle sale di questo Museo. Al piano terra sono infatti collocati i reperti individuati nel settore nord-orientale del villaggio. Nella prima sala, il museo mette in mostra gli oggetti dell'epoca nuragica ritrovati tra gli ambienti del villaggio ed in particolare il ricchissimo corredo proveniente da una singola abitazione, la casa a corte centrale.",
+          "suggests":  [
+            {
+              "suggest": "informazioni su ritrovamenti di reperti e manufatti",
+              "linkedName": "reperti"
+            },
+            {
+              "suggest": "informazioni sui reperti della Capanna 12",
+              "linkedName": "capanna12"
+            },
+            {
+              "suggest": "la descrizione della casa a corte centrale",
+              "linkedName": "casacorte"
+            }
+          ]
+          ,
+          "key": "museo genna maria. esposti. esposizione. mostra."
+        },
+        {
+          "name": "",
+          "question": "",
+          "answer": "",
+          "suggests":  [
+            {
+              "suggest": "",
+              "linkedName": ""
+            },
+            {
+              "suggest": "",
+              "linkedName": ""
+            },
+            {
+              "suggest": "",
+              "linkedName": ""
+            }
+          ]
+        },
+        {
+          "name": "",
+          "question": "",
+          "answer": " ",
+          "suggests":  [
+            {
+              "suggest": "",
+              "linkedName": ""
+            }
+          ]
+        }
+
+
+      ]
+    },
+    {
+      "id": "controls",
+      "title": "controls",
+      "type": "controls",
+      "qa": [
+        {
+          "question": "spegni la musica, spegnere",
+          "answer": "spegni la musica"
+        },
+        {
+          "question": "accendi la musica, accendere",
+          "answer": "accendi la musica"
+        },
+        {
+          "question": "abbassa la musica, abbassare audio volume",
+          "answer": "abbassa la musica"
+        },
+        {
+          "question": "aumenta la musica, aumentare, sollevare solleva audio volume",
+          "answer": "aumenta la musica"
+        },
+        {
+          "question": "ricomincia, ricominciare",
+          "answer": "ricomincia"
+        },
+        {
+          "question": "silenzio, fermati, basta cosi, zitta",
+          "answer": "silenzio"
+        },
+        {
+          "question": "cambia, cambiare",
+          "answer": "cambia quadro"
+        },
+        {
+          "question": "che ore sono, orario",
+          "answer": "che ore sono"
+        },
+        {
+          "question": "accelera la voce",
+          "answer": "aumenta la voce"
+        },
+        {
+          "question": "rallenta la voce",
+          "answer": "abbassa la voce"
+        }
+      ]
+    }
+
+  ]
 }

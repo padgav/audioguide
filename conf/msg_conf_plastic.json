@@ -1,0 +1,34 @@
+{
+
+  "welcome":
+  [
+  	"Benvenuto! Sei di fronte al",
+  	" potrai toccare la struttura rappresentata. Puoi chiedere la descrizione generale, la tecnica costruttiva, o domande a piacimento."
+  ],
+
+  "undef":
+  [
+   "Non ho capito. Prova a ripetere.",
+   "Puoi cortesemente riformulare la domanda?",
+   "Non ho capito. Riformula la domanda."
+  ],
+
+  "touching":
+  [
+   "Stai esaminando ",
+   "Stai analizzando ",
+   "Stai esplorando "
+  ],
+
+  "re":
+  [
+  	"Ancora una volta ",
+  	"Di nuovo ",
+  	"Ci siamo tornati. "
+  ],
+
+  "which": "quale pastico vuoi esplorare?",
+
+  "check": 0
+
+}
