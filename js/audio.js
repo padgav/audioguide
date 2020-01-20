@@ -207,6 +207,16 @@ function getRandomArbitrary(min, max) {
 
 }
 
+//Removes all KClasses but the passed value
+function RemoveKClasses(x) {
+  for (let i = 1; i < 5; i++)
+  {
+    if(i!=x)
+      $(".painting").removeClass("k"+i);
+  }
+  //$(".card").attr
+}
+
 /*
 var handler = function(e) {
 	console.log(this.id);
@@ -243,6 +253,8 @@ $(document).ready(function() {
   var lastX = -1;
   var currWelcome = "";
 
+
+
   function Tasto(e) {
 
     var x = e.keyCode;
@@ -276,12 +288,14 @@ $(document).ready(function() {
         case 37: //larrow //2shephard
         //$("kenburns1").attr('transform: scale3d(1, 1, 2.5) translate3d(0px, -0px, 0px)');
         //$(".card").attr("id", annunciazione_paint["name"]);
-
-        $(".painting").addClass("k1");
-        $(".painting").removeClass("k2");
-        $(".painting").removeClass("k3");
-        $(".painting").removeClass("k4");
-
+        if($(".card").attr("id") == "Gennamaria")
+        {
+          $(".painting").addClass("k1");
+          RemoveKClasses(1);
+        }
+        //$(".painting").removeClass("k2");
+        //$(".painting").removeClass("k3");
+        //$(".painting").removeClass("k4");
 
 
 /*
@@ -335,10 +349,14 @@ $('#container').children().filter('div').dcss(
           break;
 
         case 38: // uparrow
-        $(".painting").addClass("k2");
-        $(".painting").removeClass("k1");
-        $(".painting").removeClass("k3");
-        $(".painting").removeClass("k4");
+        if($(".card").attr("id") == "Gennamaria")
+        {
+          $(".painting").addClass("k2");
+          RemoveKClasses(2);
+        }
+        //$(".painting").removeClass("k1");
+        //$(".painting").removeClass("k3");
+        //$(".painting").removeClass("k4");
           if (current_painting['subjects'][38] == null)
             break;
 
@@ -413,10 +431,15 @@ $('#container').children().filter('div').dcss(
           break;
 
         case 65: //a 65
-        $(".painting").addClass("k4");
-        $(".painting").removeClass("k3");
-        $(".painting").removeClass("k1");
-        $(".painting").removeClass("k2");
+
+        if($(".card").attr("id") == "Gennamaria")
+        {
+          $(".painting").addClass("k4");
+          RemoveKClasses(4);
+        }
+        //$(".painting").removeClass("k3");
+        //$(".painting").removeClass("k1");
+        //$(".painting").removeClass("k2");
           if (current_painting['subjects'][65] == null)
             break;
 
@@ -470,10 +493,15 @@ $('#container').children().filter('div').dcss(
           break;
 
         case 70: //f 70
+
+        if($(".card").attr("id") == "Gennamaria")
+        {
           $(".painting").addClass("k3");
-          $(".painting").removeClass("k1");
-          $(".painting").removeClass("k2");
-          $(".painting").removeClass("k4");
+          RemoveKClasses(3);
+        }
+          //$(".painting").removeClass("k1");
+          //$(".painting").removeClass("k2");
+          //$(".painting").removeClass("k4");
 
           if (current_painting['subjects'][70] == null)
             break;

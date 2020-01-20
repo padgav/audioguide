@@ -7,7 +7,7 @@
   opacity: 1;
   }
   50% {
-  transform: scale3d(2.5, 2.5, 2.5) translate3d(-190px, -120px, 0px);
+  transform: scale3d(3, 3, 3) translate3d(-130px, -170px, 0px);
   animation-timing-function: ease-in;
   opacity: 1;
   }
@@ -31,7 +31,7 @@ animation: kenburns1 5s 1;
   opacity: 1;
   }
   50% {
-  transform: scale3d(2.5, 2.5, 2.5) translate3d(-150px, -500px, 0px);
+  transform: scale3d(3, 3, 3) translate3d(-90px, -390px, 0px);
   animation-timing-function: ease-in;
   opacity: 1;
   }
@@ -55,7 +55,7 @@ animation: kenburns2 5s 1;
   opacity: 1;
   }
   50% {
-  transform: scale3d(2.5, 2.5, 2.5) translate3d(-400px, 0px, 0px);
+  transform: scale3d(3, 3, 3) translate3d(-200px, 60px, 0px);
   animation-timing-function: ease-in;
   opacity: 1;
   }
@@ -79,7 +79,7 @@ animation: kenburns3 5s 1;
   opacity: 1;
   }
   50% {
-  transform: scale3d(2.5, 2.5, 2.5) translate3d(-190px, -320px, 0px);
+  transform: scale3d(5, 5, 5) translate3d(-60px, -140px, 0px);
   animation-timing-function: ease-in;
   opacity: 1;
   }
