@@ -23,7 +23,7 @@
         },
 
         {   "question": "Architettura dell'edificio",
-          "answer" : "Dal punto di vista architettonico l’edificio rappresenta un interessante connubio tra le antiche mura spagnole, progettate da Rocco Capellino ed ampliate da Giorgio e Jacopo Palearo nel XVI secolo, e l’attuale assetto razionalista moderno che perfettamente si inserisce all’interno dello suggestivo quartiere medievale di Castello."
+          "answer" : "Dal punto di vista architettonico l’edificio rappresenta un interessante connubio tra le antiche mura spagnole, progettate da Rocco Capellino ed ampliate da Giorgio e Jacopo Palearo nel sedicesimo secolo, e l’attuale assetto razionalista moderno che perfettamente si inserisce all’interno dello suggestivo quartiere medievale di Castello."
         },
 
         {   "question": "Paesaggio, vista veduta panorama",
@@ -762,25 +762,25 @@
       ]
     },
     {
-      "id": "Crocefissione",
-      "title": "Crocefissione",
+      "id": "Visitazione",
+      "title": "Visitazione",
       "type": "painting",
       "qa": [
         {
           "question": "Descrizione generale",
-          "answer": "Il dipinto fa parte probabilmente di un retablo eseguito per la chiesa di Sant'Efisio di Giorgino a Cagliari, di patronato della famiglia Ballèro. Dell'opera sono oggi noti solo due elementi: quello appunto raffigurante la Crocifissione, custodito in Pinacoteca e una Madonna in trono col Bambino e angeli, di proprietà privata;  La Crocifissione è costruita in maniera molto elementare: sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di San Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio. Le due tavole furono attribuite a Lorenzo Càvaro dall'Aru (1924) e la loro assegnazione rimane, allo stato degli studi, invariata e probabile, vista l'innegabile affinità stilistica con il retablo di Gonnostramatza, opera datata e firmata dal pittore stampacino."
+          "answer": "Il dipinto raffigura la scena della visitazione di Maria Vergine a Elisabetta sua sorella."
         },
         {
           "question": "Come è l'ambiente",
-          "answer": " sullo sfondo di una città costiera turrita, campeggiano, sovradimensionate rispetto al cristo in Croce, le figure di S. Giovanni e della Madonna; in basso compaiono il teschio e gli strumenti del martirio."
+          "answer": " sullo sfondo un castello."
         },
         {
           "question": "Chi è l'autore?",
-          "answer": "Lorenzo Càavaro"
+          "answer": "Autore aragonese"
         },
         {
           "question": "Di che periodo è?",
-          "answer": "1507"
+          "answer": "quindicesimo secolo"
         }
       ]
     },
@@ -826,7 +826,7 @@
         {
           "name": "gen",
           "question": "Descrizione generale. Struttura di Genna Maria.",
-          "answer": "La struttura del complesso di Genna Maria si compone di un bastione trilobato che racchiude la torre originaria, di un antemurale esagonale e di un villaggio posto all'interno ed all'esterno dell'antemurale. La torre originaria, costruita forse nel Bronzo medio (XV sec. a.C.), oggi svettata, ospita una semplice camera priva di vani sussidiari e di diametro interno assai ridotto rispetto a quello esterno.",
+          "answer": "La struttura del complesso di Genna Maria si compone di un bastione trilobato che racchiude la torre originaria, di un antemurale esagonale e di un villaggio posto all'interno ed all'esterno dell'antemurale. La torre originaria, costruita forse nel Bronzo medio (quindicesimo secolo a.C.), oggi svettata, ospita una semplice camera priva di vani sussidiari e di diametro interno assai ridotto rispetto a quello esterno.",
           "suggests":  [
             {
               "suggest": "una descrizione del nuraghe",
@@ -1022,7 +1022,7 @@
         {
           "name": "originaria",
           "question": "Parlami della torre centrale.",
-          "answer": "La torre centrale, costruita forse nel Bronzo medio (XV sec. a.C.), oggi svettata, ospita una semplice camera priva di vani sussidiari e di diametro interno assai ridotto rispetto a quello esterno. Raggiungeva gli 8/10 metri d’altezza e le mura del bastione arrivavano ai 7 metri, fornito di un cortile con pozzo e circondato da un antemurale turrito.",
+          "answer": "La torre centrale, costruita forse nel Bronzo medio (quindicesimo secolo a.C.), oggi svettata, ospita una semplice camera priva di vani sussidiari e di diametro interno assai ridotto rispetto a quello esterno. Raggiungeva gli 8/10 metri d’altezza e le mura del bastione arrivavano ai 7 metri, fornito di un cortile con pozzo e circondato da un antemurale turrito.",
           "suggests":  [
             {
               "suggest": "la descrizione dell’antemurale",
@@ -1042,7 +1042,7 @@
 		{
           "name": "antemurale",
           "question": "Descrivi l’antemurale.",
-          "answer": "Il possente antemurale turrito, di forma esagonale, circonda il nuraghe e con esso è stato costruito e utilizzato in funzione di controllo del territorio fra il Bronzo Medio ed il Bronzo Finale (XV-XI sec. a.C.). E’ articolato in torri (di cui quattro ancora visibili) raccordate da cortine murate e rettilinee e ingresso a SE. Un episodio di distruzione avvenuto intorno al X sec. a. C. riduce il bastione trilobato alle dimensioni attuali che superano di circa 7 metri di elevato. Lo stesso antemurale viene scapitozzato e ridotto ad un alzato di pochi filari. Fuori e dentro le sue mure si è sviluppato il villaggio e il suo abitato.",
+          "answer": "Il possente antemurale turrito, di forma esagonale, circonda il nuraghe e con esso è stato costruito e utilizzato in funzione di controllo del territorio fra il Bronzo Medio ed il Bronzo Finale. E’ articolato in torri (di cui quattro ancora visibili) raccordate da cortine murate e rettilinee e ingresso a SE. Un episodio di distruzione avvenuto intorno al decimo secolo a. C. riduce il bastione trilobato alle dimensioni attuali che superano di circa 7 metri di elevato. Lo stesso antemurale viene scapitozzato e ridotto ad un alzato di pochi filari. Fuori e dentro le sue mure si è sviluppato il villaggio e il suo abitato.",
           "suggests":  [
             {
               "suggest": "informazioni sul villaggio",
@@ -1062,7 +1062,7 @@
         {
           "name": "villaggio",
           "question": "Descrivi, parlami del villaggio di Genna Maria",
-          "answer": "Il villaggio è  posto all'interno ed all'esterno dell'antemurale. Le capanne più recenti del vilaggio hanno strutture complesse a pianta centrale, con vani ellittici, quadrangolari e rettangolari, funzionali e decorati con varie forme. Eccezionale è la ‘casa a corte centrale’, ampia 150 metri quadri e suddivisa in ambienti che convergono in un unico cortile. Nella prima età del Ferro (IX-VIII sec. a.C.), un abitato succeduto ad un precedente insediamento del Bronzo medio occupò l'area compresa tra il bastione e l'antemurale, in parte sovrapponendosi ad esso e utilizzando il materiale proveniente dallo smantellamento di capanne più antiche. Il nuovo villaggio 'geometrico' presenta delle strutture complesse a pianta centrale, con vani ellittici, quadrangolari e rettangolari. Le abitazioni hanno carattere residenziale e sono funzionali ai bisogni del nucleo familiare: riposo, preparazione e consumo dei cibi, deposito di utensili e provviste, attività artigianali a scala domestica. Le murature sono realizzate in tecnica microlitica con piccoli blocchetti e lastrine di marna.",
+          "answer": "Il villaggio è  posto all'interno ed all'esterno dell'antemurale. Le capanne più recenti del vilaggio hanno strutture complesse a pianta centrale, con vani ellittici, quadrangolari e rettangolari, funzionali e decorati con varie forme. Eccezionale è la ‘casa a corte centrale’, ampia 150 metri quadri e suddivisa in ambienti che convergono in un unico cortile. Nella prima età del Ferro, un abitato succeduto ad un precedente insediamento del Bronzo medio occupò l'area compresa tra il bastione e l'antemurale, in parte sovrapponendosi ad esso e utilizzando il materiale proveniente dallo smantellamento di capanne più antiche. Il nuovo villaggio 'geometrico' presenta delle strutture complesse a pianta centrale, con vani ellittici, quadrangolari e rettangolari. Le abitazioni hanno carattere residenziale e sono funzionali ai bisogni del nucleo familiare: riposo, preparazione e consumo dei cibi, deposito di utensili e provviste, attività artigianali a scala domestica. Le murature sono realizzate in tecnica microlitica con piccoli blocchetti e lastrine di marna.",
           "suggests":  [
             {
               "suggest": "informazioni sulle capanne",
@@ -1177,7 +1177,7 @@
               "linkedName": "vegetali"
             }
           ],
-          "key": "animali. caccia. allevamento.  pecora, capra, maiale, bue, cinghiale"
+          "key": "ritrovamenti animali. caccia. allevamento.  pecora, capra, maiale, bue, cinghiale"
         },
         {
           "name": "conservazione",
@@ -1222,7 +1222,7 @@
         {
           "name": "incendio",
           "question": "Parlami dell’incendio del villaggio. L’abitato ebbe vita lunga?",
-          "answer": "l'abitato, sviluppatosi attorno al X° secolo a.C., in piena età del ferro, che si instaurò sulle rovine dell’antemurale, fino a lambire il bastione trilobato. L’abitato attorno al nuraghe non ebbe vita lunga: tra il 1000 ed il 900 avanti Cristo, il villaggio viene abbandonato, forse a causa di un incendio che fece crollare le abitazioni, facendo la fortuna degli archeologi che, dato l’episodio dell’incendio, hanno potuto così ritrovare interi corredi in grado di raccontare la quotidianità delle popolazioni contadine dell’epoca (dalla conservazione e lavorazione delle derrate alimentari, dalla filatura alla tessitura, dalla condivisione del fuoco ai sistemi di illuminazione).",
+          "answer": "l'abitato, sviluppatosi attorno al decimo secolo a.C., in piena età del ferro, che si instaurò sulle rovine dell’antemurale, fino a lambire il bastione trilobato. L’abitato attorno al nuraghe non ebbe vita lunga: tra il 1000 ed il 900 avanti Cristo, il villaggio viene abbandonato, forse a causa di un incendio che fece crollare le abitazioni, facendo la fortuna degli archeologi che, dato l’episodio dell’incendio, hanno potuto così ritrovare interi corredi in grado di raccontare la quotidianità delle popolazioni contadine dell’epoca (dalla conservazione e lavorazione delle derrate alimentari, dalla filatura alla tessitura, dalla condivisione del fuoco ai sistemi di illuminazione).",
           "suggests":  [
             {
               "suggest": "informazioni sul villaggio",

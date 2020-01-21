@@ -75,14 +75,16 @@ var start_conf_path = './conf/start_conf.json';
 
 var adorazione_conf_path = './conf/adorazione_conf.json';
 var annunciazione_conf_path = './conf/annunciazione_conf.json';
-var crocefissione_conf_path = './conf/crocefissione_conf.json';
+var visitazione_conf_path = './conf/visitazione_conf.json';
 var gennamaria_conf_path = './conf/gennamaria_conf.json';
+//var crocefissione_conf_path = './conf/crocefissione_conf.json';
 
 var current_painting;
 var adorazione_paint;
 var annunciazione_paint;
-var crocefissione_paint;
+var visitazione_paint;
 var gennamaria_paint
+//var crocefissione_paint;
 
 var msg_conf__pic_path = './conf/msg_conf.json';
 var msg_conf_plastic_path = './conf/msg_conf_plastic.json';
@@ -135,15 +137,15 @@ fetch(annunciazione_conf_path).then(response => {
   console.log('The request failed!');
 });
 
-//crocefissione_conf json load
-fetch(crocefissione_conf_path).then(response => {
+//visitazione_conf json load
+fetch(visitazione_conf_path).then(response => {
   return response.json();
 }).then(data => {
   // Work with your JSON data here..
-  crocefissione_paint = data;
+  visitazione_paint = data;
   //default current_painting assignation
-  if($(".card").attr("id") == 'Crocefissione')
-    current_painting = crocefissione_paint;
+  if($(".card").attr("id") == 'Visitazione')
+    current_painting = visitazione_paint;
   console.log(data);
 }).catch(err => {
   // What do when the request fails
@@ -572,7 +574,7 @@ $('#container').children().filter('div').dcss(
       case myMcoms["mup"]:
         console.log("Music up cause: ", myMcoms["mup"]);
         $(music).animate({
-          volume: 1
+          volume: 0.5
         }, 1000);
         break;
 
@@ -659,11 +661,10 @@ $('#container').children().filter('div').dcss(
 
         	break;
           }
-        case crocefissione_paint["name"].toLowerCase():
-        case crocefissione_paint["alt_name"].toLowerCase():
+        case visitazione_paint["name"].toLowerCase():
         	if (msg_conf["check"] == 1) {
               $(".card").removeAttr("id");
-              $(".card").attr("id", crocefissione_paint["name"]);
+              $(".card").attr("id", visitazione_paint["name"]);
 
               console.log("Quadro scelto (card): ", $(".card").attr("id"));
               msg_conf["check"] = 0;
@@ -724,7 +725,7 @@ $('#container').children().filter('div').dcss(
     //"music/coro_angelico.mp3";
     console.log("Outer adorazione_paint on start: ", adorazione_paint);
     console.log("Outer annunciazione_paint on start: ", annunciazione_paint);
-    console.log("Outer crocefissione_paint start: ", crocefissione_paint);
+    console.log("Outer visitazione_paint start: ", visitazione_paint);
     console.log("Outer gennamaria_paint start: ", gennamaria_paint);
 
 
@@ -743,8 +744,8 @@ $('#container').children().filter('div').dcss(
 
         break;
 
-      case crocefissione_paint["name"]:
-        current_painting = crocefissione_paint;
+      case visitazione_paint["name"]:
+        current_painting = visitazione_paint;
         msg_conf = msg_conf_pic;
         console.log("CARD ID IN STARTNOW CROC: ", current_painting["name"]);
 
@@ -833,7 +834,7 @@ $('#container').children().filter('div').dcss(
           utterThis.onend = function(event) {
             console.log("end");
             $(music).animate({
-              volume: 1
+              volume: 0.5
             }, 1000);
             //recognition.start();
           }
@@ -1003,7 +1004,7 @@ $('#container').children().filter('div').dcss(
     let cardValue;
 
     console.log("Evento keypress rilevato!", input);
-    if ((input == adorazione_paint['id']) || (input == annunciazione_paint['id']) || (input == crocefissione_paint['id']) || (input == gennamaria_paint['id'])) {
+    if ((input == adorazione_paint['id']) || (input == annunciazione_paint['id']) || (input == visitazione_paint['id']) || (input == gennamaria_paint['id'])) {
       //imposto mypaints!
       switch (input) {
         case adorazione_paint['id']:
@@ -1014,8 +1015,8 @@ $('#container').children().filter('div').dcss(
           cardValue = annunciazione_paint["name"];
           break;
 
-        case crocefissione_paint['id']:
-          cardValue = crocefissione_paint['name'];
+        case visitazione_paint['id']:
+          cardValue = visitazione_paint['name'];
           break;
 
         case gennamaria_paint['id']:
@@ -1084,69 +1085,67 @@ $('#container').children().filter('div').dcss(
 
   function getResult(text) {
 
-
+    //analyzer: 'my_synonyms',
+    //q: query
+    //must => AND / should => OR / must not => '!=' / filter as 'must' not scored
     var card2 = "controls";
     var card1 = "Pinacoteca";
     var query = "question:" + text + " AND title:" + card
+
+    //temporary comment
+    console.log('**** Current Title: =>>>> ' + card);
+    console.log('**** Current Title: =>>>> ' + card1);
+    console.log('**** Current Title: =>>>> ' + card2);
 
     console.log("query: ", query);
     console.log('Confidence: ' + text);
     client.search({
       index: 'myindex',
-      //analyzer: 'my_synonyms',
-      //q: query
       body: {
-        query: {
-          bool: {
-            must: [{
+
+            query: {
                 bool: {
-                  should: [{
-                      match: {
-                        question: {
-                          query: text,
-                          boost: 2
+                    must: [ {
+                        bool: {
+                            should: [{
+                                match: {
+                                  question: {
+                                    query: text,
+                                    boost: 2
+                                  }
+                                }
+                              },
+                              {
+                                match: {
+                                  answer: text
+                                }
+                              },
+                              {
+                                match: {
+                                  key: text//
+                                }
+                              }]
                         }
-                      }
-                    },
-                    {
-                      match: {
-                        answer: text
-                      }
-                    }
-
-                  ]
+                    }, {
+                        bool: {
+                            must: [{
+                            bool: {
+                                should: [{
+                                    match: {
+                                        title: card//current title
+                                    }
+                                }, {
+                                    match: {
+                                        title: card2//controls
+                                    }
+                                }]
+                            }
+                            }]
+                        }
+                    }]
                 }
-              },
-              {
-                bool: {
-                  should: [
-                    {
-                      match: {
-                        title: card2
-                      }
-                    },
-                    {
-                      match: {
-                        title: card
-                      }
-                    },/*
-                    {
-                      match: {
-                        title: card1//"Pinacoteca"
-                      }
-                    },*/
-                    {
-                      match: {
-                        key: text//"Pinacoteca"
-                      }
-                    }
+            }
 
-                  ]
-                }
-              }
-            ]
-          }
-        }
       }
     }, function(error, response) {
       console.log("resp:", response);
@@ -1182,10 +1181,9 @@ $('#container').children().filter('div').dcss(
 
             toSynthText += " " + suggests[i]["suggest"];
           }
-
           console.log("Nel for toSynthText:", toSynthText);
-
         }
+
         var answer = toSynthText;
         var len = answer.length;
         var perc = (len * 0.1);
@@ -1236,7 +1234,7 @@ $('#container').children().filter('div').dcss(
 
         utterThis.onend = function(event) {
           $(music).animate({
-            volume: 1
+            volume: 0.5
           }, 1000);
           //recognition.start();
 
@@ -1257,7 +1255,7 @@ $('#container').children().filter('div').dcss(
         utterThis.voice = voices[VOICEIDX];
         utterThis.onend = function(event) {
           $(music).animate({
-            volume: 1
+            volume: 0.5
           }, 1000);
         }
         synth.speak(utterThis);

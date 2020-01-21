@@ -1,0 +1,33 @@
+{
+  "name": "Visitazione",
+  "alt_name": "Visitazione",
+  "id": "0000318474",
+  "src": "./images/visitazione_pic.jpg",
+  "art": "della ",
+  "support": "la tavola tàttile ",
+  "music": "coro_angelico.mp3",
+  "conf": "./conf/msg_conf.json",
+  "caption": "",
+
+  "subjects": {
+
+      "37": {
+        "desc": [
+          "La madonna",
+          "Maria",
+          "La vergine"
+        ],
+        "check": 0,
+        "name": "madonna"
+      }    ,
+    "38": {
+      "desc": [
+        "Elisabetta",
+        "Elisabetta",
+        "Elisabetta"
+      ],
+      "check": 0,
+      "name": "elisabetta"
+    }
+  }
+}
