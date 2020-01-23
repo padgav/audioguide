@@ -275,8 +275,11 @@ $(document).ready(function() {
     //touchs = myMsg['touching'][getRandomArbitrary(0,3)];
     touchs = msg_conf['touching'][getRandomArbitrary(0, 2)];
 
+
     //w 87 a 65 s 83 d 68 f 70 g 71
+
     if (focusElem != true) //wasdfg
+    //switch sostituito da blocco che riferisce a conf corrente
       switch (x) {
 
         case 32:
@@ -284,247 +287,36 @@ $(document).ready(function() {
           StartNow();
           //getResult('adorazione');
           console.log("MetaKey pressed: ", ctrlK);
-
           break;
 
-        case 37: //larrow //2shephard
-        //$("kenburns1").attr('transform: scale3d(1, 1, 2.5) translate3d(0px, -0px, 0px)');
-        //$(".card").attr("id", annunciazione_paint["name"]);
-        if($(".card").attr("id") == "Gennamaria")
-        {
-          $(".painting").addClass("k1");
-          RemoveKClasses(1);
-        }
-        //$(".painting").removeClass("k2");
-        //$(".painting").removeClass("k3");
-        //$(".painting").removeClass("k4");
-
-
-/*
-//example 3
-$('#container').children().filter('div').dcss(
-    {
-    transform : 'translate(<transX>%,<transY>%)  scale(.5,.5)',
-    transition : 'all 1s <delay>s linear'
-    },
-    {
-        delay  : function(i,el,c){ return i * .1;},
-        transX : function(){ return 50 - Math.random()*100;},
-        transY : function(){ return 50 - Math.random()*100;}
-    });
-*/
-/*
-	// Reset the animation
-	$(selector).resetKeyframe(callback);
-
-	// Pause the animation
-	$(selector).pauseKeyframe();
-
-	// Resume the animation
-	$(selector).resumeKeyframe();
-*/
-
-
-//img = $(".painting").attr("id");
-//$("p").addClass("myClass yourClass");
-//          $(".card").removeAttr("id");
-
-// =>>> div(card).img.class = painting / = k1;
-          if (current_painting['subjects'][37] == null)
-            break;
-
-          if (current_painting['subjects'][37]['check'] == 0)
-          {
-
-            current_painting['subjects'][37]['check'] = 1;
-          }
-          synth.cancel();
-
-
-
-          utterThis.text = touchs + "" + current_painting['subjects'][37]["desc"][getRandomArbitrary(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][37]["desc"][getRandomArbitrary(0, 2)];
-          writeSubject(current_painting['subjects'][37]["desc"][0]);
-
-          utterThis.voice = voices[VOICEIDX];
-          synth.speak(utterThis);
-          break;
-
-        case 38: // uparrow
-        if($(".card").attr("id") == "Gennamaria")
-        {
-          $(".painting").addClass("k2");
-          RemoveKClasses(2);
-        }
-        //$(".painting").removeClass("k1");
-        //$(".painting").removeClass("k3");
-        //$(".painting").removeClass("k4");
-          if (current_painting['subjects'][38] == null)
-            break;
-
-          if (current_painting['subjects'][38]['check'] == 0)
-          {
-
-            current_painting['subjects'][38]['check'] = 1;
-          }
-          synth.cancel();
-
-          utterThis.text = touchs + "" + current_painting['subjects'][38]["desc"][getRandomArbitrary(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][38]["desc"][getRandomArbitrary(0, 2)];
-          writeSubject(current_painting['subjects'][38]["desc"][0]);
-
-          utterThis.voice = voices[VOICEIDX];
-          synth.speak(utterThis);
-
-          break;
-
-        case 39: // rarrow
-
-          if (current_painting['subjects'][39] == null)
-            break;
-
-          if (current_painting['subjects'][39]['check'] == 0)
-            current_painting['subjects'][39]['check'] = 1;
-          synth.cancel();
-
-          utterThis.text = touchs + "" + current_painting['subjects'][39]["desc"][getRandomArbitrary(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][39]["desc"][getRandomArbitrary(0, 2)];
-          writeSubject(current_painting['subjects'][39]["desc"][0]);
-
-          utterThis.voice = voices[VOICEIDX];
-          synth.speak(utterThis);
-
-          break;
-
-        case 40: //darrow
-
-          if (current_painting['subjects'][40] == null)
-            break;
-
-          if (current_painting['subjects'][40]['check'] == 0)
-            current_painting['subjects'][40]['check'] = 1;
-          synth.cancel();
-
-          utterThis.text = touchs + "" + current_painting['subjects'][40]["desc"][getRandomArbitrary(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][40]["desc"][getRandomArbitrary(0, 2)];
-          writeSubject(current_painting['subjects'][40]["desc"][0]);
-
-          utterThis.voice = voices[VOICEIDX];
-          synth.speak(utterThis);
-
-          break;
-
-        case 87: // w 87
-
-          if (current_painting['subjects'][87] == null)
-            break;
-
-          if (current_painting['subjects'][87]['check'] == 0)
-            current_painting['subjects'][87]['check'] = 1;
-          synth.cancel();
-
-          utterThis.text = touchs + "" + current_painting['subjects'][87]["desc"][getRandomArbitrary(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][87]["desc"][getRandomArbitrary(0, 2)];
-          writeSubject(current_painting['subjects'][87]["desc"][0]);
-
-          utterThis.voice = voices[VOICEIDX];
-          synth.speak(utterThis);
-
-          break;
-
-        case 65: //a 65
-
-        if($(".card").attr("id") == "Gennamaria")
-        {
-          $(".painting").addClass("k4");
-          RemoveKClasses(4);
-        }
-        //$(".painting").removeClass("k3");
-        //$(".painting").removeClass("k1");
-        //$(".painting").removeClass("k2");
-          if (current_painting['subjects'][65] == null)
-            break;
-
-          if (current_painting['subjects'][65]['check'] == 0)
-            current_painting['subjects'][65]['check'] = 1;
-          synth.cancel();
-
-          utterThis.text = touchs + "" + current_painting['subjects'][65]["desc"][getRandomArbitrary(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][65]["desc"][getRandomArbitrary(0, 2)];
-          writeSubject(current_painting['subjects'][65]["desc"][0]);
-
-          utterThis.voice = voices[VOICEIDX];
-          synth.speak(utterThis);
-
-          break;
-
-        case 68: //d 68
-
-          if (current_painting['subjects'][68] == null)
-            break;
-
-          if (current_painting['subjects'][68]['check'] == 0)
-            current_painting['subjects'][68]['check'] = 1;
-          synth.cancel();
-
-          utterThis.text = touchs + "" + current_painting['subjects'][68]["desc"][getRandomArbitrary(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][68]["desc"][getRandomArbitrary(0, 2)];
-          writeSubject(current_painting['subjects'][68]["desc"][0]);
-
-          utterThis.voice = voices[VOICEIDX];
-          synth.speak(utterThis);
-
-          break;
-
-        case 83: //s 83
-
-          if (current_painting['subjects'][83] == null)
-            break;
-
-          if (current_painting['subjects'][83]['check'] == 0)
-            current_painting['subjects'][83]['check'] = 1;
-          synth.cancel();
-
-          utterThis.text = touchs + "" + current_painting['subjects'][83]["desc"][getRandomArbitrary(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][83]["desc"][getRandomArbitrary(0, 2)];
-          writeSubject(current_painting['subjects'][83]["desc"][0]);
-
-          utterThis.voice = voices[VOICEIDX];
-          synth.speak(utterThis);
-
-          break;
-
-        case 70: //f 70
-
-        if($(".card").attr("id") == "Gennamaria")
-        {
-          $(".painting").addClass("k3");
-          RemoveKClasses(3);
-        }
-          //$(".painting").removeClass("k1");
-          //$(".painting").removeClass("k2");
-          //$(".painting").removeClass("k4");
-
-          if (current_painting['subjects'][70] == null)
-            break;
-
-          if (current_painting['subjects'][70]['check'] == 0)
-            current_painting['subjects'][70]['check'] = 1;
-          synth.cancel();
-
-          utterThis.text = touchs + "" + current_painting['subjects'][70]["desc"][getRandomArbitrary(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][70]["desc"][getRandomArbitrary(0, 2)];
-          writeSubject(current_painting['subjects'][70]["desc"][0]);
-
-          utterThis.voice = voices[VOICEIDX];
-          synth.speak(utterThis);
-          break;
-
+        //AUDIO COM
         case 107: //+ 107
           txtRedirect(myMcoms["vup"]);
           break;
         case 109: //- 109
           txtRedirect(myMcoms["vdown"]);
+          break;
+
+        default:
+          if (current_painting['subjects'][x] == null)
+            break;
+
+          if (current_painting['subjects'][x]['check'] == 0)
+            current_painting['subjects'][x]['check'] = 1;
+          synth.cancel();
+
+          if(current_painting['subjects'][x]['animation']!=0)
+          {
+            $(".painting").addClass("k"+current_painting['subjects'][x]['animation']);
+            RemoveKClasses(current_painting['subjects'][x]['animation']);
+          }
+
+          utterThis.text = touchs + "" + current_painting['subjects'][x]["desc"][getRandomArbitrary(0, 2)];
+          utterThis.text = touchs + "" + current_painting['subjects'][x]["desc"][getRandomArbitrary(0, 2)];
+          writeSubject(current_painting['subjects'][x]["desc"][0]);
+
+          utterThis.voice = voices[VOICEIDX];
+          synth.speak(utterThis);
           break;
 
       }
@@ -1097,6 +889,7 @@ $('#container').children().filter('div').dcss(
     console.log('**** Current Title: =>>>> ' + card1);
     console.log('**** Current Title: =>>>> ' + card2);
 
+    //query / text
     console.log("query: ", query);
     console.log('Confidence: ' + text);
     client.search({
@@ -1111,20 +904,30 @@ $('#container').children().filter('div').dcss(
                                 match: {
                                   question: {
                                     query: text,
-                                    boost: 2
+                                    boost:2
                                   }
                                 }
                               },
                               {
                                 match: {
-                                  answer: text
+                                  answer: {
+                                    query: text
+                                  }
                                 }
                               },
                               {
                                 match: {
-                                  key: text//
+                                  key: {
+                                    query: text
+                                  }
                                 }
-                              }]
+                              }/*,
+                              {
+                                match: {
+                                  name: {
+                                    query: text                                  }
+                                }
+                              }*/]
                         }
                     }, {
                         bool: {

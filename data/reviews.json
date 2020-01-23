@@ -88,7 +88,8 @@
               "suggest": "informazioni sulla tavola centrale",
               "linkedName": "tav"
             }
-          ]
+          ],
+          "key": "cosa posso chiedere. domandare. domanda"
         },
         {
           "name": "dim",
@@ -99,7 +100,8 @@
               "suggest": "che tecnica e materiali sono utilizzati",
               "linkedName": "tech"
             }
-          ]
+          ],
+          "key": "dimensioni retablo"
         },
         {
           "name": "tech",
@@ -115,12 +117,13 @@
               "linkedName": "auth"
             }
 
-          ]
+          ],
+          "key": "tecnica materiali"
         },
         {
           "name": "gen",
-          "question": "Descrizione generale. Descrizione del retablo. Descrivi il retablo. Parlami del retablo.",
-          "answer": "Il retablo del presepio è costituito da una tavola centrale, quattro tavole laterali di cui due a sinistra e due a destra, una tavola superiore centrale e 7 piccoli scomparti che compongono la parte inferiore del retablo chiamata predella. Nella tavola centrale è rappresentata la scena dell'adorazione dei pastori.",
+          "question": "Descrizione generale. Descrizione generale del retablo. Descrivi il retablo. Parlami del retablo.",
+          "answer": "Il retablo del presepio è costituito da una tavola centrale che rappresenta la scena dell'adorazione dei pastori, quattro tavole laterali di cui due a sinistra e due a destra, una tavola superiore posta al centro e 7 piccoli scomparti che compongono la parte inferiore del retablo chiamata predella.",
           "suggests":  [
             {
               "suggest": "informazioni sulla tavola centrale",
@@ -130,7 +133,8 @@
               "suggest": "sulle figure rappresentate",
               "linkedName": "pgs"
             }
-          ]
+          ],
+          "key": "descrizione generale"
         },
         {
           "name": "pgs",
@@ -182,7 +186,7 @@
         {
           "name": "tav",
           "question": "Tavola centrale, scena del presepio adorazione dei pastori. Scena dell'adorazione. Cosa rappresenta la tavola centrale? Cosa raffigura la tavola centrale?",
-          "answer": "La tavola raffigura la scena della natività. E' rappresentata una capanna con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello di fronte alla mangiatoia. La struttura è costituita da un solo ambiente con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco. In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe, ai loro piedi steso sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Sullo sfondo un paesaggio di ispirazione fiamminga.",
+          "answer": "La tavola centrale raffigura la scena della natività. E' rappresentata una capanna con apertura ad arco delineata da mattoni rosso chiaro, all’interno del quale sono presenti il bue e l’asinello di fronte alla mangiatoia. La struttura è costituita da un solo ambiente con ingresso frontale. Nella parte alta della capanna sono raffigurati  sei angeli che reggono un festone bianco. In basso a sinistra sono raffigurati in ginocchio in atto di adorazione la Madonna e San Giuseppe, ai loro piedi steso sopra un lembo del mantello della madonna il Bambino rappresentato nudo con le braccia aperte. Nella zona opposta sono posizionati su tre livelli i tre pastori. Sullo sfondo un paesaggio di ispirazione fiamminga.",
           "suggests":  [
             {
               "suggest": "come è rappresentata la madonna",
@@ -196,7 +200,8 @@
               "suggest": "informazioni sul paesaggio",
               "linkedName": "paes"
             }
-          ]
+          ],
+          "key": "tavola centrale"
         },
 
         {
@@ -480,7 +485,8 @@
               "suggest": " dove stava il retablo",
               "linkedName": "locret"
             }
-          ]
+          ],
+          "key": "dimensioni tavola. retablo."
         },
         {
           "name": "locret",
@@ -841,11 +847,11 @@
               "linkedName": "ubic"
             }
           ],
-          "key": "sDescrizione generale sito archeologico genna maria. Complesso. Struttura"
+          "key": "Descrizione generale sito archeologico genna maria. Complesso. Struttura"
         },
         {
           "name": "villanova",
-          "question": "Parlami di Villanovaforru",
+          "question": "comune di Villanovaforru",
           "answer": "E’ un comune italiano di 680 abitanti della provincia del Sud Sardegna. Situato tra le dolci colline della Marmilla, a circa 50 km da Cagliari.",
           "suggests":  [
             {
@@ -857,7 +863,7 @@
         },
         {
           "name": "nuraghe",
-          "question": "Parlami del nuraghe, dove si trova il nuraghe",
+          "question": "nuraghe, dove si trova il nuraghe",
           "answer": "Nella regione storica della Marmilla, sulla sommità della collina di Genn’e Mari che nella lingua sarda significa porta-accesso al mare, si trova il nuraghe Genna Maria. È un edificio complesso,  interamente realizzato in pietra, costituito da una torre centrale e da altre tre torri periferiche disposte negli angoli nord-est, sud-est e nord-ovest. All’interno è presente un piccolo cortile dove è situata una cisterna. Attorno ad esso si sviluppa un recinto composto da quattro torri residue. Nello spazio compreso tra il recinto e le torri è un villaggio di diverse capanne. ",
           "suggests":  [
             {
@@ -877,7 +883,7 @@
               "linkedName": "tecnica"
             }
           ],
-          "key": "nuraghe. descrizione del nuraghe. dove si trova dov'è il nuraghe."
+          "key": "nuraghe. descrizione nuraghe. dove si trova dov'è nuraghe."
         },
         {
           "name": "scavi",
@@ -1001,7 +1007,7 @@
         },
         {
           "name": "evoluzione",
-          "question": "Periodo e fase edilizia.",
+          "question": "Periodo e fase edilizia. evoluzione.",
           "answer": "Il nuraghe nasce monotorre nel Bronzo Medio (1500 a.C.). Agli inizi del Bronzo Recente (1300 a.C.) la torre viene inglobata e parzialmente rifasciata da un bastione quadrilobato, con torri dotate di feritoie. All’interno del bastione: un cortile dotato di pozzo parzialmente scavato nella viva roccia. Nel Bronzo Finale (1100 a.C.), la terza fase edilizia del monumento: rifascio parziale del bastione; eliminazione di una delle sue torri; accecamento delle feritoie. Il villaggio nasce già nel Bronzo Medio, ma la forma che giunge sino a noi la assume nel corso della prima Età del Ferro (900 – 800 a.C.). assistiamo ad una vera e propria evoluzione dell’impianto abitativo: parte dell’antemurale viene smantellato e su di esso vengono costruite alcune delle nuove strutture del villaggio, che riusano materiali provenienti dallo stesso antemurale e dallo smontaggio di capanne più antiche.",
           "suggests":  [
             {
@@ -1021,7 +1027,7 @@
         },
         {
           "name": "originaria",
-          "question": "Parlami della torre centrale.",
+          "question": "torre centrale.",
           "answer": "La torre centrale, costruita forse nel Bronzo medio (quindicesimo secolo a.C.), oggi svettata, ospita una semplice camera priva di vani sussidiari e di diametro interno assai ridotto rispetto a quello esterno. Raggiungeva gli 8/10 metri d’altezza e le mura del bastione arrivavano ai 7 metri, fornito di un cortile con pozzo e circondato da un antemurale turrito.",
           "suggests":  [
             {
@@ -1041,7 +1047,7 @@
         },
 		{
           "name": "antemurale",
-          "question": "Descrivi l’antemurale.",
+          "question": "antemurale. fascia murale.",
           "answer": "Il possente antemurale turrito, di forma esagonale, circonda il nuraghe e con esso è stato costruito e utilizzato in funzione di controllo del territorio fra il Bronzo Medio ed il Bronzo Finale. E’ articolato in torri (di cui quattro ancora visibili) raccordate da cortine murate e rettilinee e ingresso a SE. Un episodio di distruzione avvenuto intorno al decimo secolo a. C. riduce il bastione trilobato alle dimensioni attuali che superano di circa 7 metri di elevato. Lo stesso antemurale viene scapitozzato e ridotto ad un alzato di pochi filari. Fuori e dentro le sue mure si è sviluppato il villaggio e il suo abitato.",
           "suggests":  [
             {
@@ -1061,7 +1067,7 @@
         },
         {
           "name": "villaggio",
-          "question": "Descrivi, parlami del villaggio di Genna Maria",
+          "question": "villaggio di Genna Maria",
           "answer": "Il villaggio è  posto all'interno ed all'esterno dell'antemurale. Le capanne più recenti del vilaggio hanno strutture complesse a pianta centrale, con vani ellittici, quadrangolari e rettangolari, funzionali e decorati con varie forme. Eccezionale è la ‘casa a corte centrale’, ampia 150 metri quadri e suddivisa in ambienti che convergono in un unico cortile. Nella prima età del Ferro, un abitato succeduto ad un precedente insediamento del Bronzo medio occupò l'area compresa tra il bastione e l'antemurale, in parte sovrapponendosi ad esso e utilizzando il materiale proveniente dallo smantellamento di capanne più antiche. Il nuovo villaggio 'geometrico' presenta delle strutture complesse a pianta centrale, con vani ellittici, quadrangolari e rettangolari. Le abitazioni hanno carattere residenziale e sono funzionali ai bisogni del nucleo familiare: riposo, preparazione e consumo dei cibi, deposito di utensili e provviste, attività artigianali a scala domestica. Le murature sono realizzate in tecnica microlitica con piccoli blocchetti e lastrine di marna.",
           "suggests":  [
             {
@@ -1077,11 +1083,11 @@
               "linkedName": "attivita"
             }
           ],
-          "key": "villaggio"
+          "key": "villaggio. centro abitato."
         },
         {
           "name": "villaggi",
-          "question": "Descrivi i villaggi nuragici dell’era del bronzo",
+          "question": "villaggi nuragici dell’era del bronzo",
           "answer": "Nell’età del bronzo i villaggi sono costituiti da agglomerati di capanne di forma circolare con diametri variabili fino ai sei metri, interamente costruite in pietra e con il tetto realizzato in rami, come nelle attuali capanne dei pastori.",
           "suggests":  [
             {
@@ -1101,7 +1107,7 @@
         },
         {
           "name": "capanne",
-          "question": "Descrivi le piccole capanne attorno al nuraghe Genna Maria",
+          "question": "piccole capanne attorno al nuraghe Genna Maria",
           "answer": "Nel mille avanti Cristo circa attorno al nuraghe Genna Maria si sviluppa un villaggio di piccole capanne di varie forme, sia quadrate che rettangolari o di forme irregolari. L’importanza delle capanne è dovuta anche ai ritrovamenti degli archeologi che hanno permesso di conoscere le attività quotidiane degli abitanti.",
           "suggests":  [
             {
@@ -1117,7 +1123,7 @@
               "linkedName": "capanna12"
             }
           ],
-          "key": "capanne, abitato"
+          "key": "capanne, abitato, abitazioni"
         },
         {
           "name": "attivita",
@@ -1190,11 +1196,11 @@
             },
             {
               "suggest": "che attività svolgevano gli abitanti",
-              "linkedName": "capanna12"
+              "linkedName": "attivita"
             },
             {
               "suggest": "informazioni sui reperti della Capanna 12",
-              "linkedName": "attivita"
+              "linkedName": "capanna12"
             }
           ],
           "key": "conservazione alimenti, cibo, cereali"
@@ -1221,7 +1227,7 @@
         },
         {
           "name": "incendio",
-          "question": "Parlami dell’incendio del villaggio. L’abitato ebbe vita lunga?",
+          "question": "incendio del villaggio. L’abitato ebbe vita lunga?",
           "answer": "l'abitato, sviluppatosi attorno al decimo secolo a.C., in piena età del ferro, che si instaurò sulle rovine dell’antemurale, fino a lambire il bastione trilobato. L’abitato attorno al nuraghe non ebbe vita lunga: tra il 1000 ed il 900 avanti Cristo, il villaggio viene abbandonato, forse a causa di un incendio che fece crollare le abitazioni, facendo la fortuna degli archeologi che, dato l’episodio dell’incendio, hanno potuto così ritrovare interi corredi in grado di raccontare la quotidianità delle popolazioni contadine dell’epoca (dalla conservazione e lavorazione delle derrate alimentari, dalla filatura alla tessitura, dalla condivisione del fuoco ai sistemi di illuminazione).",
           "suggests":  [
             {
@@ -1242,7 +1248,7 @@
         {
           "name": "culto",
           "question": "ripopolamento, culto, offerte santuario; il nuraghe viene rifrequentato?",
-          "answer": "Durante il periodo punico sul finire del V secolo avanti Cristo, presso la torre centrale ed il cortile si svolgevano dei sacrifici anche di animali e si donavano delle offerte in onore di una divinità connessa con un culto agrario: all’interno della torre principale sono state rinvenute circa seicentocinquanta piccole lucerne in ceramica. Inoltre all’interno del cortile sono state rinvenute diverse monete che vanno dall’età romana a quella vandalica. E’ probabile che si riferiscano anche in questo caso a offerte.",
+          "answer": "Durante il periodo punico sul finire del quinto secolo avanti Cristo, presso la torre centrale ed il cortile si svolgevano dei sacrifici anche di animali e si donavano delle offerte in onore di una divinità connessa con un culto agrario: all’interno della torre principale sono state rinvenute circa seicentocinquanta piccole lucerne in ceramica. Inoltre all’interno del cortile sono state rinvenute diverse monete che vanno dall’età romana a quella vandalica. E’ probabile che si riferiscano anche in questo caso a offerte.",
           "suggests":  [
             {
               "suggest": "informazioni sul villaggio",
@@ -1301,11 +1307,11 @@
               "linkedName": "lucerne"
             }
           ],
-          "key": "nuraghi, funzione, utilizzo, utilizzati, utilità, nuraghi, servivano."
+          "key": "nuraghi, funzione, utilizzo, utilizzati, utilità, servivano."
         },
         {
           "name": "casacorte",
-          "question": "Parlami della ‘casa a corte centrale’",
+          "question": "casa a corte centrale’",
           "answer": "La casa a corte centrale è ampia ben 150 metri quadrati e suddivisa in una serie di ambienti che convergono verso un unico cortile. Grazie all’intero corredo di questa casa (detta appunto ‘a corte centrale’), è stato possibile ricostruire quella che era la vita quotidiana degli abitanti: prevalentemente sono utensili di uso domestico, in pietra e ceramica e sono rari gli esempi in metallo.",
           "suggests":  [
             {
@@ -1325,7 +1331,7 @@
         },
         {
           "name": "capanna12",
-          "question": "Parlami della 12",
+          "question": "magazzino 12",
           "answer": "La capanna 12 è considerato un probabile magazzino-deposito, che conteneva grandi vasi per la conservazione di derrate solide (cereali), diversi vasi legati alla trasformazione e consumazione dei cibi, una brocca askoide decorata a stralucido, un vaso piriforme decorato con volto umano in rilievo, borracce a faccia piana ecc.. Nel pavimento della capanna 12 sono stati recuperati resti vegetali carbonizzati di grano e orzo, legumi, vinaccioli di vite coltivata e minuscoli frammenti di un preparato alimentare che è stato identificato come pane a base di una farina non lievitata (analisi di P. Marinval).",
           "suggests":  [
             {
@@ -1385,7 +1391,7 @@
         },
         {
           "name": "bronzetti2",
-          "question": "Parlami dei bronzetti. Cosa rappresentano, dimensioni.",
+          "question": "bronzetti. Cosa rappresentano, dimensioni.",
           "answer": "I bronzetti generalmente di piccole dimensioni rappresentano uomini, donne, bambini ma anche di ogni genere di animali come buoi, cinghiali, volpi, cani, cervi e di oggetti d’uso quotidiano.",
           "suggests":  [
             {
@@ -1517,9 +1523,9 @@
           "key": "museo genna maria. esposti. esposizione. mostra."
         },
         {
-          "name": "",
-          "question": "",
-          "answer": "",
+          "name": "pinolo",
+          "question": "pinolo",
+          "answer": "pinolo",
           "suggests":  [
             {
               "suggest": "",

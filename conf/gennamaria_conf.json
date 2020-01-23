@@ -5,7 +5,7 @@
   "src": "./images/gennamaria_pic.jpg",
   "art": "di ",
   "support": " plastico tàttile ",
-  "music": "canto_sardo.mp3",
+  "music": "canto_sardo.mp3_",
   "conf": "./conf/msg_conf_plastic.json",
   "caption": ". Ubicato sulla sommità di una collina a 408 metri sopra il livello del mare, a circa un chilometro dal paese di Villanovaforru: gli elementi principali sono il nuraghe, l'antemurale e un villaggio situato all'interno ed all'esterno dell'antemurale;",
 
@@ -13,21 +13,43 @@
 
       "37": {
         "desc": [
-          "il nuraghe",
-          "la struttura del nuraghe",
-          "la costruzione nuragica"
+          "la torre centrale del nuraghe",
+          "l'interno della torre centrale nuragica",
+          "l'interno della costruzione nuragica (torre centrale)"
         ],
         "check": 0,
-        "name": "nuraghe"
+        "name": "nuraghe",
+        "animation": 1
         }    ,
       "38": {
         "desc": [
-          "l'antemurale",
-          "l'antemurale",
-          "l'antemurale"
+          "l'antemurale nel lato sud",
+          "la fascia antemurale posta a sud",
+          "l'antemurale turrito (dotato di torri) a sud"
         ],
         "check": 0,
-        "name": "antemurale"
+        "name": "antemurale_sud",
+        "animation": 2
+      },
+      "81": {
+        "desc": [
+          "l'antemurale a est",
+          "la fascia antemurale posta nel lato est",
+          "l'antemurale turrito (dotato di torri) a est"
+        ],
+        "check": 0,
+        "name": "antemurale_est",
+        "animation": 0
+      },
+      "69": {
+        "desc": [
+          "la torre all'estrema sinistra dell'antemurale sud",
+          "la torre più a sinistra della fascia antemurale sud",
+          "la torre posta a sinistra dell'antemurale turrito, lato sud"
+        ],
+        "check": 0,
+        "name": "antemurale_torre1",
+        "animation": 0
       },
       "65": {
         "desc": [
@@ -36,34 +58,118 @@
           "la cisterna nel cortile"
         ],
         "check": 0,
-        "name": "bacile"
+        "name": "cortile",
+        "animation": 4
       },
       "70": {
         "desc": [
-          "il villaggio",
-          "la zona del villaggio",
-          "il centro abitato del sito archeologico"
+          "il villaggio originario",
+          "la zona del villaggio relativo all'insediamento originario",
+          "il villaggio abitato nella prima fase storica"
         ],
         "check": 0,
-        "name": "pozzo"
+        "name": "villaggio",
+        "animation": 3
       },
       "83": {
         "desc": [
-          "il villaggio",
-          "la zona del villaggio",
-          "il centro abitato del sito archeologico"
+          "il rifascio del parte del muro del nuraghe",
+          "il rifascio del parte del muro del nuraghe",
+          "il rifascio del parte del muro del nuraghe"
         ],
         "check": 0,
-        "name": "pozzo"
+        "name": "rifascio",
+        "animation": 0
       },
       "68": {
         "desc": [
-          "la parte di villaggio costruita sui resti della fascia antemurale originaria",
-          "la zona del villaggio costituitasi nella fascia antemurale originaria",
-          "il centro abitato costruito sui resti della fascia antemurale originaria"
+          "la parte sud del villaggio ricostruito ",
+          "la zona sud del villaggio ricostruita",
+          "la parte sud del centro abitato riccostruito"
         ],
         "check": 0,
-        "name": "pozzo"
-    }
+        "name": "villaggio_ric_sud",
+        "animation": 0
+      },
+      "40": {
+        "desc": [
+          "la prima camera con bacile",
+          "la prima camera con il bacile",
+          "la prima camera con bacile"
+        ],
+        "check": 0,
+        "name": "bacile1",
+        "animation": 0
+      },
+      "39": {
+        "desc": [
+          "la seconda camera con bacile",
+          "la seconda camera con il bacile",
+          "la seconda camera con bacile"
+        ],
+        "check": 0,
+        "name": "bacile2",
+        "animation": 0
+      },
+      "87": {
+        "desc": [
+          "il muro che circonda la Casa a corte centrale",
+          "il muro intorno alla Casa a corte centrale",
+          "il perimetro della Casa a corte centrale"
+        ],
+        "check": 0,
+        "name": "casaacorte",
+        "animation": 0
+      },
+      "84": {
+        "desc": [
+          "la terza torre del nuraghe",
+          "la terza delle torri del nuraghe",
+          "la torre del nuraghe più a est"
+        ],
+        "check": 0,
+        "name": "nuraghe3",
+        "animation": 0
+      },
+      "89": {
+        "desc": [
+          "la prima torre del nuraghe",
+          "la prima delle torri del nuraghe",
+          "la torre del nuraghe più a ovest"
+        ],
+        "check": 0,
+        "name": "nuraghe2",
+        "animation": 0
+      },
+      "85": {
+        "desc": [
+          "la parte nord del villaggio ricostruito ",
+          "la zona nord del villaggio ricostruita",
+          "la parte nord del centro abitato riccostruito"
+        ],
+        "check": 0,
+        "name": "villaggio_ric_nord",
+        "animation": 0
+      },
+      "82": {
+        "desc": [
+          "la porzione ovest della fascia murale",
+          "la parte di fascia antemurale ad ovest",
+          "la porzione di antemurale a ovest"
+        ],
+        "check": 0,
+        "name": "antemurale_ovest",
+        "animation": 0
+      },
+      "71": {
+        "desc": [
+          "la torre all'estrema destra dell'antemurale sud",
+          "la torre più a destra della fascia antemurale sud",
+          "la torre posta più a est dell'antemurale turrito, nel lato sud"
+        ],
+        "check": 0,
+        "name": "antemurale_torre2",
+        "animation": 0
+      }
   }
 }
