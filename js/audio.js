@@ -62,7 +62,7 @@ var bg;
 var card = "Gennamaria";
 var img;
 var music = new Audio();
-music.src = "/";
+music.src = "";
 //var music = new Audio("music/coro_angelico.mp3");
 
 ///////////////////////////////////////
@@ -536,8 +536,9 @@ $(document).ready(function() {
 
 
 
-    if( music.src = "/")
-      music.src = "music/"+current_painting["music"];
+    //if( music.src = "/")
+    music.src = "/music/";
+    music.src += current_painting["music"];
 
 
 
