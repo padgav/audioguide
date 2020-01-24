@@ -33,10 +33,10 @@ var messages = new Array();
 var voices;
 var VOICEIDX = 3;
 var focusElem = false;
-
 var rateStd = 0.9;
 var currRate = rateStd;
 
+//var started = 0;
 var myMcoms = {
   moff: "spegni la musica",
   mon: "accendi la musica",
@@ -58,9 +58,7 @@ var myMcoms = {
 ///
 
 var synth = window.speechSynthesis;
-
 var bg;
-
 var card = "Gennamaria";
 var img;
 var music = new Audio();
@@ -216,18 +214,9 @@ function RemoveKClasses(x) {
     if(i!=x)
       $(".painting").removeClass("k"+i);
   }
-  //$(".card").attr
 }
 
-/*
-var handler = function(e) {
-	console.log(this.id);
-	e.stopPropagation();
-};
-*/
-
 $(document).ready(function() {
-
 
   recognition = new SpeechRecognition();
   speechRecognitionList = new SpeechGrammarList();
@@ -241,21 +230,11 @@ $(document).ready(function() {
   //evento tastiera e assegnazione a ctrlK
   var ctrlK = 0;
   var active = 0;
-  //document.getElementById("question").addEventListener('keydown', Tasto);
   document.addEventListener('keydown', Tasto);
   //focusElem
 
-
-  /*
-  function moreInfo(text)
-  {
-  getResult(text);
-}
-*/
   var lastX = -1;
   var currWelcome = "";
-
-
 
   function Tasto(e) {
 
@@ -272,19 +251,16 @@ $(document).ready(function() {
     }
     console.log("LOGGING X: ", x);
 
-    //touchs = myMsg['touching'][getRandomArbitrary(0,3)];
     touchs = msg_conf['touching'][getRandomArbitrary(0, 2)];
 
-
     //w 87 a 65 s 83 d 68 f 70 g 71
-
     if (focusElem != true) //wasdfg
-    //switch sostituito da blocco che riferisce a conf corrente
       switch (x) {
 
         case 32:
           ctrlK = 1;
-          StartNow();
+          //StartNow();
+          reStart();
           //getResult('adorazione');
           console.log("MetaKey pressed: ", ctrlK);
           break;
@@ -657,12 +633,7 @@ $(document).ready(function() {
   var askedNames = new Array();
 
 
-
-
-
-
   // Handler for .ready() called.
-
   $(".card").on('mousedown', function(e) {
     if (e.which == 2) {
       e.preventDefault();
