@@ -11,7 +11,7 @@
 
   "subjects": {
 
-      "37": {
+      "48": {
         "desc": [
           "la torre centrale del nuraghe",
           "l'interno della torre centrale nuragica",
@@ -20,8 +20,150 @@
         "check": 0,
         "name": "nuraghe",
         "animation": 1
-        }    ,
-      "38": {
+        },
+      "66": {
+        "desc": [
+          "la parte sud del villaggio ricostruito ",
+          "la zona sud del villaggio ricostruita",
+          "la parte sud del centro abitato ricostruito"
+        ],
+        "check": 0,
+        "name": "villaggio_ric_sud",
+        "animation": 0
+      },
+      "77": {
+        "desc": [
+          "la parte sud del villaggio ricostruito ",
+          "la zona sud del villaggio ricostruita",
+          "la parte sud del centro abitato ricostruito"
+        ],
+        "check": 0,
+        "name": "villaggio_ric_sud",
+        "animation": 0
+      },
+      "53": {
+        "desc": [
+          "l'antemurale a est",
+          "la fascia antemurale posta nel lato est",
+          "l'antemurale turrito (dotato di torri) a est"
+        ],
+        "check": 0,
+        "name": "antemurale_est",
+        "animation": 0
+      },
+      "51": {
+        "desc": [
+          "l'antemurale a ovest",
+          "la fascia antemurale nel lato ovest",
+          "la parte di antemurale posta a ovest"
+        ],
+
+        "check": 0,
+        "name": "antemurale_ovest",
+        "animation": 0
+      },
+      "50": {
+        "desc": [
+          "la torre posta più a ovest  dell'antemurale nord",
+          "la torre più a ovest della fascia antemurale nord",
+          "la torre posta a ovest dell'antemurale turrito, lato nord"
+        ],
+        "check": 0,
+        "name": "antemurale_torre3",
+        "animation": 0
+      },
+      "73": {
+        "desc": [
+          "il rifascio di parte del muro del nuraghe, torre lato ovest",
+          "il rifascio di parte del muro del nuraghe, torre ovest",
+          "il rifascio di parte del muro del nuraghe, torre ovest"
+        ],
+        "check": 0,
+        "name": "rifascio_ovest",
+        "animation": 0
+      },
+      "76": {
+        "desc": [
+          "il rifascio di parte del muro del nuraghe, torre lato est",
+          "il rifascio di parte del muro del nuraghe, torre est",
+          "il rifascio di parte del muro del nuraghe, torre est"
+        ],
+        "check": 0,
+        "name": "rifascio_est",
+        "animation": 0
+      },
+      "49": {
+        "desc": [
+          "il rifascio di parte del muro del nuraghe, tra le sue torri più ad ovest",
+          "il rifascio di parte del muro del nuraghe, tra le sue torri più ad ovest",
+          "il rifascio di parte del muro del nuraghe, tra le sue torri più ad ovest"
+        ],
+        "check": 0,
+        "name": "rifascio_est",
+        "animation": 0
+      },
+      "79": {
+        "desc": [
+          "la torre lato ovest del nuraghe",
+          "la torre del nuraghe posta a ovest",
+          "il rifascio del parte del muro del nuraghe, torre ovest"
+
+        ],
+        "check": 0,
+        "name": "rifascio_ovest",
+        "animation": 0
+      },
+      "65": {
+        "desc": [
+          "la prima camera con bacìle",
+          "la prima camera con il bacìle",
+          "la prima camera con bacìle"
+        ],
+        "check": 0,
+        "name": "bacile1",
+        "animation": 0
+      },
+      "80": {
+        "desc": [
+          "il villaggio originario",
+          "la zona del villaggio relativo all'insediamento originario",
+          "il villaggio abitato nella prima fase storica"
+        ],
+        "check": 0,
+        "name": "villaggio",
+        "animation": 0
+      },
+      "67": {
+        "desc": [
+          "il villaggio originario",
+          "la zona del villaggio relativo all'insediamento originario",
+          "il villaggio abitato nella prima fase storica"
+        ],
+        "check": 0,
+        "name": "villaggio",
+        "animation": 0
+      },
+      "88": {
+        "desc": [
+          "il villaggio originario",
+          "la zona del villaggio relativo all'insediamento originario",
+          "il villaggio abitato nella prima fase storica"
+        ],
+        "check": 0,
+        "name": "villaggio",
+        "animation": 0
+      },
+      "71": {
+        "desc": [
+          "la torre all'estrema sinistra dell'antemurale sud",
+          "la torre più a sinistra della fascia antemurale sud",
+          "la torre posta a sinistra dell'antemurale turrito, lato sud"
+        ],
+        "check": 0,
+        "name": "antemurale_torre1",
+        "animation": 0
+      },
+      "68": {
         "desc": [
           "l'antemurale nel lato sud",
           "la fascia antemurale posta a sud",
@@ -33,85 +175,15 @@
       },
       "81": {
         "desc": [
-          "l'antemurale a est",
-          "la fascia antemurale posta nel lato est",
-          "l'antemurale turrito (dotato di torri) a est"
+          "l'antemurale nel lato sud",
+          "la fascia antemurale posta a sud",
+          "l'antemurale turrito (dotato di torri) a sud"
         ],
         "check": 0,
-        "name": "antemurale_est",
-        "animation": 0
+        "name": "antemurale_sud",
+        "animation": 2
       },
-      "69": {
-        "desc": [
-          "la torre all'estrema sinistra dell'antemurale sud",
-          "la torre più a sinistra della fascia antemurale sud",
-          "la torre posta a sinistra dell'antemurale turrito, lato sud"
-        ],
-        "check": 0,
-        "name": "antemurale_torre1",
-        "animation": 0
-      },
-      "65": {
-        "desc": [
-          "il cortile con cisterna",
-          "il cortile col pozzo",
-          "la cisterna nel cortile"
-        ],
-        "check": 0,
-        "name": "cortile",
-        "animation": 4
-      },
-      "70": {
-        "desc": [
-          "il villaggio originario",
-          "la zona del villaggio relativo all'insediamento originario",
-          "il villaggio abitato nella prima fase storica"
-        ],
-        "check": 0,
-        "name": "villaggio",
-        "animation": 3
-      },
-      "83": {
-        "desc": [
-          "il rifascio del parte del muro del nuraghe",
-          "il rifascio del parte del muro del nuraghe",
-          "il rifascio del parte del muro del nuraghe"
-        ],
-        "check": 0,
-        "name": "rifascio",
-        "animation": 0
-      },
-      "68": {
-        "desc": [
-          "la parte sud del villaggio ricostruito ",
-          "la zona sud del villaggio ricostruita",
-          "la parte sud del centro abitato riccostruito"
-        ],
-        "check": 0,
-        "name": "villaggio_ric_sud",
-        "animation": 0
-      },
-      "40": {
-        "desc": [
-          "la prima camera con bacile",
-          "la prima camera con il bacile",
-          "la prima camera con bacile"
-        ],
-        "check": 0,
-        "name": "bacile1",
-        "animation": 0
-      },
-      "39": {
-        "desc": [
-          "la seconda camera con bacile",
-          "la seconda camera con il bacile",
-          "la seconda camera con bacile"
-        ],
-        "check": 0,
-        "name": "bacile2",
-        "animation": 0
-      },
-      "87": {
+      "52": {
         "desc": [
           "il muro che circonda la Casa a corte centrale",
           "il muro intorno alla Casa a corte centrale",
@@ -121,37 +193,70 @@
         "name": "casaacorte",
         "animation": 0
       },
-      "84": {
-        "desc": [
-          "la terza torre del nuraghe",
-          "la terza delle torri del nuraghe",
-          "la torre del nuraghe più a est"
-        ],
-        "check": 0,
-        "name": "nuraghe3",
-        "animation": 0
-      },
       "89": {
         "desc": [
-          "la prima torre del nuraghe",
-          "la prima delle torri del nuraghe",
-          "la torre del nuraghe più a ovest"
+          "il cortile con cisterna",
+          "il cortile col pozzo",
+          "la cisterna nel cortile"
+
         ],
         "check": 0,
-        "name": "nuraghe2",
+        "name": "cortile",
+        "animation": 4
+      },
+      "87": {
+        "desc": [
+          "la seconda camera con bacìle",
+          "la seconda camera con il bacìle",
+          "la seconda camera con bacìle"
+        ],
+        "check": 0,
+        "name": "bacile2",
+        "animation": 0
+      },
+      "84": {
+        "desc": [
+          "il rifascio del parte del muro del nuraghe (lato sud)",
+          "il rifascio del parte del muro del nuraghe (lato sud)",
+          "il rifascio del parte del muro del nuraghe (lato sud)"
+
+        ],
+        "check": 0,
+        "name": "rifascio_sud",
         "animation": 0
       },
       "85": {
         "desc": [
-          "la parte nord del villaggio ricostruito ",
+          "il rifascio del parte del muro del nuraghe (lato sud)",
+          "il rifascio del parte del muro del nuraghe (lato sud)",
+          "il rifascio del parte del muro del nuraghe (lato sud)"
+
+        ],
+        "check": 0,
+        "name": "rifascio_sud",
+        "animation": 0
+      },
+      "78": {
+        "desc": [
+          "la parte nord del villaggio ricostruito",
           "la zona nord del villaggio ricostruita",
-          "la parte nord del centro abitato riccostruito"
+          "la parte nord del centro abitato ricostruito"
         ],
         "check": 0,
         "name": "villaggio_ric_nord",
-        "animation": 0
+        "animation": 3
       },
-      "82": {
+      "86": {
+        "desc": [
+          "la parte nord del villaggio ricostruito",
+          "la zona nord del villaggio ricostruita",
+          "la parte nord del centro abitato ricostruito"
+        ],
+        "check": 0,
+        "name": "villaggio_ric_nord",
+        "animation": 3
+      },
+      "83": {
         "desc": [
           "la porzione ovest della fascia murale",
           "la parte di fascia antemurale ad ovest",
@@ -161,15 +266,45 @@
         "name": "antemurale_ovest",
         "animation": 0
       },
-      "71": {
+      "90": {
+        "desc": [
+          "l'antemurale a est",
+          "la fascia antemurale posta nel lato est",
+          "l'antemurale turrito (dotato di torri) a est"
+        ],
+        "check": 0,
+        "name": "antemurale_est",
+        "animation": 0
+      },
+      "70": {
+        "desc": [
+          "la torre all'estrema sinistra dell'antemurale sud",
+          "la torre più a sinistra della fascia antemurale sud",
+          "la torre posta a sinistra dell'antemurale turrito, lato sud"
+        ],
+        "check": 0,
+        "name": "antemurale_torre1",
+        "animation": 0
+      },
+      "69": {
         "desc": [
           "la torre all'estrema destra dell'antemurale sud",
           "la torre più a destra della fascia antemurale sud",
-          "la torre posta più a est dell'antemurale turrito, nel lato sud"
+          "la torre posta a destra dell'antemurale turrito, lato sud"
         ],
         "check": 0,
         "name": "antemurale_torre2",
         "animation": 0
+      },
+      "82": {
+        "desc": [
+          "la torre del nuraghe direzione sud",
+          "la torre del nuraghe posta più a sud",
+          "la torre del nuraghe più a sud"
+        ],
+        "check": 0,
+        "name": "nuraghe_sud",
+        "animation": 1
       }
   }
 }
