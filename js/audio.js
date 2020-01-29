@@ -263,16 +263,13 @@ $(document).ready(function() {
 
     var x = e.keyCode;
 
-    if(x == 27)
+    if( x == 27  )
     {
       console.log("ESC!");
       awaitingWelcome = 0;
-      return;
-
-
     }
 
-    if (x == lastX )
+    if (x == lastX &&(x != 32 && x != 75 ))
       return;
 
     lastX = x;
