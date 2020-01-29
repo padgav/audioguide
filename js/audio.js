@@ -257,8 +257,27 @@ $(document).ready(function() {
   }
 
   //funzione tasto
+
+
   function Tasto(e) {
 
+    var x = e.keyCode;
+
+    if(x == 27)
+    {
+      console.log("ESC!");
+      awaitingWelcome = 0;
+      return;
+
+
+    }
+
+    if (x == lastX )
+      return;
+
+    lastX = x;
+
+    var utterThis = new SpeechSynthesisUtterance();
     if(inactivity != null)
     {
       console.log("Inactivity Stop.. ");
@@ -270,7 +289,6 @@ $(document).ready(function() {
       console.log("Inactivity Start.. ");
       inactivityStart();
     }
-    var x = e.keyCode;
 
 
     var utterThis = new SpeechSynthesisUtterance();
@@ -282,7 +300,7 @@ $(document).ready(function() {
     //if ( ((focusElem != true) || ((x != lastX)||(x != 32))) && awaitingWelcome != 1 )
     if ( (awaitingWelcome != 1) || (x == 32) )
     {
-      lastX = x;
+
 
       if((focusElem != true))
       switch (x) {
