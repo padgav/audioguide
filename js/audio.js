@@ -246,7 +246,8 @@ function inactivityStop() {
   clearTimeout(inactivity);
 }
 
-$(document).ready(function() {
+//$(".html").ready(function() {
+  $(document).ready(function() {
 
   recognition = new SpeechRecognition();
   speechRecognitionList = new SpeechGrammarList();
@@ -271,8 +272,6 @@ $(document).ready(function() {
 
 
   //funzione tasto
-
-
   function Tasto(e) {
 
     var x = e.keyCode;
