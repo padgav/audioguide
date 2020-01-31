@@ -1,12 +1,16 @@
 #!/bin/bash
+#UNCOMMENT NEXT LINE
+#cd $(dirname $0)
 #IF YOU INSTALLED ELASTICSEARCH THROUGHT BREW UNCOMMENT NEXT ROW:
-cd $(dirname $0)
-brew services start elasticsearch
+#brew services start elasticsearch
 #IF YOU INSTALLED ELASTICSEARCH IN ANOTHER DIR UNCOMMENT NEXT ROW AND REPLACE ‘PATH’ WITH THE CORRECT PATH FOR ELASTICSEARCH
 #PATH/bin/elasticsearch
-sleep 15
-open -a "Google Chrome" --args --kiosk --app=http://localhost:3000
-node index.js
-#USE THE COMMAND LINE TO MOVE INTO THE DIRECTORY THAT CONTAINS THIS FILE AND TYPE THIS IN YOUR TERMINAL 
+#UNCOMMENT NEXT LINE
+#sleep 15
+#UNCOMMENT NEXT LINE
+#open -a "Google Chrome" --args --kiosk --app=http://localhost:3000
+#UNCOMMENT NEXT LINE
+#node index.js
+#IF YOU PREFER, USE THE COMMAND LINE TO MOVE INTO THE DIRECTORY THAT CONTAINS THIS FILE AND TYPE NEXT LINE IN YOUR TERMINAL 
 #chmod +x execute_audioguide.sh
 
