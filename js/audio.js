@@ -36,7 +36,8 @@ var focusElem = false;
 var rateStd = 0.9;
 var currRate = rateStd;
 var awaitingWelcome = 1;
-var inactivity = null;
+var welcomeOver = 1;
+var inactivity;
 
 //var started = 0;
 var myMcoms = {
@@ -89,6 +90,7 @@ var gennamaria_paint
 var msg_conf__pic_path = './conf/msg_conf.json';
 var msg_conf_plastic_path = './conf/msg_conf_plastic.json';
 
+var start_conf;
 var msg_conf;
 var msg_conf_pic;
 var msg_conf_plastic;
@@ -201,6 +203,16 @@ synth.onvoiceschanged = function() {
 
 };
 
+window.onload = loadingRes;
+/*window.onload*/
+function loadingRes() {
+    let resTimer = setTimeout(function() {
+    console.log("resourses loaded")
+    if(1)
+    $(".painting").attr("src", current_painting["src"]);
+  }, 2000);
+}
+
 function reloadApp()
 {
   window.location.reload();
@@ -221,6 +233,17 @@ function RemoveKClasses(x) {
     if(i!=x)
     $(".painting").removeClass("k"+i);
   }
+}
+
+function inactivityStart() {
+  inactivity = setTimeout(function(){
+    /*alert("Hello");*/
+    reloadApp();
+  }, 8000);
+}
+
+function inactivityStop() {
+  clearTimeout(inactivity);
 }
 
 $(document).ready(function() {
@@ -245,16 +268,7 @@ $(document).ready(function() {
 
   //var inactivity;
 
-  function inactivityStart() {
-    inactivity = setTimeout(function(){
-      /*alert("Hello");*/
-      reloadApp();
-    }, 120000);
-  }
 
-  function inactivityStop() {
-    clearTimeout(inactivity);
-  }
 
   //funzione tasto
 
@@ -267,25 +281,29 @@ $(document).ready(function() {
     {
       console.log("ESC!");
       awaitingWelcome = 0;
+      $("#answer").html("");
+      synth.pause();
+      //console.log("inactivity started");
     }
 
-    if (x == lastX &&(x != 32 && x != 75 ))
+    if(inactivity != null)
+    {
+      inactivityStop();
+      console.log("inactivity stopped");
+    }
+
+    if(awaitingWelcome != 1)
+    {
+      inactivityStart();
+      console.log("inactivity started");
+    }
+
+    if (x == lastX &&(x != 75 ))
       return;
 
     lastX = x;
 
     var utterThis = new SpeechSynthesisUtterance();
-    if(inactivity != null)
-    {
-      console.log("Inactivity Stop.. ");
-      inactivityStop();
-    }
-
-    if(awaitingWelcome != 1)
-    {
-      console.log("Inactivity Start.. ");
-      inactivityStart();
-    }
 
 
     var utterThis = new SpeechSynthesisUtterance();
@@ -301,6 +319,14 @@ $(document).ready(function() {
 
       if((focusElem != true))
       switch (x) {
+
+        case 32:
+        //ctrlK = 1;
+        //StartNow();
+        //reStart();
+        //getResult('adorazione');
+        console.log("MetaKey pressed: ", ctrlK);
+        break;
 
         case 75:
 
@@ -320,17 +346,10 @@ $(document).ready(function() {
 
         break;
 
-        case 32:
-        ctrlK = 1;
-        //StartNow();
-        reStart();
-        //getResult('adorazione');
-        console.log("MetaKey pressed: ", ctrlK);
-        break;
-
         //AUDIO COM
         case 107: //+ 107
         txtRedirect(myMcoms["vup"]);
+        //reStart();
         break;
         case 109: //- 109
         txtRedirect(myMcoms["vdown"]);
@@ -684,9 +703,17 @@ $(document).ready(function() {
               volume: 0.5
             }, 1000);
             //recognition.start();
+
             awaitingWelcome = 0;
-            console.log("Inactivity start.. ");
-            inactivityStart();
+            welcomeOver = 0;
+            if(inactivity == null)
+            {
+              inactivityStart();
+              console.log("Inactivity start on Welcome End.. ");
+            }
+            //console.log("Inactivity start.. ");
+            //if(inactivity == null)
+            //  inactivityStart();
           }
           synth.speak(utterThis);
 
