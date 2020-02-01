@@ -208,8 +208,10 @@ window.onload = loadingRes;
 function loadingRes() {
     let resTimer = setTimeout(function() {
     console.log("resourses loaded")
-    if(1)
-    $(".painting").attr("src", current_painting["src"]);
+    if(1){
+      $(".painting").attr("src", current_painting["src"]);
+      $(".card").attr("id", current_painting["name"]);
+    }
   }, 2000);
 }
 
@@ -301,9 +303,6 @@ function inactivityStop() {
       return;
 
     lastX = x;
-
-    var utterThis = new SpeechSynthesisUtterance();
-
 
     var utterThis = new SpeechSynthesisUtterance();
 
