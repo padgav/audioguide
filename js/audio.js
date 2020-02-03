@@ -105,21 +105,7 @@ async function readConfiguration()
 ///////////////////////////////////////
 // end load conf
 //////////////////////////////////////
-/*
-synth.onvoiceschanged = function () {
-  voices = synth.getVoices();
-  console.log(voices)
-};
-*/
 
-// window.onload = loadingRes;
-// /*window.onload*/
-// function loadingRes() {
-//   let resTimer = setTimeout(function () {
-//     console.log("resourses loaded")
-//     $(".painting").attr("src", current_painting["src"]);
-//   }, 2000);
-// }
 
 //function GRS Get Random String
 function grs(array) {
@@ -144,10 +130,8 @@ function showText(message) {
   $("#answer").html(message);
   $("#answer").fadeIn();
 
-
  console.log ("altezza ", $("#answer").outerHeight());
  console.log ("altezza rghe", $("#answer").css("lineHeight"));
-
 
   var len = message.length;
   var duration = 80 * len;
