@@ -1,4 +1,11 @@
 {
-  "start1": "Gennamaria",
-  "start2": "Adorazione"
+  "start": "Gennamaria",
+
+  "config_files": [
+    "./conf/adorazione_conf.json",
+    "./conf/annunciazione_conf.json",
+    "./conf/visitazione_conf.json",
+    "./conf/gennamaria_conf.json"
+  ]
+
 }

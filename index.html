@@ -1,26 +1,3 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
-
-img {
-max-width:100%;
-height:auto;
-
-}
-<picture>
-     <source srcset="img/480.jpg" media="(max-width: 480px)">
-    <source srcset="img/768.jpg" media="(max-width: 768px)">
-    <img srcset="img/1688.jpg" alt="Immagine di default">
-</picture>
-
-
-.img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,50 +6,16 @@ height:auto;
     @import "css/animations.css";
 
   </style>
-  <!--
-  100% {
-  transform: scale3d(1, 1, 1) translate3d(0, 0, 0px);
-  animation-timing-function: ease-in;
-  opacity: 1;
-  }
-  -->
-  <!--link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script-->
+ 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="node_modules/elasticsearch-browser/elasticsearch.jquery.min.js"></script>
   <script src="node_modules/elasticsearch-browser/elasticsearch.min.js"></script>
-
-  <!--<script src="http://js.leapmotion.com/leap-0.6.3.min.js"></script>-->
+  <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.6.0.js"></script>
 
 
   <script src="js/audio.js"></script>
 
-  <!--script>
-  var controllerOptions = {};
-  var c = 0;
-  var controller = Leap.loop(controllerOptions, function(frame) {
-  console.log("frame hands length", frame.hands.length);
-
-  if((frame.hands.length>0)){
-  if(c==0){
-  var utterThis = new SpeechSynthesisUtterance(messages[1]);
-  utterThis.voice = voices[2];
-  synth.speak(utterThis);
-  c=1;
-}
-controller.disconnect();
-console.log("palmposition", frame.hands[0].palmPosition);
-}
-
-
-/*if (frame.pointables.length > 0) {
-console.log("type: ",frame.pointables[1].type);
-}*/
-})
-
-</script-->
 
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -81,25 +24,16 @@ console.log("type: ",frame.pointables[1].type);
 
   <div class="container">
 
-    <!--div class="card" id="Annunciazione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=43&w=640&h=480&force=false"/></div>
-    <div class="card" id="Crocefissione"><img  src="http://www.pinacoteca.cagliari.beniculturali.it/getImage.php?id=44&w=640&h=480&force=false"/></div-->
+    
 
-
-
-    <div class="card" id="Gennamaria" style="max-height:93%">
-      <img  class="painting" <!--src="/images/gennamaria_pic.jpg"-->/>
-      <div id="answer">
-      </div>
+    <div class="card"  style="max-height:93%">
+      <img  class="painting"/>
+      <iframe style="display: none" class="model" width="100%" height="100%" src="" id="api-frame" allow="autoplay; fullscreen; vr" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <div id="answer"></div>
     </div>
-      <!--<input style="display:block;position:fixed;top:50%;left:75%" type="text" id="question" placeholder="Domanda"> -->  <!--width:240px;position:fixed;top:200px;left:75%-->
-
-
-
-
-    <!--div id="pointer"></div-->
-    <!--<select></select>-->
+      
   </div> <!--- container -->
-  <!--<input type="text"  style="opacity: 0.95" id="question" placeholder="Domanda" > -->
+  
   <input tabindex="1" type="text"  style="opacity: 0.95" id="question" placeholder="Domanda" onfocus="focusElem=true" onblur="focusElem=false" > <!-- INPUT posto sotto come in origine-->
 
 </body>

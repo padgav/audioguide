@@ -8,7 +8,7 @@
 #UNCOMMENT NEXT LINE
 #sleep 15
 #UNCOMMENT NEXT LINE
-#open -a "Google Chrome" --args --kiosk --app=http://localhost:3000
+#open -a "Google Chrome" --args --kiosk --app=http://localhost:3000 --autoplay-policy=no-user-gesture-required
 #UNCOMMENT NEXT LINE
 #node index.js
 #IF YOU PREFER, USE THE COMMAND LINE TO MOVE INTO THE DIRECTORY THAT CONTAINS THIS FILE AND TYPE NEXT LINE IN YOUR TERMINAL 

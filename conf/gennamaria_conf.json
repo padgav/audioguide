@@ -2,16 +2,22 @@
   "name": "Gennamaria",
   "alt_name": "Genna Maria",
   "id": "000",
+  "uid": "a9785ec051404d24aea9b57778bedc1c",
   "src": "./images/gennamaria_pic.jpg",
+  "type": "model",
   "art": "di ",
   "support": " plastico tàttile ",
   "music": "canto_sardo.mp3",
   "conf": "./conf/msg_conf_plastic.json",
+  "startBehaviour": "standby",
   "caption": ". Ubicato sulla sommità di una collina a 408 metri sopra il livello del mare, a circa un chilometro dal paese di Villanovaforru: gli elementi principali sono il nuraghe, l'antemurale e un villaggio situato all'interno ed all'esterno dell'antemurale;",
-
+  "color": "#00ff00",
+  "delay": "000",
+  "position": [24.90047091451182, -316.3894617907232, 49.51737693584993],
+  "target":[28.136344737626715,-322.21416138387946,2.7556670622001502],
   "subjects": {
 
-      "48": {
+      "Digit0": {
         "desc": [
           "la torre centrale del nuraghe",
           "l'interno della torre centrale nuragica",
@@ -19,9 +25,11 @@
         ],
         "check": 0,
         "name": "nuraghe",
-        "animation": 1
+        "animation": 1,
+        "position": [42.45830580661257,-332.8185463844396,11.432761461019398],
+        "target":[28.136344737626715,-322.21416138387946,2.7556670622001502]
         },
-      "66": {
+      "KeyB": {
         "desc": [
           "la parte sud del villaggio ricostruito ",
           "la zona sud del villaggio ricostruita",
@@ -31,7 +39,7 @@
         "name": "villaggio_ric_sud",
         "animation": 0
       },
-      "77": {
+      "KeyM": {
         "desc": [
           "la parte sud del villaggio ricostruito ",
           "la zona sud del villaggio ricostruita",
@@ -41,7 +49,7 @@
         "name": "villaggio_ric_sud",
         "animation": 0
       },
-      "53": {
+      "Digit5": {
         "desc": [
           "l'antemurale a est",
           "la fascia antemurale posta nel lato est",
@@ -51,7 +59,7 @@
         "name": "antemurale_est",
         "animation": 0
       },
-      "51": {
+      "Digit3": {
         "desc": [
           "l'antemurale a ovest",
           "la fascia antemurale nel lato ovest",
@@ -62,7 +70,7 @@
         "name": "antemurale_ovest",
         "animation": 0
       },
-      "50": {
+      "Digit2": {
         "desc": [
           "la torre posta più a ovest  dell'antemurale nord",
           "la torre più a ovest della fascia antemurale nord",
@@ -72,7 +80,7 @@
         "name": "antemurale_torre3",
         "animation": 0
       },
-      "73": {
+      "KeyI": {
         "desc": [
           "il rifascio di parte del muro del nuraghe, torre lato ovest",
           "il rifascio di parte del muro del nuraghe, torre ovest",
@@ -82,7 +90,7 @@
         "name": "rifascio_ovest",
         "animation": 0
       },
-      "76": {
+      "KeyL": {
         "desc": [
           "il rifascio di parte del muro del nuraghe, torre lato est",
           "il rifascio di parte del muro del nuraghe, torre est",
@@ -92,7 +100,7 @@
         "name": "rifascio_est",
         "animation": 0
       },
-      "49": {
+      "Digit1": {
         "desc": [
           "il rifascio di parte del muro del nuraghe, tra le sue torri più ad ovest",
           "il rifascio di parte del muro del nuraghe, tra le sue torri più ad ovest",
@@ -102,7 +110,7 @@
         "name": "rifascio_est",
         "animation": 0
       },
-      "79": {
+      "KeyO": {
         "desc": [
           "la torre lato ovest del nuraghe",
           "la torre del nuraghe posta a ovest",
@@ -113,7 +121,7 @@
         "name": "rifascio_ovest",
         "animation": 0
       },
-      "65": {
+      "KeyA": {
         "desc": [
           "la prima camera con bacìle",
           "la prima camera con il bacìle",
@@ -123,7 +131,7 @@
         "name": "bacile1",
         "animation": 0
       },
-      "80": {
+      "KeyP": {
         "desc": [
           "il villaggio originario",
           "la zona del villaggio relativo all'insediamento originario",
@@ -133,7 +141,7 @@
         "name": "villaggio",
         "animation": 0
       },
-      "67": {
+      "KeyC": {
         "desc": [
           "il villaggio originario",
           "la zona del villaggio relativo all'insediamento originario",
@@ -143,7 +151,7 @@
         "name": "villaggio",
         "animation": 0
       },
-      "88": {
+      "KeyX": {
         "desc": [
           "il villaggio originario",
           "la zona del villaggio relativo all'insediamento originario",
@@ -153,7 +161,7 @@
         "name": "villaggio",
         "animation": 0
       },
-      "71": {
+      "KeyG": {
         "desc": [
           "la torre all'estrema sinistra dell'antemurale sud",
           "la torre più a sinistra della fascia antemurale sud",
@@ -163,7 +171,7 @@
         "name": "antemurale_torre1",
         "animation": 0
       },
-      "68": {
+      "KeyD": {
         "desc": [
           "l'antemurale nel lato sud",
           "la fascia antemurale posta a sud",
@@ -173,7 +181,7 @@
         "name": "antemurale_sud",
         "animation": 2
       },
-      "81": {
+      "KeyQ": {
         "desc": [
           "l'antemurale nel lato sud",
           "la fascia antemurale posta a sud",
@@ -183,7 +191,7 @@
         "name": "antemurale_sud",
         "animation": 2
       },
-      "52": {
+      "Digit4": {
         "desc": [
           "il muro che circonda la Casa a corte centrale",
           "il muro intorno alla Casa a corte centrale",
@@ -193,7 +201,7 @@
         "name": "casaacorte",
         "animation": 0
       },
-      "89": {
+      "KeyY": {
         "desc": [
           "il cortile con cisterna",
           "il cortile col pozzo",
@@ -204,7 +212,7 @@
         "name": "cortile",
         "animation": 4
       },
-      "87": {
+      "KeyW": {
         "desc": [
           "la seconda camera con bacìle",
           "la seconda camera con il bacìle",
@@ -214,7 +222,7 @@
         "name": "bacile2",
         "animation": 0
       },
-      "84": {
+      "KeyT": {
         "desc": [
           "il rifascio del parte del muro del nuraghe (lato sud)",
           "il rifascio del parte del muro del nuraghe (lato sud)",
@@ -225,7 +233,7 @@
         "name": "rifascio_sud",
         "animation": 0
       },
-      "85": {
+      "KeyU": {
         "desc": [
           "il rifascio del parte del muro del nuraghe (lato sud)",
           "il rifascio del parte del muro del nuraghe (lato sud)",
@@ -236,7 +244,7 @@
         "name": "rifascio_sud",
         "animation": 0
       },
-      "78": {
+      "KeyN": {
         "desc": [
           "la parte nord del villaggio ricostruito",
           "la zona nord del villaggio ricostruita",
@@ -246,7 +254,7 @@
         "name": "villaggio_ric_nord",
         "animation": 3
       },
-      "86": {
+      "KeyV": {
         "desc": [
           "la parte nord del villaggio ricostruito",
           "la zona nord del villaggio ricostruita",
@@ -256,7 +264,7 @@
         "name": "villaggio_ric_nord",
         "animation": 3
       },
-      "83": {
+      "KeyS": {
         "desc": [
           "la porzione ovest della fascia murale",
           "la parte di fascia antemurale ad ovest",
@@ -266,7 +274,7 @@
         "name": "antemurale_ovest",
         "animation": 0
       },
-      "90": {
+      "KeyZ": {
         "desc": [
           "l'antemurale a est",
           "la fascia antemurale posta nel lato est",
@@ -276,7 +284,7 @@
         "name": "antemurale_est",
         "animation": 0
       },
-      "70": {
+      "KeyF": {
         "desc": [
           "la torre all'estrema sinistra dell'antemurale sud",
           "la torre più a sinistra della fascia antemurale sud",
@@ -286,7 +294,7 @@
         "name": "antemurale_torre1",
         "animation": 0
       },
-      "69": {
+      "KeyE": {
         "desc": [
           "la torre all'estrema destra dell'antemurale sud",
           "la torre più a destra della fascia antemurale sud",
@@ -296,7 +304,7 @@
         "name": "antemurale_torre2",
         "animation": 0
       },
-      "82": {
+      "KeyR": {
         "desc": [
           "la torre del nuraghe direzione sud",
           "la torre del nuraghe posta più a sud",

@@ -8,38 +8,27 @@ function beep() {
   snd.play();
 }
 
-//var itsACom = false;
-
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 var recognition;
 var speechRecognitionList;
-var lastQuestionTime = Date.now();
-var lastHandlingTime = Date.now();
-var touchs;
-var standbyTime = 60 * 1000;
-var myTimeOut;
 
 var input = "";
 var startKeyStroke = false;
 var keyStrokeValue = "";
 var currentPress;
 var lastPress;
-var cp = 0;
-var lp = 0;
 
-var messages = new Array();
+var API;
+
 var voices;
-var VOICEIDX = 3;
-var focusElem = false;
+var VOICEIDX = 0;
 var rateStd = 0.9;
 var currRate = rateStd;
-var awaitingWelcome = 1;
-var welcomeOver = 1;
-var inactivity;
 
-//var started = 0;
+var askedNames = {};
+
 var myMcoms = {
   moff: "spegni la musica",
   mon: "accendi la musica",
@@ -56,200 +45,250 @@ var myMcoms = {
   vdown: "abbassa la voce"
 }
 
-//tessera 0008657628 key 0000142480
-//quadri = {1: "Adorazione", 2: "Annunciazione", 3: "Crocefissione"}
-///
-
 var synth = window.speechSynthesis;
-var bg;
-var card = "Gennamaria";
-var img;
 var music = new Audio();
-music.src = "";
-//var music = new Audio("music/coro_angelico.mp3");
+music.setAttribute("autoplay", "true");
+music.setAttribute("muted", "muted");
 
 ///////////////////////////////////////
 // start load conf
 //////////////////////////////////////
 
 var start_conf_path = './conf/start_conf.json';
-
-var adorazione_conf_path = './conf/adorazione_conf.json';
-var annunciazione_conf_path = './conf/annunciazione_conf.json';
-var visitazione_conf_path = './conf/visitazione_conf.json';
-var gennamaria_conf_path = './conf/gennamaria_conf.json';
-//var crocefissione_conf_path = './conf/crocefissione_conf.json';
-
+var configurations = [];
 var current_painting;
-var adorazione_paint;
-var annunciazione_paint;
-var visitazione_paint;
-var gennamaria_paint
-//var crocefissione_paint;
+var current_index = -1;
 
-var msg_conf__pic_path = './conf/msg_conf.json';
-var msg_conf_plastic_path = './conf/msg_conf_plastic.json';
+readConfiguration().then(x => { restartAll()});  
 
-var start_conf;
-var msg_conf;
-var msg_conf_pic;
-var msg_conf_plastic;
+async function readConfiguration() 
+{
+  var count = 0;
+  var response = await fetch(start_conf_path);
+  var data = await response.json()
+  var startName = data.start;
+  for(i in data.config_files){
+    var item = data.config_files[i];
+    var response1 = await fetch(item);
+    var data1 = await response1.json();
+    await configurations.push(data1);
+    await console.log(data1.name);
+    if (data1.name == startName) {
+      current_painting = data1;
+      current_index = count;
+    }
+    count++;
+    var config_file = data1.conf;
+    var r = await fetch(config_file);
+    var conf = await r.json();
+    data1.messages = conf;
+  }
+  return count;
+}
+ 
+// //start_conf json load
+// async function readConfiguration() {
+// fetch(start_conf_path).then(response => {
+//   return response.json();
+// }).then(data => {
+//   // Work with your JSON data here..
+//   $(".card").removeAttr("id");
+//   $(".card").attr("id", data.start);
+
+//   var startName = data.start;
+//   console.log(data);
+//   var count = 0;
+//   data.config_files.map(function (item) {
+//     fetch(item).then(response => {
+//       return response.json();
+//     }).then(data => {
+//       configurations.push(data);
+//       if (data.name == startName) {
+//         current_painting = data;
+//         current_index = count++;
+//       }
+//       var config_file = data.conf;
+//       fetch(config_file).then(response => {
+//         return response.json();
+//       }).then(conf => {
+//         data.messages = conf;
+
+        
+//       }).catch(err => {
+//         // What do when the request fails
+//         console.log('The request failed!');
+//       });
+//     }).catch(err => {
+//       // What do when the request fails
+//       console.log('The request failed!', err);
+//     });
+
+//   });
+// }).catch(err => {
+//   // What do when the request fails
+//   console.log('The request failed!');
+// });
+// }
 
 
-//start_conf json load
-fetch(start_conf_path).then(response => {
-  return response.json();
-}).then(data => {
-  // Work with your JSON data here..
-  $(".card").removeAttr("id");
-  $(".card").attr("id", data["start1"]);
-  console.log(data);
-}).catch(err => {
-  // What do when the request fails
-  console.log('The request failed!');
-});
-//adorazione_conf json load
-fetch(adorazione_conf_path).then(response => {
-  return response.json();
-}).then(data => {
-  // Work with your JSON data here..
-  adorazione_paint = data
-  //default current_painting assignation
-  if($(".card").attr("id") == 'Adorazione')
-  current_painting = adorazione_paint;
-  //current_painting = adorazione_paint;
-  console.log(data);
-}).catch(err => {
-  // What do when the request fails
-  console.log('The request failed!');
-});
-
-//annunciazione_conf json load
-fetch(annunciazione_conf_path).then(response => {
-  return response.json();
-}).then(data => {
-  // Work with your JSON data here..
-  annunciazione_paint = data;
-  //default current_painting assignation
-  if($(".card").attr("id") == 'Annunciazione')
-  current_painting = annunciazione_paint;
-  console.log(data);
-}).catch(err => {
-  // What do when the request fails
-  console.log('The request failed!');
-});
-
-//visitazione_conf json load
-fetch(visitazione_conf_path).then(response => {
-  return response.json();
-}).then(data => {
-  // Work with your JSON data here..
-  visitazione_paint = data;
-  //default current_painting assignation
-  if($(".card").attr("id") == 'Visitazione')
-  current_painting = visitazione_paint;
-  console.log(data);
-}).catch(err => {
-  // What do when the request fails
-  console.log('The request failed!');
-});
-
-//gennamaria_conf json load
-fetch(gennamaria_conf_path).then(response => {
-  return response.json();
-}).then(data => {
-  // Work with your JSON data here..
-  gennamaria_paint = data;
-  //default current_painting assignation
-  if($(".card").attr("id") == 'Gennamaria')
-  current_painting = gennamaria_paint;
-  console.log(data);
-}).catch(err => {
-  // What do when the request fails
-  console.log('The request failed!');
-});
-
-//msg_conf json load
-fetch(msg_conf__pic_path).then(response => {
-  return response.json();
-}).then(data => {
-  // Work with your JSON data here..
-  msg_conf_pic = data;
-  if($(".card").attr("id") != 'Gennamaria')
-  msg_conf = msg_conf_pic;
-  console.log(data);
-}).catch(err => {
-  // What do when the request fails
-  console.log('The request failed!');
-});
-fetch(msg_conf_plastic_path).then(response => {
-  return response.json();
-}).then(data => {
-  // Work with your JSON data here..
-  msg_conf_plastic = data;
-  if($(".card").attr("id") == 'Gennamaria')
-  msg_conf = msg_conf_plastic;
-  console.log(data);
-}).catch(err => {
-  // What do when the request fails
-  console.log('The request failed!');
-});
 ///////////////////////////////////////
 // end load conf
 //////////////////////////////////////
 
-synth.onvoiceschanged = function() {
+synth.onvoiceschanged = function () {
   voices = synth.getVoices();
-
+  console.log(voices)
 };
 
-window.onload = loadingRes;
-/*window.onload*/
-function loadingRes() {
-    let resTimer = setTimeout(function() {
-    console.log("resourses loaded")
-    if(1){
-      $(".painting").attr("src", current_painting["src"]);
-      $(".card").attr("id", current_painting["name"]);
-    }
-  }, 2000);
-}
+// window.onload = loadingRes;
+// /*window.onload*/
+// function loadingRes() {
+//   let resTimer = setTimeout(function () {
+//     console.log("resourses loaded")
+//     $(".painting").attr("src", current_painting["src"]);
+//   }, 2000);
+// }
 
-function reloadApp()
-{
-  window.location.reload();
+//function GRS Get Random String
+function grs(array) {
+  return array[getRandomArbitrary(0, array.length - 1)];
 }
 
 //get random integer from min up to max
 function getRandomArbitrary(min, max) {
-
-  x = Math.floor(Math.random() * (max - min + 1) ) + min;
-  return x;
-
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-//Removes all KClasses but the passed value
-function RemoveKClasses(x) {
-  for (let i = 1; i < 5; i++)
-  {
-    if(i!=x)
-    $(".painting").removeClass("k"+i);
+
+function showText(message) {
+  //$("#answer").hide();
+  $("#answer").css({
+    top: $("body").height() / 2
+  });
+  var color = "gray";
+  if(current_painting.color != undefined) color = current_painting.color;
+  $("#answer").css('color', color);
+  $("#answer").hide();
+  $("#answer").html(message);
+  $("#answer").fadeIn();
+
+
+ console.log ("altezza ", $("#answer").outerHeight());
+ console.log ("altezza rghe", $("#answer").css("lineHeight"));
+
+
+  var len = message.length;
+  var duration = 80 * len;
+  
+  if(duration < 10000) duration = 10000;
+  $("#answer").animate({
+    top: -($(document).height()),
+    queue: false
+  }, duration , "linear");
+}
+
+
+function speechText(message, onendFunction) {
+  var utterThis = new SpeechSynthesisUtterance();
+  utterThis.text = message;
+  utterThis.voice = voices[VOICEIDX];
+  utterThis.rate = currRate;
+
+  utterThis.onend = function (event) {
+    console.log("*** WELCOME END!!! ***");
+    if (onendFunction) onendFunction();
+    $(music).animate({
+      volume: 0.1
+    }, 1000);
+    $("#answer").stop().fadeOut();
+  }
+  synth.cancel();
+  synth.speak(utterThis);
+
+}
+var timeout;
+ function startWelcomeMessage() {
+  ;
+  music.src = "./music/" + current_painting.music;
+  music.play();
+
+  var name = current_painting.name;
+  if(current_painting.alt_name != undefined) name = current_painting.alt_name
+  var message = current_painting.messages.welcome[0] + current_painting.support +
+    current_painting.art + name + current_painting.caption + current_painting.messages.welcome[1];
+
+    timeout = setTimeout( function(){
+    showText(message);
+    speechText(message, function () { if (state == 1) state = 2 });
+  }, current_painting.delay);
+  
+}
+
+function restartAll(){
+  clearTimeout(timeout);
+  // stop speech
+  synth.cancel();
+
+  //stop music
+  music.pause();
+
+  //delete message on screen
+  $("#answer").html("");
+
+  //delete askedArray
+  askedNames = {};
+
+  state = 0;
+
+  //show new image or model
+  if(current_painting.type == "model"){
+    $(".painting").hide();
+    $(".model").show();
+    if(current_painting.loaded != true){
+      var iframe = document.getElementById( 'api-frame' );
+      var client = new Sketchfab( iframe );
+      client.init( current_painting.uid, {
+        success: function onSuccess( api ){
+            API = api;
+            api.start();
+            api.addEventListener( 'viewerready', function() {
+            console.log( 'Viewer is ready' );
+            current_painting.loaded = true;
+          } );
+        api.setCameraEasing('easeInOutQuad');
+      },
+      error: function onError() {
+          console.log( 'Viewer error' );
+      }
+    
+    } );
+
+    }
+  }
+  else{
+    $(".painting").show();
+    $(".model").hide();
+    $(".painting").attr("src", current_painting.src);
+  }
+
+  if(current_painting.startBehaviour == "standby"){
+    state = 0;
+  }
+  else{
+    state = 1;
+    // start welcome message
+    startWelcomeMessage();
   }
 }
 
-function inactivityStart() {
-  inactivity = setTimeout(function(){
-    /*alert("Hello");*/
-    reloadApp();
-  }, 8000);
-}
 
-function inactivityStop() {
-  clearTimeout(inactivity);
-}
 
-//$(".html").ready(function() {
-  $(document).ready(function() {
+var state = 0;
+//state = 0 standby
+//state = 1 welcome message, stop sensor
+//state = 2 ready for use
+
+$(document).ready(function () {
 
   recognition = new SpeechRecognition();
   speechRecognitionList = new SpeechGrammarList();
@@ -260,916 +299,508 @@ function inactivityStop() {
   recognition.maxAlternatives = 1;
   //var synth = window.speechSynthesis;
 
-  //evento tastiera e assegnazione a ctrlK
-  var ctrlK = 0;
-  var active = 0;
   document.addEventListener('keydown', Tasto);
-  //focusElem
 
-  var lastX = -1;
-  var currWelcome = "";
+  var userActivity = false;
+  setInterval(function () {
+    if (userActivity == false) {
+      state = 0;
+      synth.cancel();
+      $("#answer").html("");
+    }
+    userActivity = false
+  } , 120000);
 
-  //var inactivity;
-
-
+  var lastKey = -1;
 
   //funzione tasto
   function Tasto(e) {
+    userActivity = true;
+    var x = e.code;
 
-    var x = e.keyCode;
+    if (x == "Space") {
+      //only for develop use
+      //reset application in the state 0 
 
-    if( x == 27  )
-    {
-      console.log("ESC!");
-      awaitingWelcome = 0;
+      state = 0;
+
+      // stop speech
+      synth.cancel();
+      //delete message on screen
       $("#answer").html("");
-      synth.pause();
-      //console.log("inactivity started");
-    }
-
-    if(inactivity != null)
-    {
-      inactivityStop();
-      console.log("inactivity stopped");
-    }
-
-    if(awaitingWelcome != 1)
-    {
-      inactivityStart();
-      console.log("inactivity started");
-    }
-
-    if (x == lastX &&(x != 75 ))
+      restartAll();
+      //exit from Tasto function
       return;
+    }
 
-    lastX = x;
+    else if(x == "ArrowRight"){
+      current_index++;
+      if(current_index >= configurations.length) current_index = 0;
+      current_painting = configurations[current_index];
+      restartAll();
+       //exit from Tasto function
+       return;
+    }
 
-    var utterThis = new SpeechSynthesisUtterance();
+    else if(x == "ArrowLeft"){
+      current_index--;
+      if(current_index < 0) current_index = configurations.length - 1;
+      current_painting = configurations[current_index];
+      restartAll();
+       //exit from Tasto function
+       return;
+    }
 
-    touchs = msg_conf['touching'][getRandomArbitrary(0, 2)];
+    if (state == 0) {
+      // standby state
+      // go to state 1
+      state = 1;
 
-    //w 87 a 65 s 83 d 68 f 70 g 71
-    //if ( (focusElem != true) || ((x != lastX)||(x != 32)) ) //wasdfg
-    //if ( ((focusElem != true) || ((x != lastX)||(x != 32))) && awaitingWelcome != 1 )
-    if ( (awaitingWelcome != 1) || (x == 32) )
-    {
+      // start welcome message
+      startWelcomeMessage();
+    }
 
+    else if (state == 1) {
+      //welcome message 
+      if (x == "Escape") {
+        console.log("ESC!");
 
-      if((focusElem != true))
-      switch (x) {
-
-        case 32:
-        //ctrlK = 1;
-        //StartNow();
-        //reStart();
-        //getResult('adorazione');
-        console.log("MetaKey pressed: ", ctrlK);
-        break;
-
-        case 75:
-
-        card = $(".card").attr("id");
-        $("#answer").html(card);
-        beep();
+        $("#answer").html("");
         synth.cancel();
-        $(music).animate({
-          volume: 0.1
-        }, 1000);
-        if (active == 1)
+        state = 2; //now ready!
+      }
+
+    }
+
+    else if (state == 2) {
+      //ready to use
+      if (x == "KeyK") {
+        //start recognition
+        // stop speech
+        synth.cancel();
+
+        //delete message on screen
+        $("#answer").html("");
+        beep();
         recognition.stop();
         recognition.start();
-        //voices = synth.getVoices();
-        lastQuestionTime = Date.now();
-        //StartNow();//controller.connect();
+      }
 
-        break;
+      else {
+        //Normal sensor 
+        if (lastKey != x && current_painting.subjects[x] != undefined) {
+          var message = grs(current_painting.messages.touching) + grs(current_painting.subjects[x].desc);
+          showText(message);
+          speechText(message);
+          lastKey = x;
 
-        //AUDIO COM
-        case 107: //+ 107
-        txtRedirect(myMcoms["vup"]);
-        //reStart();
-        break;
-        case 109: //- 109
-        txtRedirect(myMcoms["vdown"]);
-        break;
+          if(current_painting.type == "model"){
+            if(current_painting.subjects[x].position != undefined && current_painting.subjects[x].target!= undefined){
+              API.setCameraLookAt(
+                current_painting.subjects[x].position, // eye position
+                current_painting.subjects[x].target, // target to lookat
+                6.0 // duration of the animation in seconds
+            );
+            }
+          }else{
 
-
-        default: //      if(awaitingWelcome != 1)
-
-        if(ctrlK == 1 && awaitingWelcome != 1)
-        {
-          if (current_painting['subjects'][x] == null)
-          break;
-
-          if (current_painting['subjects'][x]['check'] == 0)
-          current_painting['subjects'][x]['check'] = 1;
-          synth.cancel();
-
-          if(current_painting['subjects'][x]['animation']!=0)
-          {
-            $(".painting").addClass("k"+current_painting['subjects'][x]['animation']);
-            RemoveKClasses(current_painting['subjects'][x]['animation']);
+          
+            var classAnimationName = "k" + current_painting.subjects[x].animation;
+            $(".painting").removeClass($(".painting").data("lastclass"));
+            $(".painting").data("lastclass", classAnimationName);
+            $(".painting").addClass(classAnimationName);
           }
-
-          utterThis.text = touchs + "" + current_painting['subjects'][x]["desc"][getRandomArbitrary(0, 2)];
-          utterThis.text = touchs + "" + current_painting['subjects'][x]["desc"][getRandomArbitrary(0, 2)];
-          writeSubject(current_painting['subjects'][x]["desc"][0]);
-
-          utterThis.voice = voices[VOICEIDX];
-          synth.speak(utterThis);
         }
-        break;
-
       }
     }
-    console.log("LOGGING X: ", x);
-    if (ctrlK == 0 && active == 0)
-    {
-      lastX = -1;
-      reStart();
-      if(current_painting['subjects'][x] != null)
-      current_painting['subjects'][x]['check'] = 0;
-    }
-
   }
 
-
-  function writeSubject(sbjText) {
-    $("#answer").html(touchs + " " + sbjText);
-    $("#answer").stop();
-    $("#answer").css({
-      top: $("body").height() / 2
-    });
-    //fixTxt();
-  }
-
-  function comunicateInfo(infoTxt) {
-    $("#answer").html(infoTxt);
-    $("#answer").stop();
-    $("#answer").css({
-      top: $("body").height() / 2
-    });
-    //fixTxt();
-  }
-
-  function txtRedirect(tmpText) {
+  //Process internal commands
+  function processCommand(tmpText) {
     switch (tmpText.toLowerCase()) {
 
       case myMcoms["moff"]:
-      console.log("Music pause cause: ", myMcoms["moff"]);
-      music.pause();
-      music.currentTime = 0;
-      break;
+        console.log("Music pause cause: ", myMcoms["moff"]);
+        music.pause();
+        music.currentTime = 0;
+        break;
 
       case myMcoms["mon"]:
-      console.log("Music play cause: ", myMcoms["mon"]);
-      music.play();
-      break;
+        console.log("Music play cause: ", myMcoms["mon"]);
+        music.play();
+        break;
 
       case myMcoms["mdown"]:
-      console.log("Music down cause: ", myMcoms["mdown"]);
-      $(music).animate({
-        volume: 0.05
-      }, 1000);
-      break;
+        console.log("Music down cause: ", myMcoms["mdown"]);
+        $(music).animate({
+          volume: 0.05
+        }, 1000);
+        break;
 
       case myMcoms["mup"]:
-      console.log("Music up cause: ", myMcoms["mup"]);
-      $(music).animate({
-        volume: 0.5
-      }, 1000);
-      break;
+        console.log("Music up cause: ", myMcoms["mup"]);
+        $(music).animate({
+          volume: 0.5
+        }, 1000);
+        break;
 
       case myMcoms["vup"]:
-      console.log("Voice up cause: ", myMcoms["vup"]);
-      currRate = currRate + 0.05;
-      console.log("Curr rate: ", currRate);
-      break;
+        console.log("Voice up cause: ", myMcoms["vup"]);
+        currRate = currRate + 0.05;
+        console.log("Curr rate: ", currRate);
+        break;
 
       case myMcoms["vdown"]:
-      console.log("Voice down cause: ", myMcoms["vdown"]);
-      currRate = currRate - 0.05;
-      console.log("Curr rate: ", currRate);
-      break;
+        console.log("Voice down cause: ", myMcoms["vdown"]);
+        currRate = currRate - 0.05;
+        console.log("Curr rate: ", currRate);
+        break;
 
       case myMcoms["time"]:
-      console.log("Time info cause: ", myMcoms["time"]);
-      tellMeTime();
-      break;
+        console.log("Time info cause: ", myMcoms["time"]);
+        tellMeTime();
+        break;
 
       case myMcoms["restart"]:
-      console.log("Restart cause: ", myMcoms["restart"]);
+        console.log("Restart cause: ", myMcoms["restart"]);
       case myMcoms["restart2"]:
-      console.log("Restart cause: ", myMcoms["restart2"]);
+        console.log("Restart cause: ", myMcoms["restart2"]);
 
-      reStart();
-      /*
-      ctrlK = 1;
-      active = 0;
-      synth.cancel();
-      $("#answer").stop().fadeOut();
-      music.pause(); music.currentTime = 0;
-      StartNow();
-      */
-      break;
+        restartAll();
+
+        break;
 
       case myMcoms["quiet"]:
-      console.log("Turn off cause: ", myMcoms["quiet"]);
+        console.log("Turn off cause: ", myMcoms["quiet"]);
       case myMcoms["quiet2"]:
-      console.log("Turn off cause: ", myMcoms["quiet2"]);
+        console.log("Turn off cause: ", myMcoms["quiet2"]);
       case myMcoms["quiet3"]:
-      console.log("Turn off cause: ", myMcoms["quiet3"]);
-      quietPlease();
-
-      break;
-
-      case myMcoms["change"]:
-
-      synth.cancel();
-      $("#answer").stop().fadeOut();
-      music.pause();
-      music.currentTime = 0;
-      var utterThis = new SpeechSynthesisUtterance();
-
-      if (msg_conf["check"] == 0)
-      msg_conf["check"] = 1;
-      utterThis.text = msg_conf["which"];
-      utterThis.voice = voices[VOICEIDX];
-
-      synth.speak(utterThis);
-      //getResult('descrivi maria');
-      console.log("Ultima richiesta: ", myMcoms["change"]);
-      break;
-
-      case adorazione_paint["name"].toLowerCase():
-      if (msg_conf["check"] == 1) {
-
-        $(".card").removeAttr("id");
-        $(".card").attr("id", adorazione_paint["name"]);
-
-        console.log("Quadro scelto (card): ", $(".card").attr("id"));
-        msg_conf["check"] = 0;
-        txtRedirect("ricomincia");
-        break;
-      }
-      case annunciazione_paint["name"].toLowerCase():
-      if (msg_conf["check"] == 1) {
-        $(".card").removeAttr("id");
-        $(".card").attr("id", annunciazione_paint["name"]);
-
-        console.log("Quadro scelto (card): ", $(".card").attr("id"));
-        msg_conf["check"] = 0;
-        txtRedirect(myMcoms["restart"]);
+        console.log("Turn off cause: ", myMcoms["quiet3"]);
+        quietPlease();
 
         break;
-      }
-      case visitazione_paint["name"].toLowerCase():
-      if (msg_conf["check"] == 1) {
-        $(".card").removeAttr("id");
-        $(".card").attr("id", visitazione_paint["name"]);
 
-        console.log("Quadro scelto (card): ", $(".card").attr("id"));
-        msg_conf["check"] = 0;
-        txtRedirect(myMcoms["restart"]);
+      // case myMcoms["change"]:
 
-        break;
-      }
-      case gennamaria_paint["name"].toLowerCase():
-      case gennamaria_paint["alt_name"].toLowerCase():
-      if (msg_conf["check"] == 1) {
-        $(".card").removeAttr("id");
-        $(".card").attr("id", gennamaria_paint["name"]);
+      //   speechText("che cosa vuoi esplorare?");
+      //   console.log("Ultima richiesta: ", myMcoms["change"]);
+      //   break;
 
-        console.log("Opera scelta (card): ", $(".card").attr("id"));
-        //msg_conf => msg_conf_plastic_path
-        msg_conf["check"] = 0;
-        txtRedirect(myMcoms["restart"]);
+      // case adorazione_paint["name"].toLowerCase():
+      //   if (msg_conf["check"] == 1) {
 
-        break;
-      }
-      default:
-      synth.cancel();
-      getResult($("#question").val());
-      break;
+      //     $(".card").removeAttr("id");
+      //     $(".card").attr("id", adorazione_paint["name"]);
 
+      //     console.log("Quadro scelto (card): ", $(".card").attr("id"));
+      //     msg_conf["check"] = 0;
+      //     txtRedirect("ricomincia");
+      //     break;
+      //   }
+      // case annunciazione_paint["name"].toLowerCase():
+      //   if (msg_conf["check"] == 1) {
+      //     $(".card").removeAttr("id");
+      //     $(".card").attr("id", annunciazione_paint["name"]);
+
+      //     console.log("Quadro scelto (card): ", $(".card").attr("id"));
+      //     msg_conf["check"] = 0;
+      //     txtRedirect(myMcoms["restart"]);
+
+      //     break;
+      //   }
+      // case visitazione_paint["name"].toLowerCase():
+      //   if (msg_conf["check"] == 1) {
+      //     $(".card").removeAttr("id");
+      //     $(".card").attr("id", visitazione_paint["name"]);
+
+      //     console.log("Quadro scelto (card): ", $(".card").attr("id"));
+      //     msg_conf["check"] = 0;
+      //     txtRedirect(myMcoms["restart"]);
+
+      //     break;
+      //   }
+      // case gennamaria_paint["name"].toLowerCase():
+      // case gennamaria_paint["alt_name"].toLowerCase():
+      //   if (msg_conf["check"] == 1) {
+      //     $(".card").removeAttr("id");
+      //     $(".card").attr("id", gennamaria_paint["name"]);
+
+      //     console.log("Opera scelta (card): ", $(".card").attr("id"));
+      //     //msg_conf => msg_conf_plastic_path
+      //     msg_conf["check"] = 0;
+      //     txtRedirect(myMcoms["restart"]);
+
+      //     break;
+      //  }
     }
   }
 
-  function reStart() {
-    ctrlK = 1;
-    active = 0;
-    synth.cancel();
-    $("#answer").stop().fadeOut();
-    music.pause();
-    music.currentTime = 0;
-    StartNow();
-
-  }
+  
 
   function quietPlease() {
-    //ctrlK = 1;
-    //active = 0;
-
-    clearTimeout(myTimeOut);
     $("#answer").stop().fadeOut();
-
     music.pause();
     synth.pause();
     music.currentTime = 0;
-
   }
 
-  //START
-  function StartNow() {
-    var now = Date.now();
-    awaitingWelcome = 1;
-
-
-    //"music/coro_angelico.mp3";
-    console.log("Outer adorazione_paint on start: ", adorazione_paint);
-    console.log("Outer annunciazione_paint on start: ", annunciazione_paint);
-    console.log("Outer visitazione_paint start: ", visitazione_paint);
-    console.log("Outer gennamaria_paint start: ", gennamaria_paint);
-
-
-    switch ($(".card").attr("id")) {
-      case adorazione_paint["name"]:
-      current_painting = adorazione_paint;
-      msg_conf = msg_conf_pic;
-      console.log("CARD ID IN STARTNOW ADOR: ", current_painting["name"]);
-
-      break;
-
-      case annunciazione_paint["name"]:
-      current_painting = annunciazione_paint;
-      msg_conf = msg_conf_pic;
-      console.log("CARD ID IN STARTNOW ANNUNC: ", current_painting["name"]);
-
-      break;
-
-      case visitazione_paint["name"]:
-      current_painting = visitazione_paint;
-      msg_conf = msg_conf_pic;
-      console.log("CARD ID IN STARTNOW CROC: ", current_painting["name"]);
-
-      break;
-
-      case gennamaria_paint["name"]:
-      current_painting = gennamaria_paint;
-      msg_conf = msg_conf_plastic;
-      console.log("CARD ID IN STARTNOW GEANNAM: ", current_painting["name"]);
-
-      break;
-
-      default:
-      console.log("CARD ID NON RICONOSCIUTO IN STARTNOW()!")
-      break;
-    }
-    console.log("Outer current_painting assigned on start: ", current_painting);
-
-    console.log("Outer msg on start: ", msg_conf);
-
-
-
-    //if( music.src = "/")
-    music.src = "/music/";
-    music.src += current_painting["music"];
-
-
-
-    if ((now - lastQuestionTime > standbyTime) && (now - lastHandlingTime > standbyTime)) active = 0;
-    console.log("** ctrlK **", ctrlK); //if ((frame.hands.length > 0){}
-
-    //cambia il messaggio di benvenuto in funzione del quadro scelto (predisposto per quando si crea l'opzione)
-    let name = current_painting["name"];
-    if(current_painting["alt_name"]!= null)
-    name = current_painting["alt_name"];
-    if ($(".card").attr("id") == current_painting["name"]) {
-      currWelcome = msg_conf['welcome'][0] + current_painting["support"] + current_painting["art"] + name + current_painting["caption"] + msg_conf['welcome'][1];
-      //$(".painting").removeAttr("src");
-      $(".painting").attr("src", current_painting["src"]);
-      console.log("*** sto cambiando immagine con: ", current_painting["src"]);
-    }
-
-
-    console.log("*** La card è ", $(".card").attr("id"));
-
-
-    if (ctrlK == 1) {
-      lastHandlingTime = Date.now();
-      if (active == 0) {
-        music.play();
-
-        $(".painting").fadeTo(5000, 1);
-        myTimeOut = setTimeout(function() {
-          //synth.cancel();
-          $(music).animate({
-            volume: 0.1
-          }, 1000);
-
-          //scrittura su schermo 1(?)
-          $("#answer").hide();
-          $("#answer").stop();
-          $("#answer").fadeIn({
-            duration: $(document).height() / 2,
-            queue: false
-          });
-          $("#answer").html(currWelcome);
-          //console.log($(document).height())
-          $("#answer").css({
-            top: $("body").height() / 2
-          });
-
-          var len = currWelcome.length;
-          var perc = (len * 0.1);
-          $("#answer").animate({
-            top: -($(document).height() / 2),
-            queue: false
-          }, 3000 * len / perc);
-
-          console.log("ANSWER LENGTH: ", len);
-          console.log("VALUE X length: ", perc);
-
-          var utterThis = new SpeechSynthesisUtterance();
-          utterThis.text = currWelcome;
-          utterThis.voice = voices[VOICEIDX];
-          utterThis.rate = currRate;
-
-          utterThis.onend = function(event) {
-            console.log("*** WELCOME END!!! ***");
-            $(music).animate({
-              volume: 0.5
-            }, 1000);
-            //recognition.start();
-
-            awaitingWelcome = 0;
-            welcomeOver = 0;
-            if(inactivity == null)
-            {
-              inactivityStart();
-              console.log("Inactivity start on Welcome End.. ");
-            }
-            //console.log("Inactivity start.. ");
-            //if(inactivity == null)
-            //  inactivityStart();
-          }
-          synth.speak(utterThis);
-
-        }, 5000);
-        //fine setTimeout
-
-
-
-
-        active = 1;
-      }
-      //console.log("normalizedPosition", normalizedPosition);
-    }
-
-  }
-  //stop
-
-
+  
   var client = new $.es.Client({
     hosts: 'localhost:9200'
   });
-
   var bg = document.querySelector('html');
+  
 
-  //var card = "";
-  var askedNames = new Array();
+  //numeric ascii 38-57
+  // RFID READER
+  $(document).keypress(function (ev) {
 
+    if (ev.which > 38 && ev.which <= 57) {
 
-  // Handler for .ready() called.
-  $(".card").on('mousedown', function(e) {
-    if (e.which == 2) {
-      e.preventDefault();
-      console.log("e.which = MIDDLE BUTTON!");
-      if (music.paused)
-      music.play();
-      else {
-        music.pause();
-        music.currentTime = 0;
-      }
+      let v = ev.which - 48;
 
-    }
-  });
-  /*
-  $(".card").on("dblclick", function() {
-  console.log("DOUBLE CLICKED!!!");
-  if (ctrlK == 0 && active == 0)
-  reStart();
-  else {
-
-  card = $(".card").attr("id");
-  $("#answer").html(card);
-  beep();
-  synth.cancel();
-  $(music).animate({
-  volume: 0.1
-}, 1000);
-if (active == 1)
-recognition.stop();
-recognition.start();
-//voices = synth.getVoices();
-lastQuestionTime = Date.now();
-//StartNow();//controller.connect();
-//}
-});
-*/
-
-/*
-$(".card").on("click", function() {
-if (ctrlK == 0 && active == 0)
-reStart();
-else {
-
-
-card = $(".card").attr("id");
-$("#answer").html(card);
-beep();
-synth.cancel();
-$(music).animate({
-volume: 0.1
-}, 1000);
-if (active == 1)
-recognition.stop();
-recognition.start();
-//voices = synth.getVoices();
-lastQuestionTime = Date.now();
-//StartNow();//controller.connect();
-}
-});
-*/
-$(".card").on("mouseenter", function() {
-  if (card === $(".card").attr("id"))
-  return;
-  card = $(".card").attr("id");
-
-
-  //var utterThis = new SpeechSynthesisUtterance(card);
-  //utterThis.voice = voices[VOICEIDX];
-  //synth.speak(utterThis);
-});
-
-//numeric ascii 38-57
-$(document).keypress(function(ev) {
-
-  if (ev.which > 38 && ev.which <= 57) {
-
-    let v = ev.which - 48;
-
-    if (startKeyStroke == false)
-    keyStrokeInit(v);
-
-    else {
-      lastPress = new Date();
-      lp = lastPress.getTime();
-      let diff = lp - cp;
-      if (diff < 150)
-      keyStrokeValue += v;
-      else {
-        keyStrokeReset();
+      if (startKeyStroke == false)
         keyStrokeInit(v);
 
-      }
-      console.log("diff lp - cp: ", diff);
+      else {
+        lastPress = new Date();
+        lp = lastPress.getTime();
+        let diff = lp - cp;
+        if (diff < 150)
+          keyStrokeValue += v;
+        else {
+          keyStrokeReset();
+          keyStrokeInit(v);
 
-      console.log("value: ", keyStrokeValue);
-      console.log("currentPress: ", cp);
-      console.log("lastPress: ", lp);
+        }
+        console.log("diff lp - cp: ", diff);
+
+        console.log("value: ", keyStrokeValue);
+        console.log("currentPress: ", cp);
+        console.log("lastPress: ", lp);
+      }
+    } else {
+      if (ev.which == 13 && (keyStrokeValue.length == 10)) {
+        catchKeyStroke(keyStrokeValue);
+        console.log("Si tratta di un tag: ", keyStrokeValue);
+      }
+      keyStrokeReset();
+      console.log("value not numeric", keyStrokeValue);
+
     }
-  } else {
-    if (ev.which == 13 && (keyStrokeValue.length == 10)) {
-      catchKeyStroke(keyStrokeValue);
-      console.log("Si tratta di un tag: ", keyStrokeValue);
-    }
-    keyStrokeReset();
-    console.log("value not numeric", keyStrokeValue);
+
+
+  });
+
+  function keyStrokeInit(v) {
+    startKeyStroke = true;
+    keyStrokeValue += v;
+    console.log("value: ", keyStrokeValue);
+    currentPress = new Date();
+    cp = currentPress.getTime();
+    console.log("current press time: ", cp);
+  }
+
+  function keyStrokeReset() {
+    keyStrokeValue = "";
+    startKeyStroke = false;
+    cp = 0;
+    keyStrokeValue = "";
+    cp = 0;
+    lp = 0;
 
   }
 
 
-});
+  function catchKeyStroke(value) {
+    input = value;
+    let cardValue;
 
-function keyStrokeInit(v) {
-  startKeyStroke = true;
-  keyStrokeValue += v;
-  console.log("value: ", keyStrokeValue);
-  currentPress = new Date();
-  cp = currentPress.getTime();
-  console.log("current press time: ", cp);
-}
-
-function keyStrokeReset() {
-  keyStrokeValue = "";
-  startKeyStroke = false;
-  cp = 0;
-  keyStrokeValue = "";
-  cp = 0;
-  lp = 0;
-
-}
-//0000380280var
-
-function catchKeyStroke(value) {
-  input = value;
-  let cardValue;
-
-  console.log("Evento keypress rilevato!", input);
-  if ((input == adorazione_paint['id']) || (input == annunciazione_paint['id']) || (input == visitazione_paint['id']) || (input == gennamaria_paint['id'])) {
-    //imposto mypaints!
-    switch (input) {
-      case adorazione_paint['id']:
-      cardValue = adorazione_paint["name"];
-      break;
-
-      case annunciazione_paint['id']:
-      cardValue = annunciazione_paint["name"];
-      break;
-
-      case visitazione_paint['id']:
-      cardValue = visitazione_paint['name'];
-      break;
-
-      case gennamaria_paint['id']:
-      cardValue = gennamaria_paint['name'];
-      break;
-
+    for(i in configurations){
+      if(configurations[i].id == input){
+        current_index = i;
+        current_painting = configurations[i];
+        restartAll();
+        break;
+      }
     }
-    quietPlease();
-    $(".card").removeAttr("id");
-    $(".card").attr("id", cardValue)
-    reStart();
-
+    input = "";
     console.log("mypaints rilevato:", input);
   }
 
-  input = "";
-}
+//input field 
 
-$("#question").keypress(function(e) {
-  if (e.which == 13 && (awaitingWelcome != 1)) { //return keypress
-    if (ctrlK == 1 && active == 1)
-    card = $(".card").attr("id");
-    $(music).animate({
-      volume: 0.1
-    }, 1000);
-    lastQuestionTime = Date.now
+  $("#question").keydown(function (e) {
+    e.stopPropagation();
+  })
 
-    var tmpText = ($("#question").val()).toLowerCase();
+  $("#question").keypress(function (e) {
+    userActivity = true;
+    if (e.which == 13) {
+      card = $(".card").attr("id");
+      var tmpText = ($("#question").val()).toLowerCase();
+      getResult(tmpText);
+      $("#question").val('');
+    }
+    e.stopPropagation();
+  });
 
-    txtRedirect(tmpText);
-    console.log("e.which =13!!!!!!!");
-    $("#question").val('');
-    console.log("QUESTION VAL: ", $("#question").val());
-    //&& (x != 13 && x != 9)
+  function tellMeTime() {
+    let introduceH = "Sono le ore ";
+    //let introduceM = " e ";
+    let theDate = new Date();
+    //let theTime = theDate.getTime();
+    let hours = theDate.getHours();
+    let minutes = theDate.getMinutes();
+
+    let theTime = introduceH + hours + " e " /*+introduceM*/ + minutes + "minuti";
+
+    speechText(theTime);
+    showText(theTime)
+    console.log("che ore sono: ", myMcoms["time"]);
   }
 
+  recognition.onresult = function (event) {
+    var last = event.results.length - 1;
+    var text = event.results[last][0].transcript;
+    $("#question").val(text)
+    getResult(text);
+  }
 
-});
+  function getResult(text) {
 
-function tellMeTime() {
-  let introduceH = "Sono le ore ";
-  //let introduceM = " e ";
-  let theDate = new Date();
-  //let theTime = theDate.getTime();
-  let hours = theDate.getHours();
-  let minutes = theDate.getMinutes();
+    //analyzer: 'my_synonyms',
+    //q: query
+    //must => AND / should => OR / must not => '!=' / filter as 'must' not scored
+    var card2 = "controls";
+    var card1 = "Pinacoteca";
+    var card = current_painting.name;
+    var query = "question:" + text + " AND title:" + card
 
-  let theTime = introduceH + hours + " e " /*+introduceM*/ + minutes;
-  //theTime.getHours()
-  //Recupera il valore dell'ora
-  //getMinutes()
+    //temporary comment
+    console.log('**** Current Title: =>>>> ' + card);
+    console.log('**** Current Title: =>>>> ' + card1);
+    console.log('**** Current Title: =>>>> ' + card2);
 
-  var utterThis = new SpeechSynthesisUtterance();
-  utterThis.text = theTime;
-  utterThis.voice = voices[VOICEIDX];
-  synth.speak(utterThis);
-  comunicateInfo(introduceH + hours + ":" /*+introduceM*/ + minutes)
-  console.log("che ore sono: ", myMcoms["time"]);
+    //query / text
+    console.log("query: ", query);
+    console.log('Confidence: ' + text);
+    client.search({
+      index: 'myindex',
+      body: {
 
-}
-
-recognition.onresult = function(event) {
-  var last = event.results.length - 1;
-  var text = event.results[last][0].transcript;
-  $("#question").val(text)
-
-  txtRedirect(text);
-}
-
-function getResult(text) {
-
-  //analyzer: 'my_synonyms',
-  //q: query
-  //must => AND / should => OR / must not => '!=' / filter as 'must' not scored
-  var card2 = "controls";
-  var card1 = "Pinacoteca";
-  var query = "question:" + text + " AND title:" + card
-
-  //temporary comment
-  console.log('**** Current Title: =>>>> ' + card);
-  console.log('**** Current Title: =>>>> ' + card1);
-  console.log('**** Current Title: =>>>> ' + card2);
-
-  //query / text
-  console.log("query: ", query);
-  console.log('Confidence: ' + text);
-  client.search({
-    index: 'myindex',
-    body: {
-
-      query: {
-        bool: {
-          must: [ {
-            bool: {
-              should: [{
-                match: {
-                  question: {
-                    query: text,
-                    boost:2
+        query: {
+          bool: {
+            must: [{
+              bool: {
+                should: [{
+                  match: {
+                    question: {
+                      query: text,
+                      boost: 2
+                    }
                   }
-                }
-              },
-              {
-                match: {
-                  answer: {
-                    query: text
+                },
+                {
+                  match: {
+                    answer: {
+                      query: text
+                    }
                   }
-                }
-              },
-              {
-                match: {
-                  key: {
-                    query: text
+                },
+                {
+                  match: {
+                    key: {
+                      query: text
+                    }
                   }
-                }
-              }/*,
+                }/*,
               {
               match: {
               name: {
               query: text                                  }
             }
           }*/]
+              }
+            }, {
+              bool: {
+                must: [{
+                  bool: {
+                    should: [{
+                      match: {
+                        title: card//current title
+                      }
+                    }, {
+                      match: {
+                        title: card2//controls
+                      }
+                    }]
+                  }
+                }]
+              }
+            }]
+          }
         }
-      }, {
-        bool: {
-          must: [{
-            bool: {
-              should: [{
-                match: {
-                  title: card//current title
-                }
-              }, {
-                match: {
-                  title: card2//controls
-                }
-              }]
-            }
-          }]
-        }
-      }]
-    }
-  }
 
-}
-}, function(error, response) {
-  console.log("resp:", response);
-  if (response.hits.total > 0) {
-    //var answer = response.hits.hits[0]._source.answer;
-
-    if(response.hits.hits[0]._source.title == "controls")
-    {
-      txtRedirect(response.hits.hits[0]._source.answer);
-      return;
-    }
-
-    var toSynthText = response.hits.hits[0]._source.answer; //+" Testo aggiunto.";
-    var moreAsk = " Puoi chiedermi ";
-    console.log("toSynthText: ", toSynthText);
-    console.log("**** KEY ****: ", response.hits.hits[0]._source.key);
-
-    var suggests = response.hits.hits[0]._source.suggests;
-    var keywords = response.hits.hits[0]._source.key;
-
-    for (i in suggests) {
-
-      if (askedNames[suggests[i]["linkedName"]] != undefined)
-      console.log("**** AskedNames in suggest file", askedNames[suggests[i]["linkedName"]]);
-
-
-      if (askedNames[suggests[i]["linkedName"]] == undefined) {
-        if (c == undefined) var c = true;
-        if (c == true) {
-          toSynthText += moreAsk;
-          c = false;
-        } else toSynthText += ", ";
-
-        toSynthText += " " + suggests[i]["suggest"];
       }
-      console.log("Nel for toSynthText:", toSynthText);
-    }
+    }, function (error, response) {
+      console.log("resp:", response);
+      if (response.hits.total > 0) {
+        //var answer = response.hits.hits[0]._source.answer;
 
-    var answer = toSynthText;
-    var len = answer.length;
-    var perc = (len * 0.1);
+        //check for internal commands
+        if (response.hits.hits[0]._source.title == "controls") {
+          processCommand(response.hits.hits[0]._source.answer);
+          return;
+        }
 
-    //scrittura su schermo 2(?)
-    $("#answer").hide();
-    $("#answer").stop();
-    $("#answer").fadeIn({
-      duration: $(document).height() / 2,
-      queue: false
+        var toSynthText = response.hits.hits[0]._source.answer; //+" Testo aggiunto.";
+
+        var moreAsk = " Puoi chiedermi: ";
+        console.log("toSynthText: ", toSynthText);
+        console.log("**** KEY ****: ", response.hits.hits[0]._source.key);
+
+        var suggests = response.hits.hits[0]._source.suggests;
+        var suggestsValid  = 0;
+        for (i in suggests) {
+          if (askedNames[suggests[i].linkedName] == undefined){
+            suggestsValid++;
+            moreAsk += suggests[i].suggest + ";";
+          }
+        }
+
+        if(suggestsValid > 0){
+          toSynthText += moreAsk;
+        }
+        speechText(toSynthText);
+        showText(toSynthText);
+
+        var name = response.hits.hits[0]._source.name;
+        if (askedNames[name] == undefined)
+          askedNames[name] = 1;
+        else
+          askedNames[name]++;
+
+      } else {
+        //no answer found
+        var message = grs(current_painting.messages.undef);
+        speechText(message);
+        showText(message);
+      }
+
     });
-    //$("#answer").fadeIn({duration:2000, queue:false});
-    $("#answer").html(answer);
-    //console.log($(document).height())
-    $("#answer").css({
-      top: $("body").height() / 2
-    });
-
-    $("#answer").animate({
-      top: -($(document).height() * 0.6),
-      queue: false
-    }, 3000 * len / perc);
-    //$("#answer").animate({top: -1000, queue:false},   3000*len/perc);
-
-
-    console.log("ANSWER LENGTH: ", len);
-    console.log("VALUE X length: ", perc);
-
-    $.post('log.php', {
-      answer: answer,
-      question: text,
-      card: card
-    });
-
-    console.log("console all qa:", response.hits.hits[0]);
-
-    var name = response.hits.hits[0]._source.name;
-    if (askedNames[name] == undefined)
-    askedNames[name] = 1;
-    else
-    askedNames[name]++;
-
-    console.log("askedNames", askedNames);
-
-    var utterThis = new SpeechSynthesisUtterance(toSynthText);
-
-    utterThis.voice = voices[VOICEIDX];
-
-    utterThis.onend = function(event) {
-      $(music).animate({
-        volume: 0.5
-      }, 1000);
-      //recognition.start();
-
-      //}
-    }
-
-    synth.speak(utterThis);
-
-    /*
-    if (response.hits.hits[0]._source.link != undefined) {
-    // card = response.hits.hits[0]._source.link;
-    console.log("**** LINK: ", response.hits.hits[0]._source.link)
-    console.log("**** KEY in answer", response.hits.hits[0]._source.key);
   }
-  */
-} else {
-  var utterThis = new SpeechSynthesisUtterance(msg_conf['undef'][getRandomArbitrary(0, 2)]); //messages['undef']);//myMsg['touching'][getRandomArbitrary(0,3)]
-  utterThis.voice = voices[VOICEIDX];
-  utterThis.onend = function(event) {
-    $(music).animate({
-      volume: 0.5
-    }, 1000);
+
+  recognition.onspeechend = function () {
+    recognition.stop();
   }
-  synth.speak(utterThis);
 
-}
+  recognition.onnomatch = function (event) {
+    console.log('I didnt recognise that color.');
+  }
 
-});
-
-
-
-}
-
-recognition.onspeechend = function() {
-  recognition.stop();
-}
-
-recognition.onnomatch = function(event) {
-  console.log('I didnt recognise that color.');
-}
-
-recognition.onerror = function(event) {
-  console.log('Error occurred in recognition: ' + event.error);
-  /*
-  utterThis.text = "Non ho riconosciuto nessuna domanda. Se vuoi riformulare fai un click.";
-  utterThis.voice = voices[VOICEIDX];
-  synth.speak(utterThis);
-  */
-}
+  recognition.onerror = function (event) {
+    console.log('Error occurred in recognition: ' + event.error);
+  }
 
 });
