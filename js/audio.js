@@ -14,7 +14,7 @@ var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEv
 var recognition;
 var speechRecognitionList;
 
-var input = "";
+var input = "0000000000";
 var startKeyStroke = false;
 var keyStrokeValue = "";
 var currentPress;
@@ -86,50 +86,6 @@ async function readConfiguration()
   return count;
 }
  
-// //start_conf json load
-// async function readConfiguration() {
-// fetch(start_conf_path).then(response => {
-//   return response.json();
-// }).then(data => {
-//   // Work with your JSON data here..
-//   $(".card").removeAttr("id");
-//   $(".card").attr("id", data.start);
-
-//   var startName = data.start;
-//   console.log(data);
-//   var count = 0;
-//   data.config_files.map(function (item) {
-//     fetch(item).then(response => {
-//       return response.json();
-//     }).then(data => {
-//       configurations.push(data);
-//       if (data.name == startName) {
-//         current_painting = data;
-//         current_index = count++;
-//       }
-//       var config_file = data.conf;
-//       fetch(config_file).then(response => {
-//         return response.json();
-//       }).then(conf => {
-//         data.messages = conf;
-
-        
-//       }).catch(err => {
-//         // What do when the request fails
-//         console.log('The request failed!');
-//       });
-//     }).catch(err => {
-//       // What do when the request fails
-//       console.log('The request failed!', err);
-//     });
-
-//   });
-// }).catch(err => {
-//   // What do when the request fails
-//   console.log('The request failed!');
-// });
-// }
-
 
 ///////////////////////////////////////
 // end load conf
@@ -317,6 +273,13 @@ $(document).ready(function () {
   function Tasto(e) {
     userActivity = true;
     var x = e.code;
+    if(x != "Enter"){
+      input = input + e.key;
+      input = input.substr(1);
+    }
+    else{
+      checkRfidCode(input);
+;    }
 
     if (x == "Space") {
       //only for develop use
@@ -551,84 +514,78 @@ $(document).ready(function () {
   var bg = document.querySelector('html');
   
 
-  //numeric ascii 38-57
   // RFID READER
-  $(document).keypress(function (ev) {
+  // $(document).keypress(function (ev) {
 
-    if (ev.which > 38 && ev.which <= 57) {
+  //   if (ev.which > 38 && ev.which <= 57) {
 
-      let v = ev.which - 48;
+  //     let v = ev.which - 48;
 
-      if (startKeyStroke == false)
-        keyStrokeInit(v);
+  //     if (startKeyStroke == false)
+  //       keyStrokeInit(v);
 
-      else {
-        lastPress = new Date();
-        lp = lastPress.getTime();
-        let diff = lp - cp;
-        if (diff < 150)
-          keyStrokeValue += v;
-        else {
-          keyStrokeReset();
-          keyStrokeInit(v);
+  //     else {
+  //       lastPress = new Date();
+  //       lp = lastPress.getTime();
+  //       let diff = lp - cp;
+  //       if (diff < 150)
+  //         keyStrokeValue += v;
+  //       else {
+  //         keyStrokeReset();
+  //         keyStrokeInit(v);
 
-        }
-        console.log("diff lp - cp: ", diff);
+  //       }
+  //       console.log("diff lp - cp: ", diff);
 
-        console.log("value: ", keyStrokeValue);
-        console.log("currentPress: ", cp);
-        console.log("lastPress: ", lp);
-      }
-    } else {
-      if (ev.which == 13 && (keyStrokeValue.length == 10)) {
-        catchKeyStroke(keyStrokeValue);
-        console.log("Si tratta di un tag: ", keyStrokeValue);
-      }
-      keyStrokeReset();
-      console.log("value not numeric", keyStrokeValue);
+  //       console.log("value: ", keyStrokeValue);
+  //       console.log("currentPress: ", cp);
+  //       console.log("lastPress: ", lp);
+  //     }
+  //   } else {
+  //     if (ev.which == 13 && (keyStrokeValue.length == 10)) {
+  //       catchKeyStroke(keyStrokeValue);
+  //       console.log("Si tratta di un tag: ", keyStrokeValue);
+  //     }
+  //     keyStrokeReset();
+  //     console.log("value not numeric", keyStrokeValue);
 
-    }
-
-
-  });
-
-  function keyStrokeInit(v) {
-    startKeyStroke = true;
-    keyStrokeValue += v;
-    console.log("value: ", keyStrokeValue);
-    currentPress = new Date();
-    cp = currentPress.getTime();
-    console.log("current press time: ", cp);
-  }
-
-  function keyStrokeReset() {
-    keyStrokeValue = "";
-    startKeyStroke = false;
-    cp = 0;
-    keyStrokeValue = "";
-    cp = 0;
-    lp = 0;
-
-  }
+  //   }
 
 
-  function catchKeyStroke(value) {
-    input = value;
-    let cardValue;
+  // });
 
+  // function keyStrokeInit(v) {
+  //   startKeyStroke = true;
+  //   keyStrokeValue += v;
+  //   console.log("value: ", keyStrokeValue);
+  //   currentPress = new Date();
+  //   cp = currentPress.getTime();
+  //   console.log("current press time: ", cp);
+  // }
+
+  // function keyStrokeReset() {
+  //   keyStrokeValue = "";
+  //   startKeyStroke = false;
+  //   cp = 0;
+  //   keyStrokeValue = "";
+  //   cp = 0;
+  //   lp = 0;
+
+  // }
+
+  function checkRfidCode(value) {
     for(i in configurations){
-      if(configurations[i].id == input){
+      if(configurations[i].id == value){
         current_index = i;
         current_painting = configurations[i];
         restartAll();
         break;
       }
     }
-    input = "";
     console.log("mypaints rilevato:", input);
   }
 
-//input field 
+//input query field 
 
   $("#question").keydown(function (e) {
     e.stopPropagation();
