@@ -45,7 +45,7 @@ var myMcoms = {
   vdown: "abbassa la voce"
 }
 
-var synth; // = window.speechSynthesis;
+var synth;
 var voicename;
 var music = new Audio();
 music.setAttribute("autoplay", "true");
@@ -61,23 +61,17 @@ var current_painting;
 var current_index = -1;
 
 readConfiguration().then(x => {
-
-  synth = window.speechSynthesis;
-
+  synth = window.speechSynthesis; 
   synth.onvoiceschanged = function () {
     voices = synth.getVoices();
-    let i = 0;
-    voices.forEach(voice => {
-     if(voice.name == voicename)	{ //variabile? //
+    voices.forEach((voice , i) => {
+     if(voice.name == voicename)	{ 
        console.log("IDX for Alice - it-IT: ", i);
        VOICEIDX = i;
      }
-     i++;
     })
   };
-
   restartAll();
-
 });
 
 async function readConfiguration()
@@ -535,65 +529,6 @@ $(document).ready(function () {
   });
   var bg = document.querySelector('html');
 
-
-  // RFID READER
-  // $(document).keypress(function (ev) {
-
-  //   if (ev.which > 38 && ev.which <= 57) {
-
-  //     let v = ev.which - 48;
-
-  //     if (startKeyStroke == false)
-  //       keyStrokeInit(v);
-
-  //     else {
-  //       lastPress = new Date();
-  //       lp = lastPress.getTime();
-  //       let diff = lp - cp;
-  //       if (diff < 150)
-  //         keyStrokeValue += v;
-  //       else {
-  //         keyStrokeReset();
-  //         keyStrokeInit(v);
-
-  //       }
-  //       console.log("diff lp - cp: ", diff);
-
-  //       console.log("value: ", keyStrokeValue);
-  //       console.log("currentPress: ", cp);
-  //       console.log("lastPress: ", lp);
-  //     }
-  //   } else {
-  //     if (ev.which == 13 && (keyStrokeValue.length == 10)) {
-  //       catchKeyStroke(keyStrokeValue);
-  //       console.log("Si tratta di un tag: ", keyStrokeValue);
-  //     }
-  //     keyStrokeReset();
-  //     console.log("value not numeric", keyStrokeValue);
-
-  //   }
-
-
-  // });
-
-  // function keyStrokeInit(v) {
-  //   startKeyStroke = true;
-  //   keyStrokeValue += v;
-  //   console.log("value: ", keyStrokeValue);
-  //   currentPress = new Date();
-  //   cp = currentPress.getTime();
-  //   console.log("current press time: ", cp);
-  // }
-
-  // function keyStrokeReset() {
-  //   keyStrokeValue = "";
-  //   startKeyStroke = false;
-  //   cp = 0;
-  //   keyStrokeValue = "";
-  //   cp = 0;
-  //   lp = 0;
-
-  // }
 
   function checkRfidCode(value) {
     for(i in configurations){
