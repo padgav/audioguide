@@ -20,7 +20,7 @@
         "name": "hut"
       },
 
-      "70":{
+      "KeyF":{
         "desc": [
           "il bambino",
           "il bambinello",
@@ -30,7 +30,7 @@
         "name": "baby"
       },
 
-      "65": {
+      "KeyA": {
         "desc": [
           "gli angeli",
           "gli angeli che reggono un festone",
@@ -40,7 +40,7 @@
         "name": "angels"
       },
 
-    	"68": {
+    	"KeyD": {
         "desc": [
           "il cane",
           "il cane dei pastori",
@@ -70,7 +70,7 @@
         "name": "shephard2"
       },
 
-      "87": {
+      "KeyW": {
         "desc": [
         "il terzo pastore ",
         "il pastore in terzo piano",
