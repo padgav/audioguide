@@ -23,7 +23,7 @@ var lastPress;
 var API;
 
 var voices;
-var VOICEIDX = 0;
+var VOICEIDX;
 var rateStd = 0.9;
 var currRate = rateStd;
 
@@ -45,7 +45,8 @@ var myMcoms = {
   vdown: "abbassa la voce"
 }
 
-var synth = window.speechSynthesis;
+var synth; // = window.speechSynthesis;
+var voicename;
 var music = new Audio();
 music.setAttribute("autoplay", "true");
 music.setAttribute("muted", "muted");
@@ -59,14 +60,34 @@ var configurations = [];
 var current_painting;
 var current_index = -1;
 
-readConfiguration().then(x => { restartAll()});  
+readConfiguration().then(x => {
 
-async function readConfiguration() 
+  synth = window.speechSynthesis;
+
+  synth.onvoiceschanged = function () {
+    voices = synth.getVoices();
+    let i = 0;
+    voices.forEach(voice => {
+     if(voice.name == voicename)	{ //variabile? //
+       console.log("IDX for Alice - it-IT: ", i);
+       VOICEIDX = i;
+     }
+     i++;
+    })
+  };
+
+  restartAll();
+
+});
+
+async function readConfiguration()
 {
   var count = 0;
   var response = await fetch(start_conf_path);
   var data = await response.json()
   var startName = data.start;
+  voicename = data.voiceName;
+
   for(i in data.config_files){
     var item = data.config_files[i];
     var response1 = await fetch(item);
@@ -85,16 +106,17 @@ async function readConfiguration()
   }
   return count;
 }
- 
+
 
 ///////////////////////////////////////
 // end load conf
 //////////////////////////////////////
-
+/*
 synth.onvoiceschanged = function () {
   voices = synth.getVoices();
   console.log(voices)
 };
+*/
 
 // window.onload = loadingRes;
 // /*window.onload*/
@@ -135,7 +157,7 @@ function showText(message) {
 
   var len = message.length;
   var duration = 80 * len;
-  
+
   if(duration < 10000) duration = 10000;
   $("#answer").animate({
     top: -($(document).height()),
@@ -177,7 +199,7 @@ var timeout;
     showText(message);
     speechText(message, function () { if (state == 1) state = 2 });
   }, current_painting.delay);
-  
+
 }
 
 function restartAll(){
@@ -216,7 +238,7 @@ function restartAll(){
       error: function onError() {
           console.log( 'Viewer error' );
       }
-    
+
     } );
 
     }
@@ -283,7 +305,7 @@ $(document).ready(function () {
 
     if (x == "Space") {
       //only for develop use
-      //reset application in the state 0 
+      //reset application in the state 0
 
       state = 0;
 
@@ -324,7 +346,7 @@ $(document).ready(function () {
     }
 
     else if (state == 1) {
-      //welcome message 
+      //welcome message
       if (x == "Escape") {
         console.log("ESC!");
 
@@ -350,7 +372,7 @@ $(document).ready(function () {
       }
 
       else {
-        //Normal sensor 
+        //Normal sensor
         if (lastKey != x && current_painting.subjects[x] != undefined) {
           var message = grs(current_painting.messages.touching) + grs(current_painting.subjects[x].desc);
           showText(message);
@@ -367,7 +389,7 @@ $(document).ready(function () {
             }
           }else{
 
-          
+
             var classAnimationName = "k" + current_painting.subjects[x].animation;
             $(".painting").removeClass($(".painting").data("lastclass"));
             $(".painting").data("lastclass", classAnimationName);
@@ -498,7 +520,7 @@ $(document).ready(function () {
     }
   }
 
-  
+
 
   function quietPlease() {
     $("#answer").stop().fadeOut();
@@ -507,12 +529,12 @@ $(document).ready(function () {
     music.currentTime = 0;
   }
 
-  
+
   var client = new $.es.Client({
     hosts: 'localhost:9200'
   });
   var bg = document.querySelector('html');
-  
+
 
   // RFID READER
   // $(document).keypress(function (ev) {
@@ -585,7 +607,7 @@ $(document).ready(function () {
     console.log("mypaints rilevato:", input);
   }
 
-//input query field 
+//input query field
 
   $("#question").keydown(function (e) {
     e.stopPropagation();
