@@ -61,11 +61,11 @@ var current_painting;
 var current_index = -1;
 
 readConfiguration().then(x => {
-  synth = window.speechSynthesis; 
+  synth = window.speechSynthesis;
   synth.onvoiceschanged = function () {
     voices = synth.getVoices();
     voices.forEach((voice , i) => {
-     if(voice.name == voicename)	{ 
+     if(voice.name == voicename)	{
        console.log("IDX for Alice - it-IT: ", i);
        VOICEIDX = i;
      }
@@ -119,7 +119,8 @@ function getRandomArbitrary(min, max) {
 
 
 function showText(message) {
-  //$("#answer").hide();
+  $("#answer").html("");
+  $("#answer").stop();
   $("#answer").css({
     top: $("body").height() / 2
   });
@@ -151,7 +152,7 @@ function speechText(message, onendFunction) {
   utterThis.rate = currRate;
 
   utterThis.onend = function (event) {
-    console.log("*** WELCOME END!!! ***");
+    console.log("*** MESSAGE END!!! ***");
     if (onendFunction) onendFunction();
     $(music).animate({
       volume: 0.1
@@ -164,7 +165,7 @@ function speechText(message, onendFunction) {
 }
 var timeout;
  function startWelcomeMessage() {
-  ;
+  clearTimeout(timeout);
   music.src = "./music/" + current_painting.music;
   music.play();
 
@@ -446,7 +447,7 @@ $(document).ready(function () {
       // case myMcoms["change"]:
 
       //   speechText("che cosa vuoi esplorare?");
-      //   console.log("Ultima richiesta: ", myMcoms["change"]);
+      //   console.log("Ultima richiesta: ", myMcoms["d"]);
       //   break;
 
       // case adorazione_paint["name"].toLowerCase():
