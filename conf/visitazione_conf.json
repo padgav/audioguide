@@ -8,6 +8,7 @@
   "music": "coro_angelico.mp3",
   "conf": "./conf/msg_conf.json",
   "caption": "",
+  "delay": "2000",
 
   "subjects": {
 

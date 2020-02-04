@@ -13,8 +13,8 @@
   "caption": ". Ubicato sulla sommità di una collina a 408 metri sopra il livello del mare, a circa un chilometro dal paese di Villanovaforru: gli elementi principali sono il nuraghe, l'antemurale e un villaggio situato all'interno ed all'esterno dell'antemurale;",
   "color": "#00ff00",
   "delay": "000",
-  "position": [24.90047091451182, -316.3894617907232, 49.51737693584993],
-  "target":[28.136344737626715,-322.21416138387946,2.7556670622001502],
+  "position": [8.10933054558112,-352.24880714229874,46.310459302191006],
+  "target":[29.103567541329074,-320.16656013971567,-8.632410100239241],
   "subjects": {
 
       "Digit0": {
@@ -26,8 +26,9 @@
         "check": 0,
         "name": "nuraghe",
         "animation": 1,
-        "position": [42.45830580661257,-332.8185463844396,11.432761461019398],
-        "target":[28.136344737626715,-322.21416138387946,2.7556670622001502]
+        "sid": 24,
+        "position": [30.311145816762153,-328.2545458732404,18.407770544911905],
+        "target": [30.739392442995836,-326.4347515759854,16.469161884828395]
         },
       "KeyB": {
         "desc": [
@@ -37,7 +38,10 @@
         ],
         "check": 0,
         "name": "villaggio_ric_sud",
-        "animation": 0
+        "animation": 1,
+        "sid": 28,
+        "position": [51.22167950707459,-305.22594594265354,9.542885505154683],
+        "target":[43.46286953929031,-314.16657511319954,5.164430398286994]
       },
       "KeyM": {
         "desc": [
@@ -47,7 +51,10 @@
         ],
         "check": 0,
         "name": "villaggio_ric_sud",
-        "animation": 0
+        "animation": 1,
+        "sid": 27,
+        "position": [35.048695631079504,-317.1130916989447,20.91300463283273],
+        "target": [37.00119487661158,-310.62270626512935,7.739914203811494]
       },
       "Digit5": {
         "desc": [
@@ -57,7 +64,10 @@
         ],
         "check": 0,
         "name": "antemurale_est",
-        "animation": 0
+        "animation": 0,
+        "sid": 6,
+        "position": [43.37695149551558,-349.4779924131934,10.382550708264267],
+        "target": [45.15546962362339,-330.36381208288657,-0.33043559448801996]
       },
       "Digit3": {
         "desc": [
@@ -68,7 +78,10 @@
 
         "check": 0,
         "name": "antemurale_ovest",
-        "animation": 0
+        "animation": 0,
+        "sid": 15,
+        "position": [-7.460891277704118,-312.383715694663,9.20856079082306],
+        "target": [15.21431280408392,-321.92642105559,9.285757821478922]
       },
       "Digit2": {
         "desc": [
@@ -78,7 +91,10 @@
         ],
         "check": 0,
         "name": "antemurale_torre3",
-        "animation": 0
+        "animation": 0,
+        "sid": 26,
+        "position": [17.601154220150214,-310.77028683188263,26.389730721768707],
+        "target": [20.779966683616294,-302.93108292061606,10.897518681404533]
       },
       "KeyI": {
         "desc": [
@@ -88,7 +104,10 @@
         ],
         "check": 0,
         "name": "rifascio_ovest",
-        "animation": 0
+        "animation": 0,
+        "sid": 16,
+        "position": [4.9797223036716645,-318.4335679342452,15.482149079375493],
+        "target": [26.244111901744517,-312.16801848708667,11.119744429689433]
       },
       "KeyL": {
         "desc": [
@@ -98,7 +117,10 @@
         ],
         "check": 0,
         "name": "rifascio_est",
-        "animation": 0
+        "animation": 0,
+        "sid": 22,
+        "position": [50.58150883037254,-323.9155310520088,15.695135649898926],
+        "target": [38.41016312668896,-317.5152119233875,8.665967027076357]
       },
       "Digit1": {
         "desc": [
@@ -108,18 +130,23 @@
         ],
         "check": 0,
         "name": "rifascio_est",
-        "animation": 0
+        "animation": 0,
+        "":17,
+        "position": [13.455575519470518,-327.42901913180566,14.399767723541505],
+        "target": [35.477114395322175,-315.3577866672042,7.037356578823092]
       },
       "KeyO": {
         "desc": [
           "la torre lato ovest del nuraghe",
           "la torre del nuraghe posta a ovest",
           "il rifascio del parte del muro del nuraghe, torre ovest"
-
         ],
         "check": 0,
         "name": "rifascio_ovest",
-        "animation": 0
+        "animation": 0,
+        "sid": 25,
+        "position": [14.362662941723023,-305.29082629749155,19.90079938137782],
+        "target": [22.650626109654425,-316.4124515543263,8.98195489294922]
       },
       "KeyA": {
         "desc": [
@@ -129,7 +156,10 @@
         ],
         "check": 0,
         "name": "bacile1",
-        "animation": 0
+        "animation": 0,
+        "sid": 13,
+        "position": [13.829599235715369,-327.31755270017624,10.020073116880248],
+        "target": [23.152533692117096,-317.8177645110794,5.82005412265317]
       },
       "KeyP": {
         "desc": [
@@ -139,7 +169,10 @@
         ],
         "check": 0,
         "name": "villaggio",
-        "animation": 0
+        "animation": 0,
+        "sid": 9,
+        "position": [50.59447158896985,-331.6585134950077,22.663103247606635],
+        "target": [50.689958148171804,-324.48578160788685,6.34410792468451]
       },
       "KeyC": {
         "desc": [
@@ -149,7 +182,10 @@
         ],
         "check": 0,
         "name": "villaggio",
-        "animation": 0
+        "animation": 0,
+        "sid": 11,
+        "position": [35.97025837667494,-344.61579612504744,10.749456519337883],
+        "target": [51.0031943326839,-324.96812387466656,5.445199185975791]
       },
       "KeyX": {
         "desc": [
@@ -159,7 +195,10 @@
         ],
         "check": 0,
         "name": "villaggio",
-        "animation": 0
+        "animation": 0,
+        "sid": 10,
+        "position": [45.51774084459914,-336.4637057482608,14.948556758885083],
+        "target": [39.3444771794248,-328.00248808793356,8.036458653787308]
       },
       "KeyG": {
         "desc": [
@@ -169,7 +208,10 @@
         ],
         "check": 0,
         "name": "antemurale_torre1",
-        "animation": 0
+        "animation": 0,
+        "sid": 1,
+        "position": [-5.215493669781271,-329.88095878544283,8.272173076126801],
+        "target": [19.594754853863694,-323.1834923672888,7.420829620846982]
       },
       "KeyD": {
         "desc": [
@@ -179,7 +221,10 @@
         ],
         "check": 0,
         "name": "antemurale_sud",
-        "animation": 2
+        "animation": 0,
+        "sid": 3,
+        "position": [13.008248669556565,-345.48072390148855,11.92879558255699],
+        "target": [29.30891003998834,-322.5374542697316,-0.03543097826775609]
       },
       "KeyQ": {
         "desc": [
@@ -189,28 +234,36 @@
         ],
         "check": 0,
         "name": "antemurale_sud",
-        "animation": 2
+        "animation": 2,
+        "sid": 4,
+        "position": [25.989298045978906,-348.8001998283694,12.92181130674573],
+        "target": [29.529963464443284,-337.3248221754969,7.165649207433706]
       },
-      "Digit4": {
+      "Digit7": {
         "desc": [
-          "il muro che circonda la Casa a corte centrale",
-          "il muro intorno alla Casa a corte centrale",
-          "il perimetro della Casa a corte centrale"
+          "la torre posta a metà dell'antemurale ad est",
+          "la torre dell'antemurale ad est",
+          "la torre presente nel perimetro dell'antemurale est"
         ],
         "check": 0,
-        "name": "casaacorte",
-        "animation": 0
+        "name": "antemurale_torre4",
+        "animation": 0,
+        "sid": 7,
+        "position": [50.64311100217857,-353.8463066139105,8.641903336828957],
+        "target": [45.52793979549077,-336.03194323249596,8.085400257483668]
       },
       "KeyY": {
         "desc": [
           "il cortile con cisterna",
           "il cortile col pozzo",
           "la cisterna nel cortile"
-
         ],
         "check": 0,
         "name": "cortile",
-        "animation": 4
+        "animation": 4,
+        "sid": 21,
+        "position": [26.105573155672285,-323.9683608743338,19.08882224392945],
+        "target": [29.30418121774789,-326.48364077843706,9.29809364144357]
       },
       "KeyW": {
         "desc": [
@@ -220,49 +273,62 @@
         ],
         "check": 0,
         "name": "bacile2",
-        "animation": 0
+        "animation": 0,
+        "sid": 12,
+        "position": [15.73369618848141,-329.46546154187905,15.085943695298717],
+        "target": [21.16410927962415,-329.5807034091879,9.2856123789284]
       },
       "KeyT": {
         "desc": [
-          "il rifascio del parte del muro del nuraghe (lato sud)",
-          "il rifascio del parte del muro del nuraghe (lato sud)",
-          "il rifascio del parte del muro del nuraghe (lato sud)"
-
+          "il rifascio del parte del muro del nuraghe (lato sud dx)",
+          "il rifascio del parte del muro del nuraghe (lato sud dx)",
+          "il rifascio del parte del muro del nuraghe (lato sud dx)"
         ],
         "check": 0,
         "name": "rifascio_sud",
-        "animation": 0
+        "animation": 0,
+        "sid": 19,
+        "position": [37.49802226788968,-344.782742710573,16.291963069996328],
+        "target": [32.58151776605586,-334.1494583075153,10.242535032603366]
       },
       "KeyU": {
         "desc": [
-          "il rifascio del parte del muro del nuraghe (lato sud)",
-          "il rifascio del parte del muro del nuraghe (lato sud)",
-          "il rifascio del parte del muro del nuraghe (lato sud)"
-
+          "il rifascio del parte del muro del nuraghe (lato sud sx)",
+          "il rifascio del parte del muro del nuraghe (lato sud sx)",
+          "il rifascio del parte del muro del nuraghe (lato sud sx)"
         ],
         "check": 0,
         "name": "rifascio_sud",
-        "animation": 0
+        "animation": 0,
+        "sid": 18,
+        "position": [18.413141570462674,-339.9343307704153,16.721425012125408],
+        "target": [31.27032087449701,-333.12097463386164,9.240969638875024]
       },
       "KeyN": {
         "desc": [
-          "la parte nord del villaggio ricostruito",
-          "la zona nord del villaggio ricostruita",
-          "la parte nord del centro abitato ricostruito"
+          "la parte nord del villaggio ricostruito sui resti dell'antemurale",
+          "la zona nord del villaggio ricostruito sui resti dell'antemurale",
+          "la parte nord del centro abitato ricostruito sui resti dell'antemurale"
         ],
         "check": 0,
         "name": "villaggio_ric_nord",
-        "animation": 3
+        "animation": 3,
+        "sid": 29,
+        "position": [53.39363625810208,-294.94636815094645,7.29250898882686],
+        "target": [43.40162449130428,-308.61154035775036,4.944484875124646]
       },
       "KeyV": {
         "desc": [
-          "la parte nord del villaggio ricostruito",
-          "la zona nord del villaggio ricostruita",
-          "la parte nord del centro abitato ricostruito"
+          "la parte nord-est del villaggio ricostruito sui resti dell'antemurale",
+          "la zona nord-est del villaggio ricostruito sui resti dell'antemurale",
+          "la parte nord-est del centro abitato ricostruito sui resti dell'antemurale"
         ],
         "check": 0,
-        "name": "villaggio_ric_nord",
-        "animation": 3
+        "name": "villaggio_ric_nordest",
+        "animation": 3,
+        "sid": 30,
+        "position": [64.59831418716371,-306.683638689394,5.778882107606583],
+        "target": [56.60378449604545,-311.99149840537643,4.869080588853335]
       },
       "KeyS": {
         "desc": [
@@ -272,7 +338,10 @@
         ],
         "check": 0,
         "name": "antemurale_ovest",
-        "animation": 0
+        "animation": 0,
+        "sid": 14,
+        "position": [-3.6250296811095026,-324.45177230058334,10.523301943464228],
+        "target": [36.69541941570647,-305.43862927569666,-0.5201611215470873]
       },
       "KeyZ": {
         "desc": [
@@ -282,7 +351,10 @@
         ],
         "check": 0,
         "name": "antemurale_est",
-        "animation": 0
+        "animation": 0,
+        "sid": 8,
+        "position": [57.293072353197275,-321.75832396542785,9.429114048337695],
+        "target": [45.17720076977598,-319.8270283909235,7.46454628301347]
       },
       "KeyF": {
         "desc": [
@@ -292,7 +364,10 @@
         ],
         "check": 0,
         "name": "antemurale_torre1",
-        "animation": 0
+        "animation": 0,
+        "sid": 2,
+        "position": [8.58317125092858,-336.84223693827226,10.136987912937403],
+        "target": [8.362579155631211,-336.1959684300505,9.780479428616678]
       },
       "KeyE": {
         "desc": [
@@ -302,7 +377,10 @@
         ],
         "check": 0,
         "name": "antemurale_torre2",
-        "animation": 0
+        "animation": 0,
+        "sid": 5,
+        "position": [24.405002331044997,-345.61032724670815,16.827519830087027],
+        "target": [26.147285111784036,-344.96813219064336,15.257360725431562]
       },
       "KeyR": {
         "desc": [
@@ -312,7 +390,10 @@
         ],
         "check": 0,
         "name": "nuraghe_sud",
-        "animation": 1
+        "animation": 1,
+        "sid": 20,
+        "position": [27.575791253558773,-333.7339248989203,22.717345319560778],
+        "target": [27.73146920112183,-333.5589010297512,22.172687678961122]
       }
   }
 }
