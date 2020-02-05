@@ -274,6 +274,7 @@ $(document).ready(function () {
   function Tasto(e) {
     userActivity = true;
     var x = e.code;
+    console.log("TASTO: ", e.code);
     if(x != "Enter"){
       input = input + e.key;
       input = input.substr(1);

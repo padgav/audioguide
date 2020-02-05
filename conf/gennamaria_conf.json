@@ -129,9 +129,9 @@
           "il rifascio di parte del muro del nuraghe, tra le sue torri più ad ovest"
         ],
         "check": 0,
-        "name": "rifascio_est",
+        "name": "rifascio_ovest",
         "animation": 0,
-        "":17,
+        "sid":17,
         "position": [13.455575519470518,-327.42901913180566,14.399767723541505],
         "target": [35.477114395322175,-315.3577866672042,7.037356578823092]
       },
@@ -228,9 +228,9 @@
       },
       "KeyQ": {
         "desc": [
-          "l'antemurale nel lato sud",
-          "la fascia antemurale posta a sud",
-          "l'antemurale turrito (dotato di torri) a sud"
+          "l'antemurale nel lato sud a ridosso di una torre del nuraghe",
+          "la fascia antemurale posta a sud a ridosso di una torre del nuraghe",
+          "l'antemurale a sud a ridosso di una torre del nuraghe"
         ],
         "check": 0,
         "name": "antemurale_sud",
@@ -239,11 +239,24 @@
         "position": [25.989298045978906,-348.8001998283694,12.92181130674573],
         "target": [29.529963464443284,-337.3248221754969,7.165649207433706]
       },
-      "Digit7": {
+      "Digit6": {
         "desc": [
-          "la torre posta a metà dell'antemurale ad est",
-          "la torre dell'antemurale ad est",
-          "la torre presente nel perimetro dell'antemurale est"
+          "il rifascio di parte del muro del nuraghe, interno della torre lato est",
+          "il rifascio di parte del muro del nuraghe, interno della torre est",
+          "il rifascio di parte del muro del nuraghe, interno della torre est"
+        ],
+        "check": 0,
+        "name": "rifascio_est",
+        "animation": 0,
+        "sid": 7,
+        "position": [50.64311100217857,-353.8463066139105,8.641903336828957],
+        "target": [45.52793979549077,-336.03194323249596,8.085400257483668]
+      },
+      "Digit4": {
+        "desc": [
+          "la torre posta nell'antemurale est",
+          "la torre posizionata nella fascia antemurale lato est",
+          "la torre posta nel antemurale turrito, lato est"
         ],
         "check": 0,
         "name": "antemurale_torre4",
@@ -280,9 +293,9 @@
       },
       "KeyT": {
         "desc": [
-          "il rifascio del parte del muro del nuraghe (lato sud dx)",
-          "il rifascio del parte del muro del nuraghe (lato sud dx)",
-          "il rifascio del parte del muro del nuraghe (lato sud dx)"
+          "il rifascio di parte del muro del nuraghe (lato sud)",
+          "il rifascio di parte del muro del nuraghe (lato sud)",
+          "il rifascio di parte del muro del nuraghe (lato sud)"
         ],
         "check": 0,
         "name": "rifascio_sud",
@@ -293,9 +306,9 @@
       },
       "KeyU": {
         "desc": [
-          "il rifascio del parte del muro del nuraghe (lato sud sx)",
-          "il rifascio del parte del muro del nuraghe (lato sud sx)",
-          "il rifascio del parte del muro del nuraghe (lato sud sx)"
+          "il rifascio del parte del muro del nuraghe (lato sud)",
+          "il rifascio del parte del muro del nuraghe (lato sud)",
+          "il rifascio del parte del muro del nuraghe (lato sud)"
         ],
         "check": 0,
         "name": "rifascio_sud",
@@ -347,7 +360,7 @@
         "desc": [
           "l'antemurale a est",
           "la fascia antemurale posta nel lato est",
-          "l'antemurale turrito (dotato di torri) a est"
+          "la porzione di antemurale ad est"
         ],
         "check": 0,
         "name": "antemurale_est",
@@ -384,9 +397,9 @@
       },
       "KeyR": {
         "desc": [
-          "la torre del nuraghe direzione sud",
-          "la torre del nuraghe posta più a sud",
-          "la torre del nuraghe più a sud"
+          "l'interno della torre del nuraghe direzione sud",
+          "l'interno della torre del nuraghe posta più a sud",
+          "l'interno della torre del nuraghe più a sud"
         ],
         "check": 0,
         "name": "nuraghe_sud",
