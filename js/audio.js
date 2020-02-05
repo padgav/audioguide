@@ -266,7 +266,7 @@ $(document).ready(function () {
       $("#answer").html("");
     }
     userActivity = false
-  } , 120000);
+  } , 60000);
 
   var lastKey = -1;
 
@@ -280,7 +280,7 @@ $(document).ready(function () {
     }
     else{
       checkRfidCode(input);
-;    }
+    }
 
     if (x == "Space") {
       //only for develop use
