@@ -139,7 +139,7 @@
         "desc": [
           "la torre lato ovest del nuraghe",
           "la torre del nuraghe posta a ovest",
-          "il rifascio del parte del muro del nuraghe, torre ovest"
+          "il rifascio di parte del muro del nuraghe, torre ovest"
         ],
         "check": 0,
         "name": "rifascio_ovest",
@@ -306,9 +306,9 @@
       },
       "KeyU": {
         "desc": [
-          "il rifascio del parte del muro del nuraghe (lato sud)",
-          "il rifascio del parte del muro del nuraghe (lato sud)",
-          "il rifascio del parte del muro del nuraghe (lato sud)"
+          "il rifascio di parte del muro del nuraghe (lato sud)",
+          "il rifascio di parte del muro del nuraghe (lato sud)",
+          "il rifascio di parte del muro del nuraghe (lato sud)"
         ],
         "check": 0,
         "name": "rifascio_sud",
