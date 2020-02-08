@@ -147,7 +147,7 @@ function showText(message) {
 
 function speechText(message, onendFunction) {
   var utterThis = new SpeechSynthesisUtterance();
-  utterThis.text = message;
+  utterThis.text = "<?xml version='1.0'?>\r\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>" + message + "</speak>";
   utterThis.voice = voices[VOICEIDX];
   utterThis.rate = currRate;
 
@@ -171,11 +171,12 @@ var timeout;
 
   var name = current_painting.name;
   if(current_painting.alt_name != undefined) name = current_painting.alt_name
-  var message = current_painting.messages.welcome[0] + current_painting.support +
-    current_painting.art + name + current_painting.caption + current_painting.messages.welcome[1];
+  var message = current_painting.messages.welcome[0] + " " + current_painting.support + " " +
+    current_painting.art + " " + name + ". " + current_painting.caption + " " + current_painting.messages.welcome[1];
 
     timeout = setTimeout( function(){
     showText(message);
+    console.log(message);
     speechText(message, function () { if (state == 1) state = 2 });
   }, current_painting.delay);
 
