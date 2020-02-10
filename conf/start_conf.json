@@ -1,7 +1,6 @@
 {
   "start": "Gennamaria",
   "voiceName": "Alice",
-  "voiceLang": "it-IT",
 
   "config_files": [
     "./conf/adorazione_conf.json",

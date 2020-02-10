@@ -542,6 +542,7 @@ $(document).ready(function () {
       var tmpText = ($("#question").val()).toLowerCase();
       getResult(tmpText);
       $("#question").val('');
+      document.getElementById("question").blur();
     }
     e.stopPropagation();
   });
