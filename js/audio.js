@@ -245,6 +245,7 @@ var state = 0;
 //state = 0 standby
 //state = 1 welcome message, stop sensor
 //state = 2 ready for use
+//state = 3 waiting for user speech
 
 $(document).ready(function () {
 
@@ -350,6 +351,7 @@ $(document).ready(function () {
         beep();
         recognition.stop();
         recognition.start();
+        state = 3;
       }
 
       else {
@@ -563,10 +565,14 @@ $(document).ready(function () {
   }
 
   recognition.onresult = function (event) {
+    state = 2;
     var last = event.results.length - 1;
     var text = event.results[last][0].transcript;
     $("#question").val(text)
     getResult(text);
+  }
+  recognition.onend = function (event) {
+    state = 2;
   }
 
   function getResult(text) {
