@@ -145,11 +145,32 @@ function showText(message) {
 }
 
 
+var sayTimeout = null;
 function speechText(message, onendFunction) {
+
   var utterThis = new SpeechSynthesisUtterance();
   utterThis.text = "<?xml version='1.0'?>\r\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>" + message + "</speak>";
   utterThis.voice = voices[VOICEIDX];
   utterThis.rate = currRate;
+
+  //
+  if (synth.speaking) {
+      // If is currently speaking cancel the current utterances
+      synth.cancel();
+
+      // Make sure we don't create more than one timeout...
+      if (sayTimeout !== null)
+          clearTimeout(sayTimeout);
+
+      sayTimeout = setTimeout(function () { speechText(message); }, 50);
+  }
+  else {
+      // Good to go
+
+      utterThis = new SpeechSynthesisUtterance(message);
+      synth.speak(utterThis);
+  }
+
 
   utterThis.onend = function (event) {
     console.log("*** MESSAGE END!!! ***");
@@ -159,8 +180,8 @@ function speechText(message, onendFunction) {
     }, 1000);
     $("#answer").stop().fadeOut();
   }
-  synth.cancel();
-  synth.speak(utterThis);
+  //synth.cancel();
+  //synth.speak(utterThis);
 
 }
 var timeout;
