@@ -693,75 +693,98 @@
       "type": "painting",
       "qa": [
         {
+          "name": "chiedere",
           "question": "Cosa posso chiedere?",
           "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore"
         },
         {
+          "name": "generale",
           "question": "Descrizione generale, personaggi rappresentati",
           "answer": "Il retablo dell'Annunciazione è costituito da otto pannelli. Nello scomparto centrale si trova l'Annunciazione; nel pannello superiore è raffigurata una Crocifissione; delle scene laterali un solo pannello a sinistra con la Caccia di San Giuliano; nella predella in basso sono raffigurati al centro Cristo in pietà, Sant'Antonio Abate e San Giovanni Battista a sinistra, Santa Margherita d'Antiochia e Santa Caterina d'Alessandria a destra."
         },
         {
+          "name": "tecnica",
           "question": "Che tipo di materia materiale e tecnica sono utilizzate",
           "answer": "Tempera su tavola con fondo d'oro."
         },
         {
+          "name": "dimensioni",
           "question": "Che dimensioni ha l'opera?",
           "answer": "Il retablo misura 260 per 238 centimetri circa. Puoi anche chiedermi informazioni su tecnica e materiali utilizzati"
         },
         {
+          "name": "colori",
           "question": "Quali sono i colori predominanti?",
           "answer": "I colori predominanti sono marrone, rosso, verde, bianco, oro. Attraverso l'accostamento cromatico è possibile decifrare la corrente pittorica"
         },
         {
-          "question": "Qual è la corrente pittorica? Che datazione ha?",
-          "answer": "L'accostamento rosso, verde, bianco, oro esprime la piena adesione allo stile internazionale della pittura tardogotica catalana. L'opera è databile al 1410 circa"
+          "name": "corrente",
+          "question": "Qual è la corrente pittorica?",
+          "answer": "L'accostamento rosso, verde, bianco, oro esprime la piena adesione allo stile internazionale della pittura tardogotica catalana."
         },
         {
+          "name": "datazione",
+          "question": "Che datazione ha?",
+          "answer": "L'opera è databile al 1410 circa"
+        },
+        {
+          "name": "integra",
           "question": "L'opera è integra?",
           "answer": "L'opera si presenta molto rovinata, alcuni elementi del pannello centrale non sono visibili. Ha subito un restauro nel 1998"
         },
         {
+          "name": "figure",
           "question": "Figure rappresentate, personaggi raffigurati",
           "answer": "Le figure principali del pannello centrale sono la Madonna e l'Arcangelo Gabriele. Potresti chiedermi informazioni su questi personaggi o la descrizione della scena"
         },
         {
+          "name": "provenienza",
           "question": "Da dove proviene, la provenienza, dove si trovava",
           "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace a Cagliari dove era collocato all'interno della terza cappella del coro, di patronato della famiglia Dedoni. Puoi fare domande sull'autore del dipinto"
 
         },
         {
+          "name": "autore",
           "question": "Chi è l'autore, chi l'ha dipinto, chi l'ha fatto, informazioni sull'autore",
           "answer": "L’opera è stata attribuita al catalano Joan Mates di Vilafranca del Penedès, potresti chiedermi informazioni sulla scena centrale rappresentante l'Annunciazione"
         },
         {
+          "name": "centrale",
           "question": "Tavola centrale, scena dell'Annunciazione. Cosa rappresenta la tavola? Cosa raffigura la tavola?",
           "answer": "La tavola raffigura la scena dell'Annunciazione. Due figure in primo piano, a sinistra l'Arcangelo e a destra Maria, in un ambiente interno. Sullo sfondo sono presenti strutture architettoniche con arcate. In alto a sinistra la mano del Cristo punta le dita verso Maria, mandando lo Spirito Santo attraverso una colomba. Puoi farmi altre domande sui personaggi"
         },
         {
+          "name": "madonna",
           "question": "Come è rappresentata la Madonna, descrivi Maria",
           "answer": "La Madonna con aureola circolare dorata, indossa una veste abbondante che avvolge tutto il corpo fino al pavimento. I capelli dorati semicoperti dalla veste, la mano destra è rivolta verso il petto"
         },
         {
+          "name": "madonna_vestito",
           "question": "Di che colore è il vestito di Maria",
           "answer": "La veste di Maria è color marrone scuro con bordi dorati, nell'apertura sul petto si intravede una stoffa rossa decorata"
         },
         {
+          "name": "madonna_espressione",
           "question": "Che espressione ha il volto di Maria",
           "answer": "Maria ha il capo chino, lo sguardo rivolto verso l'Arcangelo, l'espressione è dolce e delicata"
         },
         {
+          "name": "gabriele",
           "question": "Come è raffigurato l'Arcangelo Gabriele",
           "answer": "Alla sinistra della Vergine, Gabriele è con aureola dorata, in ginocchio, lo sguardo rivolto verso Maria. La veste è bianca, avvolta in gran in parte da un mantello color rosso con bordi dorati. Le ali sono color rosso. Porge gentilmente un giglio bianco"
         },
         {
+          "name": "giglio",
           "question": "Quale simbologia ha il giglio?",
           "answer": "Nell'iconografia religiosa il giglio bianco rappresenta purezza e verità"
         },
         {
+          "name": "elementi",
           "question": "Quali elementi sono presenti oltre i due personaggi?",
           "answer": "Sono presenti due elementi di rilievo. In alto a sinistra è presente una mano con due dita rivolte verso Maria, sono presenti dei tratti dorati che rappresentano la luce. Con questo gesto, il Cristo emana lo Spirito Santo attraverso una colomba bianca"
         },
         {
+          "name": "colomba",
           "question": "Che simbologia ha la colomba?",
           "answer": "La colomba nella cristianità è simbolo di luce e salvezza"
         }
@@ -773,20 +796,121 @@
       "type": "painting",
       "qa": [
         {
-          "question": "Descrizione generale",
-          "answer": "Il dipinto raffigura la scena della visitazione di Maria Vergine a Elisabetta sua sorella."
+        	"name": "chiedere",
+        	"question": "Cosa posso chiedere? Che domande posso fare?",
+			    "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore"
         },
         {
-          "question": "Come è l'ambiente",
-          "answer": " sullo sfondo un castello."
+          "name": "dimensioni",
+        	"question": "Che dimensioni ha l'opera?",
+          "answer": "Il retablo misura 249,6 cm x 188,4 cm. Il pannello centrale misura 151,6 cm x 70,4 cm."
         },
         {
-          "question": "Chi è l'autore?",
-          "answer": "Autore aragonese"
+          "name": "tecnica",
+        	"question": "Che tecnica e materiali sono utilizzati?",
+          "answer": "Tempera su tavola."
         },
         {
-          "question": "Di che periodo è?",
-          "answer": "quindicesimo secolo"
+          "name": "generale",
+        	"question": "Descrizione generale",
+          "answer": "L'opera si presenta in buone condizioni, mancano predella e polvarolo. Lo scomparto centrale inferiore raffigura l'episodio della Visitazione: l'incontro fra le due donne avviene all'aperto; a destra, una costruzione turrita, dall'ingresso della quale fa capolino un'elegante damigella. Sullo sfondo un paesaggio collinare."
+        },
+        {
+        	"name": "colori",
+        	"question": "Quali sono i colori predominanti?",
+          "answer": "I colori predominanti sono il rosso, il verde, e l'oro"
+        },
+        {
+        	"name": "integra",
+        	"question": "L'opera è integra?",
+          "answer": "L'opera si presenta in buone condizioni, è composta da 6 tavole. Mancano predella e polvarolo"
+        },
+        {
+        	"name": "figure",
+        	"question": "Figure rappresentate, personaggi raffigurati",
+          "answer": "Nello scomparto centrale sono rappresentati 4 personaggi: San Giuseppe, la Vergine Maria, Elisabetta e una damigella"
+        },
+        {
+        	"name": "provenienza",
+        	"question": "Da dove proviene, la provenienza, dove si trovava",
+          "answer": "Il retablo della Visitazione proviene dalla chiesa di S. Francesco di Stampace a Cagliari, dov'era custodito all'interno della cappella omonima. Attualmente è esposto nella pinacoteca nazionale di Cagliari."
+        },
+        {
+        	"name": "autore",
+        	"question": "Chi è l'autore, chi l'ha dipinto, chi l'ha fatto, informazioni sull'autore",
+          "answer": "Si tratta dell'unica opera firmata, in Sardegna, di Joan Barcelo, pittore di Tortosa documentato nell'isola dal 1488 al 1516"
+        },
+        {
+        	"name": "centrale",
+        	"question": "Tavola centrale, scena della Visitazione. Cosa rappresenta la tavola? Cosa raffigura la tavola?",
+        	"answer": "La tavola raffigura la scena della Visitazione"
+        },
+        {
+        	"name": "madonna",
+        	"question": "Come è rappresentata la Madonna, descrivi Maria",
+          "answer": "La Madonna, eretta sulla sinistra della scena, porta capelli castani lunghi, semi raccolti le cui lunghezze cadono sulle spalle"
+        },
+        {
+        	"name": "madonna_vestito",
+        	"question": "Di che colore è il vestito di Maria",
+          "answer": "Il vestito di Maria ha calde tonalità ed è avvolta da un ampio mantello broccato, con decori floreali dorati su fondo scuro"
+        },
+        {
+        	"name": "madonna_espressione",
+        	"question": "Che espressione ha il volto di Maria",
+          "answer": "Il volto di Maria è rassicurante e ha lo sguardo rivolto in direzione di Elisabetta"
+        },
+        {
+        	"name": "elisabetta_vestito",
+        	"question": "Di che colore è il vestito di Elisabetta",
+          "answer": "Elisabetta accoglie la Vergine col capo coperto da un drappo bianco. Indossa un'ampia veste color verde, con larghe maniche nere dai polsi dorati. È coperta da un prezioso mantello dorato, verosimilmente raccolto e fermato in direzione del ventre"
+        },
+        {
+        	"name": "elisabetta_espressione",
+        	"question": "Che espressione ha il volto di Elisabetta",
+          "answer": "L'espressione di Elisabetta è stanca, indice dello stato avanzato della gravidanza in tarda età"
+        },
+        {
+        	"name": "giuseppe_vestito",
+        	"question": "Di che colore è il vestito di San Giuseppe?",
+          "answer": "San Giuseppe indossa un largo abito nero dotato di cappuccio ed è coperto da un mantello rosso vivo"
+        },
+        {
+        	"name": "giuseppe_aureaola",
+        	"question": "Perché l'aureola di San Giuseppe è ottagonale?",
+          "answer": "è a cresta ottagonale dorata, simbolo di virtù. Poiché il cerchio è simbolo della perfezione, quella ottagonale indica la via di chi è alla ricerca della perfezione. La figura di Giuseppe è intermedia tra l'antico e il nuovo testamento, in particolare Giuseppe è il protagonista assieme a Maria della rivelazione e del cammino della salvezza"
+        },
+        {
+        	"name": "giuseppe_espressione",
+        	"question": "Che espressione ha il volto di San Giuseppe?",
+          "answer": "San Giuseppe è partecipe dell'incontro fra le due donne, osserva sereno la scena"
+        },
+        {
+        	"name": "edificio",
+        	"question": "Quali elementi sono presenti oltre i personaggi?",
+          "answer": "è presente un edificio turrito"
+        },
+        {
+        	"name": "edificio_architettura",
+        	"question": "Che aspetto ha l'edificio architettura?",
+          "answer": "L'edificio ha un aspetto goticheggiante. È dotato di torre, con tipiche bifore e merlature"
+        },
+        {
+        	"name": "damigella",
+        	"question": "Che aspetto ha la damigella?",
+          "answer": "La damigella si affaccia timidamente dall'ingresso dell'edificio goticheggiante. È abbigliata secondo la moda dell'epoca: capelli raccolti e impreziositi da fermaglio, abito lungo con apertura da cui spunta una gonna color rosso"
+        },
+        {
+        	"question": "",
+          "answer" : ""
+        },
+        {
+        	"question": "",
+          "answer" : ""
+        },
+        {
+        	"question": "",
+          "answer" : ""
         }
       ]
     },
