@@ -801,9 +801,19 @@
 			    "answer": "Puoi chiedere: la descrizione generale, la provenienza, informazioni sull'autore"
         },
         {
-          "name": "dimensioni",
-        	"question": "Che dimensioni ha l'opera?",
-          "answer": "Il retablo misura 249,6 cm x 188,4 cm. Il pannello centrale misura 151,6 cm x 70,4 cm."
+          "name": "reatablo_dimensioni",
+        	"question": "Che dimensioni ha l'opera retablo?",
+          "answer": "Il retablo misura 249,6 cm x 188,4 cm."
+        },
+        {
+          "name": "visitazione_dimensioni",
+        	"question": "Che dimensioni ha il pannello della visitazione tavola, quadro centrale?",
+          "answer": "Il pannello centrale misura 151,6 cm x 70,4 cm."
+        },
+        {
+          "name": "reatablo_titolo",
+          "question": "titolo nome opera",
+          "answer": "La tavola centrale in basso dà il titolo all'opera. In questo scomparto è rappresentato l'episodio biblico della Visitazione, raccontato nel Vangelo di Luca."
         },
         {
           "name": "tecnica",
@@ -811,39 +821,74 @@
           "answer": "Tempera su tavola."
         },
         {
-          "name": "generale",
-        	"question": "Descrizione generale",
-          "answer": "L'opera si presenta in buone condizioni, mancano predella e polvarolo. Lo scomparto centrale inferiore raffigura l'episodio della Visitazione: l'incontro fra le due donne avviene all'aperto; a destra, una costruzione turrita, dall'ingresso della quale fa capolino un'elegante damigella. Sullo sfondo un paesaggio collinare."
+          "name": "retablo",
+        	"question": "Descrizione retablo",
+          "answer": "Il polittico è dipinto a tempera su fondo oro, ed è databile agli anni in cui l'autore lavora in Sardegna. L'opera si presenta in buone condizioni, mancano predella e polvarolo. Lo scomparto centrale inferiore raffigura l'episodio della Visitazione. Nello scomparto centrale superiore è rappresentata una Crocefissione di ispirazione prettamente fiamminga. L'impostazione è quella dei personaggi dolenti: le tre Marie e san Giovanni a sinistra della croce; dalla parte opposta i personaggi in abiti contemporanei. Nei pannelli laterali, partendo da sinistra, in basso, è raffigurato S. Gerolamo con i suoi canonici attributi, il leone (in questo caso accovacciato sul pavimento) e un modellino di chiesa in mano. Nel pannello superiore un'elegante Annunciazione si svolge all'interno di un ambiente con finestre che si aprono su scorci di paesaggio alla moda fiamminga. Sulla destra, dall'alto, un'affollata scena della Pentecoste sovrasta la figura di Santa Apollonia, rappresentata secondo l'iconografia come una giovane vergine che tiene in mano una tenaglia"
         },
         {
-        	"name": "colori",
+          "name": "retablo_ambiente",
+          "question": "ambiente retablo decorazioni pavimento pavimentazione",
+          "answer": "L'ambiente dell'opera è caratterizzato dal fondo oro, fittamente decorato da motivi intrecciati in due bande laterali, e da motivi decorativi tessili nella parte centrale. La pavimentazione è costituita da raffinati azulejos (piastrelle di maiolica colorata)."
+        },
+        {
+          "name": "retablo_stile",
+          "question": "stile classificazione ispirazione retablo ",
+          "answer": "L'intera opera si classifica come un interessante esempio di pittura ibero-fiamminga e rivela una pregevole fattura. Dal punto di vista stilistico, nel retablo, emerge l'utilizzo di un modello di origine fiamminga - probabilmente conosciuto tramite stampe o miniature - e la cultura d'ambito iberico-valenzano dell'autore."
+        },
+        {
+          "name": "reatablo_condizioni",
+          "question": "in che condizioni è il retablo",
+          "answer": " L'opera si presenta in buone condizioni, mancano predella e polvarolo. "
+        },
+        {
+        	"name": "retablo_colori",
         	"question": "Quali sono i colori predominanti?",
           "answer": "I colori predominanti sono il rosso, il verde, e l'oro"
         },
         {
-        	"name": "integra",
+        	"name": "retablo_condizioni",
         	"question": "L'opera è integra?",
           "answer": "L'opera si presenta in buone condizioni, è composta da 6 tavole. Mancano predella e polvarolo"
         },
         {
-        	"name": "figure",
+        	"name": "visitazione_figure",
         	"question": "Figure rappresentate, personaggi raffigurati",
           "answer": "Nello scomparto centrale sono rappresentati 4 personaggi: San Giuseppe, la Vergine Maria, Elisabetta e una damigella"
         },
         {
-        	"name": "provenienza",
+        	"name": "retablo_provenienza",
         	"question": "Da dove proviene, la provenienza, dove si trovava",
           "answer": "Il retablo della Visitazione proviene dalla chiesa di S. Francesco di Stampace a Cagliari, dov'era custodito all'interno della cappella omonima. Attualmente è esposto nella pinacoteca nazionale di Cagliari."
         },
         {
-        	"name": "autore",
+        	"name": "retablo_autore",
         	"question": "Chi è l'autore, chi l'ha dipinto, chi l'ha fatto, informazioni sull'autore",
           "answer": "Si tratta dell'unica opera firmata, in Sardegna, di Joan Barcelo, pittore di Tortosa documentato nell'isola dal 1488 al 1516"
         },
         {
-        	"name": "centrale",
-        	"question": "Tavola centrale, scena della Visitazione. Cosa rappresenta la tavola? Cosa raffigura la tavola?",
-        	"answer": "La tavola raffigura la scena della Visitazione"
+          "name": "reatablo_autore_firma",
+          "question": "Dove troviamo la firma dell'autore",
+          "answer": "Il nome dell'autore compare in un piccolo cartiglio dello scomparto centrale: un'iscrizione in minuscola gotica riporta: Johannes Barcelo me fecit.""
+        },
+        {
+          "name": "retablo_datazione",
+          "question": "Che datazione ha?",
+          "answer": "La datazione dell'opera è compresa tra il 1488 e il 1516"
+        },
+        {
+          "name": "retablo_corrente",
+          "question": "Qual è la corrente pittorica?",
+          "answer": "La corrente pittorica dell'opera è tardo gotica, di stretta osservanza valenzana, con riferimenti alla pittura fiamminga. "
+        },
+        {
+          "name": "retablo_composizione",
+          "question": "come sono le proporzioni della composizione?",
+          "answer":"Nell'opera, colpiscono, della composizione, le proporzioni goticamente allungate delle figure, la preziosità e la ricercatezza delle vesti."
+        },
+        {
+        	"name": "tavola_centrale",
+        	"question": "Tavola centrale, scena della Visitazione. Cosa rappresenta la tavola? Cosa raffigura il quadro?",
+        	"answer": "La tavola centrale raffigura la scena della Visitazione, l'episodio biblico  raccontato nel Vangelo di Luca. Al centro della scena, in primo piano, la Vergine, accompagnata da San Giuseppe, incontra Elisabetta: le figure delle due donne sono rappresentate al termine di un abbraccio nel quale i due corpi restano a contatto, le protagoniste si scambiano un tenero sguardo e le rispettive aureole, dalle identiche dimensioni, si sfiorano."
         },
         {
         	"name": "madonna",
@@ -871,6 +916,11 @@
           "answer": "L'espressione di Elisabetta è stanca, indice dello stato avanzato della gravidanza in tarda età"
         },
         {
+          "name": "giuseppe",
+          "question": "descrizione san giuseppe",
+          "answer": "Giuseppe è sposo di Maria e padre putativo di Gesù. Nell'oepra è rappresentato con una folta barba chiara, indossa un largo abito nero dotato di cappuccio ed è coperto da un mantello rosso vivo. L'aureola, a differenza di quelle circolari delle due donne, è a cresta ottagonale dorata, simbolo di virtù. Tiene il bastone con la mano destra e, partecipe dell'incontro fra le due donne e osserva la scena."
+        },
+        {
         	"name": "giuseppe_vestito",
         	"question": "Di che colore è il vestito di San Giuseppe?",
           "answer": "San Giuseppe indossa un largo abito nero dotato di cappuccio ed è coperto da un mantello rosso vivo"
@@ -878,7 +928,7 @@
         {
         	"name": "giuseppe_aureaola",
         	"question": "Perché l'aureola di San Giuseppe è ottagonale?",
-          "answer": "è a cresta ottagonale dorata, simbolo di virtù. Poiché il cerchio è simbolo della perfezione, quella ottagonale indica la via di chi è alla ricerca della perfezione. La figura di Giuseppe è intermedia tra l'antico e il nuovo testamento, in particolare Giuseppe è il protagonista assieme a Maria della rivelazione e del cammino della salvezza"
+          "answer": "L'aureola di Giuseppe è a cresta ottagonale dorata, simbolo di virtù. Poiché il cerchio è simbolo della perfezione, quella ottagonale indica la via di chi è alla ricerca della perfezione. La figura di Giuseppe è intermedia tra l'antico e il nuovo testamento, in particolare Giuseppe è il protagonista assieme a Maria della rivelazione e del cammino della salvezza"
         },
         {
         	"name": "giuseppe_espressione",
@@ -888,7 +938,7 @@
         {
         	"name": "edificio",
         	"question": "Quali elementi sono presenti oltre i personaggi?",
-          "answer": "è presente un edificio turrito"
+          "answer": "Oltre i personaggi, è presente un edificio turrito"
         },
         {
         	"name": "edificio_architettura",
@@ -897,8 +947,8 @@
         },
         {
         	"name": "damigella",
-        	"question": "Che aspetto ha la damigella?",
-          "answer": "La damigella si affaccia timidamente dall'ingresso dell'edificio goticheggiante. È abbigliata secondo la moda dell'epoca: capelli raccolti e impreziositi da fermaglio, abito lungo con apertura da cui spunta una gonna color rosso"
+        	"question": "descrizione damigella",
+          "answer": "La damigella si affaccia timidamente dall'ingresso arcato dell'edificio goticheggiante. È abbigliata secondo la moda dell'epoca: capelli raccolti e impreziositi da fermaglio, abito lungo con apertura da cui spunta una gonna color rosso"
         },
         {
         	"question": "",
