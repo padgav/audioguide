@@ -151,7 +151,7 @@
         {
           "name": "prov",
           "question": "Da dove proviene, la provenienza, dove si trovava, dove stava il retablo",
-          "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace dove era collocato nella cappella di patronato della famiglia Carnicer.",
+          "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace dove era collocato nella cappella di patronato della famiglia Carniçer.",
           "suggests":  [
             {
               "suggest": "informazioni sull'autore del dipinto",
@@ -436,7 +436,7 @@
         {
           "name": "aurcroc",
           "question": "Perchè l'aureola è crociata e cosa significa. Parlami, spiegami, l'aureola crociata",
-          "answer": " riferimento all'aureola che circonda il capo di Gesù Bambino, si indicano tre estremità della croce che preconizzano il sacrificio di Gesù Cristo per la nostra redenzione. Inoltre i bracci di tre ricordano la trinità.",
+          "answer": "In riferimento all'aureola che circonda il capo di Gesù Bambino, si indicano tre estremità della croce che preconizzano il sacrificio di Gesù Cristo per la nostra redenzione. Inoltre i bracci di tre ricordano la trinità.",
           "suggests":  [
             {
               "suggest": "informazioni sulla tavola centrale",
@@ -475,7 +475,7 @@
         {
           "name": "dim2",
           "question": "Quali sono le dimensioni della tavola e del retablo?",
-          "answer": "Le dimensioni della tavola sono cm. 163,7 per 87,5; quelle relative al retablo cm. 275,2 per 261,1.",
+          "answer": "Le dimensioni della tavola sono 163,7 per 87,5 cm.; quelle relative al retablo 275,2 per 261,1 cm.",
           "suggests":  [
             {
               "suggest": "chi è l'autore del retablo",
@@ -491,7 +491,7 @@
         {
           "name": "locret",
           "question": "Dov'era originariamente il retablo?. Dove stava il retablo.",
-          "answer": "Il retablo era originariamente collocato nella parete di controfacciata della chiesa di San Francesco di Stampace nella prima cappella a sinistra (famiglia Carnìcerj).",
+          "answer": "Il retablo era originariamente collocato nella parete di controfacciata della chiesa di San Francesco di Stampace nella prima cappella a sinistra (famiglia Carniçer).",
           "suggests":  [
             {
               "suggest": "chi ha commissionato il retablo",
@@ -547,7 +547,7 @@
         {
           "name": "vestmad3",
           "question": "La veste di Maria tra colori e disegni in rilievo ha un significato? Cosa significano i colori della veste? ",
-          "answer": "Il rosso della veste di Maria indica la passione di Gesù Cristo, il mantello reso in broccato, da l'indicazione di regalità della Madonna che appare simbolicamente vestita con un ricco abbigliamento di stretto significato teologico.",
+          "answer": "Il rosso della veste di Maria indica la passione di Gesù Cristo, il mantello reso in broccato, dà l'indicazione di regalità della Madonna che appare simbolicamente vestita con un ricco abbigliamento di stretto significato teologico.",
           "suggests":  [
             {
               "suggest": "di che colore è il vestito della madonna",
@@ -558,7 +558,7 @@
         {
           "name": "capleg",
           "question": "Perché la Madonna ha i capelli ondulati e slegati fino alle spalle? Capelli ondulati di maria. Qual'è il significato dei capelli ondulati? che significano i capelli ondulati.",
-          "answer": "Le giovani della società ebraica ai tempi di Cristo avevano la consuetudine, prima del matrimonio di mantenere i capelli sciolti come indicazione del loro stato anagrafico libero e di verginità. Per quanto riguarda ì capelli ondulati probabilmente sono riferimento alla moda della capigliatura fiamminga tra il '400 e il '500.",
+          "answer": "La madonna ha i capelli ondulati in quanto le giovani della società ebraica ai tempi di Cristo avevano la consuetudine, prima del matrimonio di mantenere i capelli sciolti come indicazione del loro stato anagrafico libero e di verginità. Per quanto riguarda ì capelli ondulati probabilmente sono riferimento alla moda della capigliatura fiamminga tra il '400 e il '500.",
           "suggests":  [
             {
               "suggest": "qual è il significato politico dell'opera",
@@ -586,7 +586,7 @@
         {
           "name": "commis",
           "question": "Chi ha commissionato il retablo? Chi ha commissionato l'opera? Chi ha commissionato il dipinto?",
-          "answer": "La committenza del retablo è attribuita alla famiglia Carnicer, aragonese composta da notai, avvocati, procuratori e medici. Giovanni Carnicer notaio nel Regno d'Aragona, passò in Sardegna nel 1482 dove acquistò la Segreteria della città di Cagliari, ufficio che fu tramandato in famiglia per circa tre secoli, passando di padre in figlio. Giovanni Carnicer fu presente assieme al figlio Pietro Andrea al parlamento Dusay, come notaio pubblico, e sindaco del Braccio reale, venendo ricompensato nel 1510 per una somma di 20 lire. La famiglia si estinse nella seconda metà del diciottesimo secolo.",
+          "answer": "La committenza del retablo è attribuita alla famiglia Carniçer, aragonese composta da notai, avvocati, procuratori e medici. Giovanni Carniçer notaio nel Regno d'Aragona, passò in Sardegna nel 1482 dove acquistò la Segreteria della città di Cagliari, ufficio che fu tramandato in famiglia per circa tre secoli, passando di padre in figlio. Giovanni Carniçer fu presente assieme al figlio Pietro Andrea al parlamento Dusay, come notaio pubblico, e sindaco del Braccio reale, venendo ricompensato nel 1510 per una somma di 20 lire. La famiglia si estinse nella seconda metà del diciottesimo secolo.",
           "suggests":  [
             {
               "suggest": "qual è il significato politico dell'opera",
@@ -597,7 +597,7 @@
         {
           "name": "sigpol",
           "question": "qual è il significato politico di questo retablo? qual è il significato politico dell'opera? qual è il significato politico del dipinto?",
-          "answer": "Il retablo sostiene il programma politico dei re cattolici, Ferdinando d'Aragona e Isabella di Castiglia che attuano un processo di conquista (in senso cristiano) del territorio iberico e ricompongono i paesi di oltre mare che costituiscono la Corona d'Aragona prima e quella di Spagna successivamente, le loro commissioni artistiche riconfermano il cristianesimo come religione di stato e su questa fondano anche una distribuzione dell'immagine canonica presente nelle sedi dell'amministrazione del culto e dei processi amministrativi.",
+          "answer": "Il retablo sostiene il programma politico dei re cattolici, Ferdinando d'Aragona e Isabella di Castiglia che attuano un processo di conquista (in senso cristiano) del territorio iberico, e ricompongono i paesi di oltre mare che costituiscono la Corona d'Aragona prima e quella di Spagna successivamente; le loro commissioni artistiche riconfermano il cristianesimo come religione di stato, e su questa fondano anche una distribuzione dell'immagine canonica presente nelle sedi dell'amministrazione del culto e dei processi amministrativi.",
           "suggests":  [
             {
               "suggest": "chi ha commissionato il retablo",
@@ -630,7 +630,7 @@
         {
           "name": "pianop",
           "question": "Perché i pastori non sono sullo stesso piano?",
-          "answer": "Per una tecnica pittorica rappresentativa che utilizza un solo punto centrale nella realizzazione prospettica della scena, dando scarsissima attenzione alle profondità dei piani.",
+          "answer": "I tre pastori, non stanno sullo stesso piano per una tecnica pittorica rappresentativa che utilizza un solo punto centrale nella realizzazione prospettica della scena, dando scarsissima attenzione alle profondità dei piani.",
           "suggests":  [
             {
               "suggest": "a quale scuola pittorica è riconducibile il quadro",
@@ -652,7 +652,7 @@
         {
           "name": "pittor",
           "question": "A quale scuola pittorica è riconducibile il quadro? scuola e stile del dipinto. Parlami dello stile di pittura.",
-          "answer": "Ambito aragonese.",
+          "answer": "La scuola pittorica di riferimento è di ambito aragonese.",
           "suggests":  [
             {
               "suggest": "in quali condizioni è pervenuto il dipinto",
@@ -663,7 +663,7 @@
         {
           "name": "condiz",
           "question": "E' arrivato integro o è stato restaurato? In che quali condizioni è pervenuto il dipinto",
-          "answer": "E' arrivato privo dei polvaroli, ma in buono stato. Ha subito pochissimi interventi di restauro che potrebbero essere intesi come interventi di manutenzione e consolidamento.",
+          "answer": "Il dipinto è arrivato privo dei polvaroli, ma in buono stato. Ha subito pochissimi interventi di restauro che potrebbero essere intesi come interventi di manutenzione e consolidamento.",
           "suggests":  [
             {
               "suggest": "a quale scuola pittorica è riconducibile il quadro",
