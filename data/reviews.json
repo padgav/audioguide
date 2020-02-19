@@ -94,7 +94,7 @@
         {
           "name": "dim",
           "question": "Che dimensioni ha l'opera?",
-          "answer": " La tavola misura 275 per 261 centimetri circa.",
+          "answer": " La tavola misura 275 per 261 cm circa.",
           "suggests":  [
             {
               "suggest": "che tecnica e materiali sono utilizzati",
@@ -710,7 +710,7 @@
         {
           "name": "dimensioni",
           "question": "Che dimensioni ha l'opera?",
-          "answer": "Il retablo misura 260 per 238 centimetri circa. Puoi anche chiedermi informazioni su tecnica e materiali utilizzati"
+          "answer": "Il retablo misura 260 per 238 cm circa. Puoi anche chiedermi informazioni su tecnica e materiali utilizzati"
         },
         {
           "name": "colori",
@@ -803,12 +803,12 @@
         {
           "name": "reatablo_dimensioni",
         	"question": "Che dimensioni ha l'opera retablo?",
-          "answer": "Il retablo misura 249,6 cm x 188,4 cm."
+          "answer": "Il retablo misura 249,6 per 188,4 cm."
         },
         {
           "name": "visitazione_dimensioni",
         	"question": "Che dimensioni ha il pannello della visitazione tavola, quadro centrale?",
-          "answer": "Il pannello centrale misura 151,6 cm x 70,4 cm."
+          "answer": "Il pannello centrale misura 151,6 per 70,4 cm."
         },
         {
           "name": "reatablo_titolo",
@@ -823,7 +823,7 @@
         {
           "name": "retablo",
         	"question": "Descrizione retablo, descrizione generale",
-          "answer": "Il retablo è un polittico dipinto a tempera su fondo oro, ed è databile agli anni in cui l'autore lavora in Sardegna. L'opera si presenta in buone condizioni, mancano predella e polvarolo. Lo scomparto centrale inferiore raffigura l'episodio della Visitazione. Nello scomparto centrale superiore è rappresentata una Crocefissione di ispirazione prettamente fiamminga. L'impostazione è quella dei personaggi dolenti: le tre Marie e san Giovanni a sinistra della croce; dalla parte opposta i personaggi in abiti contemporanei. Nei pannelli laterali, partendo da sinistra, in basso, è raffigurato S. Gerolamo con i suoi canonici attributi, il leone (in questo caso accovacciato sul pavimento) e un modellino di chiesa in mano. Nel pannello superiore un'elegante Annunciazione si svolge all'interno di un ambiente con finestre che si aprono su scorci di paesaggio alla moda fiamminga. Sulla destra, dall'alto, un'affollata scena della Pentecoste sovrasta la figura di Sant'Apollonia, rappresentata secondo l'iconografia come una giovane vergine che tiene in mano una tenaglia"
+          "answer": "Il retablo è un polittico dipinto a tempera su fondo oro, ed è databile agli anni in cui l'autore lavora in Sardegna. L'opera si presenta in buone condizioni, mancano predella e polvarolo. Lo scomparto centrale inferiore raffigura l'episodio della Visitazione. Nello scomparto centrale superiore è rappresentata una Crocefissione di ispirazione prettamente fiamminga. L'impostazione è quella dei personaggi dolenti: le tre Marie e san Giovanni a sinistra della croce; dalla parte opposta i personaggi in abiti contemporanei. Nei pannelli laterali, partendo da sinistra, in basso, è raffigurato San Gerolamo con i suoi canonici attributi, il leone (in questo caso accovacciato sul pavimento) e un modellino di chiesa in mano. Nel pannello superiore un'elegante Annunciazione si svolge all'interno di un ambiente con finestre che si aprono su scorci di paesaggio alla moda fiamminga. Sulla destra, dall'alto, un'affollata scena della Pentecoste sovrasta la figura di Sant'Apollonia, rappresentata secondo l'iconografia come una giovane vergine che tiene in mano una tenaglia"
         },
         {
           "name": "retablo_ambiente",
@@ -833,7 +833,7 @@
         {
           "name": "retablo_stile",
           "question": "stile classificazione ispirazione retablo ",
-          "answer": "L'intera opera si classifica come un interessante esempio di pittura ibero-fiamminga e rivela una pregevole fattura. Dal punto di vista stilistico, nel retablo, emerge l'utilizzo di un modello di origine fiamminga - probabilmente conosciuto tramite stampe o miniature - e la cultura d'ambito iberico-valenzano dell'autore."
+          "answer": "L'intera opera si classifica come un interessante esempio di pittura ibero-fiamminga e rivela una pregevole fattura. Dal punto di vista stilistico, nel retablo, emerge l'utilizzo di un modello di origine fiamminga (probabilmente conosciuto tramite stampe o miniature) e la cultura d'ambito iberico-valenzano dell'autore."
         },
         {
           "name": "reatablo_condizioni",
@@ -858,7 +858,7 @@
         {
         	"name": "retablo_provenienza",
         	"question": "Da dove proviene, la provenienza, dove si trovava",
-          "answer": "Il retablo della Visitazione proviene dalla chiesa di S. Francesco di Stampace a Cagliari, dov'era custodito all'interno della cappella omonima. Attualmente è esposto nella pinacoteca nazionale di Cagliari."
+          "answer": "Il retablo della Visitazione proviene dalla chiesa di San Francesco di Stampace a Cagliari, dov'era custodito all'interno della cappella omonima. Attualmente è esposto nella pinacoteca nazionale di Cagliari."
         },
         {
         	"name": "retablo_autore",
@@ -918,7 +918,7 @@
         {
           "name": "giuseppe",
           "question": "descrizione san giuseppe",
-          "answer": "Giuseppe è sposo di Maria e padre putativo di Gesù. Nell'oepra è rappresentato con una folta barba chiara, indossa un largo abito nero dotato di cappuccio ed è coperto da un mantello rosso vivo. L'aureola, a differenza di quelle circolari delle due donne, è a cresta ottagonale dorata, simbolo di virtù. Tiene il bastone con la mano destra e, partecipe dell'incontro fra le due donne e osserva la scena."
+          "answer": "Giuseppe è sposo di Maria e padre putativo di Gesù. Nell'opera è rappresentato con una folta barba chiara, indossa un largo abito nero dotato di cappuccio ed è coperto da un mantello rosso vivo. L'aureola, a differenza di quelle circolari delle due donne, è a cresta ottagonale dorata, simbolo di virtù. Tiene il bastone con la mano destra e, partecipe dell'incontro fra le due donne e osserva la scena."
         },
         {
         	"name": "giuseppe_vestito",
