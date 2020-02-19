@@ -106,7 +106,7 @@
         {
           "name": "tech",
           "question": "Che tecnica e materiali sono utilizzati? - di che cosa è fatta.",
-          "answer": "Tempera su tavola. ",
+          "answer": "Il dipinto è stato realizzato con tempera su tavola. ",
           "suggests":  [
             {
               "suggest": "la descrizione generale",
@@ -705,12 +705,12 @@
         {
           "name": "tecnica",
           "question": "Che tipo di materia materiale e tecnica sono utilizzate",
-          "answer": "Tempera su tavola con fondo d'oro."
+          "answer": "Il dipinto è stato realizzato con tempera su tavola con fondo d'oro."
         },
         {
           "name": "dimensioni",
           "question": "Che dimensioni ha l'opera?",
-          "answer": "Il retablo misura 260 per 238 cm circa. Puoi anche chiedermi informazioni su tecnica e materiali utilizzati"
+          "answer": "Il retablo misura 260 per 238 cm circa."
         },
         {
           "name": "colori",
@@ -720,7 +720,7 @@
         {
           "name": "corrente",
           "question": "Qual è la corrente pittorica?",
-          "answer": "L'accostamento rosso, verde, bianco, oro esprime la piena adesione allo stile internazionale della pittura tardogotica catalana."
+          "answer": "L'accostamento rosso, verde, bianco e oro, esprime la piena adesione allo stile internazionale della pittura tardogotica catalana."
         },
         {
           "name": "datazione",
@@ -735,23 +735,23 @@
         {
           "name": "figure",
           "question": "Figure rappresentate, personaggi raffigurati",
-          "answer": "Le figure principali del pannello centrale sono la Madonna e l'Arcangelo Gabriele. Potresti chiedermi informazioni su questi personaggi o la descrizione della scena"
+          "answer": "Le figure principali del pannello centrale sono la Madonna e l'Arcangelo Gabriele."
         },
         {
           "name": "provenienza",
           "question": "Da dove proviene, la provenienza, dove si trovava",
-          "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace a Cagliari dove era collocato all'interno della terza cappella del coro, di patronato della famiglia Dedoni. Puoi fare domande sull'autore del dipinto"
+          "answer": "Il retablo proviene dalla chiesa di San Francesco di Stampace a Cagliari dove era collocato all'interno della terza cappella del coro, di patronato della famiglia Dedoni."
 
         },
         {
           "name": "autore",
           "question": "Chi è l'autore, chi l'ha dipinto, chi l'ha fatto, informazioni sull'autore",
-          "answer": "L’opera è stata attribuita al catalano Joan Mates di Vilafranca del Penedès, potresti chiedermi informazioni sulla scena centrale rappresentante l'Annunciazione"
+          "answer": "L’opera è stata attribuita al catalano Joan Mates di Vilafranca del Penedès."
         },
         {
           "name": "centrale",
           "question": "Tavola centrale, scena dell'Annunciazione. Cosa rappresenta la tavola? Cosa raffigura la tavola?",
-          "answer": "La tavola raffigura la scena dell'Annunciazione. Due figure in primo piano, a sinistra l'Arcangelo e a destra Maria, in un ambiente interno. Sullo sfondo sono presenti strutture architettoniche con arcate. In alto a sinistra la mano del Cristo punta le dita verso Maria, mandando lo Spirito Santo attraverso una colomba. Puoi farmi altre domande sui personaggi"
+          "answer": "La tavola raffigura la scena dell'Annunciazione. Due figure in primo piano, a sinistra l'Arcangelo e a destra Maria, in un ambiente interno. Sullo sfondo sono presenti strutture architettoniche con arcate. In alto a sinistra la mano del Cristo punta le dita verso Maria, mandando lo Spirito Santo attraverso una colomba."
         },
         {
           "name": "madonna",
@@ -761,7 +761,7 @@
         {
           "name": "madonna_vestito",
           "question": "Di che colore è il vestito di Maria",
-          "answer": "La veste di Maria è color marrone scuro con bordi dorati, nell'apertura sul petto si intravede una stoffa rossa decorata"
+          "answer": "La veste di Maria è color marrone scuro con bordi dorati. Nell'apertura sul petto si intravede una stoffa rossa decorata"
         },
         {
           "name": "madonna_espressione",
@@ -818,7 +818,7 @@
         {
           "name": "tecnica",
         	"question": "Che tecnica e materiali sono utilizzati?",
-          "answer": "Tempera su tavola."
+          "answer": "Il dipinto è stato realizzato con tempera su tavola."
         },
         {
           "name": "retablo",
