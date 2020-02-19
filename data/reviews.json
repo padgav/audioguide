@@ -986,7 +986,7 @@
         {
           "name": "ubic",
           "question": "Ubicazione, dove si trova, il sito archeologico Genna Maria",
-          "answer": "Il sito archeologico si trova a poche centinaia di metri da Collinas in prossimità di Villanovaforru sulla sommità della collina marnoso-calcarea di Genna Maria, nella Marmilla, regione della Sardegna centro-meridionale. Gode di un campo visivo che spazia dal golfo di Cagliari a quello di Oristano, e, a Nord, verso la Marmilla e i monti del Gennargentu.",
+          "answer": "Il sito archeologico si trova a poche centinaia di metri da Collinas in prossimità di Villanovaforru sulla sommità della collina marnoso-calcàrea di Genna Maria, nella Marmilla, regione della Sardegna centro-meridionale. Gode di un campo visivo che spazia dal golfo di Cagliari a quello di Oristano, e, a Nord, verso la Marmilla e i monti del Gennargentu.",
           "suggests":  [
             {
               "suggest": "la descrizione generale",
@@ -1038,7 +1038,7 @@
         {
           "name": "nuraghe",
           "question": "nuraghe, dove si trova il nuraghe",
-          "answer": "Nella regione storica della Marmilla, sulla sommità della collina di Genn’e Mari che nella lingua sarda significa porta-accesso al mare, si trova il nuraghe Genna Maria. È un edificio complesso,  interamente realizzato in pietra, costituito da una torre centrale e da altre tre torri periferiche disposte negli angoli nord-est, sud-est e nord-ovest. All’interno è presente un piccolo cortile dove è situata una cisterna. Attorno ad esso si sviluppa un recinto composto da quattro torri residue. Nello spazio compreso tra il recinto e le torri è un villaggio di diverse capanne. ",
+          "answer": "Nella regione storica della Marmilla, sulla sommità della collina di Genn’e Mari che nella lingua sarda significa porta-accesso al mare, si trova il nuraghe Genna Maria. È un edificio complesso,  interamente realizzato in pietra, costituito da una torre centrale e da altre tre torri periferiche disposte negli angoli nord-est, sud-est e nord-ovest. All’interno è presente un piccolo cortile dove è situata una cisterna. Attorno ad esso si sviluppa un recinto composto da quattro torri. Nello spazio compreso tra il recinto e le torri è un villaggio di diverse capanne. ",
           "suggests":  [
             {
               "suggest": "dettagli sulla torre principale",
@@ -1062,7 +1062,7 @@
         {
           "name": "scavi",
           "question": "Come quando è stato scoperto il nuraghe. Come è avvenuta la scoperta. Chi ha diretto scavi. Come si presenta attualmente.",
-          "answer": "Il nuraghe era originariamente sepolto. Durante la seconda guerra mondiale è stato utilizzato come postazione antiaerea. Nel 1969 sono iniziate le prime indagini che si sono protratte nel corso degli anni settanta e ottanta. Il professore Enrico Atzeni dell’università di Cagliari con la collaborazione sul campo di Ubaldo Badas ha diretto gli scavi. Successivamente sono state fatti alcuni interventi conservativi, di restauro.",
+          "answer": "Il nuraghe era originariamente sepolto. Durante la seconda guerra mondiale è stato utilizzato come postazione antiaèrea. Nel 1969 sono iniziate le prime indagini che si sono protratte nel corso degli anni settanta e ottanta. Il professore Enrico Atzeni con la collaborazione sul campo di Ubaldo Badas ha diretto gli scavi. Successivamente sono state fatti alcuni interventi conservativi, di restauro.",
           "suggests":  [
             {
               "suggest": "informazioni sugli scavi in corso",
@@ -1122,7 +1122,7 @@
         {
           "name": "materiali",
           "question": "Quali materiali sono stati usati per costruire il nuraghe",
-          "answer": "Il nuraghe è stato costruito con una roccia locale che si chiama marna calcarea. Tuttavia alcuni elementi, come ad esempio gli architravi sopra gli ingressi, sono realizzati in una roccia differente, il basalto.",
+          "answer": "Il nuraghe è stato costruito con una roccia locale che si chiama marna calcàrea. Tuttavia alcuni elementi, come ad esempio gli architravi sopra gli ingressi, sono realizzati in una roccia differente, il basalto.",
           "suggests":  [
             {
               "suggest": "informazioni sulla tecnica di costruzione",
@@ -1142,7 +1142,7 @@
 	   {
           "name": "confronto",
           "question": "Come si presenta attualmente il nuraghe?",
-          "answer": "Oggi il nuraghe si presenta mancante della parte sommitale o terrazzo. Al termine della torre era presente un terrazzo che in parte sporgeva verso l’esterno. All’interno della muratura erano collocate alcune grandi mensole in pietra che sorreggevano probabilmente un solaio di legno.",
+          "answer": "Oggi il nuraghe si presenta mancante del terrazzo (che era posto sulla sommità). Al termine della torre era presente un terrazzo che in parte sporgeva verso l’esterno. All’interno della muratura erano collocate alcune grandi mensole in pietra che sorreggevano probabilmente un solaio di legno.",
           "suggests":  [
             {
               "suggest": "informazioni sull’evoluzione del nuraghe",
@@ -1222,7 +1222,7 @@
 		{
           "name": "antemurale",
           "question": "antemurale. fascia murale.",
-          "answer": "Il possente antemurale turrito, di forma esagonale, circonda il nuraghe e con esso è stato costruito e utilizzato in funzione di controllo del territorio fra il Bronzo Medio ed il Bronzo Finale. E’ articolato in torri (di cui quattro ancora visibili) raccordate da cortine murate e rettilinee e ingresso a SE. Un episodio di distruzione avvenuto intorno al decimo secolo a. C. riduce il bastione trilobato alle dimensioni attuali che superano di circa 7 metri di elevato. Lo stesso antemurale viene scapitozzato e ridotto ad un alzato di pochi filari. Fuori e dentro le sue mure si è sviluppato il villaggio e il suo abitato.",
+          "answer": "Il possente antemurale turrito, di forma esagonale, circonda il nuraghe e con esso è stato costruito e utilizzato in funzione di controllo del territorio fra il Bronzo Medio ed il Bronzo Finale. E’ articolato in torri (di cui quattro ancora visibili) raccordate da cortine murate e rettilinee e ingresso a SE. Un episodio di distruzione avvenuto intorno al decimo secolo a.C. riduce il bastione trilobato alle dimensioni attuali che superano di circa 7 metri di elevato. Lo stesso antemurale viene scapitozzato e ridotto ad un alzato di pochi filari. Fuori e dentro le sue mure si è sviluppato il villaggio e il suo abitato.",
           "suggests":  [
             {
               "suggest": "informazioni sul villaggio",
@@ -1382,7 +1382,7 @@
         {
           "name": "vegetali",
           "question": "Quali vegetali sono stati ritrovati",
-          "answer": "Le analisi archeobotaniche hanno permesso di riconoscere la presenza del grano, dell’orzo, e delle fave. In altri siti nuragici sono stati individuati anche i piselli, e frutta come i fichi, l’uva.",
+          "answer": "Le analisi archeobotaniche hanno permesso di riconoscere la presenza del grano, dell’orzo, e delle fave. In altri siti nuragici sono stati individuati anche i piselli, e frutta come i fichi e l'uva.",
           "suggests":  [
             {
               "suggest": "come venivano conservati gli alimenti",
@@ -1402,7 +1402,7 @@
         {
           "name": "incendio",
           "question": "incendio del villaggio. L’abitato ebbe vita lunga?",
-          "answer": "l'abitato, sviluppatosi attorno al decimo secolo a.C., in piena età del ferro, che si instaurò sulle rovine dell’antemurale, fino a lambire il bastione trilobato. L’abitato attorno al nuraghe non ebbe vita lunga: tra il 1000 ed il 900 avanti Cristo, il villaggio viene abbandonato, forse a causa di un incendio che fece crollare le abitazioni, facendo la fortuna degli archeologi che, dato l’episodio dell’incendio, hanno potuto così ritrovare interi corredi in grado di raccontare la quotidianità delle popolazioni contadine dell’epoca (dalla conservazione e lavorazione delle derrate alimentari, dalla filatura alla tessitura, dalla condivisione del fuoco ai sistemi di illuminazione).",
+          "answer": "l'abitato, sviluppatosi attorno al decimo secolo a.C., in piena età del ferro, si instaurò sulle rovine dell’antemurale, fino a lambire il bastione trilobato. L’abitato attorno al nuraghe non ebbe vita lunga: tra il 1000 ed il 900 avanti Cristo, il villaggio viene abbandonato, forse a causa di un incendio che fece crollare le abitazioni, facendo la fortuna degli archeologi che, dato l’episodio dell’incendio, hanno potuto così ritrovare interi corredi in grado di raccontare la quotidianità delle popolazioni contadine dell’epoca (dalla conservazione e lavorazione delle derrate alimentari, dalla filatura alla tessitura, dalla condivisione del fuoco ai sistemi di illuminazione).",
           "suggests":  [
             {
               "suggest": "informazioni sul villaggio",
@@ -1486,7 +1486,7 @@
         {
           "name": "casacorte",
           "question": "casa a corte centrale’",
-          "answer": "La casa a corte centrale è ampia ben 150 metri quadrati e suddivisa in una serie di ambienti che convergono verso un unico cortile. Grazie all’intero corredo di questa casa (detta appunto ‘a corte centrale’), è stato possibile ricostruire quella che era la vita quotidiana degli abitanti: prevalentemente sono utensili di uso domestico, in pietra e ceramica e sono rari gli esempi in metallo.",
+          "answer": "La casa a corte centrale è ampia ben 150 metri quadrati e suddivisa in una serie di ambienti che convergono verso un unico cortile. Grazie all’intero corredo di questa casa (detta appunto ‘a corte centrale’), è stato possibile ricostruire quella che era la vita quotidiana degli abitanti: prevalentemente sono utensili di uso domestico, in pietra e ceramica, e sono rari gli esempi in metallo.",
           "suggests":  [
             {
               "suggest": "sul nuraghe di Genna Maria",
@@ -1526,7 +1526,7 @@
         {
           "name": "reperti",
           "question": "Quali reperti, ritrovamenti, manufatti",
-          "answer": "Ci sono stati ritrovamenti di diversi reperti e manufatti: evolute e di alta qualità, talvolta decorate a stecca con eleganti motivi geometrici, le ceramiche rinvenute nel villaggio: vasi piriformi, fiasche, brocchette, 'antipastiere', sassole, portabrace, pintadere. Trai reperti anche ziri, caldaie, coppe di cottura, bacili e macine che testimoniano l'operosità di questa antica comunità agricola. La capanna 12 ha inoltre restituito grani di cereali, ghiande, leguminose e un frammento di pane carbonizzato. Tra i resti di pasto: ossa di bue, pecora-capra, maiale-cinghiale, cervo, prolago e valve di lamellibranchi.",
+          "answer": "Ci sono stati ritrovamenti di diversi reperti e manufatti; ceramiche evolute e di alta qualità (talvolta decorate a stecca con eleganti motivi geometrici) come vasi piriformi, fiasche, brocchette, antipastiere, sassole, portabrace, pintadere. Trai reperti anche ziri, caldaie, coppe di cottura, bacili e macine che testimoniano l'operosità di questa antica comunità agricola. La capanna 12 ha inoltre restituito grani di cereali, ghiande, leguminose e un frammento di pane carbonizzato. Tra i resti di pasto: ossa di bue, pecora-capra, maiale-cinghiale, cervo, prolago e valve di lamellibranchi.",
           "suggests":  [
             {
               "suggest": "informazioni sui reperti della Capanna 12",
@@ -1566,7 +1566,7 @@
         {
           "name": "bronzetti2",
           "question": "bronzetti. Cosa rappresentano, dimensioni.",
-          "answer": "I bronzetti generalmente di piccole dimensioni rappresentano uomini, donne, bambini ma anche di ogni genere di animali come buoi, cinghiali, volpi, cani, cervi e di oggetti d’uso quotidiano.",
+          "answer": "I bronzetti, generalmente di piccole dimensioni, rappresentano uomini, donne, bambini ma anche ogni genere di animali come buoi, cinghiali, volpi, cani, cervi ed oggetti d’uso quotidiano.",
           "suggests":  [
             {
               "suggest": "se sono stati trovati dei bronzetti nel nuraghe",
@@ -1602,7 +1602,7 @@
         {
           "name": "civilta",
           "question": "Quando si sviluppa la civiltà nuragica",
-          "answer": "Agli inizi del secondo millennio avanti Cristo, iniziano ad essere costruiti in tutta la regione della Sardegna edifici in pietra, chiamati protonuraghi, che che anticipano la costruzione del nuraghe vero e proprio a forma di torre. Nel corso dell’età del Bronzo Recente, circa tremilacinquecento anni fa, l’architettura nuragica si evolve e attraverso nuove tecniche costruttive si erigono grandi torri che potevano avere fino a tre piani sovrapposti. Da qui l’inizio della civiltà nuragica.",
+          "answer": "Agli inizi del secondo millennio avanti Cristo, iniziano ad essere costruiti in tutta la regione della Sardegna edifici in pietra, chiamati protonuraghi, che anticipano la costruzione del nuraghe vero e proprio a forma di torre. Nel corso dell’età del Bronzo Recente, circa tremilacinquecento anni fa, l’architettura nuragica si evolve e attraverso nuove tecniche costruttive si erìgono grandi torri che potevano avere fino a tre piani sovrapposti. Da qui l’inizio della civiltà nuragica.",
           "suggests":  [
             {
               "suggest": "se sono presenti protonuraghi nel territorio di Genna Maria",
@@ -1642,7 +1642,7 @@
         {
           "name": "protoforma",
           "question": "Che forma avevano i protonuraghi?",
-          "answer": "I protonuraghi avevano forma di bastioni terrazzati generalmente attraversati da un lungo corridoio, da qui anche il nome di nuraghi a corridoi. Non esiste una forma planimetrica canonica, né sono attestati di varie tipologie. Nell’architettura nuragica non si era ancora delineata la forma a tronco di cono che caratterizzerà invece le fasi media e recente dell’età del Bronzo.",
+          "answer": "I protonuraghi avevano forma di bastioni terrazzati generalmente attraversati da un lungo corridoio. Da qui anche il nome di nuraghi a corridoio. Non esiste una forma planimetrica canonica. Nell’architettura nuragica non si era ancora delineata la forma a tronco di cono che caratterizzerà invece le fasi media e recente dell’età del Bronzo.",
           "suggests":  [
             {
               "suggest": "che utilizzo avevano i protonuraghi",
