@@ -120,9 +120,10 @@ function getRandomArbitrary(min, max) {
 
 function showText(message) {
   $("#answer").html("");
-  $("#answer").stop();
+  $("#answer").stop(true);
   $("#answer").css({
-    top: $("body").height() / 2
+   // top: $("body").height() / 2
+   top: '10px'
   });
   var color = "gray";
   if(current_painting.color != undefined) color = current_painting.color;
@@ -144,8 +145,13 @@ function showText(message) {
   }, duration , "linear");
 }
 
+var speechTimeout = 0;
+function speechText(message, onendFunction){
+  if(speechTimeout) clearTimeout(speechTimeout);
+  speechTimeout = setTimeout(function() {speechTextAync(message, onendFunction)}, 50);
+}
 
-function speechText(message, onendFunction) {
+function speechTextAync(message, onendFunction) {
   var utterThis = new SpeechSynthesisUtterance();
   utterThis.text = "<?xml version='1.0'?>\r\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>" + message + "</speak>";
   utterThis.voice = voices[VOICEIDX];
@@ -157,8 +163,9 @@ function speechText(message, onendFunction) {
     $(music).animate({
       volume: 0.1
     }, 1000);
-    $("#answer").stop().fadeOut();
+    //$("#answer").stop();
   }
+  
   synth.cancel();
   synth.speak(utterThis);
 
