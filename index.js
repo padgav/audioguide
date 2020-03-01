@@ -1,11 +1,25 @@
 
 const express = require("express");
 
+
+var fs = require('fs');
+var logger;
+
+
+
+
 //const favicon = require('express-favicon');
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 
 const app = express();
 //app.use(express.static('public'));
+
+/**bodyParser.json(options)
+ * Parses the text as JSON and exposes the resulting object on req.body.
+ */
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 app.use(express.static(__dirname /*+ '/public_html'*/));
 const port = 3000;
@@ -17,6 +31,25 @@ app.get("/", function(req, res)
 {
  //res.send("Hi!");
  res.sendFile(__dirname + "/index.html");
+
+})
+
+
+app.post("/log", function(req, res)
+{
+ console.log(req.body);
+
+if(req.body.data.cmd == "restart"){
+        if(logger != undefined) logger.close();
+        var millis = req.body.millis;
+        var filename = "logs/" + millis;
+        logger = fs.createWriteStream(filename, {
+        flags: 'a' // 'a' means appending (old data will be preserved)
+    })
+}
+
+ logger.write(JSON.stringify(req.body)+"\n") ;
+ res.send("OK");
 
 })
 

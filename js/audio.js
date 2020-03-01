@@ -50,6 +50,7 @@ var voicename;
 var music = new Audio();
 music.setAttribute("autoplay", "true");
 music.setAttribute("muted", "muted");
+music.setAttribute("loop", "true");
 
 ///////////////////////////////////////
 // start load conf
@@ -117,6 +118,17 @@ function getRandomArbitrary(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function remotelog(message){
+  var body = {};
+  body.time = new Date();
+  body.millis = body.time.getTime();
+  body.data = message;
+  var bodyjs = JSON.stringify(body);
+  console.log(bodyjs);
+  $.post( "/log", body, function( data ) {
+  }, "json");
+
+}
 
 function showText(message) {
   $("#answer").html("");
@@ -152,17 +164,20 @@ function speechText(message, onendFunction){
 }
 
 function speechTextAync(message, onendFunction) {
+  $(music).animate({
+    volume: 0.1
+  }, 2000);
   var utterThis = new SpeechSynthesisUtterance();
   utterThis.text = "<?xml version='1.0'?>\r\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>" + message + "</speak>";
   utterThis.voice = voices[VOICEIDX];
   utterThis.rate = currRate;
 
   utterThis.onend = function (event) {
+    $(music).animate({
+      volume: 1
+    }, 2000);
     console.log("*** MESSAGE END!!! ***");
     if (onendFunction) onendFunction();
-    $(music).animate({
-      volume: 0.1
-    }, 1000);
     //$("#answer").stop();
   }
   
@@ -190,6 +205,7 @@ var timeout;
 }
 
 function restartAll(){
+  remotelog({cmd: 'restart'});
   clearTimeout(timeout);
   // stop speech
   synth.cancel();
@@ -297,7 +313,6 @@ $(document).ready(function () {
       //reset application in the state 0
 
       state = 0;
-
       // stop speech
       synth.cancel();
       //delete message on screen
@@ -332,6 +347,7 @@ $(document).ready(function () {
 
       // start welcome message
       startWelcomeMessage();
+      remotelog({cmd: "welcome"});
     }
 
     else if (state == 1) {
@@ -342,6 +358,7 @@ $(document).ready(function () {
         $("#answer").html("");
         synth.cancel();
         state = 2; //now ready!
+        remotelog({cmd: "Escape"});
       }
 
     }
@@ -354,16 +371,21 @@ $(document).ready(function () {
         synth.cancel();
 
         //delete message on screen
+        $(music).animate({
+          volume: 0.1
+        }, 500);
         $("#answer").html("");
         beep();
         recognition.stop();
         recognition.start();
         state = 3;
+        remotelog({cmd: "Speech"});
       }
 
       else {
         //Normal sensor
         if (lastKey != x && current_painting.subjects[x] != undefined) {
+          remotelog({cmd: "sensor", key: x});
           var message = grs(current_painting.messages.touching) + grs(current_painting.subjects[x].desc);
           showText(message);
           speechText(message);
@@ -584,6 +606,8 @@ $(document).ready(function () {
 
   function getResult(text) {
 
+    remotelog({cmd: "query", query: text});
+
     //analyzer: 'my_synonyms',
     //q: query
     //must => AND / should => OR / must not => '!=' / filter as 'must' not scored
@@ -699,8 +723,10 @@ $(document).ready(function () {
       } else {
         //no answer found
         var message = grs(current_painting.messages.undef);
+        remotelog({cmd: "answer", answer: message});
         speechText(message);
         showText(message);
+        
       }
 
     });
