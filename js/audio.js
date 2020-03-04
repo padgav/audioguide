@@ -27,13 +27,17 @@ var VOICEIDX;
 var rateStd = 0.9;
 var currRate = rateStd;
 
+var currentVolume = maxVolume = 1;
+var minVolume = 0.1;
+var unitVolume = 0.15;
+
 var askedNames = {};
 
 var myMcoms = {
   moff: "spegni la musica",
   mon: "accendi la musica",
   mdown: "abbassa la musica",
-  mup: "solleva la musica",
+  mup: "aumenta la musica",
   restart: "ricomincia",
   restart2: "ricomincia da capo",
   quiet: "basta",
@@ -165,7 +169,7 @@ function speechText(message, onendFunction){
 
 function speechTextAync(message, onendFunction) {
   $(music).animate({
-    volume: 0.1
+    volume: minVolume
   }, 2000);
   var utterThis = new SpeechSynthesisUtterance();
   utterThis.text = "<?xml version='1.0'?>\r\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>" + message + "</speak>";
@@ -174,13 +178,13 @@ function speechTextAync(message, onendFunction) {
 
   utterThis.onend = function (event) {
     $(music).animate({
-      volume: 1
+      volume: currentVolume
     }, 2000);
     console.log("*** MESSAGE END!!! ***");
     if (onendFunction) onendFunction();
     //$("#answer").stop();
   }
-  
+
   synth.cancel();
   synth.speak(utterThis);
 
@@ -372,7 +376,7 @@ $(document).ready(function () {
 
         //delete message on screen
         $(music).animate({
-          volume: 0.1
+          volume: minVolume
         }, 500);
         $("#answer").html("");
         beep();
@@ -424,21 +428,40 @@ $(document).ready(function () {
 
       case myMcoms["mon"]:
         console.log("Music play cause: ", myMcoms["mon"]);
+        music.volume = currentVolume;
         music.play();
         break;
 
       case myMcoms["mdown"]:
         console.log("Music down cause: ", myMcoms["mdown"]);
+
+        currentVolume = currentVolume - unitVolume;
+        if(currentVolume <= minVolume)
+          currentVolume = minVolume;
+
+        music.pause();
+        music.play();
         $(music).animate({
-          volume: 0.05
+          volume: currentVolume
         }, 1000);
+        console.log("current volume: ", currentVolume);
+
         break;
 
       case myMcoms["mup"]:
         console.log("Music up cause: ", myMcoms["mup"]);
+
+        currentVolume = currentVolume + unitVolume;
+        if(currentVolume > maxVolume)
+          currentVolume = maxVolume
+
+        music.pause();
+        music.play();
         $(music).animate({
-          volume: 0.5
+          volume: currentVolume
         }, 1000);
+        console.log("current volume: ", currentVolume);
+
         break;
 
       case myMcoms["vup"]:
@@ -726,7 +749,7 @@ $(document).ready(function () {
         remotelog({cmd: "answer", answer: message});
         speechText(message);
         showText(message);
-        
+
       }
 
     });
