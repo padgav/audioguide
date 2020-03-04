@@ -27,9 +27,10 @@ var VOICEIDX;
 var rateStd = 0.9;
 var currRate = rateStd;
 
-var currentVolume = maxVolume = 1;
+var currentVolume = 1;
+var maxVolume = currentVolume;
 var minVolume = 0.1;
-var unitVolume = 0.15;
+var stepVolume = 0.2;
 
 var askedNames = {};
 
@@ -434,33 +435,21 @@ $(document).ready(function () {
 
       case myMcoms["mdown"]:
         console.log("Music down cause: ", myMcoms["mdown"]);
+        musicDown();
 
-        currentVolume = currentVolume - unitVolume;
-        if(currentVolume <= minVolume)
-          currentVolume = minVolume;
-
-        music.pause();
-        music.play();
         $(music).animate({
           volume: currentVolume
         }, 1000);
-        console.log("current volume: ", currentVolume);
 
         break;
 
       case myMcoms["mup"]:
         console.log("Music up cause: ", myMcoms["mup"]);
+        musicUp();
 
-        currentVolume = currentVolume + unitVolume;
-        if(currentVolume > maxVolume)
-          currentVolume = maxVolume
-
-        music.pause();
-        music.play();
         $(music).animate({
           volume: currentVolume
         }, 1000);
-        console.log("current volume: ", currentVolume);
 
         break;
 
@@ -562,6 +551,22 @@ $(document).ready(function () {
     music.pause();
     synth.pause();
     music.currentTime = 0;
+  }
+
+  function musicUp() {
+    currentVolume = currentVolume + stepVolume;
+    if(currentVolume > maxVolume)
+      currentVolume = maxVolume
+
+    console.log("current volume: ", currentVolume);
+  }
+
+  function musicDown()  {
+    currentVolume = currentVolume - stepVolume;
+    if(currentVolume <= minVolume)
+      currentVolume = minVolume;
+
+    console.log("current volume: ", currentVolume);
   }
 
 
