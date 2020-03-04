@@ -34,7 +34,7 @@ app.get("/", function(req, res)
 
 })
 
-// Creates /tmp/a/apple, regardless of whether `/tmp` and /tmp/a exist.
+// Creates logs folder.
 fs.mkdir('logs', { recursive: true }, (err) => {
   if (err) throw err;
 });
