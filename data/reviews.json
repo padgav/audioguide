@@ -965,6 +965,18 @@
       ]
     },
     {
+      "id": "Santavittoria",
+      "title": "Santavittoria",
+      "type": "painting",
+      "qa": [
+        {
+          "name": "chiedere",
+          "question": "Cosa posso chiedere?",
+          "answer": "Puoi chiedere: la descrizione generale."
+        }
+      ]
+    },
+    {
       "id": "Gennamaria",
       "title": "Gennamaria",
       "type": "painting",

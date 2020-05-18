@@ -328,18 +328,29 @@ $(document).ready(function () {
     }
 
     else if(x == "ArrowRight"){
+
+      if(current_painting.type == "model")
+        current_painting.loaded = false;
+
       current_index++;
       if(current_index >= configurations.length) current_index = 0;
       current_painting = configurations[current_index];
+
       restartAll();
        //exit from Tasto function
        return;
     }
 
     else if(x == "ArrowLeft"){
+
+      if(current_painting.type == "model")
+        current_painting.loaded = false;
+              
       current_index--;
       if(current_index < 0) current_index = configurations.length - 1;
       current_painting = configurations[current_index];
+
+
       restartAll();
        //exit from Tasto function
        return;
