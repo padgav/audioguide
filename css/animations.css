@@ -18,7 +18,7 @@
   }
 }
 
-.k1  {
+.Gennamaria1  {
 animation: kenburns1 5s 1;
 }
 
@@ -42,7 +42,7 @@ animation: kenburns1 5s 1;
   }
 }
 
-.k2  {
+.Gennamaria2  {
 animation: kenburns2 5s 1;
 }
 
@@ -66,11 +66,11 @@ animation: kenburns2 5s 1;
   }
 }
 
-.k3  {
+.Gennamaria3  {
 animation: kenburns3 5s 1;
 }
 
-@keyframes kenburns4 {
+@keyframes kenburns01 {
 
   0% {
   opacity: 0;
@@ -90,6 +90,6 @@ animation: kenburns3 5s 1;
   }
 }
 
-.k4  {
-animation: kenburns4 5s 1;
+.Santavittoria1  {
+animation: kenburns01 5s 1;
 }

@@ -428,7 +428,7 @@ $(document).ready(function () {
           }else{
 
             //picture ismodelact animation
-            var classAnimationName = "k" + current_painting.subjects[x].animation;
+            var classAnimationName = current_painting.name + current_painting.subjects[x].animation;
             $(".painting").removeClass($(".painting").data("lastclass"));
             $(".painting").data("lastclass", classAnimationName);
             $(".painting").addClass(classAnimationName);

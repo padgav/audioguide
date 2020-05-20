@@ -8,7 +8,7 @@
   "type": "model",
   "art": "di",
   "support": "plastico tàttile",
-  "music": "377_full_before-i-depart_0159_preview.mp3",
+  "music": "canto_sardo.mp3",
   "conf": "./conf/msg_conf_plastic.json",
   "startBehaviour": "standby",
   "caption": "Il santuario nuragico di Santa Vittoria è un sito archeologico che si trova nel comune di Serri, in Sardegna.",
@@ -27,7 +27,7 @@
       ],
       "check": 0,
       "name": "capanna_del_capo",
-      "animation": 1,
+      "animation": 0,
       "sid": 1,
       "position": [-20.34914904186503,-416.8794763636156,15.212349522183821],
       "target": [-28.936172032615012,-385.4938364975323,-24.894345571096913]
@@ -40,7 +40,7 @@
       ],
       "check": 0,
       "name": "abitazione_se",
-      "animation": 1,
+      "animation": 0,
       "sid": 15,
       "position": [74.44318115428071,-573.4839634242131,12.556916399643747],
       "target": [66.56930498817319,-559.8950854541314,3.4729485346709863]
@@ -53,7 +53,7 @@
       ],
       "check": 0,
       "name": "tre_capanne",
-      "animation": 1,
+      "animation": 0,
       "sid": 2,
       "position": [-21.128926858523904,-411.23110241968766,22.463307850381664],
       "target": [-4.236574325270546,-406.5351406057477,-5.8862044014143455]
@@ -66,7 +66,7 @@
       ],
       "check": 0,
       "name": "recinto",
-      "animation": 1,
+      "animation": 0,
       "sid": 3,
       "position": [0.4060033664901628,-464.64658076606725,19.66929681457289],
       "target": [-9.398683570474319,-453.76352104318806,-25.453621059049723]
@@ -79,7 +79,7 @@
       ],
       "check": 0,
       "name": "capanna_fonditori",
-      "animation": 1,
+      "animation": 0,
       "sid": 4,
       "position": [8.679397641190102,-473.25046686961826,10.714626705592993],
       "target": [19.745228522380145,-444.5448495483862,-15.726523186423927]
@@ -92,7 +92,7 @@
       ],
       "check": 0,
       "name": "mercato",
-      "animation": 1,
+      "animation": 0,
       "sid": 5,
 
       "position": [21.683596016197328,-473.569683778736,13.967104205810715],
@@ -106,7 +106,7 @@
       ],
       "check": 0,
       "name": "capanna_ascia_bipenne",
-      "animation": 1,
+      "animation": 0,
       "sid": 6,
 
       "position": [33.61901220700497,-486.39732689851655,10.06664506097354],
@@ -133,7 +133,7 @@
       ],
       "check": 0,
       "name": "ingresso_orientale",
-      "animation": 1,
+      "animation": 0,
       "sid": 8,
       "position": [63.69034827525364,-504.32964165754714,13.011848206938685],
       "target": [40.809878887553,-496.17172963899304,-13.571549624491615]
@@ -146,7 +146,7 @@
       ],
       "check": 0,
       "name": "cucina",
-      "animation": 1,
+      "animation": 0,
       "sid": 9,
       "position": [46.05061771198861,-511.75676846848967,10.483134521210925],
       "target": [32.21904464545754,-514.5510484701235,4.300949742764264]
@@ -159,7 +159,7 @@
       ],
       "check": 0,
       "name": "recinto_feste_s_orientale",
-      "animation": 1,
+      "animation": 0,
       "sid": 10,
       "position": [54.619762847852726,-509.2821727507184,19.00096113490379],
       "target": [34.050298980741836,-496.42223024758744,-7.933510524917995]
@@ -172,7 +172,7 @@
       ],
       "check": 0,
       "name": "recinto_feste_n_occidentale",
-      "animation": 1,
+      "animation": 0,
       "sid": 11,
 
       "position": [-14.915233096975264,-490.09565578588484,16.23381586502945],
@@ -186,7 +186,7 @@
       ],
       "check": 0,
       "name": "portico_pellegrini",
-      "animation": 1,
+      "animation": 0,
       "sid": 12,
 
       "position": [17.95039415101519,-483.8035400258441,14.23953576145297],
@@ -200,7 +200,7 @@
       ],
       "check": 0,
       "name": "ingresso_so_recinto_feste",
-      "animation": 1,
+      "animation": 0,
       "sid": 13,
 
       "position": [9.390507619959504,-529.2446406052673,16.106634345628137],
@@ -214,7 +214,7 @@
       ],
       "check": 0,
       "name": "capanna_altarini",
-      "animation": 1,
+      "animation": 0,
       "sid": 14,
 
       "position": [11.20293525906358,-533.2314863919931,12.178194594479685],
@@ -228,7 +228,7 @@
       ],
       "check": 0,
       "name": "capanna_custode",
-      "animation": 1,
+      "animation": 0,
       "sid": 16,
 
       "position": [-3.217909676086281,-552.6996984198206,3.3370077630112203],
@@ -242,7 +242,7 @@
       ],
       "check": 0,
       "name": "ingresso_area_sacra",
-      "animation": 1,
+      "animation": 0,
       "sid": 17,
 
       "position": [-4.131893216902938,-548.8364701765496,2.836367286286345],
@@ -256,7 +256,7 @@
       ],
       "check": 0,
       "name": "recinto_area_sacra",
-      "animation": 1,
+      "animation": 0,
       "sid": 18,
 
       "position": [-35.41108192308696,-541.2442796235874,8.889556713965517],
@@ -270,7 +270,7 @@
       ],
       "check": 0,
       "name": "tempio_a_pozzo_1",
-      "animation": 1,
+      "animation": 0,
       "sid": 19,
 
       "position": [-35.75690645364709,-519.9403741543913,10.504549515167117],
@@ -284,7 +284,7 @@
       ],
       "check": 0,
       "name": "tempio_a_pozzo_2",
-      "animation": 1,
+      "animation": 0,
       "sid": 20,
 
       "position": [-38.158823964581536,-527.7976289020812,8.539794909135694],
@@ -298,7 +298,7 @@
       ],
       "check": 0,
       "name": "via_sacra",
-      "animation": 1,
+      "animation": 0,
       "sid": 21,
 
       "position": [-28.63736579292692,-520.7133395814176,6.766443726108273],
@@ -312,7 +312,7 @@
       ],
       "check": 0,
       "name": "torre_nuragica",
-      "animation": 1,
+      "animation": 0,
       "sid": 22,
 
       "position": [-74.04540193942908,-514.4137656941707,15.489777396075969],
@@ -326,7 +326,7 @@
       ],
       "check": 0,
       "name": "protonuraghe",
-      "animation": 1,
+      "animation": 0,
       "sid": 23,
 
       "position": [-107.1973903829058,-524.5038026154863,2.878481488832179],
@@ -340,7 +340,7 @@
       ],
       "check": 0,
       "name": "santa_vittoria",
-      "animation": 1,
+      "animation": 0,
       "sid": 24,
 
       "position": [-82.94280498691302,-537.7839319983807,6.806649762601927],
@@ -355,7 +355,7 @@
       ],
       "check": 0,
       "name": "torre_con_feritoie",
-      "animation": 1,
+      "animation": 0,
       "sid": 25,
       "position": [-74.82846668622084,-529.8912060264173,4.04606982494971],
       "target": [-79.3440394015323,-537.0558972298262,-2.4929524103511467]
@@ -368,7 +368,7 @@
       ],
       "check": 0,
       "name": "tempio_ipetrale",
-      "animation": 1,
+      "animation": 0,
       "sid": 26,
       "position": [-64.17974040832134,-522.5478913580603,2.18232745939473],
       "target": [-64.26280559373929,-522.6392050015044,2.095537763578831]
@@ -381,7 +381,7 @@
       ],
       "check": 0,
       "name": "capanna_sacerdote",
-      "animation": 1,
+      "animation": 0,
       "sid": 27,
       "position": [-60.2949658000685,-546.9907607548439,3.814435130876346],
       "target": [-66.46742530901606,-535.2646181719476,-7.920974260270203]
@@ -394,7 +394,7 @@
       ],
       "check": 0,
       "name": "ingresso_so",
-      "animation": 1,
+      "animation": 0,
       "sid": 28,
       "position": [-51.54330150048416,-540.9548399553516,1.7154207556970285],
       "target": [-58.057653055466126,-531.8771446467749,-9.126122484993584]
