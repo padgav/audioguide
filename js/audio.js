@@ -32,6 +32,9 @@ var maxVolume = currentVolume;
 var minVolume = 0.1;
 var stepVolume = 0.2;
 
+//model active variable
+var isModelActive = true;
+
 var askedNames = {};
 
 var myMcoms = {
@@ -227,7 +230,7 @@ function restartAll(){
   state = 0;
 
   //show new image or model
-  if(current_painting.type == "model"){
+  if(current_painting.type == "model"  && (isModelActive == true)){
     $(".painting").hide();
     $(".model").show();
     if(current_painting.loaded != true){
@@ -345,7 +348,7 @@ $(document).ready(function () {
 
       if(current_painting.type == "model")
         current_painting.loaded = false;
-              
+
       current_index--;
       if(current_index < 0) current_index = configurations.length - 1;
       current_painting = configurations[current_index];
@@ -354,6 +357,12 @@ $(document).ready(function () {
       restartAll();
        //exit from Tasto function
        return;
+    }
+
+    if (x == "Digit9") {
+      if(isModelActive == true) isModelActive = false;
+      else isModelActive = true;
+      console.log("iSModelActive = ", isModelActive);
     }
 
     if (state == 0) {
@@ -417,7 +426,7 @@ $(document).ready(function () {
             }
           }else{
 
-
+            //picture model animation
             var classAnimationName = "k" + current_painting.subjects[x].animation;
             $(".painting").removeClass($(".painting").data("lastclass"));
             $(".painting").data("lastclass", classAnimationName);
