@@ -32,7 +32,7 @@ var maxVolume = currentVolume;
 var minVolume = 0.1;
 var stepVolume = 0.2;
 
-//model active variable
+//ismodelact active variable
 var isModelActive = true;
 
 var askedNames = {};
@@ -229,7 +229,7 @@ function restartAll(){
 
   state = 0;
 
-  //show new image or model
+  //show new image or ismodelact
   if(current_painting.type == "model"  && (isModelActive == true)){
     $(".painting").hide();
     $(".model").show();
@@ -416,7 +416,8 @@ $(document).ready(function () {
           speechText(message);
           lastKey = x;
 
-          if(current_painting.type == "model"){
+          if(current_painting.type == "model")
+            if(isModelActive == true){
             if(current_painting.subjects[x].position != undefined && current_painting.subjects[x].target!= undefined){
               API.setCameraLookAt(
                 current_painting.subjects[x].position, // eye position
@@ -426,7 +427,7 @@ $(document).ready(function () {
             }
           }else{
 
-            //picture model animation
+            //picture ismodelact animation
             var classAnimationName = "k" + current_painting.subjects[x].animation;
             $(".painting").removeClass($(".painting").data("lastclass"));
             $(".painting").data("lastclass", classAnimationName);
