@@ -969,11 +969,466 @@
       "title": "Santavittoria",
       "type": "painting",
       "qa": [
+
+
         {
-          "name": "chiedere",
+          "name": "first",
           "question": "Cosa posso chiedere?",
-          "answer": "Puoi chiedere: la descrizione generale."
+          "answer": "Puoi chiedere: la descrizione generale.",
+          "suggests":  [
+            {
+              "suggest": "informazioni generali sul Santuario di Santa Vittoria",
+              "linkedName": "generale"
+            }
+          ],
+          "key": "chiedere, domanda, domandare"
+        },
+        {
+          "name": "generale",
+          "question": "Descrizione generale Santuario Santa Vittoria",
+          "answer": "Il Santuario nuragico di Santa Vittoria di Serri, Immerso in un habitat di notevole interesse naturalistico, è uno dei più importanti complessi nuragici della Sardegna. Gli straordinari rinvenimenti effettuati questo sito lo connòtano come uno dei più importanti complessi santuariali dell'età nuragica.",
+          "suggests":  [
+            {
+              "suggest": "dove si trova il Santuario",
+              "linkedName": "ubicazione"
+            }
+          ],
+          "key": "generale"
+        },
+        {
+          "name": "ubicazione",
+          "question": "Ubicazione, dove si trova, dov'è il Santuario Santa Vittoria",
+          "answer": "È situato in posizione di largo dominio geografico sull’estremità occidentale della Giara di Serri tra le regioni storiche della Marmilla e del Sarcidano in un’area complessiva di circa 22 ettari. ",
+          "suggests":  [
+            {
+              "suggest": "da chi è stato scoperto il Sito archeologico",
+              "linkedName": "scopritore"
+            }
+          ],
+          "key": "dove"
+        },
+        {
+          "name": "scopritore",
+          "question": "da chi è stato scoperto il Sito archeologico di Santa Vittoria",
+          "answer": "Il sito di Santa Vittoria fu scoperto dall’archeologo Antonio Taramelli assistito sul campo da Filippo Nissardi. documentò sull’altopiano basaltico una serie di antiche strutture che svelavano un’intensa frequentazione durante l’epoca nuragica con una continuità d’uso in età punica, romana e bizantina.",
+          "suggests":  [
+            {
+              "suggest": "quando",
+              "linkedName": "quando fu scoperto il sito"
+            }
+          ],
+          "key": "chi"
+        },
+        {
+          "name": "quando",
+          "question": "",
+          "answer": "La scoperta del Sito archeologico di Santa Vittoria risale al 1907.",
+          "suggests":  [
+            {
+              "suggest": "cosa è stato rinvenuto con gli scavi nel sito di Santa Vittoria di Serri",
+              "linkedName": "cosa"
+            }
+          ],
+          "key": "quando"
+        },
+        {
+          "name": "scavi",
+          "question": "Descrizione del sito, cosa  è stato rinvenuto ritrovato con gli scavi",
+          "answer": "Con gli scavi del 1907 sono stati rinvenuti edifici di diversa tipologia, funzione e orizzonte cronologico che vanno dal 2000 al 700 avanti Cristo; edifici con funzioni difensive, cultuali come di vita quotidiana.",
+          "suggests":  [
+            {
+              "suggest": "se sono stati operati altri scavi o indagini dopo il 1907",
+              "linkedName": "incorso"
+            }
+          ],
+          "key": "scavi"
+        },
+        {
+          "name": "incorso",
+          "question": "Ci sono stati ulteriori scavi e altre indagini dopo il 1907",
+          "answer": "Dopo gli scavi del Taramelli il Santuario nuragico di Santa Vittoria è stato oggetto di nuove indagini archeologiche nei primi anni sessanta del secolo scorso ad opera di Ercole Contu con interventi di restauro e scavo archeologico, ai quali sono succeduti ulteriori ricerche tra gli anni ottanta e novanta e nel corso degli anni duemila. Le indagini di scavo proseguono tutt’oggi.",
+          "suggests":  [
+            {
+              "suggest": "informazioin sui reperti",
+              "linkedName": "reperti"
+            }
+          ],
+          "key": "in corso ulteriori altri scavi"
+        },
+        {
+          "name": "reperti",
+          "question": "quali sono stati i primi reperti",
+          "answer": "Le prime testimonianze archeologiche nell’area del santuario risalgono alla prima età del Bronzo e si riferiscono ad un frammento di vaso tripode della cultura di Bonnannaro (2000-1800 avanti Cristo).",
+          "suggests":  [
+            {
+              "suggest": "informazioni sui protonuraghi",
+              "linkedName": "protonuraghi"
+            }
+          ],
+          "key": "primi reperti"
+        },
+        {
+          "name": "protonuraghi",
+          "question": "Parlami dei protonuraghi",
+          "answer": "La costruzione del proto nuraghe affiorata così come i frammenti di una pisside a decorazione metopale rinvenuta nel corso di scavi archeologici, permettono di risalire alla fase del Bronzo Medio (1750-1600 avanti Cristo)",
+          "suggests":  [
+            {
+              "suggest": "quali sono le principali strutture di culto rinvenute",
+              "linkedName": "templari"
+            }
+          ],
+          "key": "protonuraghi"
+        },
+        {
+          "name": "templari",
+          "question": "strutture cultuali templari",
+          "answer": "Le strutture templari, come il Pozzo sacro e alcune stutture circolari (vedi la torre con feritoie), si rifanno al Bronzo recente (1400-1200 avanti Cristo), quando l’occupazione dell’area si fa più intensa.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sull'ingresso per l'area sacra",
+              "linkedName": "areasacra"
+            }
+          ],
+          "key": "culto"
+        },
+        {
+          "name": "areasacra",
+          "question": "Ingresso area sacra",
+          "answer": "Arrivando da est, si arriva ad un ingresso aperto nel recinto murario, il temenos, che si raccorda, proseguendo verso nord al muro del tempio a pozzo. Incorporata nel muro è la Capanna del custode o capanna dell’ingresso.",
+          "suggests":  [
+            {
+              "suggest": "della capanna del custode",
+              "linkedName": "capannacustode"
+            }
+          ],
+          "key": "ingresso area sacra"
+        },
+        {
+          "name": "capannacustode",
+          "question": "capanna del custode",
+          "answer": "Situata in prossimità dell’ingresso all’area sacra si trova una capanna circolare del diametro di sei metri. La porta è aperta verso l’area dei templi. Lo scavo restituì ceramica nuragica ed un anello di sospensione in bronzo. Per la sua posizione in prossimità del muro di recinzione venne considerata la capanna del guardiano o del custode.",
+          "suggests":  [
+            {
+              "suggest": "Pozzo sacro o Tempio a pozzo",
+              "linkedName": "pozzosacro"
+            }
+          ],
+          "key": "capanna custode"
+        },
+        {
+          "name": "pozzosacro",
+          "question": "pozzo sacro",
+          "answer": "Il pozzo sacro è la struttura più importante dell’intero santuario. È qui che si perpetuava un culto ctonio legato all’acqua. L’edificio è composto da un vano di accesso di pianta rettangolare originariamente lastricato dove sono ancora presenti alcuni sedili in pietra. Dall’atrio si accedeva attraverso una scala di tredici gradini alla camera dell’acqua. L’intero monumento è realizzato in blocchi di basalto perfettamente lavorati. Il pozzo era originariamente coperto da una cupola in pietra calcarea, tale accostamento con la sottostante muratura in pietra basaltica conferiva all’edificio una singolare bicromia. L’atrio aveva una copertura in pietra a doppio spiovente ed all’interno il prospetto interno era probabilmente arricchito dalla presenza di una scultura di testa bovina in calcare; una serie di conci in calcare lavorati a dentelli costituiva la cornice del prospetto laterale. La struttura è finalizzata a captare le acque piovane dal piano di campagna all’interno del pozzo-cisterna attraverso un sistema di canalette ricavate nello spessore murario delle quali sono visibili gli sbocchi nella muratura. Nell’area esterna si rinvennero diversi bronzetti figurati. Nel periodo bizantino nella parte iniziale della scala trovarono spazio alcune sepolture.",
+          "suggests":  [
+            {
+              "suggest": "cosa circonda il pozzo sacro",
+              "linkedName": "recintopozzo"
+            }
+          ],
+          "key": "pozzo sacro"
+        },
+        {
+          "name": "recintopozzo",
+          "question": "Da cosa è circondato il pozzo sacro. Circonda",
+          "answer": "L’area attorno al pozzo è delimitata da un recinto murario definito temenos o recinto sacro.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla via sacra",
+              "linkedName": "viasacra"
+            }
+          ],
+          "key": "circonda pozzo"
+        },
+        {
+          "name": "viasacra",
+          "question": "",
+          "answer": "Questa via, detta via sacra, lastricata della lunghezza di circa 50 metri e della larghezza di 3-4 metri collegava in età nuragica il tempio a pozzo al tempio ipetrale. Taramelli immagina lungo questa 'via sacra' una processione che si svolgeva tra i due templi. Sulla superficie del pavimento lastricato si rinvenne materiale archeologico dell’età nuragica, punica e romana.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla Torre nuragica (o recinto del tempio)",
+              "linkedName": "torrenuragica"
+            }
+          ],
+          "key": "sacra via"
+        },
+        {
+          "name": "torrenuragica",
+          "question": "Torre nuragica, Recinto del tempio, dei sedili",
+          "answer": "La Torre nuragica o Recinto del tempio o dei sedili è un grande edificio circolare del diametro di 11.50 metri e dell’altezza residua di più di 4 metri. Ha tutte le caratteristiche di una torre della piena età del Bronzo ma non è stata ancora chiarita l’originaria funzione. Nella parte sommitale nella prima età del Ferro è stato realizzato un grande vano a cielo aperto, delimitato da conci ben lavorati e da un sedile anulare in blocchi di basalto e calcare. Al suo interno si rinvennero ceramiche nuragiche, frammenti di stiletti e pugnaletti in bronzo, una figurina femminile avvolta da un grande manto.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla cosiddetta casa del capo",
+              "linkedName": "casadelcapo"
+            }
+          ],
+          "key": "torre recinto tempio sedili"
+        },
+        {
+          "name": "casadelcapo",
+          "question": "Casa del capo",
+          "answer": "Si tratta di un grande edificio circolare situato nell’estremità nord-occidentale del santuario a poche decine di metri dal Recinto delle feste. Delimitato da un recinto murario ha un diametro esterno di 8 metri e 40 ed era originariamente coperto da una cupola in pietra. All’interno sono presenti cinque nicchie ricavate nello spessore murario. La camera circolare è preceduta da un vestibolo rettangolare originariamente coperto forse da un tetto a doppio spiovente con pavimento lastricato e bassi sedili laterali in pietra. Per la sua monumentalità e per la sua posizione di preminenza sugli altri edifici l’archeologo Taramelli lo denominò “Casa del capo”. All’esterno una recente campagna di scavi archeologici ha messo in luce tre capanne circolari che presentavano al loro interno interessanti riti di fondazione.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulle tre capanne",
+              "linkedName": "trecapanne"
+            }
+          ],
+          "key": "capo"
+        },
+        {
+          "name": "trecapanne",
+          "question": "tre capanne",
+          "answer": "Ad est della monumentale Casa del Capo si trovano tre capanne di pianta circolare e sub-circolare, allineate lungo lo stesso asse e con ingresso rivolto verso l’accesso al tempio in antis. Si tratta delle capanne denominate col nnumero 33, scavate negli anni 2002, 2006 e 2007. Questi ambienti erano coperti da travi lignee con sovrapposte lastrine calcaree. A sinistra degli ingressi di due di queste capanne gli archeologi hanno rinvenuto alcune fosse contenenti alcuni vasi interi e frammentati anche uno dentro l’altro. Si tratta di interessanti riti di fondazione connessi con la costruzione della capanna avvenuta nel corso del Bronzo Finale. All’interno di questi ambienti sono stati individuati manufatti che rimandano alla sfera femminile: anelli in bronzo e in argento, elementi di collana come una zanna di cinghiale, alcune perle in pasta vitrea, un pendaglio in ambra, e strumenti per la lavorazione come punteruoli in osso, frammenti di ossidiana, fusaiole che rimandano, questi ultimi all’attività tessile che si doveva svolgere all’interno di questi ambienti.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul recinto-ovile",
+              "linkedName": "recintoovile"
+            }
+          ],
+          "key": "3 capanne"
+        },
+        {
+          "name": "recintoovile",
+          "question": "Recinto Ovile",
+          "answer": "Si tratta di uno spazio semicircolare situato all’esterno del Recinto delle Feste interpretato come recinto per custodire il bestiame da destinare sia ai banchetti che ai sacrifici. Nel piccolo spazio circolare adiacente risiedeva forse il mandriano.",
+          "suggests":  [
+            {
+              "suggest": "Capanna dei Fonditori",
+              "linkedName": "capannafonditori"
+            }
+          ],
+          "key": "ovile"
+        },
+        {
+          "name": "capannafonditori",
+          "question": "capanna dei fonditori",
+          "answer": "Questo ambiente è situato nel settore occidentale del Recinto delle Feste. Si tratta di una capanna circolare con all’interno un sedile anulare. All’epoca degli scavi si rinvennero molti resti carboniosi nel pavimento. Il Taramelli associò a questi strati di combustione alcuni vasetti in pietra trachitica rinvenuti all’interno della capanna interpretati come crogiuoli per la fusione dei metalli. Questi indizi gli suggerirono l’interpretazione della destinazione d’uso come Recinto dei fonditori.",
+          "suggests":  [
+            {
+              "suggest": "informazioni su mercato",
+              "linkedName": "mercato"
+            }
+          ],
+          "key": "fonditori"
+        },
+        {
+          "name": "mercato",
+          "question": "Mercato",
+          "answer": "Nell’area compresa tra il recinto dei fonditori e la più monumentale capanna dell’ascia bipenne sono situati una serie di nove piccoli spazi larghi 2 metri e profondi 4, a forma di U, addossati al paramento del recinto delle feste. All’interno sono presenti dei sedili in blocchi di calcare e alcune grandi lastre. L’archeologo Raimondo Zucca ha suggerito che questi vani erano destinati ad ospitare piccole botteghe che esibivano le loro merci al di sopra di banchi in pietra.",
+          "suggests":  [
+            {
+              "suggest": "informazionoi sulla capanna dell'ascia bipenne",
+              "linkedName": "asciabipenne"
+            }
+          ],
+          "key": "mercato"
+        },
+        {
+          "name": "asciabipenne",
+          "question": "ascia bipenne",
+          "answer": "Questo è l’edificio più importante del Recinto delle Feste. Si tratta di una grande capanna circolare che si conserva per un’altezza di quasi 2 metri, realizzata in grossi blocchi basaltici. La copertura era composta da travi lignee coperte da lastrine in calcare. All’interno è presente un sedile circolare di blocchi basaltici. Il pavimento è realizzato in pietre calcaree e scaglie di basalto. Nel lato sinistro è presente una nicchia in corrispondenza della quale Antonio Taramelli rinvenne un altare costituito da vari elementi litici sopra i quali stava in origine un pilastrino in pietra dove era sistemata una grande doppia ascia in bronzo. Presso il basamento dell’altare si rinvennero strati di ceneri con ossa di animali forse riferiti a pasti o sacrifici sacri. Il vano viene frequentato anche in età punica come attestano il rinvenimento di monete della seconda metà del IV avanti Cristo.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla Capanna con Sedile",
+              "linkedName": "capannasedile"
+            }
+          ],
+          "key": "ascia bipenne"
+        },
+        {
+          "name": "capannasedile",
+          "question": "Capanna con Sedile",
+          "answer": "La Capanna con Sedile è di pianta quasi circolare in blocchi basaltici e lastroni di calcare. All’interno è presente un sedile anulare. Il pavimento è, come nell’adiacente capanna dell’ascia bipenne, in scheggioni di calcare e blocchi di basalto. Anche in questo vano si rinvenero le tracce di cenere e carboni forse e resti di pasto come ossa animali e molluschi. Anche questo vano viene riutilizzato in età romana come testimoniano i frammenti di ceramica a vernice nera e grandi vasi vinari.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sull'ingresso orientale",
+              "linkedName": "ingressoorientale"
+            }
+          ],
+          "key": "con sedile"
+        },
+        {
+          "name": "ingressoorientale",
+          "question": "ingresso orientale",
+          "answer": "L’ingresso orientale è l’accesso al Recinto per chi veniva dal settore orientale del santuario ossia dall’area della Curia. Due stipiti di calcare delimitavano originariamente l’accesso. L’ingresso può considerarsi anche secondario rispetto a quello sud-occidentale rivolto invece all’area dei templi.",
+          "suggests":  [
+            {
+              "suggest": "quali sono le principali strutture di culto rinvenute",
+              "linkedName": "templari"
+            },
+            {
+              "suggest": "informazioni sull'ingresso sud-occidentale",
+              "linkedName": "ingressosoccidentale"
+            }
+          ],
+          "key": "ingresso orientale oriente"
+        },
+        {
+          "name": "cucina",
+          "question": "descrizione cucina mangiare",
+          "answer": "La cucina rinvenuta, è un grande ambiente a pianta rettangolare con angoli arrotondati. Nella parete di fondo in corrispondenza di un’ampia nicchia si trovano tre lastre disposte perpendicolarmente rispetto al muro interpretate come sostegni per la preparazione delle pietanze. Nel lato opposto, vicino all’ingresso stava un bancone formato da due lastroni di pietra interpretato come piano per tagliare la carne degli animali dopo la cottura. Si rinvennero ceramiche nuragiche da fuoco ed una macina trachitica. L’ambiente è interpretato come cucina comunitaria.",
+          "suggests":  [
+            {
+              "suggest": "",
+              "linkedName": "recintofeste"
+            }
+          ],
+          "key": "mangiare. cucina. preparazione cibi"
+        },
+        {
+          "name": "recintofeste",
+          "question": "recinto delle feste",
+          "answer": "Il recinto delle feste è un grosso spazio aperto di forma ellissoidale largo metri 73 per 50. Ha due accessi uno rivolto a Sud-est ed uno ad sud-ovest quest’ultimo in comunicazione con i grandi portici destinati ad ospitare i pellegrini giunti al santuario nel periodo della festa religiosa. Sono parte costituente del Recinto delle Feste, altri importanti ambienti come il recinto dei fonditori e quello dell’ascia bipenne. Il recinto delle feste è considerato l’antesignano delle cumbessias, gli agglomerati di ricoveri temporanei sorti attorno alle chiese campestri nel medioevo e destinati ad ospitare i pellegrini nel periodo delle feste religiose. All’interno del Recinto delle Feste dobbiamo immaginare, come fece già Giovanni Lilliu, una confusa e pittoresca partecipazione delle comunità nuragiche accorse da più parti del territorio al santuario, in occasioni di eventi particolari che prevedevano, come accade nelle feste campestri della nostra epoca, l'aspetto liturgico, ludico con competizioni e giochi, danze e canti, e quello economico con la vendita, o più presumibilmente il baratto, di animali, pelli, cestini..",
+          "suggests":  [
+            {
+              "suggest": "Portico dei pellegrini",
+              "linkedName": "porticopellegrini"
+            },
+            {
+              "suggest": "informazioni sulla cucina",
+              "linkedName": "cucina"
+            }
+          ],
+          "key": "feste"
+        },
+        {
+          "name": "porticopellegrini",
+          "question": "portico dei pellegrini",
+          "answer": "Questo grosso spazio semiaperto era probabilmente l’area che ospitava i pellegrini giunti al santuario per il periodo della festa. Il portico si divide in due parti quello ad est e ad ovest dell’ingresso sud-orientale. È delimitato dal muro di cinta e da ciò che rimane di undici grossi pilastri di blocchi di basalto e calcare che reggevano una copertura a travi lignee ad una falda. Il pavimento è costituito dalla roccia affiorante e a tratti da lastre calcaree. Nella parte terminale del portico occidentale si trova una grande lastra, probabilmente per il consumo di cibi comunitari. All’interno dei portici è stata rinvenuta una grande quantità di resti ossei di bue, pecora, maiale, ma anche molluschi, associati a pestelli e macine di pietra ed un’accetta di bronzo. Sono attestati elementi di cultura materiale di età punica e romana come brocche, lucerne, vasetti in vetro ed un asse del periodo repubblicano.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla capanna degli altarini",
+              "linkedName": "capannaaltarini"
+            }
+          ],
+          "key": "portico pellegrini"
+        },
+        {
+          "name": "ingressosoccidentale",
+          "question": "Ingresso sud-occidentale",
+          "answer": "L’ingresso sud-occidentale è forse da considerare quello principale perché permetteva un diretto collegamento tra l’area dei templi ed i portici dove sostavano i pellegrini. L’importanza di questo accesso è data anche dalla presenza della capanna degli altarini che precede e, verosimilmente controlla, l’accesso al Recinto delle Feste.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sull'abitazione isolata",
+              "linkedName": "abitazione"
+            }
+          ],
+          "key": "Ingresso sud-occidentale"
+        },
+        {
+          "name": "capannaaltarini",
+          "question": "",
+          "answer": "L’ingresso del Recinto delle Feste è preceduto da una capanna di pianta circolare di diametro interno di quasi 7 metri. La copertura era a travi lignee con sovrapposte lastre di calcare. Al suo interno l’archeologo Taramelli rinvenne alcuni elementi litici lavorati interpretati come basi di altare. Nel piano pavimentale, all’interno di una fossa, era collocato un vaso ed un tegame, coperto da un disco di pietra calcarea a sua volta sormontato da un elemento litico di forma emisferica. Sul pavimento si rinvennero i resti di ceneri e carboni, resti di ossa di bovini e ovini, molluschi, un pugnaletto in bronzo, frammenti di spade, una testina di guerriero nuragico.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul recinto delle feste",
+              "linkedName": "recintofeste"
+            }
+          ],
+          "key": "capanna altarini"
+        },
+        {
+          "name": "abitazione",
+          "question": "abitazione isolata",
+          "answer": "Capanna apparentemente isolata della quale non sono noti i dati relativi allo scavo.",
+          "suggests":  [
+            {
+              "suggest": "Chiesa di Santa Vittoria",
+              "linkedName": "chiesasvittoria"
+            }
+          ],
+          "key": "abitazione"
+        },
+        {
+          "name": "chiesasvittoria",
+          "question": "Chiesta di Santa Vittoria di Serri",
+          "answer": "La chiesa di Santa Vittoria è ubicata nell’estremità occidentale della giara di Serri, sopra le rovine del protonuraghe. È costituita da un piccolo portico che introduce all’interno di un edificio a due navate, separate da quattro arcate a tutto sesto; la copertura, con travi in legno è a doppio spiovente. Informazioni utili sulle origini della chiesa di Santa Vittoria provengono dal materiale documentario custodito presso l’Archivio Storico Dioceano di Cagliari: fonte principale è il fondo delle Respuestas, databile agli anni 1777-1778, che riporta l’esistenza nel territorio di tre chiese rurali, fra le quali quella di Santa Vittoria. L’edificio, tradizionalmente di proprietà dei monaci Vittorini, è stato interamente ricostruito nel corso del Settecento. L’impianto originale si data con molta probabilità al VII secolo d.C., mentre la ristrutturazione dovrebbe risalire all’età giudicale intorno al 1100. Ulteriori modifiche sono state effettuate anche nel corso XIX secolo. Di recente la chiesa è stata restituita al culto dopo interventi di restauro; al suo interno è custodito il simulacro di Santa Vittoria martire.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sui protonuraghi",
+              "linkedName": "protonuraghe"
+            }
+          ],
+          "key": "chisesa santa vittoria"
+        },
+        {
+          "name": "torreferitoie",
+          "question": "Torre con feritoie",
+          "answer": "Edificio circolare di diametro interno di 3.50 ed esterno di 7.50. Mostra delle aperture strombate all’interno. Dalla torre si diparte un corridoio che va a raccordarsi agli altri edifici. Da questo spazio provengono numerosi bronzi figurati.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla Capanna del Sacerdote",
+              "linkedName": "capannasacerdote"
+            }
+          ],
+          "key": "torre feritoie"
+        },
+        {
+          "name": "capannasacerdote",
+          "question": "Capanna del sacerdote",
+          "answer": "Grande edificio di pianta circolare del diametro interno di 4 metri e 50 ed esterno di 8 metri preceduto da  un atrio rettangolare. Al suo interno il Taramelli rinvenne ossa di suini, un pugnale in bronzo ed un personaggio in bronzo raffigurante un capo tribù con un singolare bastone in mano. Questo elemento è stato interpretato come possibile rappresentazione di un voto di guarigione.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul tempio ipetrale (a cielo aperto)",
+              "linkedName": "tempioipetrale"
+            }
+          ],
+          "key": "casa abitazione sacerdote"
+        },
+        {
+          "name": "tempioipetrale",
+          "question": "Tempio ipetrale",
+          "answer": "Il tempio ipetrale, cioè a cielo aperto, è un edificio a pianta rettangolare realizzato con pietre perfettamente lavorate in basalto e calcare realizzato a ridosso di due torri nuragiche di epoca precedente. La presenza in questa struttura di varie pietre finemente lavorate del tipo analogo a quelli utilizzati nel pozzo sacro, può indicare che il tempio ipetrale è stato realizzato con elementi costruttivi derivati dallo spoglio di quest’ultimo edificio durante l’età del Ferro. Sui muri si rinvennero lastre di calcare con ancora infisse parti di spade votive in bronzo.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sull'ingresso ",
+              "linkedName": "ingressorecinto"
+            },
+			{
+              "suggest": "informazioni sui ritrovamenti nel tempio ipetrale",
+              "linkedName": "ritrovamentiipetrale"
+            }
+          ],
+          "key": "ipetrale"
+        },
+        {
+          "name": "ingressorecinto",
+          "question": "",
+          "answer": "L’area del tempio ipetrale era delimitata da un recinto della lunghezza di 14 metri con due ingressi uno ricavato nel paramento murario ed un altro adiacente alla capanna del sacerdote. Nelle vicinanze si rinvennero tre statuine votive di arcieri.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul tempo ipetrale",
+              "linkedName": "tempioipetrale"
+            }
+          ],
+          "key": "ritrovamenti ipetrale"
+        },
+        {
+          "name": "ritrovamentiipetrale",
+          "question": "ritrovamenti ipetrale ritrovati",
+          "answer": "Il rinvenimento di circa quaranta frammenti di figure votive in bronzo tra i quali capo tribù, guerrieri, arcieri, offerenti, animali, oggetti d’ornamento, riproduzioni miniaturistiche di oggetti d’uso comune, frammenti di navicelle votive ed un carretto, suggerisce che in questo luogo poteva essere custodito il deposito votivo del santuario. Un recente riesame dei reperti archeologici provenienti da questo settore propone che il primo impianto sia da riferire al Bronzo Recente: tracce di manufatti di quest’epoca sono state infatti individuati al di sotto del rifascio murario in conci isodomi; a questa stessa fase andrebbero ricondotti i vasi miniaturistici rinvenuti agli inizi del novecento da Antonio Taramelli.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul tempio ipetrale",
+              "linkedName": "tempioipetrale"
+            }
+          ],
+          "key": ""
+        },
+        {
+          "name": "",
+          "question": "",
+          "answer": "",
+          "suggests":  [
+            {
+              "suggest": "",
+              "linkedName": ""
+            }
+          ],
+          "key": ""
         }
+
+
       ]
     },
     {
