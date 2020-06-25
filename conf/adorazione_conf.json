@@ -10,7 +10,7 @@
   "delay": "2000",
   "subjects": {
 
-      "KeyS": {
+      "KeyJ": {
         "desc": [
           "la capanna",
           "il tetto della capanna",
@@ -20,7 +20,7 @@
         "name": "hut"
       },
 
-      "KeyF":{
+      "KeyV":{
         "desc": [
           "il bambino",
           "il bambinello",
@@ -30,7 +30,7 @@
         "name": "baby"
       },
 
-      "KeyA": {
+      "KeyIl": {
         "desc": [
           "gli angeli",
           "gli angeli che reggono un festone",
@@ -40,7 +40,7 @@
         "name": "angels"
       },
 
-    	"KeyD": {
+    	"KeyL": {
         "desc": [
           "il cane",
           "il cane dei pastori",
@@ -50,7 +50,7 @@
         "name": "dog"
       },
 
-      "40": {
+      "Digit1": {
         "desc": [
           "il primo pastore",
           "il pastore in primo piano",
@@ -60,7 +60,7 @@
         "name": "shephard1"
       },
 
-      "37": {
+      "KeyN": {
         "desc": [
           "il secondo pastore ",
           "il pastore in secondo piano",
@@ -70,7 +70,7 @@
         "name": "shephard2"
       },
 
-      "KeyW": {
+      "KeyC": {
         "desc": [
         "il terzo pastore ",
         "il pastore in terzo piano",
@@ -80,7 +80,7 @@
         "name": "shephard3"
       },
 
-      "39": {
+      "KeyX": {
         "desc": [
           "San Giuseppe ",
           "la sagoma di San Giuseppe ",
@@ -90,7 +90,7 @@
         "name": "giuseppe"
       },
 
-      "38": {
+      "KeyZ": {
         "desc": [
           "la Madonna ",
           "la figura di Maria ",
@@ -98,6 +98,49 @@
         ],
         "check": 0,
         "name": "madonna"
+      },
+
+      "KeyP": {
+        "desc": [
+          "l'asinello ",
+          "l'asino ",
+          "l'asino "
+        ],
+        "check": 0,
+        "name": "asino"
+      },
+
+      "KeyH": {
+        "desc": [
+          "il bue ",
+          "il bue ",
+          "il bkkue "
+        ],
+        "check": 0,
+        "name": "bue"
+      },
+
+      "KeyO": {
+        "desc": [
+          "La capanna ",
+          "La capanna interna con il bue e l'asinello ",
+          "la capanna "
+        ],
+        "check": 0,
+        "name": "capanna2"
+      },
+
+      "Digit0": {
+        "desc": [
+          "Il cappello del primo pastore ",
+          "Il cappello del primo pastore ",
+          "Il cappello del primo pastore "
+        ],
+        "check": 0,
+        "name": "cappello"
       }
+
+
+
     }
 }
