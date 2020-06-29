@@ -1,6 +1,6 @@
 {
   "name": "Annunciazione",
-  "id": "0000380280",
+  "id": "0009052229",
   "src": "./images/annunciazione_pic.jpg",
   "art": "dell' ",
   "support": "la tavola tàttile ",
@@ -11,23 +11,124 @@
 
   "subjects": {
 
-    "38": {
+    "Digit0": {
       "desc": [
-        "la Madonna ",
+        "la Madonna",
         "la figura di Maria ",
         "la sagoma della Madonna "
       ],
       "check": 0,
       "name": "madonna"
     },
-    "65": {
+
+    "KeyL": {
       "desc": [
-        "l'Arcangelo",
-        "l'Arcangelo Gabriele",
-        "Gabriele Arcangelo"
+        "la parte ricostruita della Madonna",
+        "la figura ricostruita di Maria ",
+        "la sagoma ricostruita della Madonna "
+      ],
+      "check": 0,
+      "name": "madonna"
+    },
+
+    "KeyV": {
+      "desc": [
+        "l'angelo ",
+        "la figura di un angelo ",
+        "la sagoma dell'angelo "
       ],
       "check": 0,
       "name": "angel"
+    },
+
+    "KeyM": {
+      "desc": [
+        "l'angelo ",
+        "la figura di un angelo ",
+        "la sagoma dell'angelo "
+      ],
+      "check": 0,
+      "name": "angel"
+    },
+
+    "KeyZ": {
+      "desc": [
+        "l'ala destra dell'angelo ",
+        "la figura dell'ala dell'angelo ",
+        "la sagoma dell'ala angelica' "
+      ],
+      "check": 0,
+      "name": "ala"
+    },
+
+    "KeyN": {
+      "desc": [
+        "l'ala destra dell'angelo ",
+        "la figura dell'ala dell'angelo ",
+        "la sagoma dell'ala angelica "
+      ],
+      "check": 0,
+      "name": "ala"
+    },
+
+    "KeyP": {
+      "desc": [
+        "l'ala sinistra dell'angelo ",
+        "la figura dell'ala dell'angelo ",
+        "la sagoma dell'ala angelica "
+      ],
+      "check": 0,
+      "name": "ala"
+    },
+
+    "KeyI": {
+      "desc": [
+        "la mano del Signore ",
+        "la figura della mano di Dio ",
+        "la sagoma della mano del Signore "
+      ],
+      "check": 0,
+      "name": "mano"
+    },
+
+    "KeyC": {
+      "desc": [
+        "l'aureola ",
+        "la figura dell'aureola della mano del Signore ",
+        "la sagoma dell'aureola di Dio "
+      ],
+      "check": 0,
+      "name": "aureola"
+    },
+
+    "KeyO": {
+      "desc": [
+        "i raggi della mano del Signore ",
+        "la figura dei raggi della mano ",
+        "la sagoma della luce di Dio "
+      ],
+      "check": 0,
+      "name": "raggi"
+    },
+
+    "KeyX": {
+      "desc": [
+        "i gigli dell'angelo ",
+        "la figura dei gigli ",
+        "la sagoma dei gigli "
+      ],
+      "check": 0,
+      "name": "gigli"
+    },
+
+    "Digit1": {
+      "desc": [
+        "la colomba ",
+        "la figura della colomba ",
+        "la sagoma della colomba "
+      ],
+      "check": 0,
+      "name": "colomba"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "Visitazione",
   "alt_name": "Visitazione",
-  "id": "0000318474",
+  "id": "0008657628",
   "src": "./images/visitazione_pic.jpg",
   "art": "della ",
   "support": "la tavola tàttile ",
@@ -12,23 +12,64 @@
 
   "subjects": {
 
-      "37": {
-        "desc": [
-          "La madonna",
-          "Maria",
-          "La vergine"
-        ],
-        "check": 0,
-        "name": "madonna"
-      }    ,
-    "38": {
+    "KeyI": {
       "desc": [
-        "Elisabetta",
-        "Elisabetta",
-        "Elisabetta"
+        "San Giuseppe ",
+        "la sagoma di San Giuseppe ",
+        "la figura di San Giuseppe "
       ],
       "check": 0,
-      "name": "elisabetta"
+      "name": "giuseppe"
+    },
+
+    "KeyO": {
+      "desc": [
+        "la Madonna ",
+        "la figura di Maria ",
+        "la sagoma della Madonna "
+      ],
+      "check": 0,
+      "name": "madonna"
+    },
+
+    "KeyX": {
+      "desc": [
+        "Elisabetta ",
+        "la figura di Elisabetta ",
+        "la sagoma di Elisabetta "
+      ],
+      "check": 0,
+      "name": "Eli"
+    },
+
+    "KeyP": {
+      "desc": [
+        "la Damigella ",
+        "la figura della Damigella ",
+        "la sagoma della Damigella "
+      ],
+      "check": 0,
+      "name": "damigella"
+    },
+
+    "KeyJ": {
+      "desc": [
+        "la Torre ",
+        "la figura della torre ",
+        "la sagoma della Torre "
+      ],
+      "check": 0,
+      "name": "torre"
+    },
+
+    "KeyH": {
+      "desc": [
+        "l'edificio arcato ",
+        "la figura dell'edificio gotico ",
+        "la sagoma dell'edificio "
+      ],
+      "check": 0,
+      "name": "edificio"
     }
   }
 }
