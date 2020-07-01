@@ -16,6 +16,7 @@
   "author": "Gavino Paddeu",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "elasticsearch": "^15.4.1",
     "elasticsearch-browser": "^15.4.1",
     "express": "^4.17.1",
