@@ -1,6 +1,6 @@
 
 const express = require("express");
-var cors = require('cors')
+
 
 var fs = require('fs');
 var logger;
@@ -19,12 +19,9 @@ const app = express();
 */
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
 
-var corsOptions = {
-  origin: 'http://localhost:9200',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
+
+
 
 
 
@@ -34,7 +31,7 @@ const port = 3000;
 const ip = "0.0.0.0";
 
 
-app.get("/",cors(corsOptions), function(req, res)
+app.get("/", function(req, res)
 {
   //res.send("Hi!");
   res.sendFile(__dirname + "/index.html");
