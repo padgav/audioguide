@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "start": "Santavittoria",
-=======
   "start": "Adorazione",
->>>>>>> master
   "voiceName": "Alice",
 
   "config_files": [
