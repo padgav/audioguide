@@ -90,6 +90,12 @@ async function readConfiguration()
   var data = await response.json()
   var startName = data.start;
   voicename = data.voiceName;
+  var urlParams = new URLSearchParams(window.location.search);
+
+
+  if(urlParams.has('start'))   startName = urlParams.get('start');
+  if(urlParams.has('voiceName')) voicename = urlParams.get('voiceName');
+  
 
   for(i in data.config_files){
     var item = data.config_files[i];
