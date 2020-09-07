@@ -1,6 +1,6 @@
 {
   "name": "Annunciazione",
-  "id": "0009052229",
+  "id": ["0009052229", "0009052229"],
   "src": "./images/annunciazione_pic.jpg",
   "art": "dell' ",
   "support": "la tavola tàttile ",

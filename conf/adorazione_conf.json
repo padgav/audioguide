@@ -1,6 +1,6 @@
 {
   "name": "Adorazione",
-  "id": "0008636457",
+  "id": ["0008636457","0008636457"],
   "src": "./images/adorazione_pic.jpg",
   "art": "dell' ",
   "support": "la tavola tàttile ",

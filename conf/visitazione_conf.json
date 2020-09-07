@@ -1,7 +1,7 @@
 {
   "name": "Visitazione",
   "alt_name": "Visitazione",
-  "id": "0008657628",
+  "id": ["0008657628","0008657628"],
   "src": "./images/visitazione_pic.jpg",
   "art": "della ",
   "support": "la tavola tàttile ",

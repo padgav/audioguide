@@ -317,6 +317,7 @@ $(document).ready(function () {
     if(x != "Enter"){
       input = input + e.key;
       input = input.substr(1);
+      console.log("INPUT", input);
     }
     else{
       checkRfidCode(input);
@@ -605,7 +606,7 @@ $(document).ready(function () {
 
   function checkRfidCode(value) {
     for(i in configurations){
-      if(configurations[i].id == value){
+      if(configurations[i].id.includes(value)){
         current_index = i;
         current_painting = configurations[i];
         restartAll();
