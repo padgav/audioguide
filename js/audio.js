@@ -27,8 +27,8 @@ var VOICEIDX;
 var rateStd = 0.9;
 var currRate = rateStd;
 
-var currentVolume = 1;
-var maxVolume = currentVolume;
+var currentVolume = 0.1;
+var maxVolume = 1.0;
 var minVolume = 0.1;
 var stepVolume = 0.2;
 
@@ -90,6 +90,7 @@ async function readConfiguration()
   var data = await response.json()
   var startName = data.start;
   voicename = data.voiceName;
+  currentVolume = data.volumeMusic;
   var urlParams = new URLSearchParams(window.location.search);
 
 
@@ -584,7 +585,7 @@ $(document).ready(function () {
   function musicUp() {
     currentVolume = currentVolume + stepVolume;
     if(currentVolume > maxVolume)
-      currentVolume = maxVolume
+      currentVolume = maxVolume;
 
     console.log("current volume: ", currentVolume);
   }

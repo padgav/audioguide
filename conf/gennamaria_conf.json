@@ -13,7 +13,7 @@
   "startBehaviour": "standby",
   "caption": "Il complesso nuragico è ubicato sulla sommità di una collina a 408 metri sopra il livello del mare, a circa un chilometro dal paese di Villanovaforru. Gli elementi principali sono tre. Il nuraghe, l'antemurale e, infine, il villaggio situato in parte all'interno e in parte all'esterno dell'antemurale.",
   "color": "#00ff00",
-  "delay": "4000",
+  "delay": "0000",
   "position": [8.10933054558112,-352.24880714229874,46.310459302191006],
   "target":[29.103567541329074,-320.16656013971567,-8.632410100239241],
   "subjects": {
