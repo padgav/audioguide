@@ -29,7 +29,7 @@ var currRate = rateStd;
 
 var currentVolume = 0.1;
 var maxVolume = 1.0;
-var minVolume = 0.1;
+var minVolume = 0.01;
 var stepVolume = 0.2;
 
 //ismodelact active variable

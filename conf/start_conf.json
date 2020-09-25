@@ -1,7 +1,7 @@
 {
   "start": "Adorazione",
   "voiceName": "Alice",
-  "volumeMusic": "0.1",
+  "volumeMusic": "0.01",
 
   "config_files": [
     "./conf/adorazione_conf.json",
