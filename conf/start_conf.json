@@ -8,7 +8,8 @@
     "./conf/annunciazione_conf.json",
     "./conf/visitazione_conf.json",
     "./conf/gennamaria_conf.json",
-    "./conf/santavittoria_conf.json"
+    "./conf/santavittoria_conf.json",
+    "./conf/luna.json"
   ]
 
 }

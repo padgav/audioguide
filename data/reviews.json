@@ -2198,6 +2198,772 @@
       ]
     },
     {
+      "id": "Luna",
+      "title": "Luna",
+      "type": "painting",
+      "qa": [
+
+
+        {
+          "name": "first",
+          "question": "Cosa posso chiedere?",
+          "answer": "Puoi chiedere: la descrizione generale, sul villaggio, sull'antemurale.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul nuraghe",
+              "linkedName": "nuraghe"
+            }
+          ],
+          "key": "chiedere, domanda, domandare"
+        },
+        {
+          "name": "ubic",
+          "question": "Ubicazione, dove si trova, il sito archeologico Genna Maria",
+          "answer": "Il sito archeologico si trova a poche centinaia di metri da Collinas in prossimità di Villanovaforru sulla sommità della collina marnoso-calcàrea di Genna Maria, nella Marmilla, regione della Sardegna centro-meridionale. Gode di un campo visivo che spazia dal golfo di Cagliari a quello di Oristano, e, a Nord, verso la Marmilla e i monti del Gennargentu.",
+          "suggests":  [
+            {
+              "suggest": "la descrizione generale",
+              "linkedName": "gen"
+            },
+            {
+              "suggest": "informazioni su Villanovaforru",
+              "linkedName": "villanova"
+            },
+            {
+              "suggest": "informazioni sul Museo di Genna Maria",
+              "linkedName": "museo"
+            }
+          ],
+          "key": "Dove si trova complesso genna maria. sta."
+        },
+        {
+          "name": "gen",
+          "question": "Descrizione generale. Struttura di Genna Maria.",
+          "answer": "La struttura del complesso di Genna Maria si compone di un bastione trilobato che racchiude la torre originaria, di un antemurale esagonale e di un villaggio posto all'interno ed all'esterno dell'antemurale. La torre originaria, costruita forse nel Bronzo medio (quindicesimo secolo a.C.), oggi svettata, ospita una semplice camera priva di vani sussidiari e di diametro interno assai ridotto rispetto a quello esterno.",
+          "suggests":  [
+            {
+              "suggest": "una descrizione del nuraghe",
+              "linkedName": "nuraghe"
+            },
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "l’ubicazione del sito Genna Maria",
+              "linkedName": "ubic"
+            }
+          ],
+          "key": "Descrizione generale sito archeologico genna maria. Complesso. Struttura"
+        },
+        {
+          "name": "villanova",
+          "question": "comune di Villanovaforru",
+          "answer": "E’ un comune italiano di 680 abitanti della provincia del Sud Sardegna. Situato tra le dolci colline della Marmilla, a circa 50 km da Cagliari.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul Museo di Genna Maria",
+              "linkedName": "museo"
+            }
+          ],
+          "key": "Villanovaforru. Città. Paese."
+        },
+        {
+          "name": "nuraghe",
+          "question": "nuraghe, dove si trova il nuraghe",
+          "answer": "Nella regione storica della Marmilla, sulla sommità della collina di Genn’e Mari che nella lingua sarda significa porta-accesso al mare, si trova il nuraghe Genna Maria. È un edificio complesso,  interamente realizzato in pietra, costituito da una torre centrale e da altre tre torri periferiche disposte negli angoli nord-est, sud-est e nord-ovest. All’interno è presente un piccolo cortile dove è situata una cisterna. Attorno ad esso si sviluppa un recinto composto da quattro torri. Nello spazio compreso tra il recinto e le torri è un villaggio di diverse capanne. ",
+          "suggests":  [
+            {
+              "suggest": "dettagli sulla torre principale",
+              "linkedName": "torre_originaria"
+            },
+            {
+              "suggest": "la descrizione dell’antemurale",
+              "linkedName": "antemurale"
+            },
+            {
+              "suggest": "informazioni sull’evoluzione del nuraghe",
+              "linkedName": "evoluzione"
+            },
+            {
+              "suggest": "informazioni sulla tecnica di costruzione",
+              "linkedName": "tecnica"
+            }
+          ],
+          "key": "nuraghe. descrizione nuraghe. dove si trova dov'è nuraghe."
+        },
+        {
+          "name": "scavi",
+          "question": "Come quando è stato scoperto il nuraghe. Come è avvenuta la scoperta. Chi ha diretto scavi. Come si presenta attualmente.",
+          "answer": "Il nuraghe era originariamente sepolto. Durante la seconda guerra mondiale è stato utilizzato come postazione antiaèrea. Nel 1969 sono iniziate le prime indagini che si sono protratte nel corso degli anni settanta e ottanta. Il professore Enrico Atzeni con la collaborazione sul campo di Ubaldo Badas ha diretto gli scavi. Successivamente sono state fatti alcuni interventi conservativi, di restauro.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sugli scavi in corso",
+              "linkedName": "incorso"
+            },
+            {
+              "suggest": "informazioni sui materiali",
+              "linkedName": "materiali"
+            },
+            {
+              "suggest": "come si presenta oggi il nuraghe attuale",
+              "linkedName": "confronto"
+            }
+          ],
+          "key": "scavi. scavi. scavi. scoperto nuraghe."
+        },
+        {
+          "name": "incorso",
+          "question": "Gli scavi sono stati conclusi, finiti? in corso",
+          "answer": "Esistono ancora delle parti del nuraghe non scavate: finora è stato possibile ricostruire solo le vicende della parte nord-orientale del villaggio. Lo scavo nel settore sud-occidentale non è stato ancora concluso.",
+          "suggests":  [
+            {
+              "suggest": "quando è stato scoperto il nuraghe e circa gli interventi conservativi di restauro",
+              "linkedName": "scavi"
+            },
+            {
+              "suggest": "quali reperti/manufatti sono stati rinvenuti.",
+              "linkedName": "reperti"
+            },
+            {
+              "suggest": "informazioni sul Museo di Genna Maria",
+              "linkedName": "museo"
+            }
+          ],
+          "key": "scavi in corso. concluso"
+        },
+        {
+          "name": "tecnica",
+          "question": "Tecnica costruttiva nuraghe",
+          "answer": "La tecnica costruttiva è quella della muratura a secco, per la costruzione sono state adottate pietre di grandi dimensioni che pesano diversi quintali, legate tra loro da terra o fango. Gli ambienti interni delle torri sono chiusi da una cupola di pietre.",
+          "suggests":  [
+            {
+              "suggest": "che funzione hanno i nuraghi",
+              "linkedName": "funzione"
+            },
+            {
+              "suggest": "informazioni sui materiali",
+              "linkedName": "materiali"
+            },
+            {
+              "suggest": "quando è stato scoperto il nuraghe e circa gli interventi conservativi di restauro",
+              "linkedName": "scavi"
+            }
+          ],
+          "key": "tecnica costruttiva. costruzione"
+        },
+        {
+          "name": "materiali",
+          "question": "Quali materiali sono stati usati per costruire il nuraghe",
+          "answer": "Il nuraghe è stato costruito con una roccia locale che si chiama marna calcàrea. Tuttavia alcuni elementi, come ad esempio gli architravi sopra gli ingressi, sono realizzati in una roccia differente, il basalto.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla tecnica di costruzione",
+              "linkedName": "tecnica"
+            },
+            {
+              "suggest": "informazioni sull’evoluzione del nuraghe",
+              "linkedName": "evoluzione"
+            },
+            {
+              "suggest": "quando è stato scoperto il nuraghe e circa gli interventi conservativi di restauro",
+              "linkedName": "scavi"
+            }
+          ],
+          "key": "materiali"
+        },
+	   {
+          "name": "confronto",
+          "question": "Come si presenta attualmente il nuraghe?",
+          "answer": "Oggi il nuraghe si presenta mancante del terrazzo (che era posto sulla sommità). Al termine della torre era presente un terrazzo che in parte sporgeva verso l’esterno. All’interno della muratura erano collocate alcune grandi mensole in pietra che sorreggevano probabilmente un solaio di legno.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sull’evoluzione del nuraghe",
+              "linkedName": "evoluzione"
+            },
+            {
+              "suggest": "informazioni sulla tecnica di costruzione",
+              "linkedName": "tecnica"
+            },
+            {
+              "suggest": "informazioni sul terrazzo",
+              "linkedName": "terrazzo"
+            }
+          ],
+          "key": "come è il nuraghe oggi attuale."
+        },
+        {
+          "name": "terrazzo",
+          "question": "Informazioni sul terrazzo.",
+          "answer": "Il terrazzo del nuraghe era la parte più vulnerabile dell’edificio, perché la parte più esposta agli agenti atmosferici come la pioggia ed il vento che potevano causare danni alla struttura. Occorreva dunque effettuare una continua manutenzione. È anche probabile che dal terrazzo si praticassero dei segnali per comunicare con gli altri nuraghi.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulla Torre centrale",
+              "linkedName": "originaria"
+            },
+            {
+              "suggest": "informazioni sull’evoluzione del nuraghe",
+              "linkedName": "evoluzione"
+            },
+            {
+              "suggest": "informazioni sulla tecnica di costruzione",
+              "linkedName": "tecnica"
+            }
+          ],
+          "key": "terrazzo"
+        },
+        {
+          "name": "evoluzione",
+          "question": "Periodo e fase edilizia. evoluzione.",
+          "answer": "Il nuraghe nasce monotorre nel Bronzo Medio (1500 a.C.). Agli inizi del Bronzo Recente (1300 a.C.) la torre viene inglobata e parzialmente rifasciata da un bastione quadrilobato, con torri dotate di feritoie. All’interno del bastione: un cortile dotato di pozzo parzialmente scavato nella viva roccia. Nel Bronzo Finale (1100 a.C.), la terza fase edilizia del monumento: rifascio parziale del bastione; eliminazione di una delle sue torri; accecamento delle feritoie. Il villaggio nasce già nel Bronzo Medio, ma la forma che giunge sino a noi la assume nel corso della prima Età del Ferro (900 – 800 a.C.). assistiamo ad una vera e propria evoluzione dell’impianto abitativo: parte dell’antemurale viene smantellato e su di esso vengono costruite alcune delle nuove strutture del villaggio, che riusano materiali provenienti dallo stesso antemurale e dallo smontaggio di capanne più antiche.",
+          "suggests":  [
+            {
+              "suggest": "come si presenta oggi il nuraghe attuale",
+              "linkedName": "confronto"
+            },
+            {
+              "suggest": "che funzione avevano i nuraghi",
+              "linkedName": "funzione"
+            },
+            {
+              "suggest": "la descrizione dell’antemurale",
+              "linkedName": "antemurale"
+            }
+          ],
+          "key": "periodi nuraghe. fasi nuraghe. evoluzione del nuraghe"
+        },
+        {
+          "name": "originaria",
+          "question": "torre centrale.",
+          "answer": "La torre centrale, costruita forse nel Bronzo medio (quindicesimo secolo a.C.), oggi svettata, ospita una semplice camera priva di vani sussidiari e di diametro interno assai ridotto rispetto a quello esterno. Raggiungeva gli 8/10 metri d’altezza e le mura del bastione arrivavano ai 7 metri, fornito di un cortile con pozzo e circondato da un antemurale turrito.",
+          "suggests":  [
+            {
+              "suggest": "la descrizione dell’antemurale",
+              "linkedName": "antemurale"
+            },
+            {
+              "suggest": "la descrizione del nuraghe",
+              "linkedName": "nuraghe"
+            },
+            {
+              "suggest": "informazioni sugli scavi in corso",
+              "linkedName": "incorso"
+            }
+          ],
+          "key": "torre centrale, principale, originaria"
+        },
+		{
+          "name": "antemurale",
+          "question": "antemurale. fascia murale.",
+          "answer": "Il possente antemurale turrito, di forma esagonale, circonda il nuraghe e con esso è stato costruito e utilizzato in funzione di controllo del territorio fra il Bronzo Medio ed il Bronzo Finale. E’ articolato in torri (di cui quattro ancora visibili) raccordate da cortine murate e rettilinee e ingresso a SE. Un episodio di distruzione avvenuto intorno al decimo secolo a.C. riduce il bastione trilobato alle dimensioni attuali che superano di circa 7 metri di elevato. Lo stesso antemurale viene scapitozzato e ridotto ad un alzato di pochi filari. Fuori e dentro le sue mure si è sviluppato il villaggio e il suo abitato.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "la descrizione del nuraghe",
+              "linkedName": "nuraghe"
+            },
+            {
+              "suggest": "informazioni sugli scavi",
+              "linkedName": "scavi"
+            }
+          ],
+          "key": "antemurale. mura. murate"
+        },
+        {
+          "name": "villaggio",
+          "question": "villaggio di Genna Maria",
+          "answer": "Il villaggio è  posto all'interno ed all'esterno dell'antemurale. Le capanne più recenti del vilaggio hanno strutture complesse a pianta centrale, con vani ellittici, quadrangolari e rettangolari, funzionali e decorati con varie forme. Eccezionale è la ‘casa a corte centrale’, ampia 150 metri quadri e suddivisa in ambienti che convergono in un unico cortile. Nella prima età del Ferro, un abitato succeduto ad un precedente insediamento del Bronzo medio occupò l'area compresa tra il bastione e l'antemurale, in parte sovrapponendosi ad esso e utilizzando il materiale proveniente dallo smantellamento di capanne più antiche. Il nuovo villaggio 'geometrico' presenta delle strutture complesse a pianta centrale, con vani ellittici, quadrangolari e rettangolari. Le abitazioni hanno carattere residenziale e sono funzionali ai bisogni del nucleo familiare: riposo, preparazione e consumo dei cibi, deposito di utensili e provviste, attività artigianali a scala domestica. Le murature sono realizzate in tecnica microlitica con piccoli blocchetti e lastrine di marna.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulle capanne",
+              "linkedName": "capanne"
+            },
+            {
+              "suggest": "la descrizione della casa a corte centrale",
+              "linkedName": "casacorte"
+            },
+            {
+              "suggest": "quali attività svolgevano gli abitanti",
+              "linkedName": "attivita"
+            }
+          ],
+          "key": "villaggio. centro abitato."
+        },
+        {
+          "name": "villaggi",
+          "question": "villaggi nuragici dell’era del bronzo",
+          "answer": "Nell’età del bronzo i villaggi sono costituiti da agglomerati di capanne di forma circolare con diametri variabili fino ai sei metri, interamente costruite in pietra e con il tetto realizzato in rami, come nelle attuali capanne dei pastori.",
+          "suggests":  [
+            {
+              "suggest": "descrizione del villaggio di Genna Maria",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "informazioni sulle capanne",
+              "linkedName": "capanne"
+            },
+            {
+              "suggest": "che attività svolgevano gli abitanti",
+              "linkedName": "attivita"
+            }
+          ],
+          "key": "generale"
+        },
+        {
+          "name": "capanne",
+          "question": "piccole capanne attorno al nuraghe Genna Maria",
+          "answer": "Nel mille avanti Cristo circa attorno al nuraghe Genna Maria si sviluppa un villaggio di piccole capanne di varie forme, sia quadrate che rettangolari o di forme irregolari. L’importanza delle capanne è dovuta anche ai ritrovamenti degli archeologi che hanno permesso di conoscere le attività quotidiane degli abitanti.",
+          "suggests":  [
+            {
+              "suggest": "che attività svolgevano gli abitanti",
+              "linkedName": "attivita"
+            },
+            {
+              "suggest": "la descrizione della casa a corte centrale",
+              "linkedName": "casacorte"
+            },
+            {
+              "suggest": "informazioni sui reperti della Capanna 12",
+              "linkedName": "capanna12"
+            }
+          ],
+          "key": "capanne, abitato, abitazioni"
+        },
+        {
+          "name": "attivita",
+          "question": "Quali attività svolgevano gli abitanti del villaggio?",
+          "answer": "All’interno delle capanne, gli archeologi hanno rinvenuto tracce delle attività quotidiane degli abitanti come le macine che attestano la molitura dei cereali e dei legumi secchi, le pietre per l’affilatura delle lame, la cottura dei cibi, le scorie che attestano la fusione del bronzo, la conservazione delle derrate agricole all’interno di grandi contenitori di ceramica.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sulle capanne",
+              "linkedName": "capanne"
+            },
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "informazioni sulla produzione di vino",
+              "linkedName": "vino"
+            }
+          ],
+          "key": "attività abitanti villaggio"
+        },
+        {
+          "name": "vino",
+          "question": "Si produceva vino?",
+          "answer": "Le analisi effettuate sui resti di sedimenti semi hanno dimostrato che in età nuragica in Sardegna si coltivava uva per la produzione di un vino bianco.",
+          "suggests":  [
+            {
+              "suggest": "come venivano conservati gli alimenti",
+              "linkedName": "conservazione"
+            },
+            {
+              "suggest": "quali vegetali sono stati trovati",
+              "linkedName": "vegetali"
+            },
+            {
+              "suggest": "informazioni sui reperti della Capanna 12",
+              "linkedName": "capanna12"
+            }
+          ],
+          "key": "produzione vino"
+        },
+        {
+          "name": "animali",
+          "question": "Gli animali venivano cacciati, allevati. Caccia e allevamenti di animali",
+          "answer": "Lo studio dei focolari permette spesso di individuare gli avanzi dei pasti degli antichi nuragici. Lo studio archeozoologico ha permesso di ricostruire la fauna durante l’età nuragica, sono infatti stati individuati la pecora, la capra, il maiale ed il bue che erano allevati mentre il cinghiale ed il cervo venivano cacciati.",
+          "suggests":  [
+            {
+              "suggest": "come venivano conservati gli alimenti",
+              "linkedName": "conservazione"
+            },
+            {
+              "suggest": "che attività svolgevano gli abitanti",
+              "linkedName": "attivita"
+            },
+            {
+              "suggest": "quali vegetali sono stati trovati",
+              "linkedName": "vegetali"
+            }
+          ],
+          "key": "ritrovamenti animali. caccia. allevamento.  pecora, capra, maiale, bue, cinghiale"
+        },
+        {
+          "name": "conservazione",
+          "question": "Conservazione degli alimenti. Cibo. Cosa mangiavano. Alimenti conservati",
+          "answer": "Gli alimenti venivano conservati all’interno di grandi contenitori di ceramica, oggi esposti in questo museo. Sappiamo infatti che durante le indagini di scavo sono stati trovati all’interno i resti di cereali carbonizzati.",
+          "suggests":  [
+            {
+              "suggest": "quali vegetali sono stati trovati",
+              "linkedName": "vegetali"
+            },
+            {
+              "suggest": "che attività svolgevano gli abitanti",
+              "linkedName": "attivita"
+            },
+            {
+              "suggest": "informazioni sui reperti della Capanna 12",
+              "linkedName": "capanna12"
+            }
+          ],
+          "key": "conservazione alimenti, cibo, cereali"
+        },
+        {
+          "name": "vegetali",
+          "question": "Quali vegetali sono stati ritrovati",
+          "answer": "Le analisi archeobotaniche hanno permesso di riconoscere la presenza del grano, dell’orzo, e delle fave. In altri siti nuragici sono stati individuati anche i piselli, e frutta come i fichi e l'uva.",
+          "suggests":  [
+            {
+              "suggest": "come venivano conservati gli alimenti",
+              "linkedName": "conservazione"
+            },
+            {
+              "suggest": "che attività svolgevano gli abitanti",
+              "linkedName": "capanna12"
+            },
+            {
+              "suggest": "informazioni sulla produzione di vino",
+              "linkedName": "vino"
+            }
+          ],
+          "key": "vegetali. botanica. flora. grano, orzo, fave, piselli, frutta, fichi, uva."
+        },
+        {
+          "name": "incendio",
+          "question": "incendio del villaggio. L’abitato ebbe vita lunga?",
+          "answer": "l'abitato, sviluppatosi attorno al decimo secolo a.C., in piena età del ferro, si instaurò sulle rovine dell’antemurale, fino a lambire il bastione trilobato. L’abitato attorno al nuraghe non ebbe vita lunga: tra il 1000 ed il 900 avanti Cristo, il villaggio viene abbandonato, forse a causa di un incendio che fece crollare le abitazioni, facendo la fortuna degli archeologi che, dato l’episodio dell’incendio, hanno potuto così ritrovare interi corredi in grado di raccontare la quotidianità delle popolazioni contadine dell’epoca (dalla conservazione e lavorazione delle derrate alimentari, dalla filatura alla tessitura, dalla condivisione del fuoco ai sistemi di illuminazione).",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "informazioni sul culto",
+              "linkedName": "culto"
+            },
+            {
+              "suggest": "informazioni su ritrovamenti di reperti e manufatti",
+              "linkedName": "reperti"
+            }
+          ],
+          "key": "incendio. abitato."
+        },
+        {
+          "name": "culto",
+          "question": "ripopolamento, culto, offerte santuario; il nuraghe viene rifrequentato?",
+          "answer": "Durante il periodo punico sul finire del quinto secolo avanti Cristo, presso la torre centrale ed il cortile si svolgevano dei sacrifici anche di animali e si donavano delle offerte in onore di una divinità connessa con un culto agrario: all’interno della torre principale sono state rinvenute circa seicentocinquanta piccole lucerne in ceramica. Inoltre all’interno del cortile sono state rinvenute diverse monete che vanno dall’età romana a quella vandalica. E’ probabile che si riferiscano anche in questo caso a offerte.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio,"
+            },
+            {
+              "suggest": "informazioni sulle lucerne",
+              "linkedName": "lucerne"
+            },
+            {
+              "suggest": "circa ritrovamenti animali",
+              "linkedName": "animali"
+            },
+            {
+              "suggest": "informazioni sull’incendio che fece crollare le abitazioni",
+              "linkedName": "incendio"
+            }
+          ],
+          "key": "culto. religione. rito. offerte. divinità. sacrificio. "
+        },
+        {
+          "name": "lucerne",
+          "question": "Cosa sono le lucerne? informazioni sulle lucerne",
+          "answer": "Le lucerne, rinvenute nella torre principale, sono connesse con un rituale molto antico collegato con il solstizio estivo che si colloca attorno alla data del venti/ventuno giugno coincidente con la trebbiatura dei cereali. Durante questa festa è probabile che si portassero, durante una fiaccolata notturna, le lucerne nel luogo del santuario.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sull’incendio che fece crollare le abitazioni",
+              "linkedName": "incendio"
+            },
+            {
+              "suggest": "informazioni sul culto",
+              "linkedName": "culto"
+            },
+            {
+              "suggest": "che funzione avevano i nuraghi",
+              "linkedName": "funzione"
+            }
+          ],
+          "key": "lucerne, rituale, solstizio, santuario"
+        },
+        {
+          "name": "funzione",
+          "question": "A cosa servivano i nuraghi",
+          "answer": "Le ipotesi sull'utlizzo che avevano i nuraghi sono oggi ancora molto discusse. Alcuni anni fa gli archeologi attribuivano ai nuraghi una funzione difensiva, ma le recenti indagini hanno oggi dimostrato che all’interno dei nuraghi si svolgevano attività come la lavorazione del grano, la preparazione di cibi, probabilmente anche per fini rituali. Non sono state rinvenute tracce di azioni belliche.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sul culto",
+              "linkedName": "culto"
+            },
+            {
+              "suggest": "informazioni sull’incendio che fece crollare le abitazioni",
+              "linkedName": "incendio"
+            },
+            {
+              "suggest": "informazioni sulle lucerne",
+              "linkedName": "lucerne"
+            }
+          ],
+          "key": "nuraghi, funzione, utilizzo, utilizzati, utilità, servivano."
+        },
+        {
+          "name": "casacorte",
+          "question": "casa a corte centrale’",
+          "answer": "La casa a corte centrale è ampia ben 150 metri quadrati e suddivisa in una serie di ambienti che convergono verso un unico cortile. Grazie all’intero corredo di questa casa (detta appunto ‘a corte centrale’), è stato possibile ricostruire quella che era la vita quotidiana degli abitanti: prevalentemente sono utensili di uso domestico, in pietra e ceramica, e sono rari gli esempi in metallo.",
+          "suggests":  [
+            {
+              "suggest": "sul nuraghe di Genna Maria",
+              "linkedName": "nuraghe"
+            },
+            {
+              "suggest": "informazioni sul villaggio",
+              "linkedName": "villaggio"
+            },
+            {
+              "suggest": "informazioni sugli scavi in corso",
+              "linkedName": "incorso"
+            }
+          ],
+          "key": "casa a corte centrale. vita quotidiana."
+        },
+        {
+          "name": "capanna12",
+          "question": "magazzino 12",
+          "answer": "La capanna 12 è considerato un probabile magazzino-deposito, che conteneva grandi vasi per la conservazione di derrate solide (cereali), diversi vasi legati alla trasformazione e consumazione dei cibi, una brocca askoide decorata a stralucido, un vaso piriforme decorato con volto umano in rilievo, borracce a faccia piana ecc.. Nel pavimento della capanna 12 sono stati recuperati resti vegetali carbonizzati di grano e orzo, legumi, vinaccioli di vite coltivata e minuscoli frammenti di un preparato alimentare che è stato identificato come pane a base di una farina non lievitata (analisi di P. Marinval).",
+          "suggests":  [
+            {
+              "suggest": "come venivano conservati gli alimenti",
+              "linkedName": "conservazione"
+            },
+            {
+              "suggest": "quali vegetali sono stati trovati",
+              "linkedName": "vegetali"
+            },
+            {
+              "suggest": "circa ritrovamenti animali",
+              "linkedName": "animali"
+            }
+          ],
+          "key": "capanna 12. magazzino. deposito. alimentare. cereali. cibi. farina"
+        },
+        {
+          "name": "reperti",
+          "question": "Quali reperti, ritrovamenti, manufatti",
+          "answer": "Ci sono stati ritrovamenti di diversi reperti e manufatti; ceramiche evolute e di alta qualità (talvolta decorate a stecca con eleganti motivi geometrici) come vasi piriformi, fiasche, brocchette, antipastiere, sassole, portabrace, pintadere. Trai reperti anche ziri, caldaie, coppe di cottura, bacili e macine che testimoniano l'operosità di questa antica comunità agricola. La capanna 12 ha inoltre restituito grani di cereali, ghiande, leguminose e un frammento di pane carbonizzato. Tra i resti di pasto: ossa di bue, pecora-capra, maiale-cinghiale, cervo, prolago e valve di lamellibranchi.",
+          "suggests":  [
+            {
+              "suggest": "informazioni sui reperti della Capanna 12",
+              "linkedName": "capanna12"
+            },
+            {
+              "suggest": "informazioni sul Museo di Genna Maria",
+              "linkedName": "museo"
+            },
+            {
+              "suggest": "se sono stati trovati dei bronzetti nel nuraghe",
+              "linkedName": "bronzetti"
+            }
+          ],
+          "key": "reperti, ritrovamenti, manufatti. vasi piriformi, fiasche, brocchette, pintadere. resti di pasto."
+        },
+        {
+          "name": "bronzetti",
+          "question": "Sono stati trovati bronzetti. Pugnale. Bronzetti.",
+          "answer": "Gli scavi non hanno rinvenuto alcun bronzetto fatta accezione per una piccola rappresentazione di pugnale all’interno del suo fodero o faretra. Questo perché i bronzetti vengono generalmente rinvenuti presso i pozzi sacri, mentre sono rari all’interno di un nuraghe.",
+          "suggests":  [
+            {
+              "suggest": "come venivano utilizzati i bronzetti",
+              "linkedName": "bonzetti_utilizzo"
+            },
+            {
+              "suggest": "cosa rappresentano o le dimensioni dei bronzetti",
+              "linkedName": "bronzetti2"
+            },
+            {
+              "suggest": "informazioni su ritrovamenti di reperti e manufatti",
+              "linkedName": "reperti"
+            }
+          ],
+          "key": "bronzetti. pugnale."
+        },
+        {
+          "name": "bronzetti2",
+          "question": "bronzetti. Cosa rappresentano, dimensioni.",
+          "answer": "I bronzetti, generalmente di piccole dimensioni, rappresentano uomini, donne, bambini ma anche ogni genere di animali come buoi, cinghiali, volpi, cani, cervi ed oggetti d’uso quotidiano.",
+          "suggests":  [
+            {
+              "suggest": "se sono stati trovati dei bronzetti nel nuraghe",
+              "linkedName": "bronzetti"
+            },
+            {
+              "suggest": "come venivano utilizzati i bronzetti",
+              "linkedName": "bonzetti_utilizzo"
+            },
+            {
+              "suggest": "circa i ritrovamenti animali",
+              "linkedName": "animali"
+            }
+          ],
+          "key": "bronzetti dimensione rappresentano."
+        },
+        {
+          "name": "bonzetti_utilizzo",
+          "question": "A cosa servivano i bronzetti",
+          "answer": "I bronzetti servivano con molta probabilità come offerte; venivano utilizzati dagli individui che li donavano alla divinità.",
+          "suggests":  [
+            {
+              "suggest": "se sono stati trovati dei bronzetti nel nuraghe",
+              "linkedName": "bronzetti"
+            },
+            {
+              "suggest": "cosa rappresentano o le dimensioni dei bronzetti",
+              "linkedName": "bronzetti2"
+            }
+          ],
+          "key": "bronzetti, funzione, utilizzo, utilizzati, utilità, nuraghi, servivano"
+        },
+        {
+          "name": "civilta",
+          "question": "Quando si sviluppa la civiltà nuragica",
+          "answer": "Agli inizi del secondo millennio avanti Cristo, iniziano ad essere costruiti in tutta la regione della Sardegna edifici in pietra, chiamati protonuraghi, che anticipano la costruzione del nuraghe vero e proprio a forma di torre. Nel corso dell’età del Bronzo Recente, circa tremilacinquecento anni fa, l’architettura nuragica si evolve e attraverso nuove tecniche costruttive si erìgono grandi torri che potevano avere fino a tre piani sovrapposti. Da qui l’inizio della civiltà nuragica.",
+          "suggests":  [
+            {
+              "suggest": "se sono presenti protonuraghi nel territorio di Genna Maria",
+              "linkedName": "protogenna"
+            },
+            {
+              "suggest": "informazioni sugli scavi",
+              "linkedName": "scavi"
+            },
+            {
+              "suggest": "informazioni sugli scavi in corso",
+              "linkedName": "incorso"
+            }
+          ],
+          "key": "bronzetti, utilizzo, servivano, utilizzati, funzione"
+        },
+        {
+          "name": "protogenna",
+          "question": "Sono presenti protonuraghi attorno al territorio di Genna Maria?",
+          "answer": "Sono presenti dei protonuraghi non lontano dal territorio di Genna Maria nel vicino altipiano di Siddi, anche Giara, dove è presente il protonuraghe Sa Fogaia",
+          "suggests":  [
+            {
+              "suggest": "che utilizzo avevano i protonuraghi",
+              "linkedName": "protoutilizzo"
+            },
+            {
+              "suggest": "che forma avevano i protonuraghi",
+              "linkedName": "protoforma"
+            },
+            {
+              "suggest": "informazioni sugli scavi in corso",
+              "linkedName": "incorso"
+            }
+          ],
+          "key": "protonuraghe presenti genna maria"
+        },
+        {
+          "name": "protoforma",
+          "question": "Che forma avevano i protonuraghi?",
+          "answer": "I protonuraghi avevano forma di bastioni terrazzati generalmente attraversati da un lungo corridoio. Da qui anche il nome di nuraghi a corridoio. Non esiste una forma planimetrica canonica. Nell’architettura nuragica non si era ancora delineata la forma a tronco di cono che caratterizzerà invece le fasi media e recente dell’età del Bronzo.",
+          "suggests":  [
+            {
+              "suggest": "che utilizzo avevano i protonuraghi",
+              "linkedName": "protoutilizzo"
+            },
+            {
+              "suggest": "se sono presenti protonuraghi attorno al territorio di Genna Maria",
+              "linkedName": "protogenna"
+            }
+          ],
+          "key": "protonuraghe forma, "
+        },
+        {
+          "name": "protoutilizzo",
+          "question": "A cosa servivano i protonuraghi",
+          "answer": "Non ci sono molte informazioni sull’utilizzo dei protonuraghi. Sono ancora poco studiati, mancano infatti ricerche specifiche su questa tipologia di edifici.",
+          "suggests":  [
+            {
+              "suggest": "che forma avevano i protonuraghi",
+              "linkedName": "protoforma"
+            },
+            {
+              "suggest": "se sono presenti protonuraghi attorno al territorio di Genna Maria",
+              "linkedName": "protogenna"
+            },
+            {
+              "suggest": "che funzione avevano invece i nuraghi",
+              "linkedName": "funzione"
+            }
+          ],
+          "key": "protonuraghi, funzione, utilizzo, utilizzati, utilità, nuraghi, servivano"
+        },
+        {
+          "name": "museo",
+          "question": "informazioni sul Museo di Genna Maria. Cosa ospita il museo",
+          "answer": "Il museo Genna Maria situato nell'antico Monte di Soccorso, è stato inaugurato nel 1982. Si dispone su due piani e ospita numerosi e preziosi reperti rinvenuti non solo nel territorio di Villanovaforru, ma anche nei paesi limitrofi. Gran parte dei manufatti rinvenuti nel nuraghe e nel villaggio sono stati restaurati ed esposti nelle sale di questo Museo. Al piano terra sono infatti collocati i reperti individuati nel settore nord-orientale del villaggio. Nella prima sala, il museo mette in mostra gli oggetti dell'epoca nuragica ritrovati tra gli ambienti del villaggio ed in particolare il ricchissimo corredo proveniente da una singola abitazione, la casa a corte centrale.",
+          "suggests":  [
+            {
+              "suggest": "informazioni su ritrovamenti di reperti e manufatti",
+              "linkedName": "reperti"
+            },
+            {
+              "suggest": "informazioni sui reperti della Capanna 12",
+              "linkedName": "capanna12"
+            },
+            {
+              "suggest": "la descrizione della casa a corte centrale",
+              "linkedName": "casacorte"
+            }
+          ]
+          ,
+          "key": "museo genna maria. esposti. esposizione. mostra."
+        },
+        {
+          "name": "pinolo",
+          "question": "pinolo",
+          "answer": "pinolo",
+          "suggests":  [
+            {
+              "suggest": "",
+              "linkedName": ""
+            },
+            {
+              "suggest": "",
+              "linkedName": ""
+            },
+            {
+              "suggest": "",
+              "linkedName": ""
+            }
+          ]
+        },
+        {
+          "name": "",
+          "question": "",
+          "answer": " ",
+          "suggests":  [
+            {
+              "suggest": "",
+              "linkedName": ""
+            }
+          ]
+        }
+
+
+      ]
+    },
+    {
       "id": "controls",
       "title": "controls",
       "type": "controls",
