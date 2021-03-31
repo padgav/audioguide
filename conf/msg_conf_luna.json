@@ -1,0 +1,34 @@
+{
+
+  "welcome":
+  [
+  	"Benvenuto! Sei di fronte al",
+  	"Potrai toccare la struttura rappresentata in 3D. Il plastico ha diversi sensori che potrai toccare e mentre lo esplori con le mani ti darò indicazioni su quale zona della Luna. Nella cornice vicino a te, al centro, puoi toccare il sensore che ti permetterà di pormi delle domande, alle quali io cercherò di dare delle risposte. Ecco, da questo momento puoi esplorare il plastico in modo interattivo."
+  ],
+
+  "undef":
+  [
+   "Non ho capito. Prova a ripetere.",
+   "Puoi cortesemente riformulare la domanda?",
+   "Non ho capito. Riformula la domanda."
+  ],
+
+  "touching":
+  [
+   "Stai esaminando ",
+   "Stai analizzando ",
+   "Stai esplorando "
+  ],
+
+  "re":
+  [
+  	"Ancora una volta ",
+  	"Di nuovo ",
+  	"Ci siamo tornati. "
+  ],
+
+  "which": "quale plastico vuoi esplorare?",
+
+  "check": 0
+
+}
