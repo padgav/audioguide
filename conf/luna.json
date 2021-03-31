@@ -1,0 +1,404 @@
+{
+  "name": "Luna",
+  "alt_name": "Luna",
+  "id": "003",
+  "uid": "2ed768f024e14e0e89bba3fcec487ac6",
+  "loaded": "false",
+  "src": "./images/santavittoria_pic.jpg",
+  "type": "model",
+  "art": "della",
+  "support": "plastico tàttile",
+  "music": "377_full_before-i-depart_0159_preview.mp3",
+  "conf": "./conf/msg_conf_plastic.json",
+  "startBehaviour": "standby",
+  "caption": "La rappresentazione della Luna in scala una a un milione",
+  "color": "#00ff00",
+  "delay": "000",
+
+  "position": [-73.56286604953186,-568.7840559745343,20.293380078596012],
+  "target": [-67.32674242273116,-549.1063467326098,10.64027737367897],
+  "subjects": {
+
+    "KeyN": {
+      "desc": [
+        "la capanna del capo",
+        "la capanna a nord detta del capo",
+        "la capanna detta del capo"
+      ],
+      "check": 0,
+      "name": "capanna_del_capo",
+      "animation": 0,
+      "sid": 1,
+      "position": [-20.34914904186503,-416.8794763636156,15.212349522183821],
+      "target": [-28.936172032615012,-385.4938364975323,-24.894345571096913]
+    },
+    "KeyP": {
+      "desc": [
+        "una abitazione posta a sud est",
+        "l'abitazione posta più a sud est",
+        "l'abitazione che si trova a sud est dell'area"
+      ],
+      "check": 0,
+      "name": "abitazione_se",
+      "animation": 0,
+      "sid": 15,
+      "position": [74.44318115428071,-573.4839634242131,12.556916399643747],
+      "target": [66.56930498817319,-559.8950854541314,3.4729485346709863]
+    },
+    "KeyM": {
+      "desc": [
+        "le tre capanne",
+        "il gruppo di tre capanne",
+        "le tre capanne"
+      ],
+      "check": 0,
+      "name": "tre_capanne",
+      "animation": 0,
+      "sid": 2,
+      "position": [-21.128926858523904,-411.23110241968766,22.463307850381664],
+      "target": [-4.236574325270546,-406.5351406057477,-5.8862044014143455]
+    },
+    "Digit0": {
+      "desc": [
+        "il recinto (ovile)",
+        "l'ovile",
+        "il recinto, detto ovile"
+      ],
+      "check": 0,
+      "name": "recinto",
+      "animation": 0,
+      "sid": 3,
+      "position": [0.4060033664901628,-464.64658076606725,19.66929681457289],
+      "target": [-9.398683570474319,-453.76352104318806,-25.453621059049723]
+    },
+    "KeyB": {
+      "desc": [
+        "la capanna dei fonditori",
+        "la capanna dei fonditori",
+        "la capanna dei fonditori"
+      ],
+      "check": 0,
+      "name": "capanna_fonditori",
+      "animation": 0,
+      "sid": 4,
+      "position": [8.679397641190102,-473.25046686961826,10.714626705592993],
+      "target": [19.745228522380145,-444.5448495483862,-15.726523186423927]
+    },
+    "KeyV": {
+      "desc": [
+        "il mercato",
+        "i resti del mercato",
+        "il mercato della zona archeologica"
+      ],
+      "check": 0,
+      "name": "mercato",
+      "animation": 0,
+      "sid": 5,
+
+      "position": [21.683596016197328,-473.569683778736,13.967104205810715],
+      "target": [40.15209276222267,-456.482640064663,-15.22763242184322]
+    },
+    "KeyC": {
+      "desc": [
+        "la capanna dell'ascia bipenne",
+        "la capanna dell'ascia bipenne",
+        "la capanna dell'ascia bipenne"
+      ],
+      "check": 0,
+      "name": "capanna_ascia_bipenne",
+      "animation": 0,
+      "sid": 6,
+
+      "position": [33.61901220700497,-486.39732689851655,10.06664506097354],
+      "target": [46.22925991728831,-463.8363394724289,-15.04008304282094]
+    },
+    "KeyX": {
+      "desc": [
+        "la capanna con sedile",
+        "la capanna con sedile",
+        "la capanna con sedile"
+      ],
+      "check": 0,
+      "name": "capanna_sedile",
+      "animation": 1,
+      "sid": 7,
+      "position": [43.02446636079071,-494.73784558545435,9.659540850659674],
+      "target": [41.284806042732164,-473.0102042637258,-16.55732184362262]
+    },
+    "KeyJ": {
+      "desc": [
+        "l'ingresso orientale al recinto delle feste",
+        "l'ingresso del recinto delle feste, zona orientale",
+        "l'ingresso a oriente del recinto delle feste"
+      ],
+      "check": 0,
+      "name": "ingresso_orientale",
+      "animation": 0,
+      "sid": 8,
+      "position": [63.69034827525364,-504.32964165754714,13.011848206938685],
+      "target": [40.809878887553,-496.17172963899304,-13.571549624491615]
+    },
+    "KeyO": {
+      "desc": [
+        "la cucina",
+        "la cucina nei pressi dell'ingresso orientale",
+        "la cucina"
+      ],
+      "check": 0,
+      "name": "cucina",
+      "animation": 0,
+      "sid": 9,
+      "position": [46.05061771198861,-511.75676846848967,10.483134521210925],
+      "target": [32.21904464545754,-514.5510484701235,4.300949742764264]
+    },
+    "KeyL": {
+      "desc": [
+        "il recinto delle feste settore sud-orientale",
+        "la zona sud orientale nel recinto delle feste",
+        "il settore sud-orientale del recinto delle feste"
+      ],
+      "check": 0,
+      "name": "recinto_feste_s_orientale",
+      "animation": 0,
+      "sid": 10,
+      "position": [54.619762847852726,-509.2821727507184,19.00096113490379],
+      "target": [34.050298980741836,-496.42223024758744,-7.933510524917995]
+    },
+    "KeyZ": {
+      "desc": [
+        "il recinto delle feste settore nord-occidentale",
+        "la zona nord occidentale nel recinto delle feste",
+        "il settore nord-occidentale del recinto delle feste"
+      ],
+      "check": 0,
+      "name": "recinto_feste_n_occidentale",
+      "animation": 0,
+      "sid": 11,
+
+      "position": [-14.915233096975264,-490.09565578588484,16.23381586502945],
+      "target": [2.880222082504697,-488.69301728070326,-2.3175122931375003]
+    },
+    "Digit1": {
+      "desc": [
+        "il portico dei pellegrini",
+        "i portico detto dei pellegrini",
+        "il portico dei pellegrini"
+      ],
+      "check": 0,
+      "name": "portico_pellegrini",
+      "animation": 0,
+      "sid": 12,
+
+      "position": [17.95039415101519,-483.8035400258441,14.23953576145297],
+      "target": [-7.546185208932355,-498.270617426978,-9.826415562422874]
+    },
+    "KeyI": {
+      "desc": [
+        "l'ingresso sud occidentale al recinto delle feste",
+        "l'ingresso del recinto delle feste, zona sud occidentale",
+        "l'ingresso sud occidentale del recinto delle feste"
+      ],
+      "check": 0,
+      "name": "ingresso_so_recinto_feste",
+      "animation": 0,
+      "sid": 13,
+
+      "position": [9.390507619959504,-529.2446406052673,16.106634345628137],
+      "target": [11.033506939444917,-502.3750932406889,-10.406625883167996]
+    },
+    "KeyF": {
+      "desc": [
+        "la capanna degli altarini",
+        "la capanna, detta degli altarini",
+        "la capanna degli altarini"
+      ],
+      "check": 0,
+      "name": "capanna_altarini",
+      "animation": 0,
+      "sid": 14,
+
+      "position": [11.20293525906358,-533.2314863919931,12.178194594479685],
+      "target": [27.415237485815705,-508.47611784032387,-18.12906785564923]
+    },
+    "KeyG": {
+      "desc": [
+        "la capanna del custode (o capanna dell'ingresso)",
+        "la capanna detta dell'ingresso o del custode",
+        "la capanna dell'ingresso (o del custode)"
+      ],
+      "check": 0,
+      "name": "capanna_custode",
+      "animation": 0,
+      "sid": 16,
+
+      "position": [-3.217909676086281,-552.6996984198206,3.3370077630112203],
+      "target": [-11.573222170940536,-527.4090731062349,-15.96212304460459]
+    },
+    "KeyD": {
+      "desc": [
+        "l'ingresso dell'area sacra",
+        "il punto di ingresso all'area sacra",
+        "l'ingresso dell'area sacra"
+      ],
+      "check": 0,
+      "name": "ingresso_area_sacra",
+      "animation": 0,
+      "sid": 17,
+
+      "position": [-4.131893216902938,-548.8364701765496,2.836367286286345],
+      "target": [-21.634391242825746,-527.2328206733392,-8.549290694219174]
+    },
+    "KeyS": {
+      "desc": [
+        "il recinto dell'area sacra",
+        "il recinto nella zona sacra",
+        "il recinto dell'area sacra"
+      ],
+      "check": 0,
+      "name": "recinto_area_sacra",
+      "animation": 0,
+      "sid": 18,
+
+      "position": [-35.41108192308696,-541.2442796235874,8.889556713965517],
+      "target": [-20.955958839441518,-533.6789083401956,-6.294546472556968]
+    },
+    "KeyA": {
+      "desc": [
+        "il tempio a pozzo",
+        "il tempio - pozzo sacro",
+        "il tempio col pozzo sacro"
+      ],
+      "check": 0,
+      "name": "tempio_a_pozzo_1",
+      "animation": 0,
+      "sid": 19,
+
+      "position": [-35.75690645364709,-519.9403741543913,10.504549515167117],
+      "target": [-31.86635964212605,-514.6241555920672,-1.0331390956058923]
+    },
+    "KeyW": {
+      "desc": [
+        "il tempio a pozzo",
+        "il tempio - pozzo sacro",
+        "il tempio col pozzo sacro"
+      ],
+      "check": 0,
+      "name": "tempio_a_pozzo_2",
+      "animation": 0,
+      "sid": 20,
+
+      "position": [-38.158823964581536,-527.7976289020812,8.539794909135694],
+      "target": [-35.2611966799937,-520.993087746728,-5.666578154231611]
+    },
+    "KeyE": {
+      "desc": [
+        "la via sacra",
+        "il percorso chiamato la via sacra",
+        "la via detta sacra"
+      ],
+      "check": 0,
+      "name": "via_sacra",
+      "animation": 0,
+      "sid": 21,
+
+      "position": [-28.63736579292692,-520.7133395814176,6.766443726108273],
+      "target": [-40.576281175959004,-516.2783769521025,-0.42626657476095237]
+    },
+    "KeyR": {
+      "desc": [
+        "la torre nuragica",
+        "la torre nuragica",
+        "la torre nuragica"
+      ],
+      "check": 0,
+      "name": "torre_nuragica",
+      "animation": 0,
+      "sid": 22,
+
+      "position": [-74.04540193942908,-514.4137656941707,15.489777396075969],
+      "target": [-77.02008391025137,-514.9976296430337,8.38225333408049]
+    },
+    "Digit6": {
+      "desc": [
+        "il protonuraghe",
+        "il protonuraghe vicino alla torre nuragica",
+        "il protonuraghe, posto tra la chiesa di Santa Vittoria e la torre nuragica"
+      ],
+      "check": 0,
+      "name": "protonuraghe",
+      "animation": 0,
+      "sid": 23,
+
+      "position": [-107.1973903829058,-524.5038026154863,2.878481488832179],
+      "target": [-92.22420373476542,-527.2257880239729,-7.4528105330299095]
+    },
+    "Digit7": {
+      "desc": [
+        "la chiesa di Santa Vittoria",
+        "la chiesa (Santa Vittoria)",
+        "la chiesa di Santa Vittoria"
+      ],
+      "check": 0,
+      "name": "santa_vittoria",
+      "animation": 0,
+      "sid": 24,
+
+      "position": [-82.94280498691302,-537.7839319983807,6.806649762601927],
+      "target": [-91.18175550592451,-536.7454589926068,2.7227475917374555]
+    },
+
+    "Digit4": {
+      "desc": [
+        "la torre con feritoie",
+        "la torre con feritoie",
+        "la torre con feritoie"
+      ],
+      "check": 0,
+      "name": "torre_con_feritoie",
+      "animation": 0,
+      "sid": 25,
+      "position": [-74.82846668622084,-529.8912060264173,4.04606982494971],
+      "target": [-79.3440394015323,-537.0558972298262,-2.4929524103511467]
+    },
+    "KeyT": {
+      "desc": [
+        "il tempio ipetrale",
+        "il tempio ipetrale",
+        "il tempio ipetrale"
+      ],
+      "check": 0,
+      "name": "tempio_ipetrale",
+      "animation": 0,
+      "sid": 26,
+      "position": [-64.17974040832134,-522.5478913580603,2.18232745939473],
+      "target": [-64.26280559373929,-522.6392050015044,2.095537763578831]
+    },
+    "Digit5": {
+      "desc": [
+        "la capanna del sacerdote",
+        "la capanna sacerdotale",
+        "la capanna del sacerdote"
+      ],
+      "check": 0,
+      "name": "capanna_sacerdote",
+      "animation": 0,
+      "sid": 27,
+      "position": [-60.2949658000685,-546.9907607548439,3.814435130876346],
+      "target": [-66.46742530901606,-535.2646181719476,-7.920974260270203]
+    },
+    "KeyQ": {
+      "desc": [
+        "l'ingresso sud occidentale",
+        "l'ingresso sud occidentale",
+        "l'ingresso sud occidentale"
+      ],
+      "check": 0,
+      "name": "ingresso_so",
+      "animation": 0,
+      "sid": 28,
+      "position": [-51.54330150048416,-540.9548399553516,1.7154207556970285],
+      "target": [-58.057653055466126,-531.8771446467749,-9.126122484993584]
+    }
+
+  }
+}
